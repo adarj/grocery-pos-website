@@ -88,8 +88,11 @@ client JavaScript. [Security](../engineering/security-baseline.md),
   thin TS/TSX boundaries under actual Next development and production builds.
 - How ReScript/React code participates in Server and Client Components, including
   directive placement and transitive imports; no claim of compatibility by assumption.
-- A minimal language-bearing route and framework integration sufficient to prove
-  the stack, without prematurely adding commerce, auth, or provider architecture.
+- A minimal framework route sufficient to prove the stack, without prematurely
+  adding commerce, auth, or provider architecture. Language-bearing routing belongs
+  to M0.4; the M0.2 engineering page is temporarily served at `/`.
+
+See the [M0.2 toolchain record](../engineering/toolchain.md) for empirical results.
 
 The selected foundation stands unless this proof exposes a concrete contradiction.
 Record such findings before revising an ADR. Hosting and other unresolved choices

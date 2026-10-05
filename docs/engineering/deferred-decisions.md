@@ -19,7 +19,7 @@ calls for evidence and a decision; it does not automatically authorize implement
 | Consent-management system | Actual data processing, scripts, and jurisdictions are unknown | Before introducing processing that requires consent decisions |
 | CMS | Authoring roles and content workflow are unproven | Sustained content maintenance with demonstrated editorial needs |
 | Docs search backend | No corpus or search behavior to assess | Documentation scale/queries justify search |
-| Final translation/i18n library | Framework interoperability and resource needs are unproven | M0.2 routing proof, then early pseudo-localization/multilingual content |
+| Final translation/i18n library | Resource and language-routing needs are unproven | M0.4 routing qualification, then early pseudo-localization/multilingual content |
 | Country-specific domains | Language architecture does not define market rollout | Real country/SEO/commercial deployment requirements |
 | Account subdomain vs `/account` | Isolation and navigation requirements are unspecified | Account deployment/security design |
 | GraphQL | No API consumers or query needs justify it | Concrete API contract needs showing benefit over simpler interfaces |

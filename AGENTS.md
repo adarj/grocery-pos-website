@@ -29,13 +29,14 @@ contradictions rather than silently substituting another architecture.
   follow the [capability claims policy](docs/product/public-capability-claims.md).
 - Use standards-based CSS and a small first-party design system. Do not introduce
   Tailwind or a major UI framework without revisiting the recorded decision.
-- Never hand-edit generated ReScript JavaScript. Output is normally untracked;
-  M0.2 must prove its suffix and compiler configuration before ignore rules expand.
-- Grow verification with risk. Use canonical `just` commands once M0.2 establishes
-  them; do not invent executable commands during this checkpoint.
-- Once Next is installed, read installed, version-matched Next documentation
-  before framework work. If the package does not provide it, use official docs
-  matching the installed version and record the limitation; no such docs exist here yet.
+- Never hand-edit generated ReScript `.res.mjs` or GenType `.gen.tsx` files.
+  They and ReScript `lib/` build state are ignored and regenerated before builds.
+- Grow verification with risk. Use canonical `just` commands; dependency and browser
+  installation remain explicit. Read the [toolchain record](docs/engineering/toolchain.md).
+- Development mode is not the complete Next route/type acceptance gate. Run
+  `just typecheck` after consequential framework/route changes and before checkpoint completion.
+- Before Next.js-specific implementation, consult the relevant version-matched
+  documentation under `node_modules/next/dist/docs/`.
 - Complexity and dependencies require demonstrated need. Avoid large route files,
   generic `lib/` dumping grounds, and abstractions created only to fill a diagram.
 
@@ -53,11 +54,23 @@ contradictions rather than silently substituting another architecture.
 
 ## Checkpoint and Git limits
 
-M0.1 is documentation only. Do not scaffold the app, install packages, create
-build/tooling configuration, or alter global Codex/MCP configuration.
+M0.2 is a toolchain/framework spike only. Do not expand into M0.3 source architecture,
+M0.4 routing/i18n, or product/design work. Do not alter global Codex/MCP configuration.
+Nix must already work in the outer Linux environment; never bootstrap a substitute.
 
 Do not commit, push, merge, rebase, reset, tag, create releases, force-update refs,
 perform destructive Git operations, or create/modify GitHub remotes. Safe Git
 status/diff/read operations are allowed. A later explicit human instruction is
-required to authorize an exception; M0.1 authorizes none. Leave implementation,
+required to authorize an exception; M0.2 authorizes none. Do not stage, cherry-pick,
+or create/delete/switch branches. Leave implementation,
 validation results, and a suggested commit message for human review.
+
+<!-- BEGIN:nextjs-agent-rules -->
+
+# This is NOT the Next.js you know
+
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+
+This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+
+<!-- END:nextjs-agent-rules -->

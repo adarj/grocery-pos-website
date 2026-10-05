@@ -13,9 +13,9 @@ before changing a boundary.
    application/API boundaries, in-process or separately deployed as justified by
    [ADR 0004](../adr/0004-first-party-api-authority-boundary.md).
 4. Add directories/abstractions for actual responsibilities, not to complete a tree.
-   Never edit compiler output; M0.2 will establish generated import/ignore conventions.
-5. Read installed, version-matched Next docs once available before framework work;
-   follow the [root constitution](../../AGENTS.md) if bundled docs are absent.
+   Never edit compiler output; follow the [toolchain record](../engineering/toolchain.md)
+   for generated import/ignore conventions and build ordering.
+5. Read `node_modules/next/dist/docs/` before Next-specific framework work.
    Report concrete integration contradictions before changing accepted decisions.
 
 ## Codex/MCP policy

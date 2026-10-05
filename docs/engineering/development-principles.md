@@ -27,7 +27,7 @@ rationale are in the [ADRs](../adr/README.md).
 - **Complexity is earned:** Prefer clear feature boundaries over speculative generic
   frameworks. Keep route files thin and avoid an arbitrary `lib/` collection.
 
-M0.2 will establish executable development commands. Until then, do not publish
-invented setup instructions or add configuration that has not been qualified.
+M0.2's executable commands and qualification are in the [toolchain record](toolchain.md).
+Do not publish setup instructions or add configuration that has not been qualified.
 Document real constraints and update the [deferred register](deferred-decisions.md)
 when requirements make an open decision actionable.

@@ -1,0 +1,13 @@
+{
+  "name": "grocery-pos-website",
+  "sources": [{ "dir": "src/spike" }],
+  "dependencies": ["@rescript/react"],
+  "package-specs": { "module": "esmodule", "in-source": true },
+  "suffix": ".res.mjs",
+  "jsx": { "version": 4 },
+  "gentypeconfig": {
+    "module": "esmodule",
+    "moduleResolution": "bundler",
+    "generatedFileExtension": ".gen.tsx"
+  }
+}

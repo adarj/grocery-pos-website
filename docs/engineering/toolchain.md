@@ -1,0 +1,242 @@
+# M0.2 toolchain qualification
+
+This is an integration spike, not a website implementation. The thin Next page
+renders `src/spike/FrameworkProof.res`; that server component contains a small
+`Counter.res` Client Component. Durable source architecture, language routes, and
+the visual system remain M0.3, M0.4, and M1 work respectively.
+
+## Ownership and environment
+
+The repository contract starts with a suitable **Linux environment with working
+Nix**. Nix installation, the host, containers, and hypervisor are outside repository
+ownership. Never bootstrap an alternative Nix environment to obtain spike evidence.
+
+The current developer uses Fedora Kinoite → Distrobox `dev` → existing Nix.
+Either `cd ~/Projects/grocery-pos-website` then `distrobox enter dev`, or entering
+the container first and then changing directory, is a developer example. Distrobox
+is optional. Do not inherit the POS repository's flake or `PROJECT_ROOT`.
+
+Nix supplies Node, the pnpm executable, and just. pnpm supplies all JS packages and
+owns `pnpm-lock.yaml`. The flake uses `mkShellNoCC`, one Nixpkgs input, no helper
+library or overlays, and exposes `aarch64-linux` and `x86_64-linux` shells. ARM64 is
+the execution-qualified system; x86_64 is evaluated, not runtime-qualified here.
+
+## Versions
+
+| Tool | Qualified selection |
+| --- | --- |
+| Outer Nix | 2.34.7; an environment observation, not installed by this repository |
+| Nixpkgs | `nixos-26.05`, revision `0d9e9b832d03ac387417e16ce1febf73b2e631e1` |
+| Node | 24.21.0 (LTS) |
+| pnpm | 12.9.0 |
+| just | 1.51.0 |
+| Next | 16.3.8 |
+| React / React DOM | 19.3.0 / 19.3.0 |
+| TypeScript | 6.0.3 |
+| ReScript | 12.3.1 |
+| `@rescript/react` | 0.15.0 |
+| `@rescript/runtime` | 12.3.1, direct runtime dependency |
+| Playwright Test | 1.63.0 |
+
+`flake.lock` owns the exact Nix revision and content hash. This supported stable
+pin supplies Node 24 and a cached pnpm 12 package without extra inputs or a custom
+derivation. Its default pnpm is 11.27.0; the explicit `pnpm_12` selection is 12.9.0,
+slightly behind registry 12.9.1. Node 26 is not selected. TypeScript 6 is a stable,
+supported compiler-API line; adopting the newly available 7 major is unnecessary
+for this seam. Next's bundled TypeScript guide covers both; no experimental
+checker configuration is needed.
+
+These React versions describe declared pnpm packages. Next App Router uses its
+framework-bundled React implementation, as explained in its installation guide;
+the spike qualifies actual Next behavior rather than assuming identical internals.
+
+## Installation and commands
+
+Enter `nix develop`, then install with `pnpm install --frozen-lockfile`. The
+`packageManager` field matches Nix's pnpm, and engines require the Node 24 line.
+Neither field replaces the pinned shell. There is one application and no workspace.
+
+During pre-commit review, untracked flake files require `nix develop path:.`.
+Do not stage files for Nix. After the human tracks them, ordinary `nix develop`
+works. Path-flake snapshots can include ignored local files, so this is a review
+technique, not the preferred ongoing Git-backed workflow.
+
+`.envrc` contains `use flake`. With outer direnv/nix-direnv configured, the human
+must run `direnv allow` once after reviewing it. No global direnv configuration or
+authorization was changed during qualification; automatic activation remains a
+human one-time step. Explicit Nix shell entry is authoritative and does not require
+direnv.
+
+| Command | Behavior |
+| --- | --- |
+| `just dev` | Initial ReScript build, then one managed ReScript watcher and Next dev on `127.0.0.1:3000` |
+| `just rescript` | ReScript 12 `rescript build` |
+| `just typecheck` | ReScript build → `next typegen` → strict `tsc --noEmit` |
+| `just test-supervisor` | Isolated Linux launcher/descendant fixtures for development process cleanup |
+| `just build` | ReScript build → ordinary Next/Turbopack production build, including TypeScript |
+| `just start` | Ordinary Next Node server for the existing production build, on `127.0.0.1:3000` |
+| `just browsers` | Explicit Playwright-controlled browser provisioning; no OS dependency installation |
+| `just test-e2e` | All three browser projects against an owned production server on port 3100; requires build and provisioning first |
+| `just test-e2e --project=firefox` | The same scenario for one selected engine |
+| `just check` | Typecheck, production build, and Chromium smoke; no implied lint/unit/a11y suite |
+| `just clean` | Remove only known generated outputs/build state; preserve source, lockfiles, dependencies, and browser cache |
+
+`scripts/dev.mjs` uses Node's child-process API, without an orchestration dependency.
+Each tool runs in a separate process group. SIGINT/SIGTERM terminate both groups;
+unexpected tool exit stops its sibling and propagates failure. A bounded SIGKILL
+fallback retains process-group ownership even if a leader exits before its children.
+Initial compilation precedes server startup. Failed or signal-terminated initial
+compiler launchers use the same group cleanup before ownership is released; numeric
+failure status is preserved, and an abnormally killed launcher reports failure.
+Live source changes and restoration were observed in an open Chromium page without
+manual reload/restart; normal interruption and an invalid Next startup were checked
+for child cleanup. A forced Next CLI exit also terminated its surviving server
+child and the ReScript watcher within the bounded shutdown period.
+
+`just test-supervisor` copies the actual supervisor into temporary fixture roots
+with tiny fake launchers and real native-child stand-ins. It checks initial launcher
+SIGKILL/non-zero exit, watcher/Next launcher SIGKILL, normal startup, SIGINT/SIGTERM,
+and repeated signals, asserting exit status and disappearance of owned processes.
+The initial SIGKILL case deliberately keeps a descendant alive through SIGTERM to
+exercise the bounded fallback. Fixtures use Node built-ins only, verify ownership
+before failure cleanup, and remove their temporary directories. They do not start
+an application server or write project compiler/build output.
+
+## ReScript / Next / TypeScript seam
+
+Current ReScript configuration uses `dependencies`, JSX v4, in-source ESM, and
+`.res.mjs`. No legacy `bsconfig.json` or `bs-*` keys are used. Generated modules
+import React/`react/jsx-runtime`. The tiny counter's integer/string operations
+compile to native JS, so this particular output needs no runtime helper import.
+The direct `@rescript/runtime` dependency satisfies the binding's peer ownership
+and makes generated runtime helper paths resolvable under pnpm isolation; a direct
+ESM import of `@rescript/runtime/lib/es6/Stdlib_Option.js` was verified. No hoisting
+policy was weakened.
+
+The server export alone is annotated with `@genType`. Next's page imports
+`FrameworkProof.gen.tsx`, whose compiler-derived `React.ComponentType` requires
+`title: string`. A comparison experiment showed direct unchecked `.res.mjs` imports
+accepted `title: 42`, while GenType rejected it with TS2322. This is why GenType
+is materially better here than direct JS inference or hand-maintained declarations.
+It is built into ReScript and adds no dependency. Its generated, localized
+`as any` assignment attaches the compiler-derived interface to the JS export;
+there is no handwritten `any` shim or duplicate prop model. This attachment does
+not runtime-validate external data or guarantee serializable props.
+See the [ReScript TypeScript integration guide](https://rescript-lang.org/docs/manual/typescript-integration/).
+
+GenType uses ESM/bundler resolution and `.gen.tsx`; TS uses `allowJs` and
+`allowImportingTsExtensions` for that supported seam. `strict` remains true and
+`skipLibCheck` false. No build-error suppression is configured.
+
+Next 16.3.8 generates overlapping ambient declarations under `.next/types` and
+`.next/dev/types`. Including both after development and production caused duplicate
+declaration errors. Canonical checks regenerate production types with `next typegen`
+and exclude `.next/dev` from root-file discovery. Dev startup removes only stale
+`.next/types`, letting `next-env.d.ts` import the current dev route declarations
+without duplicate production globals. Product and route-validator code remains
+checked by canonical validation; no declaration checking is disabled.
+
+`just dev` provides ReScript watch compilation, Next compilation/runtime diagnostics,
+and the ordinary TypeScript/editor feedback available in that environment. Its
+development-only TypeScript program does not include the complete generated Next
+route-export validators. A running development server is therefore not the complete
+framework/type acceptance gate.
+
+`just typecheck` is the authoritative static gate: it compiles ReScript, regenerates
+production Next route types and export validators, then checks them with strict
+TypeScript. Run it after consequential framework/route changes and before checkpoint
+completion. `just build` likewise generates and checks production validators;
+`just check` sequences the canonical typecheck, build, and Chromium browser smoke.
+Use these workflows sequentially with dev startup; they share generated type state
+and `next-env.d.ts`. Re-evaluate this version-sensitive workaround when Next is
+upgraded, using the newly installed bundled documentation rather than assuming
+live validator parity or disabling strictness.
+
+The ReScript server component has no client directive. It imports the counter's
+generated module directly; only that module starts with `'use client'`, emitted
+from `@@directive("'use client'")`. GenType does not insert a directive or expand
+the client boundary. The server content appears in HTTP HTML, and the counter
+hydrates and updates state in development and production without console/hydration
+errors in the passing browser runs. Rendering grants no authorization.
+
+`.res.mjs`, `.gen.tsx`, `lib/`, `.next/`, and Next's `next-env.d.ts` are ignored.
+Compiler output is never hand-edited. `just clean` followed by `just build`
+regenerates the seam and production output from source. Tests never install
+dependencies or silently build: run `just build` before `just test-e2e`; `just check`
+already provides that order.
+
+## Browser qualification and native limitations
+
+The same two production scenarios run for each configured engine. One disables
+JavaScript and asserts that the ReScript heading and server paragraph are visible
+in the rendered page, so embedded script/RSC payload text cannot satisfy the SSR
+proof. The separate default JavaScript-enabled scenario checks hydration, counter
+updates, and browser errors; it does not expect interaction with JavaScript disabled.
+
+Playwright controls browser revisions. The normal Linux user cache,
+`~/.cache/ms-playwright`, avoids a second project-local browser store and can be
+reused across container sessions. Browser binaries are outside Git. pnpm package
+versions and Playwright revisions define provisioning; arbitrary host browsers
+are not used.
+
+The ARM64 Fedora 44 container is not an officially supported Playwright OS. It
+downloads the Ubuntu 24.04 ARM64 fallback:
+
+| Engine | Provisioned version / revision | Production smoke |
+| --- | --- | --- |
+| Chromium | 153.0.8010.12 / 1243 | Passed |
+| Firefox | 155.0 / 1543 | Passed |
+| WebKit | 26.6 / 2359 | Failed before page load: native dependency validation |
+
+Chromium/Firefox use the existing compatible Linux runtime here. WebKit lacks
+GTK4, ICU74, GStreamer components, flite, JPEG8, AVIF16 and related libraries.
+`ldd` also identifies `libjxl.so.0.8`; the pinned Nixpkgs supplies libjxl 0.11.2,
+not an ABI-compatible 0.8 package. Its bundled MiniBrowser launcher overwrites
+`LD_LIBRARY_PATH`, so exporting a few Nix library paths would not suffice. This is
+a native-runtime limitation, not an application or ReScript failure.
+
+The spike does not install privileged host packages, run `install-deps`, replace
+browser revisions with Nixpkgs' older Playwright browsers, fake SONAME compatibility,
+patch shared browser caches, or force architecture emulation. A newer Ubuntu
+target exists in Playwright, but changing its fallback/platform assumptions was
+not adopted merely to obtain a green matrix. No extra Nix input or custom legacy
+library derivation is justified by this small spike.
+
+Full WebKit qualification remains open on a compatible supported Linux runtime
+or a deliberately qualified Nix native-runtime solution; future x86_64 CI may
+supply additional evidence. `just test-e2e` keeps the failing WebKit project enabled.
+The foundation is qualified with a **conditional browser-matrix result**, not a
+claim that all Linux hosts or all engines have passed.
+
+## Supply chain and framework guidance
+
+Frozen installation succeeded with an unchanged lockfile hash. pnpm 12 reported
+successful supply-chain policy checks. No required lifecycle-script failure or
+approval notice occurred; the installed policy has an empty `allowBuilds` map.
+Native compiler/SWC payloads arrive through platform-specific packages. No blanket
+script approval, extra workspace policy, or isolation weakening was introduced.
+
+Next decisions were checked against installed `node_modules/next/dist/docs/`:
+manual installation, TypeScript/typegen, server/client boundaries, CLI, AI-agent
+rules, and MCP guidance. Next's managed agent-rule block is retained in `AGENTS.md`.
+No custom Next config, router, server, hosting adapter, or deployment provider was
+needed. Next's ordinary telemetry notice and Playwright's OS/native warnings were
+observed; they are not application failures. Color-variable notices under the tool
+runner do not affect test results.
+
+The running application is ready to evaluate official Next DevTools MCP for M0.3:
+live compilation/runtime errors, routes, logs, and component/page metadata complement
+static bundled docs and scripted Playwright tests. Recommend a reviewed, pinned
+`next-devtools-mcp` stdio entry in the human's website Codex profile, using the Nix
+Node environment and project-local dev endpoint. Preserve approval for mutating
+actions; do not grant blanket tool approval. No profile or project MCP configuration
+was modified. See the installed `01-app/02-guides/mcp.md` and
+`01-app/02-guides/ai-agents.md` before configuring it.
+The live `/_next/mcp` endpoint returned its tool list and the sole App Router route,
+`/`. Its `get_errors` query requires a connected browser session; querying after
+the smoke browser closed returned that limitation rather than an error-free result.
+
+All six M0.1 ADRs remain valid. The accepted architecture is unchanged; only the
+old milestone description of language routing was aligned with M0.4. Hosting,
+commercial authority integrations, authentication, translations, testing/CI expansion,
+and the design system remain outside this spike.

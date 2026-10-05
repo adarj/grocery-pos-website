@@ -1,7 +1,8 @@
 # Testing strategy
 
-This is a plan, not an installed test stack. M0.1 has no application or test
-configuration; its verification is document, link, scope, and Git-state review.
+This is the broader test plan. M0.2 implements compiler/strict TypeScript checks,
+production build/smoke, and a small Playwright scenario; see the
+[toolchain record](toolchain.md). Unit/component/a11y tooling remains planned.
 
 ## Intended verification layers
 

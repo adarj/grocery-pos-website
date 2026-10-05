@@ -1,0 +1,15 @@
+body {
+  font-family: system-ui, sans-serif;
+  margin: 2rem;
+  line-height: 1.5;
+}
+
+main {
+  max-inline-size: 48rem;
+}
+
+button {
+  font: inherit;
+  min-block-size: 2.75rem;
+  padding-inline: 1rem;
+}

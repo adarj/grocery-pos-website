@@ -65,6 +65,8 @@ this diagram. Start with the smallest explicit boundary that protects a real nee
 
 Compiler-generated JavaScript is never hand-edited and should normally be
 untracked, reproducible build output. Human-maintained JS/TS adapters remain source.
-M0.2 must empirically qualify the compiler configuration, exact suffix/output
-location, import paths, and Next build behavior. Then add precise ignore rules;
-do not blanket-ignore `*.js` or invent final ReScript build syntax now.
+M0.2 qualifies in-source ESM `.res.mjs` and compiler-generated `.gen.tsx` at the
+typed TS seam, with ignored `lib/` build state. Build commands regenerate output
+before Next consumes it. See the [toolchain record](../engineering/toolchain.md).
+Do not blanket-ignore `*.js` or `*.mjs`. The current `src/spike/` area is a proof;
+M0.3 will establish durable placement from real responsibilities.

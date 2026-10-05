@@ -1,7 +1,7 @@
 # Documentation map
 
-M0.1 records the constitution before application scaffolding. Architectural
-choices are accepted policy, not evidence that corresponding features exist.
+M0.1 records the constitution; M0.2 adds the executable framework spike.
+Architectural choices are policy, not evidence that product features exist.
 
 | Question | Canonical document |
 | --- | --- |
@@ -10,6 +10,7 @@ choices are accepted policy, not evidence that corresponding features exist.
 | Where will source code belong? | [Proposed source layout](architecture/source-layout.md) |
 | Why were foundational choices made? | [ADR index](adr/README.md) |
 | How should engineering tradeoffs be made? | [Development principles](engineering/development-principles.md) |
+| How do I run and qualify the spike? | [Toolchain record](engineering/toolchain.md) |
 | What verification will be introduced? | [Testing strategy](engineering/testing-strategy.md) |
 | What security rules apply already? | [Security baseline](engineering/security-baseline.md) |
 | What are accessibility and performance expectations? | [Accessibility and performance](engineering/accessibility-and-performance.md) |

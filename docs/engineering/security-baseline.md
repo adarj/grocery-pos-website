@@ -1,8 +1,8 @@
 # Security baseline
 
 Security constraints apply before authentication exists. This document establishes
-boundaries for an unauthenticated site and future work; it does not claim controls
-are implemented in this documentation-only repository.
+boundaries for the unauthenticated framework spike and future work; it does not
+claim deployment headers or account/commerce controls are implemented.
 
 ## Public-site baseline
 

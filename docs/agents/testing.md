@@ -1,7 +1,8 @@
 # Testing guide for agents
 
 Use the [testing strategy](../engineering/testing-strategy.md) to select the lowest
-layer that can expose a real failure. No test tools or commands exist in M0.1.
+layer that can expose a real failure. Current commands and browser qualification
+limits are in the [toolchain record](../engineering/toolchain.md).
 
 | Change | Proportionate verification |
 | --- | --- |
@@ -16,7 +17,11 @@ Do not add tests that only restate a wrapper or implementation. Accessibility sm
 is not a WCAG proof. Reversible low-impact changes need appropriate review rather
 than a new test suite.
 
-Once M0.2 establishes canonical `just` commands, run the relevant ones and report
+A passing development server is not full framework/type validation. Run
+`just typecheck` after consequential route/framework changes and before checkpoint
+completion; use `just test-supervisor` when changing development process management.
+
+Run the relevant canonical `just` commands and report
 results and untested limits. Broaden testing for new failures or unresolved risks;
 avoid repeatedly rerunning completed checks without a reason. Never install tooling
-just to validate this documentation checkpoint.
+without an actual verification need.

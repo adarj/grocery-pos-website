@@ -1,0 +1,31 @@
+# Local dependency and framework/build output; keep lockfiles and configuration.
+/node_modules/
+/.pnpm-store/
+/.next/
+/out/
+*.tsbuildinfo
+
+# Local environment and credential files; allow reviewed example templates.
+.env
+.env.*
+!.env.example
+!.env.*.example
+/.aws/
+
+# Development environment and Nix result links.
+/.direnv/
+/result
+/result-*
+
+# Generated verification reports.
+/coverage/
+/playwright-report/
+/test-results/
+/blob-report/
+
+# Project-local agent caches only; keep meaningful agent configuration trackable.
+/.codex/cache/
+/.codex/tmp/
+
+# ReScript output is normally untracked. M0.2 will qualify its generated suffix
+# and add a precise ignore rule; do not ignore arbitrary JavaScript source now.

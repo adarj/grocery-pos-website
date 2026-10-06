@@ -1,13 +1,13 @@
 # Documentation map
 
-M0.1 records the constitution; M0.2 adds the executable framework spike.
+M0.1 records the constitution; M0.2 qualifies the toolchain; M0.3 proves source boundaries.
 Architectural choices are policy, not evidence that product features exist.
 
 | Question | Canonical document |
 | --- | --- |
 | What is this repository and its next checkpoint? | [Root README](../README.md) |
 | How does the eventual website fit together? | [Architecture overview](architecture/website-architecture.md) |
-| Where will source code belong? | [Proposed source layout](architecture/source-layout.md) |
+| Where does source code belong? | [Source layout and application boundary](architecture/source-layout.md) |
 | Why were foundational choices made? | [ADR index](adr/README.md) |
 | How should engineering tradeoffs be made? | [Development principles](engineering/development-principles.md) |
 | How do I run and qualify the spike? | [Toolchain record](engineering/toolchain.md) |

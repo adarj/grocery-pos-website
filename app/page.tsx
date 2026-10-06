@@ -1,5 +1,6 @@
-import { make as FrameworkProof } from "../src/spike/FrameworkProof.gen";
+import { load } from "../src/qualification/CapabilityProofData.gen";
+import { make as ArchitectureProof } from "../src/ui/ArchitectureProof.gen";
 
 export default function Page() {
-  return <FrameworkProof title="Grocery POS Website — M0.2 framework spike" />;
+  return <ArchitectureProof capabilities={load()} />;
 }

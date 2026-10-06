@@ -80,7 +80,7 @@ client JavaScript. [Security](../engineering/security-baseline.md),
 [accessibility/performance](../engineering/accessibility-and-performance.md), and
 [testing](../engineering/testing-strategy.md) apply across all zones.
 
-## What M0.2 must prove
+## Qualified foundation and current slice
 
 - A compatible, reproducible ReScript + React + Next App Router build using
   Nix/pnpm, with documented versions and canonical `just` commands.
@@ -90,9 +90,15 @@ client JavaScript. [Security](../engineering/security-baseline.md),
   directive placement and transitive imports; no claim of compatibility by assumption.
 - A minimal framework route sufficient to prove the stack, without prematurely
   adding commerce, auth, or provider architecture. Language-bearing routing belongs
-  to M0.4; the M0.2 engineering page is temporarily served at `/`.
+  to M0.4; the engineering proof remains temporarily served at `/`.
 
-See the [M0.2 toolchain record](../engineering/toolchain.md) for empirical results.
+M0.2 established this foundation; see the
+[toolchain record](../engineering/toolchain.md) for empirical results and browser limits.
+M0.3 now proves the inward dependency direction with a fictional capability slice:
+domain construction defaults to withholding, application code decides public
+eligibility, and server-rendered UI receives only the public view. See the
+[actual source layout](source-layout.md). This is neither a production ledger nor
+a real publication-approval system.
 
 The selected foundation stands unless this proof exposes a concrete contradiction.
 Record such findings before revising an ADR. Hosting and other unresolved choices

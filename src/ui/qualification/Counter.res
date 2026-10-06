@@ -1,5 +1,7 @@
 @@directive("'use client'")
 
+// Retained solely to qualify ReScript hydration; capability presentation is server-only.
+
 @react.component
 let make = () => {
   let (count, setCount) = React.useState(() => 0)

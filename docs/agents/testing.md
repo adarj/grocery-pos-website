@@ -17,6 +17,8 @@ Do not add tests that only restate a wrapper or implementation. Accessibility sm
 is not a WCAG proof. Reversible low-impact changes need appropriate review rather
 than a new test suite.
 
+A pure rule/decoder change should run `just test-unit`; M0.3 uses ReScript tests
+compiled for Node's built-in runner without adding a general test framework.
 A passing development server is not full framework/type validation. Run
 `just typecheck` after consequential route/framework changes and before checkpoint
 completion; use `just test-supervisor` when changing development process management.

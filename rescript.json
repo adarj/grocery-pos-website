@@ -1,6 +1,9 @@
 {
   "name": "grocery-pos-website",
-  "sources": [{ "dir": "src/spike" }],
+  "sources": [
+    { "dir": "src", "subdirs": true },
+    { "dir": "tests/unit", "type": "dev" }
+  ],
   "dependencies": ["@rescript/react"],
   "package-specs": { "module": "esmodule", "in-source": true },
   "suffix": ".res.mjs",

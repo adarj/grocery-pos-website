@@ -54,14 +54,16 @@ contradictions rather than silently substituting another architecture.
 
 ## Checkpoint and Git limits
 
-M0.2 is a toolchain/framework spike only. Do not expand into M0.3 source architecture,
-M0.4 routing/i18n, or product/design work. Do not alter global Codex/MCP configuration.
+M0.3 proves application/source boundaries with fictional capability data. Do not
+expand into M0.4 routing/i18n, a production ledger, providers, or product/design work.
+Use the [source layout](docs/architecture/source-layout.md) for placement and interfaces.
+Do not alter global Codex/MCP configuration.
 Nix must already work in the outer Linux environment; never bootstrap a substitute.
 
 Do not commit, push, merge, rebase, reset, tag, create releases, force-update refs,
 perform destructive Git operations, or create/modify GitHub remotes. Safe Git
 status/diff/read operations are allowed. A later explicit human instruction is
-required to authorize an exception; M0.2 authorizes none. Do not stage, cherry-pick,
+required to authorize an exception; M0.3 authorizes none. Do not stage, cherry-pick,
 or create/delete/switch branches. Leave implementation,
 validation results, and a suggested commit message for human review.
 

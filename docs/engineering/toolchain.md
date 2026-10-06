@@ -1,9 +1,10 @@
 # M0.2 toolchain qualification
 
-This is an integration spike, not a website implementation. The thin Next page
-renders `src/spike/FrameworkProof.res`; that server component contains a small
-`Counter.res` Client Component. Durable source architecture, language routes, and
-the visual system remain M0.3, M0.4, and M1 work respectively.
+M0.2 qualified the foundation recorded here. M0.3 now uses that stack for the
+fictional capability-publication slice documented in the
+[source architecture](../architecture/source-layout.md). The server-tree proof is
+replaced; the counter remains an isolated client qualification control. Language
+routes and the visual system remain M0.4 and M1 work respectively.
 
 ## Ownership and environment
 
@@ -71,6 +72,7 @@ direnv.
 | --- | --- |
 | `just dev` | Initial ReScript build, then one managed ReScript watcher and Next dev on `127.0.0.1:3000` |
 | `just rescript` | ReScript 12 `rescript build` |
+| `just test-unit` | ReScript build → Node's built-in runner for pure domain/application tests |
 | `just typecheck` | ReScript build → `next typegen` → strict `tsc --noEmit` |
 | `just test-supervisor` | Isolated Linux launcher/descendant fixtures for development process cleanup |
 | `just build` | ReScript build → ordinary Next/Turbopack production build, including TypeScript |
@@ -78,7 +80,7 @@ direnv.
 | `just browsers` | Explicit Playwright-controlled browser provisioning; no OS dependency installation |
 | `just test-e2e` | All three browser projects against an owned production server on port 3100; requires build and provisioning first |
 | `just test-e2e --project=firefox` | The same scenario for one selected engine |
-| `just check` | Typecheck, production build, and Chromium smoke; no implied lint/unit/a11y suite |
+| `just check` | Pure unit tests, typecheck, production build, and Chromium smoke; no implied lint/component/a11y suite |
 | `just clean` | Remove only known generated outputs/build state; preserve source, lockfiles, dependencies, and browser cache |
 
 `scripts/dev.mjs` uses Node's child-process API, without an orchestration dependency.
@@ -113,10 +115,12 @@ and makes generated runtime helper paths resolvable under pnpm isolation; a dire
 ESM import of `@rescript/runtime/lib/es6/Stdlib_Option.js` was verified. No hoisting
 policy was weakened.
 
-The server export alone is annotated with `@genType`. Next's page imports
-`FrameworkProof.gen.tsx`, whose compiler-derived `React.ComponentType` requires
-`title: string`. A comparison experiment showed direct unchecked `.res.mjs` imports
-accepted `title: 42`, while GenType rejected it with TS2322. This is why GenType
+In M0.2, the server export's `@genType` produced a typed `title: string` prop.
+A comparison experiment showed direct unchecked `.res.mjs` imports accepted
+`title: 42`, while GenType rejected it with TS2322. M0.3 retains the qualified seam:
+the qualification module's `load` and the `ArchitectureProof` component use the generated
+public view type with readonly string fields. Invalid numeric `maturityCode` props
+are rejected by strict TypeScript. This is why GenType
 is materially better here than direct JS inference or hand-maintained declarations.
 It is built into ReScript and adds no dependency. Its generated, localized
 `as any` assignment attaches the compiler-derived interface to the JS export;
@@ -146,7 +150,7 @@ framework/type acceptance gate.
 production Next route types and export validators, then checks them with strict
 TypeScript. Run it after consequential framework/route changes and before checkpoint
 completion. `just build` likewise generates and checks production validators;
-`just check` sequences the canonical typecheck, build, and Chromium browser smoke.
+`just check` adds pure unit tests before canonical typecheck, build, and Chromium smoke.
 Use these workflows sequentially with dev startup; they share generated type state
 and `next-env.d.ts`. Re-evaluate this version-sensitive workaround when Next is
 upgraded, using the newly installed bundled documentation rather than assuming
@@ -160,7 +164,9 @@ hydrates and updates state in development and production without console/hydrati
 errors in the passing browser runs. Rendering grants no authorization.
 
 `.res.mjs`, `.gen.tsx`, `lib/`, `.next/`, and Next's `next-env.d.ts` are ignored.
-Compiler output is never hand-edited. `just clean` followed by `just build`
+Compiler output is never hand-edited. GenType seams can remain after a source move;
+`just clean` removes the narrow `src/**/*.gen.tsx` generated suffix as well as
+compiler/build state. `just clean` followed by `just build`
 regenerates the seam and production output from source. Tests never install
 dependencies or silently build: run `just build` before `just test-e2e`; `just check`
 already provides that order.
@@ -168,10 +174,12 @@ already provides that order.
 ## Browser qualification and native limitations
 
 The same two production scenarios run for each configured engine. One disables
-JavaScript and asserts that the ReScript heading and server paragraph are visible
+JavaScript and asserts that the ReScript heading and authorized sample are visible
 in the rendered page, so embedded script/RSC payload text cannot satisfy the SSR
 proof. The separate default JavaScript-enabled scenario checks hydration, counter
 updates, and browser errors; it does not expect interaction with JavaScript disabled.
+The SSR scenario also checks that withheld samples are absent. Pure policy and
+decoder tests remain separate from these framework-boundary scenarios.
 
 Playwright controls browser revisions. The normal Linux user cache,
 `~/.cache/ms-playwright`, avoids a second project-local browser store and can be

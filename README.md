@@ -16,9 +16,10 @@ implementation. Its intended repository identity is `adarj/grocery-pos-website`.
 
 ## Current status
 
-Internal/preproduction; **Website M0.2 — Reproducible Toolchain & Framework
-Spike**. The root page is an engineering proof: a ReScript server component and
-an interactive ReScript counter. It is not a marketing homepage or released product.
+Internal/preproduction; **Website M0.3 — Application Boundary & Source Architecture**.
+The root page demonstrates a ReScript-owned public capability projection and an
+isolated hydration counter. All capability data is fictional qualification data,
+not product claims. See the [source architecture](docs/architecture/source-layout.md).
 
 **Next routes. ReScript models. React presents. APIs connect.**
 
@@ -54,16 +55,12 @@ just --list
 just dev
 ```
 
-Before the first human commit tracks the new flake files, use `nix develop path:.`
-for review; Git-backed Nix flake discovery omits untracked files. Do not stage
-files merely to enter the shell. After that commit, ordinary `nix develop` and
-`use flake` apply.
-
 Production and browser qualification:
 
 ```bash
 just browsers             # Explicit Playwright binary provisioning, once per revision
-just check                # Compiler, strict TS, production build, Chromium smoke
+just test-unit            # Pure ReScript publication/decoding rules via Node's test runner
+just check                # Unit tests, strict TS, production build, Chromium smoke
 just test-e2e             # Full Chromium / Firefox / WebKit matrix after a build
 just start                # Serve the last production build on 127.0.0.1:3000
 ```
@@ -74,8 +71,8 @@ reports that failure rather than skipping it. See the [toolchain qualification
 record](docs/engineering/toolchain.md) for versions, interop, native-runtime limits,
 and workflow details. Browser provisioning never installs host OS packages.
 
-M0.3 will establish durable source architecture; M0.4 owns language-bearing routing.
-The spike's temporary English text establishes no market or currency defaults.
+M0.4 owns language-bearing routing. Temporary engineering text establishes no
+market or currency defaults. Development diagnostics do not replace `just typecheck`.
 
 Agents leave changes for human review and a human signed commit; see the
 [Git workflow](docs/agents/git-workflow.md).

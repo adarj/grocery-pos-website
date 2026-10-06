@@ -1,8 +1,10 @@
 # Testing strategy
 
-This is the broader test plan. M0.2 implements compiler/strict TypeScript checks,
-production build/smoke, and a small Playwright scenario; see the
-[toolchain record](toolchain.md). Unit/component/a11y tooling remains planned.
+This is the broader test plan. M0.2 implements compiler/strict TypeScript checks
+and production/browser smoke; see the [toolchain record](toolchain.md). M0.3 adds
+direct ReScript domain/application tests through Node's built-in runner; see the
+[source boundary record](../architecture/source-layout.md). Component/a11y tooling
+and CI remain planned.
 
 ## Intended verification layers
 
@@ -31,8 +33,9 @@ production build/smoke
 
 ReScript compiler/type checking, **Vitest**, **React Testing Library** where
 appropriate, **Playwright**, and an accessibility smoke tool such as **axe** are
-the initial tool intentions. M0.2 and later checkpoints must qualify compatible
-versions and integration before publishing commands. Install none during M0.1.
+the broader tool intentions. M0.3's small pure suite needs no Vitest dependency;
+reconsider it when runner features justify it. Qualify compatible versions and
+integration before publishing new commands.
 
 ## Scope and reliability
 

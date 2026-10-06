@@ -1,13 +1,15 @@
 @genType
-type view = {id: string, maturityCode: string}
+type maturityCode = [#AVAILABLE | #PILOT | #PREVIEW | #PLANNED | #INTERNAL]
+@genType
+type view = {id: string, maturityCode: maturityCode}
 
 let maturityCode = maturity =>
   switch maturity {
-  | Capability.Available => "AVAILABLE"
-  | Pilot => "PILOT"
-  | Preview => "PREVIEW"
-  | Planned => "PLANNED"
-  | Internal => "INTERNAL"
+  | Capability.Available => #AVAILABLE
+  | Pilot => #PILOT
+  | Preview => #PREVIEW
+  | Planned => #PLANNED
+  | Internal => #INTERNAL
   }
 
 let present = capability =>

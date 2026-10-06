@@ -89,8 +89,8 @@ client JavaScript. [Security](../engineering/security-baseline.md),
 - How ReScript/React code participates in Server and Client Components, including
   directive placement and transitive imports; no claim of compatibility by assumption.
 - A minimal framework route sufficient to prove the stack, without prematurely
-  adding commerce, auth, or provider architecture. Language-bearing routing belongs
-  to M0.4; the engineering proof remains temporarily served at `/`.
+  adding commerce, auth, or provider architecture. M0.4 serves the engineering proof
+  at `/en`, with root-only public language redirection and a development-only pseudo route.
 
 M0.2 established this foundation; see the
 [toolchain record](../engineering/toolchain.md) for empirical results and browser limits.
@@ -98,7 +98,10 @@ M0.3 now proves the inward dependency direction with a fictional capability slic
 domain construction defaults to withholding, application code decides public
 eligibility, and server-rendered UI receives only the public view. See the
 [actual source layout](source-layout.md). This is neither a production ledger nor
-a real publication-approval system.
+a real publication-approval system. M0.4 adds typed language/messages and localized
+metadata after the public-safe projection, without changing disclosure policy.
+See the [internationalization foundation](internationalization.md) for actual routing
+and production exclusion rules.
 
 The selected foundation stands unless this proof exposes a concrete contradiction.
 Record such findings before revising an ADR. Hosting and other unresolved choices

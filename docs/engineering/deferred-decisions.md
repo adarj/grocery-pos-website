@@ -19,7 +19,8 @@ calls for evidence and a decision; it does not automatically authorize implement
 | Consent-management system | Actual data processing, scripts, and jurisdictions are unknown | Before introducing processing that requires consent decisions |
 | CMS | Authoring roles and content workflow are unproven | Sustained content maintenance with demonstrated editorial needs |
 | Docs search backend | No corpus or search behavior to assess | Documentation scale/queries justify search |
-| Final translation/i18n library | Resource and language-routing needs are unproven | M0.4 routing qualification, then early pseudo-localization/multilingual content |
+| Final translation/i18n library | M0.4's typed messages/pseudo transform need no full framework | Real multilingual editorial, plural/interpolation, or resource-loading requirements |
+| Canonical public origin and final canonical/hreflang/sitemap URLs | No production origin or real second language exists | First public deployment/SEO requirements; derive languages from public exposure |
 | Country-specific domains | Language architecture does not define market rollout | Real country/SEO/commercial deployment requirements |
 | Account subdomain vs `/account` | Isolation and navigation requirements are unspecified | Account deployment/security design |
 | GraphQL | No API consumers or query needs justify it | Concrete API contract needs showing benefit over simpler interfaces |

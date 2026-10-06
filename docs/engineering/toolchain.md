@@ -1,10 +1,11 @@
 # M0.2 toolchain qualification
 
-M0.2 qualified the foundation recorded here. M0.3 now uses that stack for the
+M0.2 qualified the foundation recorded here. M0.3–M0.4 use that stack for the
 fictional capability-publication slice documented in the
 [source architecture](../architecture/source-layout.md). The server-tree proof is
-replaced; the counter remains an isolated client qualification control. Language
-routes and the visual system remain M0.4 and M1 work respectively.
+replaced; the counter remains an isolated client qualification control.
+M0.4's [language/message boundary](../architecture/internationalization.md) serves
+the proof at `/en`. The visual system remains M1 work.
 
 ## Ownership and environment
 
@@ -119,7 +120,9 @@ In M0.2, the server export's `@genType` produced a typed `title: string` prop.
 A comparison experiment showed direct unchecked `.res.mjs` imports accepted
 `title: 42`, while GenType rejected it with TS2322. M0.3 retains the qualified seam:
 the qualification module's `load` and the `ArchitectureProof` component use the generated
-public view type with readonly string fields. Invalid numeric `maturityCode` props
+public view type with readonly fields. M0.4 narrows maturity codes to a closed string
+union and adds a typed language prop; the generated seam remains authoritative.
+Invalid numeric `maturityCode` props
 are rejected by strict TypeScript. This is why GenType
 is materially better here than direct JS inference or hand-maintained declarations.
 It is built into ReScript and adds no dependency. Its generated, localized
@@ -173,13 +176,16 @@ already provides that order.
 
 ## Browser qualification and native limitations
 
-The same two production scenarios run for each configured engine. One disables
+The production scenarios run for each configured engine. One disables
 JavaScript and asserts that the ReScript heading and authorized sample are visible
 in the rendered page, so embedded script/RSC payload text cannot satisfy the SSR
 proof. The separate default JavaScript-enabled scenario checks hydration, counter
 updates, and browser errors; it does not expect interaction with JavaScript disabled.
 The SSR scenario also checks that withheld samples are absent. Pure policy and
-decoder tests remain separate from these framework-boundary scenarios.
+decoder tests remain separate from these framework-boundary scenarios. M0.4 also
+asserts `/en` language/direction and metadata, temporary root redirection, strict
+unsupported-language 404s, and production pseudo exclusion. Controlled dev pseudo
+qualification does not change the production test server's mode.
 
 Playwright controls browser revisions. The normal Linux user cache,
 `~/.cache/ms-playwright`, avoids a second project-local browser store and can be
@@ -240,9 +246,11 @@ Node environment and project-local dev endpoint. Preserve approval for mutating
 actions; do not grant blanket tool approval. No profile or project MCP configuration
 was modified. See the installed `01-app/02-guides/mcp.md` and
 `01-app/02-guides/ai-agents.md` before configuring it.
-The live `/_next/mcp` endpoint returned its tool list and the sole App Router route,
-`/`. Its `get_errors` query requires a connected browser session; querying after
+At M0.2 qualification, the live `/_next/mcp` endpoint returned its tool list and
+the then-sole App Router route, `/`. Its `get_errors` query requires a connected browser session; querying after
 the smoke browser closed returned that limitation rather than an error-free result.
+M0.4 used the human-configured MCP against `/[lang]`; connected pseudo-page metadata,
+compilation issues, and runtime errors supplemented browser/static qualification.
 
 All six M0.1 ADRs remain valid. The accepted architecture is unchanged; only the
 old milestone description of language routing was aligned with M0.4. Hosting,

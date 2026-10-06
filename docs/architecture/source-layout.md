@@ -1,19 +1,26 @@
 # Source layout and application boundary
 
-M0.3 proves the responsibility map with a small capability-publication slice.
+M0.3 proves the responsibility map with a small capability-publication slice;
+M0.4 adds a typed internationalization boundary over that slice.
 This is an engineering surface with fictional fixtures, not a capability ledger.
 
 ## Actual source structure
 
 ```text
 app/
-  layout.tsx                          Next document/layout seam
-  page.tsx                            Obtain typed views and render the ReScript page
+  [lang]/layout.tsx                   Validated HTML language/direction, static params, metadata
+  [lang]/page.tsx                     Obtain typed views/language and render the ReScript page
   globals.css                         Minimal qualification-page CSS
+proxy.ts                              Bare-root temporary public language redirect
 src/
   domain/Capability.res + .resi        Opaque capability, maturity, disclosure, decoder
   application/
     CapabilityPresentation.res + .resi Public eligibility and minimal view projection
+  i18n/
+    Language.res + .resi              Registry, exposure, direction, route validation/selection
+    Messages.res + .resi              Semantic keys, private English catalog, resolved labels
+    PseudoLocalization.res            Deterministic human-message qualification transform
+  adapters/next/language.ts            Registry result to Next notFound/mode seam
   qualification/CapabilityProofData.res Fictional sample composition for architecture proof
   ui/
     ArchitectureProof.res             Engineering-page composition; GenType component export
@@ -21,6 +28,7 @@ src/
     qualification/Counter.res         Isolated M0.2 hydration qualification island
 tests/
   unit/CapabilityPublicationTest.res   Direct pure-core tests, compiled for Node's test runner
+  unit/InternationalizationTest.res    Language, exposure, messages, and pseudo invariants
   e2e/framework-smoke.spec.ts          Visible SSR without JS, then interactive hydration
   tooling/dev-supervisor.test.mjs      Isolated process-group regression fixtures
 ```
@@ -32,16 +40,20 @@ qualification; it is not an application feature or a design-system primitive.
 ## Dependency direction
 
 ```text
-app/page.tsx --> qualification/CapabilityProofData --> application --> domain
-            --> ui/ArchitectureProof --> ui/CapabilityList --> application view type
-                                     --> ui/qualification/Counter (client island)
+proxy.ts --> i18n/Language (public-only root selection)
+app/[lang] --> adapters/next/language --> i18n/Language
+           --> qualification/CapabilityProofData --> application --> domain
+           --> ui/ArchitectureProof --> ui/CapabilityList --> application view type
+                                    --> i18n/Messages --> i18n/Language
+                                    --> ui/qualification/Counter (resolved labels; client island)
 ```
 
 Domain code imports no Next, React, browser, or provider APIs. Application code
 depends on the domain and owns whether a public view exists. The list receives
-only `id` and `maturityCode`, never publication internals, and makes no eligibility
-decision. UI imports of the application view are type dependencies; the policy
-implementation is not part of the client island.
+only `id` and a closed semantic `maturityCode`, never publication internals, and makes
+no eligibility decision. `Messages` maps these codes exhaustively to display labels.
+UI imports of the application view are type dependencies; policy and catalogs are
+not part of the client island.
 
 The qualification module owns the fictional sample inputs and calls the application
 projection. Qualification artifacts exercise architectural/runtime properties;
@@ -52,7 +64,9 @@ result to the generated ReScript component interface. There are no handwritten
 TypeScript model mirrors, unchecked route imports, speculative ports, or extra
 network hops. Being called by a Next page does not make this module a Next adapter.
 Next request/cache/metadata details belong in framework entrypoints or genuine
-framework interoperability seams under `adapters/next` when required.
+framework interoperability seams under `adapters/next`. M0.4's language adapter
+translates registry failure to `notFound()` and limits qualification exposure by
+the framework's development mode; it owns no catalog or disclosure decisions.
 
 ## Capability and publication boundary
 
@@ -69,9 +83,9 @@ into a customer offering. Production claims still require evidence, scope, and
 publication review under the [claims policy](../product/public-capability-claims.md).
 
 The domain stores structured maturity, not formatted English prose. View codes
-are stable semantic values, not a final translation catalog or localized labels.
-M0.4 can map them to messages at the presentation boundary; no language, market,
-currency, or jurisdiction is inferred here. The sample IDs identify fictional
+are closed uppercase semantic values, not localized labels. M0.4 maps them to typed
+messages after projection; no formatting locale, market, currency, or jurisdiction
+is inferred here. The sample IDs identify fictional
 engineering examples, not product names.
 
 ## Interfaces and decoding
@@ -93,18 +107,18 @@ does not approve disclosure.
 
 ## Future responsibilities, introduced only when needed
 
-- `src/i18n/`: language/resources/formatting boundaries in M0.4, with market and
-  commercial context kept distinct.
+- Formatting-locale and commercial context remain future separate concerns;
+  the implemented [i18n boundary](internationalization.md) handles content language only.
 - `src/infrastructure/`: concrete external I/O, HTTP clients, storage and privileged
   provider implementations behind application boundaries. No such I/O exists yet.
 - `src/adapters/`: framework/library interoperability and boundary translations.
-  No such source directory is needed yet; a Next caller alone does not justify one.
+  M0.4 introduces the real Next validation seam; a Next caller alone does not justify one.
   A concrete provider network implementation belongs in infrastructure; do not
   duplicate wrappers across these areas merely to populate folders.
 - UI primitives/layout, shared styles/tokens, and reviewed content grow when real
   repeated needs justify them; M0.3 creates none of that scaffolding.
 
-No empty i18n, infrastructure, third-party, design-system, or content directories
+No empty infrastructure, third-party, design-system, or content directories
 were created. Reject large route files, generic `lib/` dumping grounds, broad UI
 provider authority, and abstraction solely to match a diagram.
 

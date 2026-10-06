@@ -35,7 +35,7 @@ test("separate disclosure approval produces the public projection", () => {
   switch CapabilityPresentation.present(capability) {
   | Some(view) => {
       expectTrue(view.id == "approved-sample")
-      expectTrue(view.maturityCode == "PREVIEW")
+      expectTrue(view.maturityCode == #PREVIEW)
     }
   | None => expectTrue(false)
   }
@@ -48,7 +48,7 @@ test("explicitly approved INTERNAL information stays INTERNAL, not an available 
     ~publication=ApprovedForPublicDisclosure,
   )
   switch CapabilityPresentation.present(capability) {
-  | Some(view) => expectTrue(view.maturityCode == "INTERNAL")
+  | Some(view) => expectTrue(view.maturityCode == #INTERNAL)
   | None => expectTrue(false)
   }
 })

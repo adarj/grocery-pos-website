@@ -1,13 +1,11 @@
 @genType
 @react.component
-let make = (~capabilities: array<CapabilityPresentation.view>) => {
+let make = (~capabilities: array<CapabilityPresentation.view>, ~language: Language.t) => {
   <main>
-    <h1> {React.string("Grocery POS Website — M0.3 architecture proof")} </h1>
-    <p> {React.string("Publication decisions come from the ReScript application boundary.")} </p>
-    <p>
-      {React.string("Fictional qualification data; no Grocery POS product availability is claimed.")}
-    </p>
-    <CapabilityList capabilities />
-    <Counter />
+    <h1> {React.string(Messages.get(language, PageTitle))} </h1>
+    <p> {React.string(Messages.get(language, ArchitectureExplanation))} </p>
+    <p> {React.string(Messages.get(language, FictionalDisclaimer))} </p>
+    <CapabilityList capabilities language />
+    <Counter labels={Messages.counterLabels(language)} />
   </main>
 }

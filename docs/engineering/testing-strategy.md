@@ -3,8 +3,10 @@
 This is the broader test plan. M0.2 implements compiler/strict TypeScript checks
 and production/browser smoke; see the [toolchain record](toolchain.md). M0.3 adds
 direct ReScript domain/application tests through Node's built-in runner; see the
-[source boundary record](../architecture/source-layout.md). Component/a11y tooling
-and CI remain planned.
+[source boundary record](../architecture/source-layout.md). M0.4 adds pure registry/message
+tests and production redirect, invalid-language, metadata, SSR, and hydration scenarios;
+development pseudo qualification is recorded in the
+[i18n foundation](../architecture/internationalization.md). Component/a11y tooling and CI remain planned.
 
 ## Intended verification layers
 

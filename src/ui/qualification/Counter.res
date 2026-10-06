@@ -3,14 +3,17 @@
 // Retained solely to qualify ReScript hydration; capability presentation is server-only.
 
 @react.component
-let make = () => {
+let make = (~labels: Messages.counterLabels) => {
   let (count, setCount) = React.useState(() => 0)
 
-  <section ariaLabel="Client component proof">
-    <h2> {React.string("ReScript client interaction")} </h2>
-    <p ariaLive=#polite> {React.string("Count: " ++ Int.toString(count))} </p>
+  <section ariaLabel=labels.section>
+    <h2> {React.string(labels.heading)} </h2>
+    <dl>
+      <dt> {React.string(labels.count)} </dt>
+      <dd> <output ariaLabel=labels.count ariaLive=#polite> {React.int(count)} </output> </dd>
+    </dl>
     <button onClick={_ => setCount(previous => previous + 1)}>
-      {React.string("Increment counter")}
+      {React.string(labels.increment)}
     </button>
   </section>
 }

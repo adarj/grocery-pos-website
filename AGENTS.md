@@ -22,8 +22,10 @@ contradictions rather than silently substituting another architecture.
   hidden UI never establishes authorization.
 - Accessibility is correctness: target WCAG 2.2 AA, and prefer semantic HTML and
   native controls before custom abstractions.
-- Internationalization is architectural. Language, formatting locale, market,
-  currency, and tax jurisdiction are distinct; English implies neither US nor USD.
+- Internationalization is architectural. `/[lang]` uses the typed language registry;
+  pseudo content is qualification-only. Use typed messages for implemented UI text.
+  Language, formatting locale, market, currency, tax jurisdiction, and direction
+  are distinct; English implies neither US nor USD.
 - Public claims require evidenced product maturity and separate authoritative
   publication/disclosure approval. Withhold information without that approval;
   follow the [capability claims policy](docs/product/public-capability-claims.md).
@@ -54,8 +56,8 @@ contradictions rather than silently substituting another architecture.
 
 ## Checkpoint and Git limits
 
-M0.3 proves application/source boundaries with fictional capability data. Do not
-expand into M0.4 routing/i18n, a production ledger, providers, or product/design work.
+M0.4 establishes language routing/messages over fictional qualification data. Do not
+expand into M0.5 quality/CI, real translations, a production ledger, providers, or design work.
 Use the [source layout](docs/architecture/source-layout.md) for placement and interfaces.
 Do not alter global Codex/MCP configuration.
 Nix must already work in the outer Linux environment; never bootstrap a substitute.
@@ -63,7 +65,7 @@ Nix must already work in the outer Linux environment; never bootstrap a substitu
 Do not commit, push, merge, rebase, reset, tag, create releases, force-update refs,
 perform destructive Git operations, or create/modify GitHub remotes. Safe Git
 status/diff/read operations are allowed. A later explicit human instruction is
-required to authorize an exception; M0.3 authorizes none. Do not stage, cherry-pick,
+required to authorize an exception; M0.4 authorizes none. Do not stage, cherry-pick,
 or create/delete/switch branches. Leave implementation,
 validation results, and a suggested commit message for human review.
 

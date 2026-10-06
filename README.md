@@ -16,10 +16,14 @@ implementation. Its intended repository identity is `adarj/grocery-pos-website`.
 
 ## Current status
 
-Internal/preproduction; **Website M0.3 — Application Boundary & Source Architecture**.
-The root page demonstrates a ReScript-owned public capability projection and an
-isolated hydration counter. All capability data is fictional qualification data,
-not product claims. See the [source architecture](docs/architecture/source-layout.md).
+Internal/preproduction; **Website M0.4 — Internationalized Routing Foundation**.
+`/` redirects to `/en`, the sole public content language. The engineering page
+demonstrates a ReScript-owned public capability projection and an isolated hydration
+counter. All capability data is fictional qualification data, not product claims.
+Development-only `/en-XA` derives expanded pseudo messages from English; production
+rejects it and all unsupported languages. See the
+[i18n foundation](docs/architecture/internationalization.md) and
+[source architecture](docs/architecture/source-layout.md).
 
 **Next routes. ReScript models. React presents. APIs connect.**
 
@@ -59,7 +63,7 @@ Production and browser qualification:
 
 ```bash
 just browsers             # Explicit Playwright binary provisioning, once per revision
-just test-unit            # Pure ReScript publication/decoding rules via Node's test runner
+just test-unit            # Pure publication, decoding, language, and message tests
 just check                # Unit tests, strict TS, production build, Chromium smoke
 just test-e2e             # Full Chromium / Firefox / WebKit matrix after a build
 just start                # Serve the last production build on 127.0.0.1:3000
@@ -71,8 +75,9 @@ reports that failure rather than skipping it. See the [toolchain qualification
 record](docs/engineering/toolchain.md) for versions, interop, native-runtime limits,
 and workflow details. Browser provisioning never installs host OS packages.
 
-M0.4 owns language-bearing routing. Temporary engineering text establishes no
-market or currency defaults. Development diagnostics do not replace `just typecheck`.
+With `just dev` running, visit `/en` or `/en-XA` for controlled pseudo qualification.
+Content language establishes no formatting-locale, market, currency, or tax defaults.
+Development diagnostics do not replace `just typecheck`.
 
 Agents leave changes for human review and a human signed commit; see the
 [Git workflow](docs/agents/git-workflow.md).

@@ -5,8 +5,9 @@ fictional capability-publication slice documented in the
 [source architecture](../architecture/source-layout.md). The server-tree proof is
 replaced; the counter remains an isolated client qualification control.
 M0.4's [language/message boundary](../architecture/internationalization.md) serves
-the proof at `/en`. M0.5 adds [quality/CI gates](quality-and-ci.md) and pending
-Ubuntu x86_64 qualification. The visual system remains M1 work.
+the proof at `/en`. M0.5's first [quality/CI run](quality-and-ci.md) qualifies Ubuntu
+x86_64 runtime and Chromium/Firefox; WebKit navigation remains blocked by a likely
+upstream bundle defect. The visual system remains M1 work.
 
 ## Ownership and environment
 
@@ -21,14 +22,15 @@ is optional. Do not inherit the POS repository's flake or `PROJECT_ROOT`.
 
 Nix supplies Node, the pnpm executable, and just. pnpm supplies all JS packages and
 owns `pnpm-lock.yaml`. The flake uses `mkShellNoCC`, one Nixpkgs input, no helper
-library or overlays, and exposes `aarch64-linux` and `x86_64-linux` shells. ARM64 is
-the execution-qualified system; x86_64 is evaluated, not runtime-qualified here.
+library or overlays, and exposes `aarch64-linux` and `x86_64-linux` shells. Both
+are execution-qualified: ARM64 locally and x86_64 in CI run 37550037169 at commit
+`963a82f3b48d6e1c4d15668cd66544f3eee27e8f`; see the [remote evidence](quality-and-ci.md).
 
 ## Versions
 
 | Tool | Qualified selection |
 | --- | --- |
-| Outer Nix | 2.34.7; an environment observation, not installed by this repository |
+| Outer Nix | 2.34.7 locally / 2.35.2 in CI; environment observations, not installed by this repository |
 | Nixpkgs | `nixos-26.05`, revision `0d9e9b832d03ac387417e16ce1febf73b2e631e1` |
 | Node | 24.21.0 (LTS) |
 | pnpm | 12.9.0 |
@@ -224,11 +226,17 @@ target exists in Playwright, but changing its fallback/platform assumptions was
 not adopted merely to obtain a green matrix. No extra Nix input or custom legacy
 library derivation is justified by this small spike.
 
-Full WebKit qualification remains open on a compatible supported Linux runtime
-or a deliberately qualified Nix native-runtime solution; future x86_64 CI may
-supply additional evidence. `just test-e2e` keeps the failing WebKit project enabled.
-The foundation is qualified with a **conditional browser-matrix result**, not a
-claim that all Linux hosts or all engines have passed.
+Ubuntu 24.04 x86_64 CI now qualifies the shell, frozen install, core quality,
+and all seven Chromium/Firefox scenarios. WebKit launches and passes three request/API
+scenarios, but four document-navigation scenarios fail before a recorded HTTP response.
+Playwright 1.63.0 / `webkit-2359` matches an upstream libsoup 3.6.5 network-process defect;
+the local ARM64 fallback bundle also contains that version. Exact CI crash causation
+remains an inference without a native stack or fixed-build A/B result.
+See the [run, traces, upstream links, and stable 1.64 trigger](quality-and-ci.md).
+
+`just test-e2e` and `just ci` keep WebKit required and blocking. M0.5 remains
+**conditional** until supported-host WebKit navigation and the complete gate pass.
+Fedora's native-runtime limitation is separate and is not retired by x86_64 evidence.
 
 ## Supply chain and framework guidance
 
@@ -267,4 +275,5 @@ All six M0.1 ADRs remain valid. The accepted architecture is unchanged; only the
 old milestone description of language routing was aligned with M0.4. Hosting,
 commercial authority integrations, authentication, real translations, and the
 design system remain outside this spike. M0.5's quality/CI expansion is recorded
-separately above and still requires remote qualification.
+separately above; remote x86_64/Chromium/Firefox qualification has passed, while
+successful supported-host WebKit qualification remains required before M0.5 acceptance.

@@ -33,8 +33,11 @@ calls for evidence and a decision; it does not automatically authorize implement
 
 Exact dependency versions, ReScript output conventions, and executable commands
 are **M0.2 proof work**, rather than unresolved product architecture. CI/test
-configuration is implemented locally in M0.5; real remote execution remains
-pending under the [quality/CI contract](quality-and-ci.md).
+configuration is implemented in M0.5. CI run 37550037169 qualifies the x86_64
+runtime and Chromium/Firefox; WebKit navigation remains a likely upstream blocker.
+Stable Playwright 1.64 with the promised Linux bundle fix is the preferred targeted
+upgrade trigger, subject to human approval and a successful unchanged full CI gate.
+See the [qualification evidence and remaining acceptance boundary](quality-and-ci.md).
 
 When a trigger arrives, identify the owner/requirement, evaluate the smallest
 adequate options, and record the outcome in an ADR or scoped engineering document.

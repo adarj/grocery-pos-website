@@ -10,8 +10,9 @@ accessibility audit, WCAG conformance, benchmark, or working design system.
 `/en` page. The selected, verified tags are `wcag2a`, `wcag2aa`, `wcag21a`,
 `wcag21aa`, and `wcag22aa` (70 rules in this version). There are no disabled rules
 or element exclusions; any reported violation fails the test. Local Chromium and
-Firefox scans passed with zero violations. Full supported Ubuntu browser
-qualification is pending the real CI run.
+Firefox scans passed with zero violations. Ubuntu x86_64 CI also passes both
+engines' axe and keyboard scenarios; WebKit fails navigation before its scan can run.
+See the [remote evidence and remaining blocker](quality-and-ci.md).
 
 A separate keyboard smoke tabs to the named native Counter button, verifies a
 visible focus treatment, activates it with Enter and Space, and checks the count

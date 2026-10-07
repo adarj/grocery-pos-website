@@ -8,7 +8,8 @@ tests and production redirect, invalid-language, metadata, SSR, and hydration sc
 development pseudo qualification is recorded in the
 [i18n foundation](../architecture/internationalization.md). M0.5 adds lint/format,
 supervisor acceptance, security response tests, axe/keyboard smoke, and a
-[CI workflow](quality-and-ci.md) awaiting remote execution. Component-unit tooling remains deferred.
+[CI workflow](quality-and-ci.md) with x86_64/Chromium/Firefox qualification and a
+remaining WebKit navigation blocker. Component-unit tooling remains deferred.
 
 ## Intended verification layers
 

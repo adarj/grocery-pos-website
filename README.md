@@ -18,8 +18,9 @@ implementation. Its intended repository identity is `adarj/grocery-pos-website`.
 
 Internal/preproduction; **Website M0.5 — Quality, Security & CI Foundation**.
 Local acceptance includes linting, accessibility smoke, security headers, and CSP.
-The Ubuntu x86_64 workflow requires real remote execution before final acceptance;
-see [quality and CI](docs/engineering/quality-and-ci.md).
+The first Ubuntu x86_64 CI run qualifies the toolchain and Chromium/Firefox;
+WebKit navigation remains a likely upstream blocker. M0.5 is conditional and must
+not yet merge; see [quality and CI](docs/engineering/quality-and-ci.md).
 `/` redirects to `/en`, the sole public content language. The engineering page
 demonstrates a ReScript-owned public capability projection and an isolated hydration
 counter. All capability data is fictional qualification data, not product claims.
@@ -76,8 +77,9 @@ just start                # Serve the last production build on 127.0.0.1:3000
 
 Chromium and Firefox passed on the current ARM64 Fedora development environment.
 WebKit's Ubuntu fallback lacks compatible native libraries there; the full matrix
-reports that failure rather than skipping it. Ubuntu CI targets all three engines;
-remote evidence is still pending. See the [toolchain qualification
+reports that failure rather than skipping it. Ubuntu CI ran all three engines:
+Chromium/Firefox passed; WebKit remains required and blocking after an internal
+navigation error matching an upstream bundle defect. See the [toolchain qualification
 record](docs/engineering/toolchain.md) for versions, interop, native-runtime limits,
 and workflow details. Local `just browsers` never installs host OS packages;
 CI provisions system libraries only on its disposable Ubuntu runner.

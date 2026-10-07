@@ -30,6 +30,9 @@ tests/
   unit/CapabilityPublicationTest.res   Direct pure-core tests, compiled for Node's test runner
   unit/InternationalizationTest.res    Language, exposure, messages, and pseudo invariants
   e2e/framework-smoke.spec.ts          Visible SSR without JS, then interactive hydration
+  e2e/accessibility.spec.ts            Whole-page axe and native keyboard/focus behavior
+  e2e/security-headers.spec.ts         Production page/redirect/404 HTTP security policy
+  e2e/browser-diagnostics.ts           Shared browser/hydration/CSP error gate
   tooling/dev-supervisor.test.mjs      Isolated process-group regression fixtures
 ```
 
@@ -150,8 +153,9 @@ remain in the server tree. Static HTML/RSC output contains neither withheld samp
 identifier. Chromium and Firefox pass both production smoke scenarios on the
 current ARM64 host; WebKit retains the M0.2 native-runtime qualification limit.
 
-`just check` sequences unit tests, canonical strict typecheck, production build,
-and Chromium smoke. Development feedback is not full framework/type acceptance;
+M0.5's [quality/CI contract](../engineering/quality-and-ci.md) adds lint/format,
+supervisor, and production accessibility/security gates to `just check`.
+Development feedback is not full framework/type acceptance;
 retain the sequential, version-sensitive Next type workflow in the
 [toolchain record](../engineering/toolchain.md). Full browser qualification remains
 `just test-e2e`, with the known local WebKit native-runtime limitation reported.

@@ -5,7 +5,8 @@ fictional capability-publication slice documented in the
 [source architecture](../architecture/source-layout.md). The server-tree proof is
 replaced; the counter remains an isolated client qualification control.
 M0.4's [language/message boundary](../architecture/internationalization.md) serves
-the proof at `/en`. The visual system remains M1 work.
+the proof at `/en`. M0.5 adds [quality/CI gates](quality-and-ci.md) and pending
+Ubuntu x86_64 qualification. The visual system remains M1 work.
 
 ## Ownership and environment
 
@@ -56,7 +57,8 @@ the spike qualifies actual Next behavior rather than assuming identical internal
 
 Enter `nix develop`, then install with `pnpm install --frozen-lockfile`. The
 `packageManager` field matches Nix's pnpm, and engines require the Node 24 line.
-Neither field replaces the pinned shell. There is one application and no workspace.
+Neither field replaces the pinned shell. There is one application; M0.5's
+`pnpm-workspace.yaml` supplies only root lifecycle policy, not extra packages.
 
 During pre-commit review, untracked flake files require `nix develop path:.`.
 Do not stage files for Nix. After the human tracks them, ordinary `nix develop`
@@ -73,6 +75,8 @@ direnv.
 | --- | --- |
 | `just dev` | Initial ReScript build, then one managed ReScript watcher and Next dev on `127.0.0.1:3000` |
 | `just rescript` | ReScript 12 `rescript build` |
+| `just lint` | Next flat ESLint/TypeScript over handwritten JS/TS only |
+| `just format-check` | Non-mutating ReScript `format --check` |
 | `just test-unit` | ReScript build → Node's built-in runner for pure domain/application tests |
 | `just typecheck` | ReScript build → `next typegen` → strict `tsc --noEmit` |
 | `just test-supervisor` | Isolated Linux launcher/descendant fixtures for development process cleanup |
@@ -81,7 +85,10 @@ direnv.
 | `just browsers` | Explicit Playwright-controlled browser provisioning; no OS dependency installation |
 | `just test-e2e` | All three browser projects against an owned production server on port 3100; requires build and provisioning first |
 | `just test-e2e --project=firefox` | The same scenario for one selected engine |
-| `just check` | Pure unit tests, typecheck, production build, and Chromium smoke; no implied lint/component/a11y suite |
+| `just test-a11y` | Chromium axe/keyboard smoke after a production build |
+| `just quality` | Lint/format, pure unit/supervisor, typecheck, one production build |
+| `just check` | Quality plus all Chromium production scenarios, including a11y/security |
+| `just ci` | Quality plus all Chromium/Firefox/WebKit scenarios on a supported host |
 | `just clean` | Remove only known generated outputs/build state; preserve source, lockfiles, dependencies, and browser cache |
 
 `scripts/dev.mjs` uses Node's child-process API, without an orchestration dependency.
@@ -153,7 +160,8 @@ framework/type acceptance gate.
 production Next route types and export validators, then checks them with strict
 TypeScript. Run it after consequential framework/route changes and before checkpoint
 completion. `just build` likewise generates and checks production validators;
-`just check` adds pure unit tests before canonical typecheck, build, and Chromium smoke.
+`just check` includes pure unit/supervisor and lint/format checks before canonical
+typecheck, build, and Chromium accessibility/security/framework smoke.
 Use these workflows sequentially with dev startup; they share generated type state
 and `next-env.d.ts`. Re-evaluate this version-sensitive workaround when Next is
 upgraded, using the newly installed bundled documentation rather than assuming
@@ -226,15 +234,18 @@ claim that all Linux hosts or all engines have passed.
 
 Frozen installation succeeded with an unchanged lockfile hash. pnpm 12 reported
 successful supply-chain policy checks. No required lifecycle-script failure or
-approval notice occurred; the installed policy has an empty `allowBuilds` map.
+approval notice occurred during M0.2. M0.5 explicitly denies the lint resolver's
+fallback script through `allowBuilds`; see [quality and CI](quality-and-ci.md).
 Native compiler/SWC payloads arrive through platform-specific packages. No blanket
-script approval, extra workspace policy, or isolation weakening was introduced.
+script approval or isolation weakening was introduced; the single root policy
+only adds the explicit resolver-script denial.
 
 Next decisions were checked against installed `node_modules/next/dist/docs/`:
 manual installation, TypeScript/typegen, server/client boundaries, CLI, AI-agent
 rules, and MCP guidance. Next's managed agent-rule block is retained in `AGENTS.md`.
-No custom Next config, router, server, hosting adapter, or deployment provider was
-needed. Next's ordinary telemetry notice and Playwright's OS/native warnings were
+M0.2 required no custom Next configuration; M0.5 adds normal `next.config.ts`
+headers without a custom router/server, hosting adapter, or deployment provider.
+Next's ordinary telemetry notice and Playwright's OS/native warnings were
 observed; they are not application failures. Color-variable notices under the tool
 runner do not affect test results.
 
@@ -254,5 +265,6 @@ compilation issues, and runtime errors supplemented browser/static qualification
 
 All six M0.1 ADRs remain valid. The accepted architecture is unchanged; only the
 old milestone description of language routing was aligned with M0.4. Hosting,
-commercial authority integrations, authentication, translations, testing/CI expansion,
-and the design system remain outside this spike.
+commercial authority integrations, authentication, real translations, and the
+design system remain outside this spike. M0.5's quality/CI expansion is recorded
+separately above and still requires remote qualification.

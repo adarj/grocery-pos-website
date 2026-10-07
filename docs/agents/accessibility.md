@@ -12,8 +12,8 @@ For interaction changes, check keyboard order, visible/unobscured focus, activat
 and focus return where relevant. Review touch targets, zoom/reflow, contrast,
 non-color error/status cues, reduced motion, and language/direction behavior.
 
-Use automated smoke tooling once available, plus relevant manual keyboard and
-assistive-technology checks. Report limits honestly: a passing axe scan does not
+Use `just test-a11y` for the focused production axe/keyboard smoke, plus relevant
+manual keyboard and assistive-technology checks. Report limits honestly: a passing axe scan does not
 establish WCAG conformance. Scale verification to the affected behavior rather than
 writing tests for a trivial reversible edit.
 

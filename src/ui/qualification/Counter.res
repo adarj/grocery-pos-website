@@ -10,7 +10,9 @@ let make = (~labels: Messages.counterLabels) => {
     <h2> {React.string(labels.heading)} </h2>
     <dl>
       <dt> {React.string(labels.count)} </dt>
-      <dd> <output ariaLabel=labels.count ariaLive=#polite> {React.int(count)} </output> </dd>
+      <dd>
+        <output ariaLabel=labels.count ariaLive=#polite> {React.int(count)} </output>
+      </dd>
     </dl>
     <button onClick={_ => setCount(previous => previous + 1)}>
       {React.string(labels.increment)}

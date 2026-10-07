@@ -7,6 +7,12 @@ dev:
 rescript:
     pnpm run rescript
 
+lint:
+    pnpm run lint
+
+format-check:
+    pnpm run format:check
+
 test-unit:
     pnpm run test:unit
 
@@ -33,9 +39,20 @@ browsers:
 test-e2e *args:
     pnpm run test:e2e {{args}}
 
-# Pure rules plus the routine integration gate; full engine matrix is just test-e2e.
-check: test-unit typecheck build
+# Focused production Chromium scan/keyboard smoke; requires a build.
+test-a11y:
+    pnpm run test:a11y
+
+# Sequential core gates, shared by local and CI aggregates; exactly one build.
+quality: lint format-check test-unit test-supervisor typecheck build
+
+# Fedora ARM64's local WebKit limitation does not relax the CI matrix.
+check: quality
     pnpm run test:e2e --project=chromium
+
+# Supported Ubuntu browser runtime/provisioning is an explicit CI prerequisite.
+ci: quality
+    pnpm run test:e2e
 
 # Only known generated artifacts, never source or dependency lockfiles.
 clean:

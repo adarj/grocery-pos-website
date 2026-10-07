@@ -1,0 +1,4 @@
+# pnpm's project-policy file; this remains one root application, not a monorepo.
+# Linux native bindings arrive as pinned optional packages; no fallback download.
+allowBuilds:
+  unrs-resolver: false

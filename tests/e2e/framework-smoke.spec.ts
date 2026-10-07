@@ -1,4 +1,4 @@
-import { expect, test } from "@playwright/test";
+import { expect, test } from "./browser-diagnostics";
 
 test.describe("visible server-rendered content", () => {
   test.use({ javaScriptEnabled: false });
@@ -26,14 +26,6 @@ test.describe("visible server-rendered content", () => {
 });
 
 test("ReScript client counter hydrates and responds to interaction", async ({ page }) => {
-  const browserErrors: string[] = [];
-  page.on("pageerror", (error) => browserErrors.push(error.message));
-  page.on("console", (message) => {
-    if (message.type() === "error" || /hydrat/i.test(message.text())) {
-      browserErrors.push(message.text());
-    }
-  });
-
   await page.goto("/en");
   await expect(page.getByRole("heading", { name: "Grocery POS Website — M0.4 internationalized architecture proof" })).toBeVisible();
   const counter = page.getByRole("region", { name: "Client component proof" });
@@ -42,7 +34,6 @@ test("ReScript client counter hydrates and responds to interaction", async ({ pa
   await expect(counter.getByRole("status", { name: "Count", exact: true })).toHaveText("1");
   await counter.getByRole("button", { name: "Increment counter" }).click();
   await expect(counter.getByRole("status", { name: "Count", exact: true })).toHaveText("2");
-  expect(browserErrors).toEqual([]);
 });
 
 test("root temporarily redirects only to the public language and preserves query", async ({ request }) => {

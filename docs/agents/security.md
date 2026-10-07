@@ -18,5 +18,6 @@ scripts require their own scoped design/review before introduction, not an incid
 endpoint or script tag.
 
 Document real exposure or incomplete controls in the checkpoint report. Do not
-claim M0.1 implements CSP, authentication, payments, or security headers, and do not
-choose vendors or build those systems during this checkpoint.
+claim M0.5's headers/CSP establish authentication, payments, or HTTPS deployment
+security. Preserve the qualified static policy and revisit inline allowances before
+sensitive surfaces under the [security baseline](../engineering/security-baseline.md).

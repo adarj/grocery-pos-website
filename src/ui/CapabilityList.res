@@ -12,7 +12,7 @@ let make = (~capabilities: array<CapabilityPresentation.view>, ~language: Langua
             <dt> {React.string(Messages.get(language, MaturityLabel))} </dt>
             <dd> {React.string(Messages.get(language, Maturity(view.maturityCode)))} </dd>
             <dt> {React.string(Messages.get(language, CanonicalMaturityCode))} </dt>
-            <dd> {React.string(view.maturityCode :> string)} </dd>
+            <dd> {React.string((view.maturityCode :> string))} </dd>
           </dl>
         </li>
       )

@@ -16,7 +16,10 @@ implementation. Its intended repository identity is `adarj/grocery-pos-website`.
 
 ## Current status
 
-Internal/preproduction; **Website M0.4 — Internationalized Routing Foundation**.
+Internal/preproduction; **Website M0.5 — Quality, Security & CI Foundation**.
+Local acceptance includes linting, accessibility smoke, security headers, and CSP.
+The Ubuntu x86_64 workflow requires real remote execution before final acceptance;
+see [quality and CI](docs/engineering/quality-and-ci.md).
 `/` redirects to `/en`, the sole public content language. The engineering page
 demonstrates a ReScript-owned public capability projection and an isolated hydration
 counter. All capability data is fictional qualification data, not product claims.
@@ -64,16 +67,20 @@ Production and browser qualification:
 ```bash
 just browsers             # Explicit Playwright binary provisioning, once per revision
 just test-unit            # Pure publication, decoding, language, and message tests
-just check                # Unit tests, strict TS, production build, Chromium smoke
+just check                # Lint/format, unit/supervisor, TS, build, Chromium/a11y/security
+just test-a11y            # Focused Chromium axe + keyboard smoke after a build
+just ci                   # Full quality + three browsers; supported runtime required
 just test-e2e             # Full Chromium / Firefox / WebKit matrix after a build
 just start                # Serve the last production build on 127.0.0.1:3000
 ```
 
 Chromium and Firefox passed on the current ARM64 Fedora development environment.
 WebKit's Ubuntu fallback lacks compatible native libraries there; the full matrix
-reports that failure rather than skipping it. See the [toolchain qualification
+reports that failure rather than skipping it. Ubuntu CI targets all three engines;
+remote evidence is still pending. See the [toolchain qualification
 record](docs/engineering/toolchain.md) for versions, interop, native-runtime limits,
-and workflow details. Browser provisioning never installs host OS packages.
+and workflow details. Local `just browsers` never installs host OS packages;
+CI provisions system libraries only on its disposable Ubuntu runner.
 
 With `just dev` running, visit `/en` or `/en-XA` for controlled pseudo qualification.
 Content language establishes no formatting-locale, market, currency, or tax defaults.

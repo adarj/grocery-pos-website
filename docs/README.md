@@ -1,7 +1,8 @@
 # Documentation map
 
 M0.1 records the constitution; M0.2 qualifies the toolchain; M0.3 proves source boundaries;
-M0.4 establishes typed language routing and messages.
+M0.4 establishes typed language routing/messages; M0.5 adds local quality/security
+gates and a CI workflow awaiting remote qualification.
 Architectural choices are policy, not evidence that product features exist.
 
 | Question | Canonical document |
@@ -13,6 +14,7 @@ Architectural choices are policy, not evidence that product features exist.
 | Why were foundational choices made? | [ADR index](adr/README.md) |
 | How should engineering tradeoffs be made? | [Development principles](engineering/development-principles.md) |
 | How do I run and qualify the spike? | [Toolchain record](engineering/toolchain.md) |
+| What do local and CI acceptance gates run? | [Quality and CI](engineering/quality-and-ci.md) |
 | What verification will be introduced? | [Testing strategy](engineering/testing-strategy.md) |
 | What security rules apply already? | [Security baseline](engineering/security-baseline.md) |
 | What are accessibility and performance expectations? | [Accessibility and performance](engineering/accessibility-and-performance.md) |

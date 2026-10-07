@@ -56,8 +56,10 @@ contradictions rather than silently substituting another architecture.
 
 ## Checkpoint and Git limits
 
-M0.4 establishes language routing/messages over fictional qualification data. Do not
-expand into M0.5 quality/CI, real translations, a production ledger, providers, or design work.
+M0.5 establishes quality/security/CI over fictional qualification data. Run `just check`
+locally; `just ci` requires the supported full browser runtime. Remote evidence is
+required before final acceptance; see [quality and CI](docs/engineering/quality-and-ci.md).
+Do not expand into M1, real translations, a production ledger, providers, or design work.
 Use the [source layout](docs/architecture/source-layout.md) for placement and interfaces.
 Do not alter global Codex/MCP configuration.
 Nix must already work in the outer Linux environment; never bootstrap a substitute.
@@ -65,7 +67,7 @@ Nix must already work in the outer Linux environment; never bootstrap a substitu
 Do not commit, push, merge, rebase, reset, tag, create releases, force-update refs,
 perform destructive Git operations, or create/modify GitHub remotes. Safe Git
 status/diff/read operations are allowed. A later explicit human instruction is
-required to authorize an exception; M0.4 authorizes none. Do not stage, cherry-pick,
+required to authorize an exception; M0.5 authorizes none. Do not stage, cherry-pick,
 or create/delete/switch branches. Leave implementation,
 validation results, and a suggested commit message for human review.
 

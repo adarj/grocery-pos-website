@@ -1,5 +1,4 @@
-@genType
-@react.component
+@genType @react.component
 let make = (~capabilities: array<CapabilityPresentation.view>, ~language: Language.t) => {
   <main>
     <h1> {React.string(Messages.get(language, PageTitle))} </h1>

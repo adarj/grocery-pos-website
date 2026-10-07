@@ -41,19 +41,36 @@ test("qualification route access is explicit; production rejects pseudo and all 
   })
 })
 
-test("single-public-language negotiation handles absence, English, unsupported, pseudo and malformed preferences", () => {
-  [None, Some("en"), Some("en-GB,en;q=0.8"), Some("fr"), Some("en-XA"),
-   Some("en-XA,fr;q=0.9"), Some("fr;q=0.9,en;q=0.5"), Some("*"), Some("en;q=0"),
-   Some("not a valid header")]->Array.forEach(header => {
-    let language = Language.negotiate(header)
-    expectTrue(language == Language.English)
-    expectTrue(Language.isPublic(language))
-  })
-})
+test(
+  "single-public-language negotiation handles absence, English, unsupported, pseudo and malformed preferences",
+  () => {
+    [
+      None,
+      Some("en"),
+      Some("en-GB,en;q=0.8"),
+      Some("fr"),
+      Some("en-XA"),
+      Some("en-XA,fr;q=0.9"),
+      Some("fr;q=0.9,en;q=0.5"),
+      Some("*"),
+      Some("en;q=0"),
+      Some("not a valid header"),
+    ]->Array.forEach(header => {
+      let language = Language.negotiate(header)
+      expectTrue(language == Language.English)
+      expectTrue(Language.isPublic(language))
+    })
+  },
+)
 
 test("English messages and metadata come from semantic keys", () => {
   expectTrue(Messages.get(English, CapabilitySection) == "Public-safe capability samples")
-  expectTrue(Messages.get(English, PageTitle) == "Grocery POS Website — M0.4 internationalized architecture proof")
+  expectTrue(
+    Messages.get(
+      English,
+      PageTitle,
+    ) == "Grocery POS Website — M0.4 internationalized architecture proof",
+  )
   let metadata = Messages.pageMetadata(English)
   expectTrue(metadata.title == Messages.get(English, PageTitle))
   expectTrue(metadata.description == Messages.get(English, MetadataDescription))
@@ -61,30 +78,49 @@ test("English messages and metadata come from semantic keys", () => {
 
 test("every semantic maturity code has an exhaustive human-facing label", () => {
   let cases: array<(CapabilityPresentation.maturityCode, string)> = [
-    (#AVAILABLE, "Available"), (#PILOT, "Pilot"), (#PREVIEW, "Preview"),
-    (#PLANNED, "Planned"), (#INTERNAL, "Internal"),
+    (#AVAILABLE, "Available"),
+    (#PILOT, "Pilot"),
+    (#PREVIEW, "Preview"),
+    (#PLANNED, "Planned"),
+    (#INTERNAL, "Internal"),
   ]
   cases->Array.forEach(((code, expected)) => {
     expectTrue(Messages.get(English, Maturity(code)) == expected)
-    expectTrue(Messages.get(PseudoEnglish, Maturity(code)) == PseudoLocalization.transform(expected))
+    expectTrue(
+      Messages.get(PseudoEnglish, Maturity(code)) == PseudoLocalization.transform(expected),
+    )
   })
 })
 
-test("pseudo lookup transforms the same complete message keys deterministically with expansion", () => {
-  let keys: array<Messages.key> = [PageTitle, MetadataDescription, ArchitectureExplanation,
-    FictionalDisclaimer, CapabilitySection, SampleIdentifier, MaturityLabel,
-    CanonicalMaturityCode, CounterSection, CounterHeading, CounterCount, CounterIncrement]
-  keys->Array.forEach(key => {
-    let english = Messages.get(English, key)
-    let pseudo = Messages.get(PseudoEnglish, key)
-    expectTrue(pseudo == PseudoLocalization.transform(english))
-    expectTrue(pseudo != english)
-    expectTrue(String.length(pseudo) > String.length(english))
-    expectTrue(pseudo->String.startsWith("[!! "))
-    expectTrue(pseudo->String.endsWith(" !!]"))
-  })
-  expectTrue(PseudoLocalization.transform("A, e!") == "[!! Á, é! ·· !!]")
-})
+test(
+  "pseudo lookup transforms the same complete message keys deterministically with expansion",
+  () => {
+    let keys: array<Messages.key> = [
+      PageTitle,
+      MetadataDescription,
+      ArchitectureExplanation,
+      FictionalDisclaimer,
+      CapabilitySection,
+      SampleIdentifier,
+      MaturityLabel,
+      CanonicalMaturityCode,
+      CounterSection,
+      CounterHeading,
+      CounterCount,
+      CounterIncrement,
+    ]
+    keys->Array.forEach(key => {
+      let english = Messages.get(English, key)
+      let pseudo = Messages.get(PseudoEnglish, key)
+      expectTrue(pseudo == PseudoLocalization.transform(english))
+      expectTrue(pseudo != english)
+      expectTrue(String.length(pseudo) > String.length(english))
+      expectTrue(pseudo->String.startsWith("[!! "))
+      expectTrue(pseudo->String.endsWith(" !!]"))
+    })
+    expectTrue(PseudoLocalization.transform("A, e!") == "[!! Á, é! ·· !!]")
+  },
+)
 
 test("localization leaves authorized machine facts unchanged and never adds withheld views", () => {
   let views = CapabilityProofData.load()
@@ -97,5 +133,7 @@ test("localization leaves authorized machine facts unchanged and never adds with
     expectTrue(view.id == "sample-authorized-preview" && view.maturityCode == #PREVIEW)
   })
   let pseudoMetadata = Messages.pageMetadata(PseudoEnglish)
-  expectTrue(pseudoMetadata.title == PseudoLocalization.transform(Messages.pageMetadata(English).title))
+  expectTrue(
+    pseudoMetadata.title == PseudoLocalization.transform(Messages.pageMetadata(English).title),
+  )
 })

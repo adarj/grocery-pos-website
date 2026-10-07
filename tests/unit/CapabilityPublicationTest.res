@@ -12,12 +12,15 @@ let maturities = [
   Capability.Internal,
 ]
 
-test("absent disclosure approval withholds every maturity, including AVAILABLE and INTERNAL", () => {
-  maturities->Array.forEach(maturity => {
-    let capability = Capability.make(~id="unapproved-sample", ~maturity)
-    expectTrue(CapabilityPresentation.present(capability) == None)
-  })
-})
+test(
+  "absent disclosure approval withholds every maturity, including AVAILABLE and INTERNAL",
+  () => {
+    maturities->Array.forEach(maturity => {
+      let capability = Capability.make(~id="unapproved-sample", ~maturity)
+      expectTrue(CapabilityPresentation.present(capability) == None)
+    })
+  },
+)
 
 test("explicit withholding cannot be overridden by maturity", () => {
   maturities->Array.forEach(maturity => {
@@ -61,7 +64,9 @@ test("known raw maturity values decode into domain variants", () => {
     ("planned", Capability.Planned),
     ("internal", Capability.Internal),
   ]
-  cases->Array.forEach(((raw, expected)) => expectTrue(Capability.decodeMaturity(raw) == Ok(expected)))
+  cases->Array.forEach(((raw, expected)) =>
+    expectTrue(Capability.decodeMaturity(raw) == Ok(expected))
+  )
 })
 
 test("unknown raw values return explicit errors without a maturity fallback", () => {

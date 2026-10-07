@@ -6,7 +6,9 @@ direct ReScript domain/application tests through Node's built-in runner; see the
 [source boundary record](../architecture/source-layout.md). M0.4 adds pure registry/message
 tests and production redirect, invalid-language, metadata, SSR, and hydration scenarios;
 development pseudo qualification is recorded in the
-[i18n foundation](../architecture/internationalization.md). Component/a11y tooling and CI remain planned.
+[i18n foundation](../architecture/internationalization.md). M0.5 adds lint/format,
+supervisor acceptance, security response tests, axe/keyboard smoke, and a
+[CI workflow](quality-and-ci.md) awaiting remote execution. Component-unit tooling remains deferred.
 
 ## Intended verification layers
 
@@ -60,5 +62,5 @@ and screen-reader review according to the feature's risk. See
 [accessibility and performance](accessibility-and-performance.md).
 
 Once canonical `just` commands exist, agents use and report them. A development
-server passing does not replace production build qualification. CI and exact test
-placement/commands are later implementation, not claims of existing coverage.
+server passing does not replace production build qualification. Current commands
+and the remote-evidence boundary are in [quality and CI](quality-and-ci.md).

@@ -26,6 +26,9 @@ A passing development server is not full framework/type validation. Run
 completion; use `just test-supervisor` when changing development process management.
 
 Run the relevant canonical `just` commands and report
-results and untested limits. Broaden testing for new failures or unresolved risks;
+results and untested limits. M0.5's [local/full CI gates](../engineering/quality-and-ci.md)
+include security responses and axe/keyboard smoke. Use `just check` locally and
+`just ci` on a supported browser host; keep remote qualification explicit.
+Broaden testing for new failures or unresolved risks;
 avoid repeatedly rerunning completed checks without a reason. Never install tooling
 without an actual verification need.

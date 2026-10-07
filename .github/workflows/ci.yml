@@ -1,0 +1,73 @@
+name: Website CI
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main, 'feat/**']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# Main runs each retain a unique group; superseded branch/PR runs may be cancelled.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}-${{ github.ref == 'refs/heads/main' && github.run_id || 'branch' }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  quality:
+    name: Quality and browsers
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        id: checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Install outer Nix prerequisite
+        uses: cachix/install-nix-action@13d8dd58da0234aa297dedd986986ccb8e7f3e24 # v31.11.1
+        with:
+          enable_kvm: false
+      - name: Qualify repository toolchain on x86_64
+        run: |
+          nix --version
+          test "$(nix eval --impure --raw --expr builtins.currentSystem)" = x86_64-linux
+          nix develop --command bash -euo pipefail -c '
+            command -v node pnpm just
+            node --version
+            pnpm --version
+            just --version
+            test "$(node --version)" = v24.21.0
+            test "$(pnpm --version)" = 12.9.0
+            test "$(just --version)" = "just 1.51.0"
+          '
+      - name: Frozen dependency installation
+        run: nix develop --command pnpm install --frozen-lockfile
+      - name: Provision Playwright on disposable Ubuntu
+        timeout-minutes: 10
+        run: nix develop --command pnpm exec playwright install --with-deps chromium firefox webkit
+      - name: Quality, security, accessibility, and full browser matrix
+        id: qualification
+        run: nix develop --command just ci
+      - name: Verify checkout remains source-clean
+        if: ${{ always() && steps.checkout.outcome == 'success' }}
+        run: |
+          git diff --exit-code
+          git diff --cached --exit-code
+          test -z "$(git ls-files --others --exclude-standard)"
+      - name: Upload bounded browser failure evidence
+        if: ${{ failure() }}
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: browser-failure-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            playwright-report/
+            test-results/
+          retention-days: 7
+          if-no-files-found: ignore

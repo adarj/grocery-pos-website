@@ -14,7 +14,10 @@ let maturityCode = maturity =>
 
 let present = capability =>
   if Capability.hasPublicDisclosureApproval(capability) {
-    Some({id: Capability.id(capability), maturityCode: maturityCode(Capability.maturity(capability))})
+    Some({
+      id: Capability.id(capability),
+      maturityCode: maturityCode(Capability.maturity(capability)),
+    })
   } else {
     None
   }

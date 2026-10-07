@@ -6,7 +6,7 @@ calls for evidence and a decision; it does not automatically authorize implement
 
 | Decision | Why premature | Trigger for evaluation |
 | --- | --- | --- |
-| Vercel vs DigitalOcean vs other hosting | No qualified build or operating requirements | M0.2 build evidence, then first deployment with cost/runtime/region needs |
+| Vercel vs DigitalOcean vs other hosting | Production operating requirements remain unspecified | First deployment with cost/runtime/region needs, using the qualified build |
 | Exact deployment topology | API, regional, and availability needs are not established | First deployment and authoritative API integration |
 | Authentication provider | No account journeys or identity requirements | Authenticated-account milestone and threat model |
 | MFA/recovery implementation | Assurance/support requirements depend on accounts | Account-security design before protected commercial access |
@@ -26,12 +26,15 @@ calls for evidence and a decision; it does not automatically authorize implement
 | GraphQL | No API consumers or query needs justify it | Concrete API contract needs showing benefit over simpler interfaces |
 | Shared cross-repository contracts package/repository | No stable contracts or multiple consumers exist | Explicit API evolution and demonstrated cross-repository reuse; create neither now |
 | `codebase-memory-mcp` | Repository scale does not justify another tool | Proven navigation/knowledge needs as codebase grows |
-| Strict CSP nonce/hash implementation | Rendering and legitimate script sources are unqualified | First deployable rendering/script inventory; baseline header review still required |
+| Strict CSP nonce/hash/SRI hardening | M0.5 qualifies a static-compatible baseline with documented inline allowances | Before auth, billing/commerce, rich content, sensitive support, or significant third-party JS; reevaluate current Next support |
+| HSTS and HTTPS deployment-edge profile | No production HTTPS origin/deployment exists | First HTTPS deployment; qualify transport, subdomains, and redirects |
+| Dependency bot, scheduled advisory checks, or CodeQL | No evidenced automation/scanner need for the current qualification surface | Sustained update/security operations or materially expanded sensitive code |
 | Production observability vendor | No runtime/SLO/error volume to evaluate | Deployment operations with explicit reliability and privacy requirements |
 
 Exact dependency versions, ReScript output conventions, and executable commands
 are **M0.2 proof work**, rather than unresolved product architecture. CI/test
-configuration follows a working stack; do not invent it here.
+configuration is implemented locally in M0.5; real remote execution remains
+pending under the [quality/CI contract](quality-and-ci.md).
 
 When a trigger arrives, identify the owner/requirement, evaluate the smallest
 adequate options, and record the outcome in an ADR or scoped engineering document.

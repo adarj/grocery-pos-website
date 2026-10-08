@@ -18,13 +18,15 @@ AUTHORIZED.** M1.3.1 tokens are accepted, merged and qualified on main (30/30);
 the [token record](engineering/m1-3-1-token-qualification.md) owns that evidence.
 The [M1.3.2 no-extraction decision](engineering/m1-3-2-primitives-qualification.md)
 was human-accepted October 8, 2026 (UTC), merged and qualified on main (30/30).
-M1.3.3 was authorized on the same date; its
-[design-system qualification](engineering/m1-3-3-design-system-qualification.md)
-records independent inspection and bounded local probes over the unchanged UI.
-Adversarial audit, exact-commit CI and human review remain pending. The approved
-M1 plan and design-system specification govern the work. M1.3 is not complete;
-M1.3.4 has not begun; M1.4 is not authorized. Architecture, templates and proposed URLs
-are not publication approval or evidence of commercially released features.
+M1.3.3 is merged and main-qualified (30/30), with adversarial audit PASS.
+The final M1.3.4 audit retains its CONDITIONAL PASS with no implementation defects.
+The [canonical closeout candidate](engineering/m1-3-3-design-system-qualification.md#final-acceptance-readiness-closeout-2026-10-08-utc)
+records five human-reported manual PASS observations and three explicitly approved,
+unverified M1.5 deferrals on October 8, 2026 (UTC).
+Overall M1.3 acceptance is PENDING final maintainer sign-off; the documentation
+candidate still needs exact-commit CI. M1.4 is not authorized. The approved M1 plan
+and design-system specification remain governing. Architecture, templates and
+proposed URLs are not publication approval or evidence of commercially released features.
 
 | Question | Canonical document |
 | --- | --- |

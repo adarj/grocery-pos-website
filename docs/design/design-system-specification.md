@@ -25,10 +25,13 @@ not automatic approval of broader candidate sizes below. The
 existing container/section CSS patterns and ReScript composition sufficient;
 no additional component extraction is justified. The maintainer accepted the
 no-extraction decision October 8, 2026 (UTC); merged main CI passes 30/30.
-The authorized [M1.3.3 qualification](../engineering/m1-3-3-design-system-qualification.md)
-records independent inspection, inherited three-browser evidence and bounded
-local probes. It awaits adversarial audit, exact-commit CI and human review;
-M1.3 is not complete.
+The [M1.3.3 qualification](../engineering/m1-3-3-design-system-qualification.md)
+is merged and main-qualified (30/30), with adversarial audit PASS. Its
+[dated closeout candidate](../engineering/m1-3-3-design-system-qualification.md#final-acceptance-readiness-closeout-2026-10-08-utc)
+preserves the final M1.3.4 CONDITIONAL PASS, five human-reported manual PASS
+observations and three explicitly approved, unverified M1.5 deferrals.
+Overall M1.3 acceptance is PENDING final maintainer sign-off; the wider proposed
+roles below and M1.4 remain outside this closeout's authorization.
 
 Secondary/inverse/technical type, status/warning/error/disabled roles, contrasting
 panels, additional action variants and unneeded primitives remain proposals.

@@ -9,11 +9,12 @@ no new component, CSS rule, token, route, test or dependency was introduced.
 Signed main commit `e14416956296233844b833526ccc32d21b86f47e` is qualified by
 run 37797004595 (30/30), recorded below.
 
-The maintainer explicitly authorized M1.3.3 on the same date. Its
-[design-system qualification](m1-3-3-design-system-qualification.md) records
-independent inspection and bounded local probes over the unchanged UI;
-adversarial audit, exact-commit CI and human review remain pending.
-M1.3 is not complete; M1.3.4 has not begun and M1.4 remains unauthorized.
+M1.3.3 is merged and main-qualified (30/30), with adversarial audit PASS.
+The final M1.3.4 audit retains its CONDITIONAL PASS with no implementation defects.
+The [dated closeout candidate](m1-3-3-design-system-qualification.md#final-acceptance-readiness-closeout-2026-10-08-utc)
+records subsequent human observations and explicitly approved, unverified M1.5
+deferrals. Overall M1.3 acceptance is PENDING final maintainer sign-off;
+M1.4 remains unauthorized.
 
 Starting branch: `feat/m1-3-2-reusable-primitives`; HEAD/main/origin-main:
 `61784aec86d53f35aa839c9ef7fce780d3cd4805`, with clean worktree and staging.
@@ -149,10 +150,12 @@ ESLint 9.39.5 exception retains every condition and the January 8, 2027 deadline
 
 ## Deferred primitives and subsequent checkpoint handoff
 
-The accepted inventory governs the authorized
+The accepted inventory governs the completed
 [M1.3.3 qualification](m1-3-3-design-system-qualification.md). Do not reopen extraction
-for completeness or manufacture a second page to justify it. M1.3.4 adversarial
-audit and any later implementation require separate authorization.
+for completeness or manufacture a second page to justify it. M1.3.4's authorized
+final audit and subsequent human dispositions are preserved in the
+[closeout candidate](m1-3-3-design-system-qualification.md#final-acceptance-readiness-closeout-2026-10-08-utc). Overall
+M1.3 acceptance remains pending; later implementation requires separate authorization.
 
 Reconsider extraction when approved real pages repeat meaningful semantic
 composition, require consistent inputs or expose maintenance drift that CSS cannot

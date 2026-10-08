@@ -2,13 +2,28 @@
 
 ## Scope, baseline and current status
 
+**M1.3 CLOSEOUT CANDIDATE — READY FOR HUMAN REVIEW.**
+M1.3.3 is merged and main-qualified at signed commit
+`b3175b473710279152e78598019812ff43e15a08`, run 37804897764 (30/30).
+Its independent adversarial audit passed. The final M1.3.4 audit retains its
+CONDITIONAL PASS with no implementation defects. The
+[dated closeout section](#final-acceptance-readiness-closeout-2026-10-08-utc)
+records the later human observations and approved, unverified M1.5 deferrals.
+**Formal overall M1.3 acceptance: PENDING final maintainer sign-off.**
+This documentation candidate still requires exact-commit CI; M1.4 is unauthorized.
+
+### Historical local qualification and starting baseline
+
+The following preserves M1.3.3's pre-merge report and its evidentiary scope.
+
 **LOCAL QUALIFICATION COMPLETE — READY FOR M1.3.3 ADVERSARIAL AUDIT.**
 This checkpoint independently inspects the accepted token/presentation foundation,
 reviews exact-baseline three-browser evidence and performs bounded local probes.
 No implementation deficiency requiring a code or test change was found.
 The diff is documentation-only; no additional primitive, token, route or test is
-introduced. M1.3.3 is not human-accepted or remotely qualified at its future commit.
-M1.3 remains incomplete; M1.3.4 has not begun and M1.4 remains unauthorized.
+introduced. At this pre-merge reporting point, M1.3.3 was not human-accepted or
+remotely qualified at its future commit. M1.3 remained incomplete; M1.3.4 had not
+begun and M1.4 was unauthorized. Later outcomes are recorded in the closeout below.
 
 Starting branch: `feat/m1-3-3-design-system-qualification`; HEAD/main/origin-main:
 `e14416956296233844b833526ccc32d21b86f47e`, with clean worktree and staging, 0/0
@@ -26,7 +41,9 @@ historical experiments; this record owns the independent qualification and limit
 
 ## Coverage inventory and qualification decisions
 
-This inventory preceded the decision to retain the unchanged implementation.
+This historical local inventory preceded the decision to retain the unchanged
+implementation. Later human outcomes are recorded in the
+[dated closeout](#final-acceptance-readiness-closeout-2026-10-08-utc).
 Passing a suite is evidence for its actual assertions, not every design requirement.
 
 | Requirement | Direct evidence reviewed | Coverage / decision |
@@ -199,6 +216,9 @@ behavior have not been measured here.
 
 ## Defects, validation and outstanding manual qualification
 
+The results and validation counts below describe the original M1.3.3 local report;
+the dated closeout separately records later human decisions.
+
 No runtime, styling, token or test defect was substantiated; no implementation
 correction was needed. Stale M1.3.2 approval/CI and M1.3.3-not-started summaries
 are reconciled with the human instruction and verified main evidence.
@@ -213,9 +233,12 @@ pass, including git diff --check. Scope hashes show only documentation changes;
 all 561 inspected generated/build artifacts remain byte-identical. Nothing is
 staged and no diagnostic output or permanent probe file was left in the repository.
 
-Human review still needs appropriate screen-reader names/reading/status behavior,
-native browser 400% zoom, real device/touch use, focus visibility/overlap and
-text-spacing review. The [manual checklist](accessibility-and-performance.md#manual-review-checklist)
+At local qualification, human evidence was still needed for appropriate
+screen-reader names/reading/status behavior, native browser 400% zoom, real
+device/touch use, focus visibility/overlap and text-spacing review.
+The [dated closeout](#final-acceptance-readiness-closeout-2026-10-08-utc) records
+subsequent human PASS observations and explicitly approved, unverified deferrals.
+The [manual checklist](accessibility-and-performance.md#manual-review-checklist)
 remains governing. No full WCAG 2.2 AA conformance, screen-reader/device or general
 RTL support, production hosting, HTTPS/HSTS, product readiness, security certification
 or real-world Core Web Vitals is asserted. Fedora ARM64 WebKit native runtime stays
@@ -223,14 +246,18 @@ unqualified; the supported Ubuntu baseline provides WebKit evidence.
 
 ## M1.3.4 audit handoff and remaining M1.3 acceptance
 
-The subsequent adversarial audit should challenge the mapping from current code
+This historical handoff preceded M1.3.4 authorization and execution; its completed
+audit disposition and later human decisions are preserved in the closeout below.
+
+The subsequent adversarial audit was to challenge the mapping from current code
 to inherited evidence, contrast adjacency/state sampling, controlled-link limits,
 reverse-probe scope, unchanged visual boundaries and explicit manual nonclaims.
 Do not reopen the human-accepted no-extraction decision without concrete new
-evidence. M1.3.4 has not started and requires separate authorization.
+evidence. At that point, M1.3.4 had not started and required separate authorization.
 
-The exact eventual signed M1.3.3 commit must pass the unchanged Ubuntu
-Chromium/Firefox/WebKit matrix with one worker and zero retries. Before M1.3
+The historical acceptance plan required the eventual signed M1.3.3 commit to pass
+the unchanged Ubuntu Chromium/Firefox/WebKit matrix with one worker and zero
+retries. Before M1.3
 acceptance: resolve substantive audit findings, record human review and the
 disposition of outstanding manual requirements, qualify the reviewed feature
 commit, perform human integration and main CI, and obtain explicit maintainer
@@ -242,3 +269,144 @@ contrast/keyboard/reflow/client boundaries. Make identity current-page compositi
 route-aware before the first additional public child route. The approved pinned
 ESLint 9.39.5 maintenance exception retains all controls, targeted-update review
 and its January 8, 2027 maximum review date.
+
+## Final acceptance-readiness closeout (2026-10-08 UTC)
+
+**M1.3 CLOSEOUT CANDIDATE — READY FOR HUMAN REVIEW.**
+**Formal overall M1.3 acceptance: PENDING final maintainer sign-off.**
+The maintainer supplied the manual observations and approved the bounded deferrals
+below on October 8, 2026 (UTC). Those decisions support an acceptance recommendation;
+they do not constitute an explicit overall M1.3 acceptance decision.
+
+This documentation-only closeout starts on `docs/m1-3-acceptance-closeout` at
+HEAD/main/origin-main `b3175b473710279152e78598019812ff43e15a08`, with clean
+worktree/staging and 0/0 ahead/behind. It changes no runtime, CSS, tests,
+dependencies or configuration. Historical starting SHAs, local results and
+conditional audit decisions above and in the linked records remain evidence
+of their original checkpoints.
+
+### Reconciled merged checkpoints and exact-commit CI
+
+| Checkpoint | Signed main commit | Main CI | Completed work |
+| --- | --- | --- | --- |
+| M1.3.1 | `61784aec86d53f35aa839c9ef7fce780d3cd4805` | [Run 37791509300](https://github.com/adarj/grocery-pos-website/actions/runs/37791509300): PASS, 30/30 | Accepted [semantic token foundation](m1-3-1-token-qualification.md) |
+| M1.3.2 | `e14416956296233844b833526ccc32d21b86f47e` | [Run 37797004595](https://github.com/adarj/grocery-pos-website/actions/runs/37797004595): PASS, 30/30 | Maintainer-approved [no-extraction decision](m1-3-2-primitives-qualification.md); existing CSS patterns and ReScript composition retained |
+| M1.3.3 | `b3175b473710279152e78598019812ff43e15a08` | [Run 37804897764](https://github.com/adarj/grocery-pos-website/actions/runs/37804897764): PASS, 30/30 | Completed independent design-system qualification; adversarial **M1.3.3 PASS — READY FOR HUMAN REVIEW**, no BLOCKER, MAJOR or MINOR findings |
+
+Each independently verified main run tests its listed commit on Ubuntu 24.04
+x86_64. Repository Nix/toolchain, frozen installation, lint/format, 15 pure tests,
+seven supervisor cases, canonical typecheck/production build, static /en and source
+cleanliness pass. Chromium, Firefox and WebKit each pass 10/10 scenarios using one
+worker and zero browser retries. These runs qualify the merged checkpoints;
+they do not qualify this future signed documentation commit. No fresh build or
+browser run is claimed by this closeout.
+
+The accepted foundation remains 43 properties: five raw palette values, thirteen
+semantic colors, nine typography/measure values, seven spacing steps, two layout
+values and seven geometry/border/focus values. The seven resolved opaque-sRGB
+combinations are ink/paper 13.86:1, ink/white 14.79:1, evergreen/paper 5.79:1,
+evergreen/white 6.18:1, white/evergreen 6.18:1, white/ink 14.79:1 and ink/sage
+12.03:1. The 24 state/context assertions per engine measure rendered consumers,
+not 24 unique colors; the detailed thresholds and parser limits remain above.
+
+A13-01 is RESOLVED in the merged token record. A13-02 remains a nonblocking NOTE:
+the semantic base-link role is legitimate and qualified with controlled fixtures
+despite current anchor overrides. A13-03 remains a nonblocking historical NOTE:
+the fourth in-memory parity snapshot did not assert a named focused target.
+Later named keyboard probes do not retroactively strengthen that experiment.
+No CSS correction or additional extraction follows from either NOTE.
+
+### Final M1.3.4 audit and subsequent dispositions
+
+The maintainer authorized M1.3.4 on October 8, 2026 (UTC). Its original decision is
+preserved: **M1.3.4 CONDITIONAL PASS — ACCEPTANCE GATES OUTSTANDING.**
+No BLOCKER, MAJOR or MINOR implementation defects were found. The conditional
+decision concerned human evidence and administrative reconciliation; it is not
+rewritten as an unconditional PASS.
+
+| Obligation | Subsequent disposition |
+| --- | --- |
+| A134-01 — Human accessibility observations and dispositions | Addressed by the five human-reported PASS observations and three explicitly approved, unverified M1.5 deferrals below; no independent reproduction or complete accessibility claim |
+| A134-02 — Final milestone documentation reconciliation | Addressed in this closeout candidate and linked current-status summaries; remains subject to human review and exact-commit CI |
+
+### Human-reported manual observations
+
+The human maintainer reported all five results on **October 8, 2026 (UTC)**.
+They are manual observations supplied by the maintainer, not newly automated
+results or independent agent reproduction.
+
+| Manual check | Human-reported result |
+| --- | --- |
+| Keyboard-only navigation | PASS |
+| Navigation without JavaScript | PASS |
+| Native 400% browser zoom | PASS |
+| Focus visibility and overlap | PASS |
+| Text enlargement and spacing | PASS |
+
+The exact browser version, operating system and detailed test configuration were
+not supplied. This metadata limitation remains part of the record; no values or
+additional browser/device coverage are inferred. The reported native-zoom result
+is separate from historical 320 CSS-pixel viewport simulation. None of these
+observations establishes screen-reader verification or full WCAG 2.2 AA conformance.
+
+### Explicitly approved M1.5 deferrals
+
+For each item below, the human maintainer explicitly approved bounded deferral
+on **October 8, 2026 (UTC)**. Each remains **DEFERRED, UNVERIFIED**, is owned for
+follow-up by the human repository maintainer and must be revisited at **M1.5**.
+
+| ID / check | Status / target | Required future review |
+| --- | --- | --- |
+| D13-01 — Screen-reader verification | DEFERRED, UNVERIFIED; M1.5 | Landmarks and heading navigation; accessible names; skip-link destination; Counter status announcement; reading and focus order |
+| D13-02 — Physical touch/device verification | DEFERRED, UNVERIFIED; M1.5 | Real-device control usability; touch targets and spacing; narrow-screen layout; portrait/landscape behavior where supported; no accidental neighboring activation |
+| D13-03 — Actual OS high-contrast verification | DEFERRED, UNVERIFIED; M1.5 | Actual OS contrast theme; text and control visibility; keyboard focus appearance; meaningful boundaries; relevant browser behavior |
+
+The reason for each bounded deferral is the current internal engineering-preview
+scope and the distinction between automated browser evidence and actual
+assistive-technology/device/OS qualification. Browser media emulation does not
+establish screen-reader, physical-device or actual OS contrast-theme support.
+These approvals neither waive the checks nor convert any item to PASS.
+Record the M1.5 environment, observations and dispositions, and correct discovered
+current defects. No WCAG conformance claim accompanies any deferral.
+
+### Acceptance recommendation and preserved boundaries
+
+> Recommend formal acceptance of M1.3's implemented engineering-preview subset:
+> the accepted semantic tokens, approved no-extraction architecture, completed
+> qualification and exact-commit CI, independent final audit, five human-reported
+> manual PASS observations and three explicitly approved M1.5 deferrals provide
+> an evidence-backed basis. No outstanding known implementation defect remains.
+> Formal overall M1.3 acceptance is PENDING the maintainer's explicit final sign-off.
+
+**Next routes. ReScript models. React presents. APIs connect.** Server-first
+composition, static /en, English-only public authorization, development-only pseudo
+content, Counter-only application client ownership, fictional-data withholding,
+CSP/security headers and the accepted token/pattern inventory remain unchanged.
+Make identity-link current-page handling route-aware before the first additional
+public child route. New components, surfaces, states and real content still
+require genuine consumers and appropriate contrast/interaction/reflow qualification.
+
+Fedora ARM64 WebKit native runtime remains unqualified. General RTL support,
+production hosting, HTTPS/HSTS, real-world Core Web Vitals, security certification
+and public product readiness are not established here. No marketing pages,
+product disclosures, public claims, CMS, deployment or backend functionality are
+authorized. M1.4 remains unauthorized. The approved exactly pinned ESLint 9.39.5
+exception retains all controls, targeted lint-stack review and its January 8, 2027
+maximum review date.
+
+### Remaining human and CI gates
+
+- Human review of this closeout candidate and explicit final overall M1.3 sign-off;
+  the manual PASS reports and deferral approvals alone do not supply that decision.
+- Human-controlled signed closeout commit and push, followed by successful CI on
+  that exact commit: all 30 Chromium/Firefox/WebKit scenarios, one worker, zero
+  retries and source cleanliness. The existing workflow does not automatically
+  run on a `docs/**` branch push; qualify this branch through a pull request
+  targeting main or manual workflow dispatch without changing CI policy.
+- Human integration into main and successful main-branch CI at the integrated
+  closeout commit; preserve these exact run/commit references in the acceptance
+  record when available.
+- Revisit D13-01–D13-03 at M1.5 and correct discovered current defects. Any M1.4
+  implementation or publication set requires separate explicit authorization.
+
+No final overall acceptance date, future closeout SHA or CI run is invented.

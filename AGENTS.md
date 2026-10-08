@@ -66,11 +66,14 @@ accepted, merged and qualified on main (30/30); see the
 [token record](docs/engineering/m1-3-1-token-qualification.md).
 The [M1.3.2 no-extraction decision](docs/engineering/m1-3-2-primitives-qualification.md)
 is human-accepted October 8, 2026 (UTC), merged and qualified on main (30/30).
-The maintainer authorized M1.3.3 on the same date. Its
-[design-system qualification](docs/engineering/m1-3-3-design-system-qualification.md)
-records independent inspection and bounded local probes over the unchanged UI;
-adversarial audit, exact-commit CI and human review remain pending.
-M1.3 is not complete. Do not begin M1.3.4 or M1.4.
+M1.3.3 is merged and qualified on main (30/30), with adversarial audit PASS.
+The final M1.3.4 audit retains its CONDITIONAL PASS — ACCEPTANCE GATES OUTSTANDING;
+no implementation defects were found. The canonical
+[closeout candidate](docs/engineering/m1-3-3-design-system-qualification.md#final-acceptance-readiness-closeout-2026-10-08-utc)
+records five human-reported manual PASS observations and three explicitly approved,
+unverified M1.5 deferrals on October 8, 2026 (UTC).
+**Overall M1.3 acceptance is PENDING final maintainer sign-off.** M1.4 remains
+unauthorized; preparing this record grants no publication or deployment approval.
 Follow the [M1 plan](docs/engineering/milestone-1-plan.md) and approved
 [design-system specification](docs/design/design-system-specification.md).
 The [shell record](docs/engineering/m1-2-shell-qualification.md) preserves audit/CI

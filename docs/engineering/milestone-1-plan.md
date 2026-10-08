@@ -11,11 +11,13 @@ and qualified on main (30/30). Its [qualification record](m1-3-1-token-qualifica
 owns measured and remote evidence. The [M1.3.2 assessment](m1-3-2-primitives-qualification.md)
 finds existing CSS reuse sufficient; the maintainer accepted the no-extraction
 decision October 8, 2026 (UTC), and merged main CI passes 30/30.
-The maintainer authorized M1.3.3 on the same date. Its
-[design-system qualification](m1-3-3-design-system-qualification.md) records independent
-inspection and bounded local probes over the unchanged UI; adversarial audit,
-exact-commit CI and human review remain pending.
-M1.3 is not complete; M1.3.4 has not begun; M1.4 is not authorized.
+M1.3.3 is merged and main-qualified (30/30), with adversarial audit PASS.
+The final M1.3.4 audit retains its CONDITIONAL PASS with no implementation defects.
+The [closeout candidate](m1-3-3-design-system-qualification.md#final-acceptance-readiness-closeout-2026-10-08-utc) records
+five human-reported manual PASS observations and three explicitly approved,
+unverified M1.5 deferrals on October 8, 2026 (UTC).
+Overall M1.3 acceptance is PENDING final maintainer sign-off; the documentation
+candidate requires exact-commit CI. M1.4 is not authorized.
 Later checkpoints retain their scope and human review gates. Specification approval grants no publication or
 production deployment authorization. Milestone 0 is complete and accepted;
 see the [qualification record](milestone-0-qualification.md).
@@ -29,7 +31,7 @@ see the [qualification record](milestone-0-qualification.md).
 | Signed specification commit / feature CI | [Run 37728971554](https://github.com/adarj/grocery-pos-website/actions/runs/37728971554) passes at `efa76de8dc5afec83c7f4858afa2cbfcfeeab2e1`; Chromium/Firefox/WebKit 7/7 each, 21/21, one worker, zero retries; source cleanliness passes |
 | M1.1 branch integration / main CI | Merged; [main run 37749346349](https://github.com/adarj/grocery-pos-website/actions/runs/37749346349) passes at `cea8dea94bafe182af40ef30fe390cc9b667ac07`, including 21/21 and source cleanliness |
 | M1.2 | ACCEPTED by the maintainer October 8, 2026 (UTC); visual review completed, A12-01/A12-02 resolved, ESLint retention approved; [shell record](m1-2-shell-qualification.md) preserves history and final main run 37780086710 at `e5f690977273ce721998f6f778b946924b5a443f`: 27/27 and source cleanliness PASS |
-| M1.3 | AUTHORIZED October 8, 2026 (UTC); M1.3.1 tokens and M1.3.2 no-extraction decision accepted/merged, main CI 30/30; M1.3.3 qualification authorized, audit/exact-commit CI/human review pending; scope and review gate below remain governing |
+| M1.3 | AUTHORIZED October 8, 2026 (UTC); M1.3.1 tokens, M1.3.2 no-extraction decision and M1.3.3 qualification merged/main-qualified (30/30 each); M1.3.4 historical CONDITIONAL PASS retained; human manual observations and approved M1.5 deferrals recorded in the [closeout candidate](m1-3-3-design-system-qualification.md#final-acceptance-readiness-closeout-2026-10-08-utc); overall acceptance PENDING final maintainer sign-off |
 
 ## Objective and implementation starting point
 
@@ -56,9 +58,15 @@ samples as product claims or delete unique coverage without replacement.
 | --- | --- | --- | --- | --- |
 | M1.1 — Specifications | Approved audience/IA, target navigation and templates, visual direction and component contracts; accepted M0 baseline | Adversarial audit PASS; exact feature CI PASS; working document links; documentation-only scope | No components, assets, public copy, routes or M1.2 execution | Specification/design approval recorded October 8, 2026 (UTC); merged main CI passes |
 | M1.2 — Internal engineering-preview shell | Approved identity header, skip link, responsive container, existing qualification proof and minimal footer; essential accessible styling; navigation/disclosure only when eligible destinations justify them | Server-first/client-reference review; JS-disabled usability; keyboard/focus/axe; measured actual contrast/control states; narrow-to-wide/pseudo checks; preserved security/hydration/publication regressions; typecheck/build; full supported CI | No fabricated marketing content, unavailable routes/links, pricing, commerce, accounts, contact forms, backend services, speculative features, mega-menu/search, real second language or broad token library | Maintainer visual review and formal acceptance recorded October 8, 2026 (UTC); first-implementation ESLint review satisfied by explicit retention approval |
-| M1.3 — Tokens/primitives | Measure palette pairs; consolidate minimal M1.2 styling into semantic tokens and demonstrated container/section/link/button/card/callout patterns | Contrast/state pairing sheet; responsive/expanded-text/forced-colors/reduced-motion checks; proportionate tests and canonical gates | No UI framework, remote fonts, generic component factory, complex forms/data grids or commerce controls | Implementation authorized October 8, 2026 (UTC); M1.3.1 and M1.3.2 accepted/main-qualified; M1.3.3 qualification authorized, audit/CI/human review pending; approve the resulting measured visual system and justified component inventory |
+| M1.3 — Tokens/primitives | Measure palette pairs; consolidate minimal M1.2 styling into semantic tokens and demonstrated container/section/link/button/card/callout patterns | Contrast/state pairing sheet; responsive/expanded-text/forced-colors/reduced-motion checks; proportionate tests and canonical gates | No UI framework, remote fonts, generic component factory, complex forms/data grids or commerce controls | Implementation authorized October 8, 2026 (UTC); three checkpoints merged/main-qualified; final audit and human manual dispositions recorded; formal acceptance of the measured system and retained composition PENDING final maintainer sign-off |
 | M1.4 — Reviewed templates/content | Integrate a small approved subset of IA templates and actual reviewed copy/assets; depends on owners, maturity/disclosure evidence and M1.3 | Claim/source review; metadata and link checks; public-safe projection/withholding; real SSR; content-specific a11y/performance checks and CI | No requirement to populate every sitemap area; no fake claims, CMS/docs platform, pricing, commerce/account or submission backend | Approve every publication set and its qualifications; withhold unsupported pages |
 | M1.5 — Audit/qualification | Adversarial architecture, publication, accessibility, responsive and measured performance review of the implemented scope | Chromium/Firefox/WebKit; manual screen-reader/keyboard/zoom/contrast review; responsive matrix; static/client graph and asset review; canonical local + CI evidence | No deployment certification, WCAG claim from automation, speculative scanners or features added to fill gaps | Accept/correct M1 based on actual evidence; authorize subsequent work separately |
+
+The maintainer explicitly approved D13-01 screen-reader, D13-02 physical-device
+and D13-03 actual OS high-contrast deferrals to M1.5 on October 8, 2026 (UTC).
+All remain **DEFERRED, UNVERIFIED**, with required future checks and the obligation
+to correct discovered current defects in the [canonical closeout](m1-3-3-design-system-qualification.md#final-acceptance-readiness-closeout-2026-10-08-utc).
+These bounded deferrals do not establish WCAG conformance or authorize M1.4.
 
 The order is deliberate: shell work has only necessary provisional styles;
 M1.3 consolidates actual repeated needs. M1.4's content dependencies may reduce

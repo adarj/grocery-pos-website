@@ -34,8 +34,9 @@ in-memory probes. It did not rebuild or install dependencies.
 
 - **F06-01, MINOR:** stale milestone/qualification guidance. The M0.6.2 correction
   set replaces obsolete cleanup/merge/runtime claims with actual main evidence.
-- **F06-02, MINOR:** ESLint 9 EOL lacked a formal disposition. The proposal below
-  requires explicit maintainer approval; drafting it does not resolve that approval.
+- **F06-02, MINOR — RESOLVED:** ESLint 9 EOL lacked a formal disposition. The
+  human repository maintainer explicitly approved the bounded exception below on
+  October 8, 2026 (UTC); this documents acceptance of the maintenance risk only.
 - **F06-03, NOTE:** Next-generated page validators do not reject every semantic
   prop mismatch. Current authored routes are correct. This is an accepted framework
   limitation, not a present M1 blocker. Use explicit supported `PageProps` and
@@ -73,7 +74,7 @@ The exact defective search-path entry was not exhaustively determined.
 
 ## M0.6.3 qualification evidence
 
-**Technical qualification passes; human ESLint approval and final acceptance remain pending.**
+**Technical qualification passes; the ESLint exception is approved and final acceptance remains pending.**
 The qualification began with a clean worktree/staging area at signed feature HEAD
 `de6ccda2cd99c8c068801962e95851509832738b`, one commit ahead of main baseline
 `a85611d2c863386f9600c29abf48d84dbc609f12`.
@@ -96,7 +97,7 @@ main evidence. Failure-artifact upload was correctly skipped.
 | WebKit | Not run on the unqualified Fedora ARM64 native runtime | 7/7; blocking Linux-CI child-environment correction retained | Supported-host PASS |
 | Security / accessibility | Response/CSP diagnostics, zero axe violations, native keyboard/focus, JS-disabled SSR and hydration pass in both local engines | All three engines pass | PASS; no WCAG/HTTPS claim |
 | Documentation / source cleanliness | Local paths/heading links pass; all 71 tracked hashes unchanged after execution; generated output ignored; no test server remains | Source-cleanliness step passes | PASS; this closeout record is a subsequent documentation change |
-| ESLint exception | No explicit maintainer authorization supplied; proposal remains pending | CI success does not grant approval | PENDING |
+| ESLint exception | Explicit human maintainer approval recorded October 8, 2026 (UTC), under all conditions below | CI success does not grant approval | ACCEPTED |
 
 Fresh production inspection confirms `/en` is the sole public prerendered route
 (apart from Next's built-in error routes), `lang="en"`/`dir="ltr"`, no pseudo page,
@@ -106,9 +107,9 @@ identifier. Counter's generated runtime imports only React/JSX; server policy an
 catalog logic remain outside its client graph. No remote script source or
 high-confidence tracked credential pattern was found.
 
-F06-01 corrections are incorporated in the tested M0.6.2 commit. F06-02 still
-requires maintainer sign-off on the exact proposal below; F06-03 remains the
-accepted framework note. No new BLOCKER or MAJOR was found. The only runtime
+F06-01 corrections are incorporated in the tested M0.6.2 commit. F06-02 is resolved
+through documented, bounded maintainer acceptance on October 8, 2026 (UTC);
+F06-03 remains the accepted framework note. No new BLOCKER or MAJOR was found. The only runtime
 warnings were Node's `NO_COLOR`/`FORCE_COLOR` notices. No source, test, dependency,
 CI or security configuration was changed for qualification.
 
@@ -126,19 +127,23 @@ CI or security configuration was changed for qualification.
   deployment qualification. No deployment approval is implied by local HTTP tests.
 - Root Proxy's 307 preserves non-GET methods. Review GET/HEAD scope before a root
   write endpoint exists; no such endpoint is currently implemented.
-- The ESLint exception below remains proposed, subject to human approval and review.
+- The ESLint exception below is approved, subject to its unchanged review and expiration conditions.
 - Real commercial features require separate authoritative validation, disclosure
   evidence, authorization/organization scope, cache isolation and security qualification.
   Fictional approval constructors are not production authorization.
 
 Other untriggered choices remain in the [deferred register](deferred-decisions.md).
 
-### Proposed ESLint 9 maintenance exception
+<a id="proposed-eslint-9-maintenance-exception"></a>
 
-**Status: proposed / pending maintainer sign-off.** No human acceptance or renewal
-is recorded by this document.
+### Approved ESLint 9 maintenance exception
 
-| Field | Proposal |
+**Status: APPROVED.** The human repository maintainer explicitly approved this
+exact bounded exception on **October 8, 2026 (UTC)**. All conditions below remain
+unchanged. This approval resolves F06-02 only; it does not establish Milestone 0
+acceptance or authorize M1.
+
+| Field | Approved conditions |
 | --- | --- |
 | Exception | Temporarily continue exactly pinned ESLint **9.39.5**, acknowledging EOL |
 | Owner | Human repository maintainer |
@@ -158,15 +163,16 @@ See [ESLint support](https://eslint.org/version-support/),
 [ESLint 10 API changes](https://eslint.org/docs/latest/use/migrate-to-10.0.0),
 and the [qualified lint-stack record](quality-and-ci.md).
 Do not force peer overrides, drop useful checks or upgrade unrelated framework
-dependencies to conceal this risk. Maintainer sign-off must be recorded explicitly
-before this exception can satisfy F06-02.
+dependencies to conceal this risk. The explicit maintainer approval recorded above
+satisfies F06-02 without changing the qualified lint stack or its coverage.
 
 ## M0.6 final acceptance criteria
 
 Final acceptance requires all of the following:
 
 1. F06-01 corrections are reviewed and accurate.
-2. The maintainer explicitly accepts the F06-02 exception or otherwise resolves it.
+2. **Satisfied:** the maintainer explicitly approved the bounded F06-02 exception
+   on October 8, 2026 (UTC); its review and expiration obligations remain in force.
 3. M0.6.3 local qualification passes: stop dev; enter the repository Nix shell;
    `just clean`; `pnpm install --frozen-lockfile`; provision pinned browsers explicitly
    if needed; run `just check` and the relevant Firefox regression. Inspect static
@@ -190,9 +196,9 @@ future commit SHA or CI run ID, or infer exception approval from passing checks.
 | --- | --- |
 | M0.1–M0.5 | Complete, signed, merged and qualified on main |
 | M0.6.1 | Independent assessment complete: CONDITIONAL PASS |
-| M0.6.2 | Corrections committed as `de6ccda2cd99c8c068801962e95851509832738b` and feature-CI qualified; ESLint exception proposal pending sign-off |
-| M0.6.3 | Fresh local qualification and exact feature CI pass; closeout-record review/CI, ESLint approval, main integration/CI and formal human acceptance remain |
+| M0.6.2 | Corrections committed as `de6ccda2cd99c8c068801962e95851509832738b` and feature-CI qualified; bounded ESLint exception approved October 8, 2026 (UTC) |
+| M0.6.3 | Fresh local qualification and exact feature CI pass; closeout-record review/CI, main integration/CI and formal human acceptance remain |
 | M1 | Not authorized; GO recommendation only after the remaining human/CI conditions |
 
-**Milestone 0 final acceptance pending maintainer ESLint approval, closeout-record
-review/qualification, main integration/CI and formal human sign-off.**
+**Milestone 0 final acceptance pending closeout-record review/qualification,
+main integration/CI and formal human sign-off. M1 remains unauthorized.**

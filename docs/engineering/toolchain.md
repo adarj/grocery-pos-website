@@ -306,4 +306,4 @@ commercial authority integrations, authentication, real translations, and the
 design system remain outside this spike. M0.5's quality/CI expansion is recorded
 separately above; remote x86_64 runtime, all three browser engines, and final
 cleanup are qualified on main. The [Milestone 0 qualification record](milestone-0-qualification.md)
-owns the remaining M0.6 acceptance boundary.
+records completed M0.6 acceptance, final main CI evidence and continuing limitations.

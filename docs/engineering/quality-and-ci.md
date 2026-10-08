@@ -44,9 +44,11 @@ ESLint 9.39.5 remains exactly pinned and qualified, but is EOL, not a supported
 long-term choice. See [ESLint support](https://eslint.org/version-support/),
 [React compatibility](https://github.com/jsx-eslint/eslint-plugin-react/issues/3984),
 and [JSX accessibility support](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/issues/1075).
-The [bounded exception proposal](milestone-0-qualification.md#proposed-eslint-9-maintenance-exception)
-requires maintainer sign-off. Do not suppress peer checks, remove accessibility
-rules, or incidentally upgrade qualified Next to hide the limitation.
+The maintainer [approved the bounded exception](milestone-0-qualification.md#approved-eslint-9-maintenance-exception)
+on October 8, 2026 (UTC). Review it at the first M1 implementation checkpoint and
+targeted lint-stack updates, no later than January 8, 2027 unless explicitly revised.
+Do not suppress peer checks, remove accessibility rules, or incidentally upgrade
+qualified Next to hide the limitation.
 
 `pnpm-workspace.yaml` supplies pnpm 12's root lifecycle policy; omitting `packages`
 keeps one application. `allowBuilds` explicitly denies `unrs-resolver`'s fallback

@@ -1,17 +1,22 @@
 # Documentation map
 
-M0.1–M0.5 are complete: constitution, toolchain, source boundaries, typed language
-routing/messages, and quality/security/CI gates. Main run 37721922700 qualifies the
-merged M0.5 cleanup on Ubuntu x86_64 with all three browsers.
-The [Milestone 0 qualification record](engineering/milestone-0-qualification.md)
-owns M0.6 findings, proposed maintenance exceptions, and final acceptance status.
-Detailed CI history remains in [quality and CI](engineering/quality-and-ci.md).
-Architectural choices are policy, not evidence that product features exist.
+Milestone 0 was formally accepted and M1 authorized on October 8, 2026 (UTC);
+main run 37727162386 qualifies the merged foundation on all three browser engines.
+The [qualification record](engineering/milestone-0-qualification.md) owns acceptance,
+evidence and the approved bounded ESLint exception. Detailed CI history remains in
+[quality and CI](engineering/quality-and-ci.md).
+M1.1 produces proposed information/visual/design specifications for human review;
+M1.2 has not begun. Architecture, templates and proposed URLs are not publication
+approval or evidence of commercially released features.
 
 | Question | Canonical document |
 | --- | --- |
 | What is this repository and its next checkpoint? | [Root README](../README.md) |
 | Is the engineering foundation qualified for M1? | [Milestone 0 qualification](engineering/milestone-0-qualification.md) |
+| Who is the website for, and how should pages/navigation work? | [Website information architecture](product/website-information-architecture.md) |
+| What visual direction is proposed? | [Visual direction](design/visual-direction.md) |
+| What are the first-party presentation/accessibility contracts? | [Design-system specification](design/design-system-specification.md) |
+| What are the proposed M1 checkpoints and approval gates? | [Milestone 1 plan](engineering/milestone-1-plan.md) |
 | How does the eventual website fit together? | [Architecture overview](architecture/website-architecture.md) |
 | Where does source code belong? | [Source layout and application boundary](architecture/source-layout.md) |
 | How do languages, messages, and pseudo qualification work? | [Internationalization foundation](architecture/internationalization.md) |

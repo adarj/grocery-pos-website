@@ -56,12 +56,16 @@ contradictions rather than silently substituting another architecture.
 
 ## Checkpoint and Git limits
 
-M0.1–M0.5 are complete. M0.6 closes out the engineering foundation; follow the
-[qualification record](docs/engineering/milestone-0-qualification.md) for findings,
-the proposed ESLint exception, and final local/CI/human acceptance gates.
-M0.6.2 is documentation-only; comprehensive execution belongs to M0.6.3.
-Use `just check` locally and `just ci` on a supported full browser runtime.
-Do not expand into M1, real translations, a production ledger, providers, or design work.
+Milestone 0 is accepted and M1 authorized; see the
+[qualification record](docs/engineering/milestone-0-qualification.md).
+M1.1 is documentation/specification-only; follow the
+[proposed M1 plan](docs/engineering/milestone-1-plan.md). Do not begin M1.2 or change
+application, CSS, tests, dependencies, tooling or CI during this checkpoint.
+Review the approved ESLint exception at the first M1 implementation checkpoint
+and targeted lint-stack updates, no later than January 8, 2027 unless explicitly revised.
+Use `just check` locally and `just ci` on a supported full browser runtime for
+implementation; documentation changes need links, whitespace and scope checks.
+Real translations, production ledgers and provider integrations remain outside this scope.
 Use the [source layout](docs/architecture/source-layout.md) for placement and interfaces.
 Do not alter global Codex/MCP configuration.
 Nix must already work in the outer Linux environment; never bootstrap a substitute.
@@ -69,7 +73,7 @@ Nix must already work in the outer Linux environment; never bootstrap a substitu
 Do not commit, push, merge, rebase, reset, tag, create releases, force-update refs,
 perform destructive Git operations, or create/modify GitHub remotes. Safe Git
 status/diff/read operations are allowed. A later explicit human instruction is
-required to authorize an exception; this foundation closeout authorizes none. Do not stage, cherry-pick,
+required to authorize an exception; M1.1 authorizes no Git mutation. Do not stage, cherry-pick,
 or create/delete/switch branches. Leave implementation,
 validation results, and a suggested commit message for human review.
 

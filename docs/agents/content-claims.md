@@ -17,5 +17,7 @@ For each customer-facing capability claim:
 4. Check that the promised job belongs to the website or is clearly described as a
    separate operational product; authenticated UI does not expand website ownership.
 
-Include evidence/uncertainty in the change report. M0.1 establishes policy only;
-do not build a capability ledger or produce a public marketing site here.
+Include evidence/uncertainty in the change report. Policy and specifications do
+not establish product availability or publication approval. Follow the authorized
+checkpoint scope; M1.1 defines specifications only, without a production capability
+ledger or final public marketing copy.

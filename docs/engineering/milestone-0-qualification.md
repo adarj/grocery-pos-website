@@ -74,7 +74,8 @@ The exact defective search-path entry was not exhaustively determined.
 
 ## M0.6.3 qualification evidence
 
-**Technical qualification passes; the ESLint exception is approved and final acceptance remains pending.**
+**Technical qualification passed; the ESLint exception is approved.**
+Formal human acceptance and final main evidence are recorded below.
 The qualification began with a clean worktree/staging area at signed feature HEAD
 `de6ccda2cd99c8c068801962e95851509832738b`, one commit ahead of main baseline
 `a85611d2c863386f9600c29abf48d84dbc609f12`.
@@ -113,6 +114,31 @@ F06-03 remains the accepted framework note. No new BLOCKER or MAJOR was found. T
 warnings were Node's `NO_COLOR`/`FORCE_COLOR` notices. No source, test, dependency,
 CI or security configuration was changed for qualification.
 
+## Final main qualification and human acceptance
+
+The human repository maintainer formally accepted **Milestone 0** and authorized
+**M1 development on October 8, 2026 (UTC)**, explicitly recorded in the M1.1
+instruction. This is a separate decision from the ESLint exception approval.
+It accepts the engineering foundation, not production deployment, commercial
+feature availability or WCAG conformance.
+
+Independently verified [main run 37727162386](https://github.com/adarj/grocery-pos-website/actions/runs/37727162386)
+tested merged commit `780ba8b89364fd16dba8609a0cb2a13779c24348`; run and
+`Quality and browsers` job (ID `113147860728`) conclude success. Ubuntu 24.04
+x86_64 uses the repository Nix toolchain; frozen installation, lint/format,
+15 pure tests, seven supervisor cases, canonical typecheck/build, static /en and
+source cleanliness pass. Chromium, Firefox and WebKit each pass 7/7:
+**21/21, one worker, zero retries**, including security/CSP and axe/keyboard checks.
+Failure-artifact upload is correctly skipped. This qualifies the integrated
+foundation; earlier main and feature evidence remains historical evidence.
+
+M1.1 is authorized as documentation/specification-only work. The
+[proposed M1 plan](milestone-1-plan.md) requires human scope/design/publication gates
+before subsequent implementation. Acceptance of M0 does not approve that entire
+plan, new public content, hosting configuration or deployment. The approved ESLint
+exception retains every condition, including review at the first M1 implementation
+checkpoint and the January 8, 2027 deadline.
+
 ## Accepted limitations and future triggers
 
 - Fedora ARM64 WebKit native-runtime compatibility remains unqualified; supported
@@ -140,8 +166,8 @@ Other untriggered choices remain in the [deferred register](deferred-decisions.m
 
 **Status: APPROVED.** The human repository maintainer explicitly approved this
 exact bounded exception on **October 8, 2026 (UTC)**. All conditions below remain
-unchanged. This approval resolves F06-02 only; it does not establish Milestone 0
-acceptance or authorize M1.
+unchanged. This exception approval resolves F06-02 only; separate Milestone 0
+acceptance and M1 authorization are recorded in the final main closeout above.
 
 | Field | Approved conditions |
 | --- | --- |
@@ -168,7 +194,8 @@ satisfies F06-02 without changing the qualified lint stack or its coverage.
 
 ## M0.6 final acceptance criteria
 
-Final acceptance requires all of the following:
+The maintainer accepted Milestone 0 after the following criteria were fulfilled.
+Retain this checklist as the acceptance contract and the historical evidence above:
 
 1. F06-01 corrections are reviewed and accurate.
 2. **Satisfied:** the maintainer explicitly approved the bounded F06-02 exception
@@ -185,10 +212,10 @@ Final acceptance requires all of the following:
    into main, then actual main-branch CI passes at the integrated SHA.
 6. The human records the formal Milestone 0 acceptance and M1 authorization decision.
 
-M0.6.2 did not execute the qualification sequence; the M0.6.3 results are recorded
-above. After human review/signing of this closeout record, its feature CI and
-post-integration main CI remain required. Do not invent a final acceptance date,
-future commit SHA or CI run ID, or infer exception approval from passing checks.
+M0.6.2 did not execute the qualification sequence; M0.6.3 local and remote evidence
+is retained above. Final main qualification and the human's October 8 acceptance
+complete the closeout. CI alone did not grant ESLint approval or M1 authorization;
+both were explicit human decisions.
 
 ## Current status
 
@@ -197,8 +224,9 @@ future commit SHA or CI run ID, or infer exception approval from passing checks.
 | M0.1–M0.5 | Complete, signed, merged and qualified on main |
 | M0.6.1 | Independent assessment complete: CONDITIONAL PASS |
 | M0.6.2 | Corrections committed as `de6ccda2cd99c8c068801962e95851509832738b` and feature-CI qualified; bounded ESLint exception approved October 8, 2026 (UTC) |
-| M0.6.3 | Fresh local qualification and exact feature CI pass; closeout-record review/CI, main integration/CI and formal human acceptance remain |
-| M1 | Not authorized; GO recommendation only after the remaining human/CI conditions |
+| M0.6.3 | Local/feature qualification and final main run 37727162386 pass; human foundation acceptance recorded October 8, 2026 (UTC) |
+| Milestone 0 | Formally accepted by the human maintainer October 8, 2026 (UTC); ongoing limitations/review obligations retained |
+| M1 | Authorized; M1.1 specifications active, subsequent checkpoint scope/design/publication decisions remain separate |
 
-**Milestone 0 final acceptance pending closeout-record review/qualification,
-main integration/CI and formal human sign-off. M1 remains unauthorized.**
+**Milestone 0 accepted; M1 authorized. Production deployment and commercial
+feature publication remain separately gated.**

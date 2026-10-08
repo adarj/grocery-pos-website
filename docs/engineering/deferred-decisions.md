@@ -1,12 +1,16 @@
 # Deliberately deferred decisions
 
-These choices are open by design. M0.1 fixes ownership and architectural constraints,
-not vendors or infrastructure for features that do not exist. A listed trigger
-calls for evidence and a decision; it does not automatically authorize implementation.
+These implementation choices remain open by design. Accepted ADRs fix ownership
+and architectural constraints. The maintainer has identified **Vercel as the
+intended strategic hosting provider**; the former provider-selection entry was
+stale at that level. Deployment architecture, domain/origin, runtime/regions,
+caching, HTTPS/HSTS and operational approval remain unqualified.
+A listed trigger calls for evidence and a decision; it does not automatically
+authorize implementation. See the [M1 deployment boundary](milestone-1-plan.md#hosting-and-deployment-boundary).
 
 | Decision | Why premature | Trigger for evaluation |
 | --- | --- | --- |
-| Vercel vs DigitalOcean vs other hosting | Production operating requirements remain unspecified | First deployment with cost/runtime/region needs, using the qualified build |
+| Vercel hosting implementation and operational approval | Strategic target selected; actual project/domain/runtime/cache/cost/operations requirements remain unqualified | Bounded first-deployment decision using the qualified build; no provider configuration in M1.1 |
 | Exact deployment topology | API, regional, and availability needs are not established | First deployment and authoritative API integration |
 | Authentication provider | No account journeys or identity requirements | Authenticated-account milestone and threat model |
 | MFA/recovery implementation | Assurance/support requirements depend on accounts | Account-security design before protected commercial access |
@@ -39,10 +43,10 @@ x86_64 repository runtime, and Chromium/Firefox/WebKit 7/7 each. The inherited
 `XDG_DATA_DIRS`/GSettings failure is resolved by the Linux-CI WebKit browser-child
 correction; temporary diagnostics are removed. Fedora ARM64 WebKit native-runtime
 compatibility remains unqualified. Detailed history is in [quality and CI](quality-and-ci.md).
-The [proposed ESLint 9 exception](milestone-0-qualification.md#proposed-eslint-9-maintenance-exception)
-requires human approval, review at the first M1 implementation checkpoint or any
-targeted lint-stack update, and review no later than January 8, 2027 unless explicitly
-revised by the maintainer. Final M0.6 acceptance is governed by the
+The [approved ESLint 9 exception](milestone-0-qualification.md#approved-eslint-9-maintenance-exception)
+requires review at the first M1 implementation checkpoint and any targeted
+lint-stack update, no later than January 8, 2027 unless explicitly revised by the
+maintainer. Milestone 0 acceptance and final main evidence are recorded in the
 [qualification record](milestone-0-qualification.md).
 
 When a trigger arrives, identify the owner/requirement, evaluate the smallest

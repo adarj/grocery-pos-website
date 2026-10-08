@@ -16,15 +16,17 @@ implementation. Its intended repository identity is `adarj/grocery-pos-website`.
 
 ## Current status
 
-Internal/preproduction; **Website M0.6 — Engineering Foundation Qualification**.
-M0.1–M0.5 are complete and merged. Main-branch
-[CI run 37721922700](https://github.com/adarj/grocery-pos-website/actions/runs/37721922700)
-qualifies commit `a85611d2c863386f9600c29abf48d84dbc609f12`: the Ubuntu x86_64
-repository toolchain and all 21 Chromium/Firefox/WebKit production scenarios pass.
-Temporary diagnostics are removed. M0.6.1 independently assessed the foundation
-as CONDITIONAL PASS; bounded documentation and maintenance corrections are prepared
-in M0.6.2. Final M0.6.3 qualification and human acceptance remain required; M1 is
-not authorized. See the [Milestone 0 qualification record](docs/engineering/milestone-0-qualification.md).
+Internal/preproduction; **M1.1 — Information Architecture, Visual Direction &
+Design-System Specification** is active and documentation-only. The human maintainer
+formally accepted Milestone 0 and authorized M1 on October 8, 2026 (UTC).
+Final main [CI run 37727162386](https://github.com/adarj/grocery-pos-website/actions/runs/37727162386)
+qualifies commit `780ba8b89364fd16dba8609a0cb2a13779c24348`, including all 21
+Chromium/Firefox/WebKit scenarios. See the
+[foundation acceptance record](docs/engineering/milestone-0-qualification.md).
+The [M1 checkpoint plan](docs/engineering/milestone-1-plan.md), information architecture
+and visual/design-system specifications are proposals for human review; M1.2 has
+not begun. No public marketing page or commercial capability is approved by those
+specifications. The bounded ESLint exception remains subject to its review gates.
 `/` redirects to `/en`, the sole public content language. The engineering page
 demonstrates a ReScript-owned public capability projection and an isolated hydration
 counter. All capability data is fictional qualification data, not product claims.

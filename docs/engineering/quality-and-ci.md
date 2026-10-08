@@ -1,13 +1,13 @@
 # M0.5 quality and CI contract
 
-Local gates implement the quality/security floor over fictional M0.4 engineering
-content. Ubuntu x86_64 [CI run 37720760809](https://github.com/adarj/grocery-pos-website/actions/runs/37720760809)
-qualifies the repository toolchain and all 21 Chromium/Firefox/WebKit production
-scenarios. The inherited `XDG_DATA_DIRS`/GSettings failure is resolved by the narrow
-WebKit browser-child correction. Temporary diagnosis infrastructure is removed;
-this final cleanup still requires a successful remote CI run before merge review.
-M0.6 has not begun; it audits the foundation separately. M1 owns public content,
-the visual shell, and design system.
+M0.5 implements the quality/security floor over fictional M0.4 engineering content.
+Main-branch [CI run 37721922700](https://github.com/adarj/grocery-pos-website/actions/runs/37721922700)
+qualifies the merged cleanup commit and all 21 Chromium/Firefox/WebKit production
+scenarios on Ubuntu x86_64. The narrow WebKit browser-child correction resolves
+the inherited `XDG_DATA_DIRS`/GSettings failure; temporary diagnostics are removed.
+This record owns the CI contract and historical evidence. Foundation closeout,
+maintenance exceptions, and M1 authorization are tracked in the
+[Milestone 0 qualification record](milestone-0-qualification.md).
 
 ## Commands and ownership
 
@@ -38,14 +38,15 @@ compiler state, and build/report/cache output. Basic undefined/unused/unreachabl
 rules also cover handwritten `.mjs`. A missing-alt image probe is rejected by Next
 and JSX accessibility rules; generated-file ignore probes passed.
 
-**Compatibility limitation:** current ESLint 10.12.0 is outside the stable
-React/import/JSX-accessibility plugins' declared support. ESLint 9.39.5 is compatible
-but explicitly EOL, not a supported long-term choice. See [ESLint support](https://eslint.org/version-support/),
+**Compatibility limitation:** M0.6.1 inspected stable ESLint 10.12.0 and found
+React/import/JSX-accessibility peer constraints and removed-API compatibility concerns.
+ESLint 9.39.5 remains exactly pinned and qualified, but is EOL, not a supported
+long-term choice. See [ESLint support](https://eslint.org/version-support/),
 [React compatibility](https://github.com/jsx-eslint/eslint-plugin-react/issues/3984),
 and [JSX accessibility support](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/issues/1075).
-Carry this tooling limitation into M0.6 review and reevaluate when those plugins
-support ESLint 10. Do not suppress peer checks, remove accessibility rules, or
-incidentally upgrade qualified Next to hide it.
+The [bounded exception proposal](milestone-0-qualification.md#proposed-eslint-9-maintenance-exception)
+requires maintainer sign-off. Do not suppress peer checks, remove accessibility
+rules, or incidentally upgrade qualified Next to hide the limitation.
 
 `pnpm-workspace.yaml` supplies pnpm 12's root lifecycle policy; omitting `packages`
 keeps one application. `allowBuilds` explicitly denies `unrs-resolver`'s fallback
@@ -88,7 +89,7 @@ traces and screenshots, retained seven days. No dependency/browser/store upload.
 A final step checks tracked diffs, staging, and nonignored untracked files even
 after a gate fails. Ignored generated output is expected; Next's AGENTS marker stays tracked.
 
-## Evidence and next human step
+## Qualification evidence
 
 Fedora ARM64: Chromium and Firefox pass all seven production scenarios, including
 axe with no violations/exclusions, keyboard behavior, and CSP diagnostics. Static
@@ -96,7 +97,31 @@ axe with no violations/exclusions, keyboard behavior, and CSP diagnostics. Stati
 no config/session errors. See [security](security-baseline.md) and
 [accessibility](accessibility-and-performance.md) for intentional limits.
 
-### Successful supported-host qualification: 2026-10-08
+### Final merged main qualification: 2026-10-08
+
+[Website CI run 37721922700](https://github.com/adarj/grocery-pos-website/actions/runs/37721922700),
+attempt 1, was triggered by a push to `main` and tested signed commit
+`a85611d2c863386f9600c29abf48d84dbc609f12`
+(`chore(web): finalize M0.5 browser qualification`). The run and
+`Quality and browsers` job (ID `113131290782`) conclude **success**.
+Run metadata, step conclusions, and logs were independently reviewed in M0.6.
+
+Ubuntu 24.04 x86_64 entered the repository flake and used Node 24.21.0, pnpm 12.9.0,
+and just 1.51.0 from `/nix/store`. Frozen installation and project-owned Playwright
+1.64.0 browser provisioning pass. Lint, non-mutating ReScript formatting, 15 pure
+tests, seven supervisor cases, canonical typecheck, and production build pass.
+`/en` remains statically generated. Chromium, Firefox, and WebKit each pass all
+seven production scenarios: **21/21, one worker, zero retries**, including
+security-header/CSP, automated accessibility, keyboard/focus, JS-disabled SSR,
+and hydration checks. The final source-cleanliness step passes; failure-artifact
+upload is correctly skipped. Temporary diagnostics are absent from this commit.
+
+This main result qualifies the completed M0.5 cleanup and supersedes reliance on
+feature-branch-only evidence for closeout. Earlier runs below remain useful
+diagnostic history. Final Milestone 0 acceptance is separately governed by the
+[qualification criteria](milestone-0-qualification.md#m06-final-acceptance-criteria).
+
+### Corrected feature-branch qualification: 2026-10-08
 
 [Website CI run 37720760809](https://github.com/adarj/grocery-pos-website/actions/runs/37720760809),
 attempt 1, executed signed commit `ea43696930d129d848ad0a67d3ef2e0a98cadeb8`
@@ -132,11 +157,10 @@ Fedora ARM64 WebKit native-runtime compatibility remains unqualified. Axe smoke
 is not WCAG 2.2 AA conformance; HTTPS/HSTS deployment qualification remains deferred.
 The ESLint 9 EOL obligation and root Proxy method-scope note remain unchanged.
 
-The temporary isolation script and its failure-only workflow step are removed in
-this cleanup. The canonical gate, security settings, failure artifacts, and source
-cleanliness enforcement remain intact. The cleanup commit must pass remote CI
-before final human merge review; the passing run above qualifies its tested commit,
-not an unpushed cleanup revision.
+This feature-branch run qualifies the targeted browser-child correction. The
+subsequent cleanup removed the temporary script and failure-only diagnostic step;
+the final main qualification above verifies that merged cleanup while retaining
+the canonical gate, security controls, failure artifacts, and source cleanliness.
 
 ### First remote qualification: 2026-10-07
 
@@ -252,7 +276,8 @@ no diagnostic step or special diagnostic upload is added to routine CI.
 WebKit remains **required and blocking**. No prerelease, skip, retry-based acceptance,
 CSP relaxation, preload, ABI symlink, emulation, or substitute browser is adopted.
 Supported-host application qualification does not establish Fedora ARM64 native
-runtime compatibility. M0.6 is a separate task and has not begun.
+runtime compatibility. Final foundation acceptance is tracked separately in the
+[Milestone 0 qualification record](milestone-0-qualification.md).
 
 `pnpm audit` is a separate manual dependency-review input, not a network-dependent
 correctness gate. Triage changing advisory reports when reviewing dependencies.

@@ -100,8 +100,10 @@ qualification access, default-only negotiation, semantic English/pseudo messages
 all maturity labels, deterministic expansion, and unchanged machine facts.
 `just check` includes those tests, canonical type validation, a production build,
 and Chromium production routing/SSR/metadata/hydration tests. Firefox runs the same
-scenarios with `just test-e2e --project=firefox`. Existing WebKit native-runtime and
-x86_64 runtime qualification limits remain in the [toolchain record](../engineering/toolchain.md).
+scenarios with `just test-e2e --project=firefox`. Main CI run 37721922700 qualifies
+the Ubuntu x86_64 repository runtime and all three engines; Fedora ARM64 WebKit
+native-runtime compatibility remains unqualified. See the
+[toolchain record](../engineering/toolchain.md).
 
 For controlled pseudo qualification, run `just dev`, visit `/en-XA`, and inspect
 expanded visible text, title/description, `lang="en-XA"`, `dir="ltr"`, and robots

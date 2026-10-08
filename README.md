@@ -16,13 +16,15 @@ implementation. Its intended repository identity is `adarj/grocery-pos-website`.
 
 ## Current status
 
-Internal/preproduction; **Website M0.5 — Quality, Security & CI Foundation**.
-Local acceptance includes linting, accessibility smoke, security headers, and CSP.
-Ubuntu x86_64 [CI run 37720760809](https://github.com/adarj/grocery-pos-website/actions/runs/37720760809)
-qualifies the repository toolchain and Chromium/Firefox/WebKit: 21/21 production
-scenarios pass at commit `ea43696930d129d848ad0a67d3ef2e0a98cadeb8`.
-Temporary diagnostics are removed; final cleanup remote CI and human merge review
-remain. M0.6 has not begun; see [quality and CI](docs/engineering/quality-and-ci.md).
+Internal/preproduction; **Website M0.6 — Engineering Foundation Qualification**.
+M0.1–M0.5 are complete and merged. Main-branch
+[CI run 37721922700](https://github.com/adarj/grocery-pos-website/actions/runs/37721922700)
+qualifies commit `a85611d2c863386f9600c29abf48d84dbc609f12`: the Ubuntu x86_64
+repository toolchain and all 21 Chromium/Firefox/WebKit production scenarios pass.
+Temporary diagnostics are removed. M0.6.1 independently assessed the foundation
+as CONDITIONAL PASS; bounded documentation and maintenance corrections are prepared
+in M0.6.2. Final M0.6.3 qualification and human acceptance remain required; M1 is
+not authorized. See the [Milestone 0 qualification record](docs/engineering/milestone-0-qualification.md).
 `/` redirects to `/en`, the sole public content language. The engineering page
 demonstrates a ReScript-owned public capability projection and an isolated hydration
 counter. All capability data is fictional qualification data, not product claims.

@@ -5,11 +5,12 @@ fictional capability-publication slice documented in the
 [source architecture](../architecture/source-layout.md). The server-tree proof is
 replaced; the counter remains an isolated client qualification control.
 M0.4's [language/message boundary](../architecture/internationalization.md) serves
-the proof at `/en`. M0.5 [CI run 37720760809](quality-and-ci.md) qualifies the Ubuntu
-x86_64 repository runtime and all seven scenarios in each of Chromium, Firefox,
-and WebKit. The Linux-CI WebKit browser-child correction resolves inherited
-`XDG_DATA_DIRS`/GSettings lookup failure; temporary diagnostics are removed.
-Final cleanup remote CI remains required before merge review.
+the proof at `/en`. M0.5 main [CI run 37721922700](quality-and-ci.md) qualifies the
+merged cleanup, Ubuntu x86_64 repository runtime, and all seven scenarios in each
+of Chromium, Firefox, and WebKit. The Linux-CI WebKit browser-child correction
+resolves inherited `XDG_DATA_DIRS`/GSettings lookup failure; temporary diagnostics
+are removed. Final foundation acceptance and maintenance review are tracked in the
+[Milestone 0 qualification record](milestone-0-qualification.md).
 The visual system remains M1 work.
 
 ## Ownership and environment
@@ -172,6 +173,14 @@ and `next-env.d.ts`. Re-evaluate this version-sensitive workaround when Next is
 upgraded, using the newly installed bundled documentation rather than assuming
 live validator parity or disabling strictness.
 
+M0.6.1 NOTE F06-03: generated Next page validation does not reject every semantic
+prop mismatch. An in-memory extra required page prop passed; an invalid required
+layout prop was rejected. Current authored routes are correct. Use supported,
+explicit `PageProps`/`LayoutProps` annotations and review route signatures against
+installed version-matched Next documentation. Do not rely exclusively on generated
+validation for arbitrary extra required props; add proportionate framework tests
+when real routes change. This requires no generated-file patch or custom validator.
+
 The ReScript server component has no client directive. It imports the counter's
 generated module directly; only that module starts with `'use client'`, emitted
 from `@@directive("'use client'")`. GenType does not insert a directive or expand
@@ -253,9 +262,9 @@ the exact defective search-path entry has not been exhaustively identified.
 See the [successful qualification and diagnosis](quality-and-ci.md).
 
 `just test-e2e` and `just ci` keep WebKit required and blocking. The supported-host
-runtime/browser blockers are resolved; final cleanup still awaits its own remote
-CI result before merge review. Fedora's native-runtime limitation is separate and
-is not retired by x86_64 evidence.
+runtime/browser blockers and cleanup qualification are resolved by main run
+37721922700 at `a85611d2c863386f9600c29abf48d84dbc609f12`. Fedora's native-runtime
+limitation is separate and is not retired by x86_64 evidence.
 
 ## Supply chain and framework guidance
 
@@ -295,6 +304,6 @@ All six M0.1 ADRs remain valid. The accepted architecture is unchanged; only the
 old milestone description of language routing was aligned with M0.4. Hosting,
 commercial authority integrations, authentication, real translations, and the
 design system remain outside this spike. M0.5's quality/CI expansion is recorded
-separately above; remote x86_64 runtime and all three browser engines are qualified
-at the corrected commit. Final cleanup CI and human merge review remain; M0.6 has
-not begun.
+separately above; remote x86_64 runtime, all three browser engines, and final
+cleanup are qualified on main. The [Milestone 0 qualification record](milestone-0-qualification.md)
+owns the remaining M0.6 acceptance boundary.

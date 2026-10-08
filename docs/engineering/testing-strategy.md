@@ -8,11 +8,12 @@ tests and production redirect, invalid-language, metadata, SSR, and hydration sc
 development pseudo qualification is recorded in the
 [i18n foundation](../architecture/internationalization.md). M0.5 adds lint/format,
 supervisor acceptance, security response tests, axe/keyboard smoke, and a
-[CI workflow](quality-and-ci.md) qualified on Ubuntu x86_64 in run 37720760809:
-Chromium, Firefox, and WebKit each pass all seven production scenarios. The narrow
-Linux-CI WebKit environment correction resolves inherited `XDG_DATA_DIRS`/GSettings
-failure; temporary diagnostics are removed. Final cleanup remote CI remains
-required before merge review. Component-unit tooling remains deferred.
+[CI workflow](quality-and-ci.md) qualified on Ubuntu x86_64 by main run 37721922700:
+Chromium, Firefox, and WebKit each pass all seven production scenarios at the merged
+cleanup commit. The narrow Linux-CI WebKit environment correction resolves inherited
+`XDG_DATA_DIRS`/GSettings failure; temporary diagnostics are removed.
+Final foundation acceptance follows the [Milestone 0 qualification record](milestone-0-qualification.md).
+Component-unit tooling remains deferred.
 
 ## Intended verification layers
 

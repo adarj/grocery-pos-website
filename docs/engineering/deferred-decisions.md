@@ -33,14 +33,17 @@ calls for evidence and a decision; it does not automatically authorize implement
 
 Exact dependency versions, ReScript output conventions, and executable commands
 are **M0.2 proof work**, rather than unresolved product architecture. CI/test
-configuration is implemented in M0.5. CI run 37720760809 at commit
-`ea43696930d129d848ad0a67d3ef2e0a98cadeb8` qualifies the Ubuntu x86_64 repository
-runtime and Chromium/Firefox/WebKit 7/7 each. The inherited `XDG_DATA_DIRS`/GSettings
-failure is resolved by the Linux-CI WebKit browser-child correction. Temporary
-diagnostics are removed; final cleanup remote CI remains required before merge
-review. Fedora ARM64 WebKit native-runtime compatibility remains unqualified,
-and ESLint 9 EOL requires explicit M0.6 review. M0.6 has not begun.
-See the [qualification evidence and remaining review boundary](quality-and-ci.md).
+configuration is implemented and qualified in M0.5. Main CI run 37721922700 at
+`a85611d2c863386f9600c29abf48d84dbc609f12` qualifies the merged cleanup, Ubuntu
+x86_64 repository runtime, and Chromium/Firefox/WebKit 7/7 each. The inherited
+`XDG_DATA_DIRS`/GSettings failure is resolved by the Linux-CI WebKit browser-child
+correction; temporary diagnostics are removed. Fedora ARM64 WebKit native-runtime
+compatibility remains unqualified. Detailed history is in [quality and CI](quality-and-ci.md).
+The [proposed ESLint 9 exception](milestone-0-qualification.md#proposed-eslint-9-maintenance-exception)
+requires human approval, review at the first M1 implementation checkpoint or any
+targeted lint-stack update, and review no later than January 8, 2027 unless explicitly
+revised by the maintainer. Final M0.6 acceptance is governed by the
+[qualification record](milestone-0-qualification.md).
 
 When a trigger arrives, identify the owner/requirement, evaluate the smallest
 adequate options, and record the outcome in an ADR or scoped engineering document.

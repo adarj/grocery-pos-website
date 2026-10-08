@@ -1,10 +1,9 @@
 # Git workflow for agents
 
-Codex must not **commit, push, merge, rebase, reset, tag, create a release,
-force-update refs, or perform destructive Git operations** unless the human
-explicitly requests otherwise. Do not create/modify GitHub remotes or external
-repository state without an explicit instruction. M0.1 forbids all these actions;
-no exception is authorized by this checkpoint.
+Without explicit human authorization, agents do not stage, commit, push, merge,
+rebase, reset, cherry-pick, switch/create/delete branches, tag, create releases,
+modify remotes or GitHub state, rewrite history, or perform destructive Git operations.
+The human owns final review, signed commits, pushes, and branch integration.
 
 Safe read-only/status/diff commands are allowed. Inspect the baseline first,
 preserve existing work, and report an uninitialized repository rather than silently

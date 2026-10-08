@@ -2,25 +2,32 @@
 
 ## Scope and status
 
-The approved M1.2 scope is implemented around the existing fictional qualification
-page. Local and feature-branch remote qualification pass for the signed implementation
-commit below. The independent adversarial audit returned **M1.2 CONDITIONAL PASS —
-BOUNDED CORRECTIONS**, with no BLOCKER or MAJOR findings. A12-01/A12-02 corrective
-review is in progress; correction CI and human checkpoint acceptance remain pending.
-M1.3 authorization is not granted.
+**M1.2 — ACCEPTED by the human maintainer on October 8, 2026 (UTC).** The
+maintainer confirmed completion of the visual review and formal acceptance of the
+internal engineering-preview shell. A12-01/A12-02 are resolved; final merged-main
+qualification passes at the correction commit recorded below. The independent
+audit's original **CONDITIONAL PASS — BOUNDED CORRECTIONS** remains historical
+evidence, not a retroactively changed audit result.
+
+**M1.3 — Design Tokens & Reusable Primitives: AUTHORIZED** by the maintainer on
+October 8, 2026 (UTC); implementation has not started. Scope remains governed by
+the [M1 plan](milestone-1-plan.md) and
+[design-system specification](../design/design-system-specification.md).
+M1.4 and future commercial publication are not authorized.
 
 | Checkpoint evidence / decision | Status |
 | --- | --- |
 | Local implementation qualification | PASSED |
 | Feature-branch remote implementation qualification | PASSED: run 37752595132, attempt 2, exact signed commit below |
-| Independent adversarial implementation audit | CONDITIONAL PASS: A12-01/A12-02 MINOR corrections; A12-03 informational |
-| A12-01/A12-02 corrective review | IN PROGRESS |
-| Human visual/accessibility review | PENDING |
-| Human M1.2 ESLint exception disposition | PENDING |
-| Feature-branch correction CI | PENDING; earlier CI does not qualify these corrections |
-| Main integration and CI | PENDING |
-| M1.2 formal acceptance | PENDING |
-| M1.3 authorization | NOT GRANTED |
+| Independent adversarial implementation audit | Historical CONDITIONAL PASS: no BLOCKER/MAJOR; A12-01/A12-02 subsequently resolved; A12-03 remains NOTE |
+| A12-01/A12-02 dispositions | RESOLVED |
+| Human visual review | COMPLETED: confirmed October 8, 2026 (UTC); no additional manual accessibility coverage is asserted |
+| Human M1.2 ESLint exception disposition | APPROVED October 8, 2026 (UTC), under the unchanged bounded exception |
+| Final correction qualification | PASSED on merged main: run 37780086710 at the exact correction commit below |
+| Main integration and CI | COMPLETE; 27/27 and source cleanliness pass |
+| M1.2 formal acceptance | ACCEPTED October 8, 2026 (UTC) |
+| M1.3 authorization | AUTHORIZED October 8, 2026 (UTC); implementation not started |
+| M1.4 / commercial publication | NOT AUTHORIZED |
 
 An internal-preview label is neither access control nor deployment authorization.
 No marketing content, new routes, publication grants or product availability claims
@@ -130,8 +137,8 @@ cached binaries required no installation or host changes.
 
 All seven prior scenarios remain; two shell tests bring the suite to nine per
 engine. Supported Ubuntu `just ci` ran **27/27** for the signed implementation
-commit below. The same nine scenarios per engine, now including focused current-page
-and identity-focus assertions, must pass again on the correction commit. Chromium,
+commit below. Final merged-main qualification also passes the correction commit,
+including current-page and identity-focus assertions, as recorded below. Chromium,
 Firefox and WebKit remain blocking, with one worker and zero retries.
 Fedora ARM64 WebKit native runtime remains unqualified; no local success is asserted
 and no remote project is disabled.
@@ -140,7 +147,8 @@ The existing Linux-CI WebKit child-only GSettings correction is unchanged.
 No dependency, lockfile, Nix, CI, Playwright, security, domain/publication policy,
 route set or language-exposure change is made. Generated ReScript/GenType output
 remains ignored. The [first-checkpoint ESLint review](quality-and-ci.md#m12-eslint-compatibility-review-2026-10-08)
-retains the qualified exception; maintainer disposition is required at acceptance.
+supports retaining the qualified exception; the maintainer approved continued use
+at M1.2 acceptance under its unchanged conditions and deadline, as recorded below.
 
 ## Feature-branch remote qualification: 2026-10-08
 
@@ -170,9 +178,9 @@ not the subsequent corrections.
 
 ## Adversarial findings and correction review
 
-- **A12-01 — MINOR:** corrected obsolete pending-feature-CI/audit summaries and
+- **A12-01 — MINOR, RESOLVED:** corrected obsolete pending-feature-CI/audit summaries and
   recorded both remote attempts distinctly. Cross-document summaries link here.
-- **A12-02 — MINOR:** added the identity link's current-page semantics and emphasized
+- **A12-02 — MINOR, RESOLVED:** added the identity link's current-page semantics and emphasized
   underline, with production SSR, keyboard-order, focus/contrast and eligible-link
   assertions. The single-route assumption and mandatory future child-route safeguard
   are recorded above and in the shell source.
@@ -180,9 +188,10 @@ not the subsequent corrections.
   No timeout, retry, cache, mirror or provisioning change is justified by this
   isolated event; reassess only if comparable incidents recur.
 
-Corrective review is **IN PROGRESS**. The local correction qualification below
-passes; full three-engine correction qualification requires a new signed commit
-and supported-host CI run.
+A12-01/A12-02 are **RESOLVED** through the implemented corrections, local
+qualification and successful merged-main qualification. The maintainer formally
+accepted M1.2 on October 8, 2026 (UTC). The original audit result and failed
+provisioning attempt remain distinct historical evidence.
 
 ## M1.2.1 local correction qualification: 2026-10-08
 
@@ -200,15 +209,62 @@ used; no installation, dependency or host modification was needed.
 | Scope / documentation | PASS: only the intended shell/CSS/tests and status documentation changed; local Markdown links/anchors and `git diff --check` pass; dependencies, Nix, CI, route/publication policy and security controls unchanged |
 
 The existing nine scenarios per engine are preserved. Fedora ARM64 WebKit was not
-run; supported Ubuntu correction CI must qualify all three engines again, with
-WebKit required, one worker and zero retries.
+run locally; the final supported Ubuntu main run below qualifies all three engines,
+with WebKit required, one worker and zero retries.
 
-## Remaining checkpoint gates
+## Final merged-main qualification and human acceptance: 2026-10-08
 
-- Human review of A12-01/A12-02 corrections and visual/accessibility review.
-- Maintainer M1.2 disposition of ESLint retention under the approved exception;
-  its January 8, 2027 maximum review date and conditions are unchanged.
-- Signed human correction commit/push and exact-commit supported Ubuntu CI (27/27).
-- Human integration and main qualification, then formal M1.2 acceptance;
-  M1.3 authorization is not granted and remains a separate decision.
-- Manual screen-reader/zoom review; no deployment, HTTPS/HSTS or WCAG certification claim.
+Merged main commit: `e5f690977273ce721998f6f778b946924b5a443f`.
+[Main run 37780086710](https://github.com/adarj/grocery-pos-website/actions/runs/37780086710)
+and [job 113320701351](https://github.com/adarj/grocery-pos-website/actions/runs/37780086710/job/113320701351)
+were independently verified against that exact SHA and the `main` branch:
+**SUCCESS** on Ubuntu 24.04 x86_64.
+
+| Gate | Final main result |
+| --- | --- |
+| Repository Nix toolchain | PASS: Node 24.21.0, pnpm 12.9.0, just 1.51.0 |
+| Frozen installation / browser provisioning | PASS |
+| Lint / ReScript formatting | PASS: zero-warning lint and non-mutating formatting |
+| Pure / supervisor tests | PASS: 15 pure tests and seven supervisor regression cases |
+| Canonical typecheck / production build | PASS; `/en` remains statically generated |
+| Chromium / Firefox / WebKit | PASS: 9/9 each, aggregate 27/27, one worker, zero browser retries |
+| Security / accessibility / shell regressions | PASS: response/CSP, axe/keyboard, SSR/hydration, current-page/focus, reflow and withholding checks |
+| Source cleanliness | PASS |
+
+The human maintainer confirmed **completion of the visual review, formal M1.2
+acceptance and authorization to begin M1.3 on October 8, 2026 (UTC)**. Acceptance
+covers the internal engineering-preview shell only. It does not authorize
+customer-facing product claims, production deployment, M1.4 or other commercial
+publication. An internal-preview designation remains neither access control nor
+deployment authorization.
+
+### M1.2 ESLint checkpoint disposition
+
+On **October 8, 2026 (UTC)** the human maintainer explicitly approved continued
+use of exactly pinned **ESLint 9.39.5** under the
+[previously accepted maintenance exception](milestone-0-qualification.md#approved-eslint-9-maintenance-exception).
+The M1.2 technical review found no supported, coverage-preserving ESLint 10
+migration with the required stable plugin stack. This approval satisfies the
+**first-M1-implementation-checkpoint review requirement**.
+
+All controls remain: development/CI-only scope, zero-warning enforcement, existing
+Next/TypeScript/JSX accessibility coverage, frozen installation, normal CI gates
+and no unsupported peer overrides. Targeted lint-stack updates still trigger
+review; the maximum review date remains **January 8, 2027**. Upgrade criteria and
+explicit renewal/alternative-decision requirements at expiration remain unchanged.
+This is not an unrestricted exception or an automatic deadline extension.
+
+## Next-checkpoint boundaries and retained limitations
+
+- **M1.3 — Design Tokens & Reusable Primitives: AUTHORIZED; implementation not
+  started.** Follow the approved M1 plan and design-system specification; the
+  resulting measured visual system and component inventory still require review.
+- Before the first additional public child route, make identity-link current-page
+  handling route-aware; preserve the shared-layout safeguard recorded above.
+- A12-03 remains NOTE-level: monitor comparable provisioning incidents; no CI
+  timeout, retry, mirror, cache or provisioning change is authorized.
+- Fedora ARM64 WebKit native runtime remains unqualified. The confirmed visual
+  review does not establish additional screen-reader/native-zoom qualification
+  or WCAG 2.2 AA conformance; manual accessibility review continues with real UI.
+- Production HTTPS/HSTS, deployment and commercial publication require separate
+  authorization and qualification. M1.4 is not authorized.

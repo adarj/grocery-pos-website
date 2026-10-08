@@ -84,10 +84,13 @@ No peer overrides, dependency changes, rule removals or experimental ESLint 10 r
 were made. Keep exactly pinned ESLint 9.39.5 under the approved development/CI-only
 exception, zero-warning enforcement, existing rule coverage and frozen installation.
 
-**Checkpoint disposition:** technical review completed; the human maintainer must
-review continued retention at M1.2 acceptance under the existing exception.
-This record does not grant a new renewal or alter its January 8, 2027 maximum
-review date. Stable whole-stack compatibility without overrides, preserved active
+**Checkpoint disposition: APPROVED.** On October 8, 2026 (UTC), the human maintainer
+explicitly approved continued use of exactly pinned ESLint 9.39.5 under the existing
+bounded exception, satisfying the first-M1-implementation-checkpoint review.
+All existing controls, targeted lint-stack-update review obligations and expiration
+conditions remain. This is neither an unrestricted exception nor an automatic
+extension of its January 8, 2027 maximum review date.
+Stable whole-stack compatibility without overrides, preserved active
 rules/coverage, and passing local/remote gates remain the upgrade criteria.
 See the [approved exception](milestone-0-qualification.md#approved-eslint-9-maintenance-exception)
 for ownership and expiration behavior, and the

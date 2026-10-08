@@ -58,16 +58,19 @@ contradictions rather than silently substituting another architecture.
 
 Milestone 0 is accepted and M1 authorized; see the
 [qualification record](docs/engineering/milestone-0-qualification.md).
-M1.1 specifications are approved, merged and qualified on main. M1.2 implements
-only the approved internal engineering-preview shell around fictional proof data;
-see the [M1 plan](docs/engineering/milestone-1-plan.md) and
-[shell qualification record](docs/engineering/m1-2-shell-qualification.md).
-Keep navigation limited to actual approved destinations and qualify accessible
-styling now. M1.2 local and feature CI qualification pass; the adversarial audit
-returned CONDITIONAL PASS. A12-01/A12-02 corrections are under review; correction
-CI, human checkpoint decisions and main qualification remain pending. Do not begin M1.3.
-Review the approved ESLint exception at the first M1 implementation checkpoint
-and targeted lint-stack updates, no later than January 8, 2027 unless explicitly revised.
+M1.1 specifications and the M1.2 internal engineering-preview shell are accepted,
+merged and qualified on main. The maintainer confirmed completed visual review,
+formal M1.2 acceptance and M1.3 authorization on October 8, 2026 (UTC).
+**M1.3 — Design Tokens & Reusable Primitives: AUTHORIZED; implementation not started.**
+Follow the [M1 plan](docs/engineering/milestone-1-plan.md) and approved
+[design-system specification](docs/design/design-system-specification.md).
+The [shell record](docs/engineering/m1-2-shell-qualification.md) preserves audit/CI
+history, resolved A12-01/A12-02 and final main qualification. Keep navigation limited
+to eligible destinations; make identity current-state handling route-aware before
+the first public child route. M1.4, public product claims and deployment are not authorized.
+The maintainer approved ESLint retention at M1.2, satisfying its first-implementation
+review. Retain all exception controls; review targeted lint-stack updates and no
+later than January 8, 2027 unless explicitly revised.
 Use `just check` locally and `just ci` on a supported full browser runtime for
 implementation; documentation changes need links, whitespace and scope checks.
 Real translations, production ledgers and provider integrations remain outside this scope.
@@ -78,7 +81,7 @@ Nix must already work in the outer Linux environment; never bootstrap a substitu
 Do not commit, push, merge, rebase, reset, tag, create releases, force-update refs,
 perform destructive Git operations, or create/modify GitHub remotes. Safe Git
 status/diff/read operations are allowed. A later explicit human instruction is
-required to authorize an exception; M1.2 authorizes no Git mutation. Do not stage, cherry-pick,
+required to authorize an exception; this closeout authorizes no Git mutation. Do not stage, cherry-pick,
 or create/delete/switch branches. Leave implementation,
 validation results, and a suggested commit message for human review.
 

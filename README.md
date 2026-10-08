@@ -16,8 +16,9 @@ implementation. Its intended repository identity is `adarj/grocery-pos-website`.
 
 ## Current status
 
-Internal/preproduction; **M1.2 — Public Shell & Responsive Foundation** implements
-the approved internal engineering-preview shell. The human maintainer
+Internal/preproduction; **M1.2 — Public Shell & Responsive Foundation** is accepted.
+**M1.3 — Design Tokens & Reusable Primitives: AUTHORIZED; implementation not started.**
+The accepted surface remains the internal engineering-preview shell. The human maintainer
 formally accepted Milestone 0 and authorized M1 on October 8, 2026 (UTC).
 Final main [CI run 37727162386](https://github.com/adarj/grocery-pos-website/actions/runs/37727162386)
 qualifies commit `780ba8b89364fd16dba8609a0cb2a13779c24348`, including all 21
@@ -29,13 +30,16 @@ M1.1 is merged and qualified by main [CI run 37749346349](https://github.com/ada
 at `cea8dea94bafe182af40ef30fe390cc9b667ac07`. M1.2 adds a server-rendered identity
 header, skip link, responsive proof container and preview footer; no additional
 navigation destinations exist. See the [shell qualification record](docs/engineering/m1-2-shell-qualification.md)
-for local PASS, feature CI PASS (27/27 on attempt 2 of run 37752595132), and the
-independent adversarial CONDITIONAL PASS. A12-01/A12-02 correction review, correction
-CI, human visual/accessibility and ESLint decisions, main integration/CI and formal
-M1.2 acceptance remain pending; M1.3 authorization is not granted. No public marketing
+for historical local/feature CI and adversarial evidence, resolved A12-01/A12-02,
+and final main [run 37780086710](https://github.com/adarj/grocery-pos-website/actions/runs/37780086710)
+at `e5f690977273ce721998f6f778b946924b5a443f`: Chromium/Firefox/WebKit 9/9 each,
+27/27, one worker, zero retries and source cleanliness PASS. The maintainer confirmed
+completion of visual review, formal M1.2 acceptance and M1.3 authorization on
+October 8, 2026 (UTC). M1.4 is not authorized. No public marketing
 page, customer claim, asset or deployment is authorized. The broader palette
 remains exploratory. The [M1.2 lint review](docs/engineering/quality-and-ci.md#m12-eslint-compatibility-review-2026-10-08)
-retains the bounded exception and its January 8, 2027 maximum review date.
+and explicit maintainer retention approval satisfy the first-implementation-checkpoint
+requirement under the existing bounded exception and January 8, 2027 maximum review date.
 `/` redirects to `/en`, the sole public content language. The engineering page
 demonstrates a ReScript-owned public capability projection and an isolated hydration
 counter. All capability data is fictional qualification data, not product claims.

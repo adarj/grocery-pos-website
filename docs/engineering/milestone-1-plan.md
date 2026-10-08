@@ -2,11 +2,12 @@
 
 **Status: M1.1 planning specification approved by the human maintainer on
 October 8, 2026 (UTC).** The initial M1.2 internal engineering-preview scope below
-is implemented: local and feature remote qualification pass, and the independent
-adversarial audit returned CONDITIONAL PASS. A12-01/A12-02 corrective review is in
-progress; correction CI, human checkpoint decisions, main integration/CI and formal
-M1.2 acceptance remain pending. M1.3 authorization is not granted. Later checkpoints
-retain their scope and human review gates. Specification approval grants no publication or
+is implemented, merged and qualified on main. The maintainer confirmed completion
+of the visual review and formally accepted M1.2 on October 8, 2026 (UTC).
+A12-01/A12-02 are resolved; the original adversarial CONDITIONAL PASS remains
+historical evidence. **M1.3 — Design Tokens & Reusable Primitives: AUTHORIZED**
+on the same date; implementation has not started. M1.4 is not authorized.
+Later checkpoints retain their scope and human review gates. Specification approval grants no publication or
 production deployment authorization. Milestone 0 is complete and accepted;
 see the [qualification record](milestone-0-qualification.md).
 
@@ -18,7 +19,8 @@ see the [qualification record](milestone-0-qualification.md).
 | Independent adversarial specification audit | **M1.1 PASS — READY FOR HUMAN DESIGN APPROVAL**; no BLOCKER, MAJOR or MINOR defects; A11-01–A11-03 carried below |
 | Signed specification commit / feature CI | [Run 37728971554](https://github.com/adarj/grocery-pos-website/actions/runs/37728971554) passes at `efa76de8dc5afec83c7f4858afa2cbfcfeeab2e1`; Chromium/Firefox/WebKit 7/7 each, 21/21, one worker, zero retries; source cleanliness passes |
 | M1.1 branch integration / main CI | Merged; [main run 37749346349](https://github.com/adarj/grocery-pos-website/actions/runs/37749346349) passes at `cea8dea94bafe182af40ef30fe390cc9b667ac07`, including 21/21 and source cleanliness |
-| M1.2 | Approved scope implemented; [shell record](m1-2-shell-qualification.md): local PASS, feature CI PASS (27/27), adversarial CONDITIONAL PASS; A12-01/A12-02 correction review in progress; correction CI, human decisions, main integration/CI and formal acceptance pending; M1.3 not authorized |
+| M1.2 | ACCEPTED by the maintainer October 8, 2026 (UTC); visual review completed, A12-01/A12-02 resolved, ESLint retention approved; [shell record](m1-2-shell-qualification.md) preserves history and final main run 37780086710 at `e5f690977273ce721998f6f778b946924b5a443f`: 27/27 and source cleanliness PASS |
+| M1.3 | Design Tokens & Reusable Primitives: AUTHORIZED October 8, 2026 (UTC); implementation not started; approved scope and review gate below remain governing |
 
 ## Objective and implementation starting point
 
@@ -44,8 +46,8 @@ samples as product claims or delete unique coverage without replacement.
 | Checkpoint | Scope and dependencies | Acceptance evidence | Explicit exclusions | Human gate |
 | --- | --- | --- | --- | --- |
 | M1.1 — Specifications | Approved audience/IA, target navigation and templates, visual direction and component contracts; accepted M0 baseline | Adversarial audit PASS; exact feature CI PASS; working document links; documentation-only scope | No components, assets, public copy, routes or M1.2 execution | Specification/design approval recorded October 8, 2026 (UTC); merged main CI passes |
-| M1.2 — Internal engineering-preview shell | Approved identity header, skip link, responsive container, existing qualification proof and minimal footer; essential accessible styling; navigation/disclosure only when eligible destinations justify them | Server-first/client-reference review; JS-disabled usability; keyboard/focus/axe; measured actual contrast/control states; narrow-to-wide/pseudo checks; preserved security/hydration/publication regressions; typecheck/build; full supported CI | No fabricated marketing content, unavailable routes/links, pricing, commerce, accounts, contact forms, backend services, speculative features, mega-menu/search, real second language or broad token library | Review the implemented bounded scope and **review the approved ESLint exception at this first implementation checkpoint** |
-| M1.3 — Tokens/primitives | Measure palette pairs; consolidate minimal M1.2 styling into semantic tokens and demonstrated container/section/link/button/card/callout patterns | Contrast/state pairing sheet; responsive/expanded-text/forced-colors/reduced-motion checks; proportionate tests and canonical gates | No UI framework, remote fonts, generic component factory, complex forms/data grids or commerce controls | Approve measured visual system and justified component inventory |
+| M1.2 — Internal engineering-preview shell | Approved identity header, skip link, responsive container, existing qualification proof and minimal footer; essential accessible styling; navigation/disclosure only when eligible destinations justify them | Server-first/client-reference review; JS-disabled usability; keyboard/focus/axe; measured actual contrast/control states; narrow-to-wide/pseudo checks; preserved security/hydration/publication regressions; typecheck/build; full supported CI | No fabricated marketing content, unavailable routes/links, pricing, commerce, accounts, contact forms, backend services, speculative features, mega-menu/search, real second language or broad token library | Maintainer visual review and formal acceptance recorded October 8, 2026 (UTC); first-implementation ESLint review satisfied by explicit retention approval |
+| M1.3 — Tokens/primitives | Measure palette pairs; consolidate minimal M1.2 styling into semantic tokens and demonstrated container/section/link/button/card/callout patterns | Contrast/state pairing sheet; responsive/expanded-text/forced-colors/reduced-motion checks; proportionate tests and canonical gates | No UI framework, remote fonts, generic component factory, complex forms/data grids or commerce controls | Implementation authorized October 8, 2026 (UTC), not started; approve the resulting measured visual system and justified component inventory |
 | M1.4 — Reviewed templates/content | Integrate a small approved subset of IA templates and actual reviewed copy/assets; depends on owners, maturity/disclosure evidence and M1.3 | Claim/source review; metadata and link checks; public-safe projection/withholding; real SSR; content-specific a11y/performance checks and CI | No requirement to populate every sitemap area; no fake claims, CMS/docs platform, pricing, commerce/account or submission backend | Approve every publication set and its qualifications; withhold unsupported pages |
 | M1.5 — Audit/qualification | Adversarial architecture, publication, accessibility, responsive and measured performance review of the implemented scope | Chromium/Firefox/WebKit; manual screen-reader/keyboard/zoom/contrast review; responsive matrix; static/client graph and asset review; canonical local + CI evidence | No deployment certification, WCAG claim from automation, speculative scanners or features added to fill gaps | Accept/correct M1 based on actual evidence; authorize subsequent work separately |
 
@@ -79,16 +81,19 @@ regression and supported Ubuntu just ci qualify all three blocking engines with
 one worker and zero retries. Add tests for actual shell behavior; do not freeze
 the old page's wording as permanent product acceptance.
 
-The approved ESLint 9.39.5 exception is unchanged. The human maintainer must review
-it at M1.2 (the first implementation checkpoint) and targeted lint-stack updates,
-no later than January 8, 2027 unless explicitly revised. Check stable plugin
+The approved ESLint 9.39.5 exception is unchanged. The human maintainer explicitly
+approved continued retention on October 8, 2026 (UTC), satisfying the M1.2
+first-implementation-checkpoint review. Review remains required at targeted
+lint-stack updates and no later than January 8, 2027 unless explicitly revised.
+Check stable plugin
 support, active rules and coverage; use no forced peer overrides. If a supported
 migration remains unavailable at review, record explicit renewal or a supported
 alternative per the [accepted exception](milestone-0-qualification.md#approved-eslint-9-maintenance-exception).
 The [M1.2 compatibility review](quality-and-ci.md#m12-eslint-compatibility-review-2026-10-08)
 finds the stable plugin stack still unsuitable for an unsupported forced migration.
-Retain the qualified pin; the maintainer's checkpoint disposition remains part of
-M1.2 acceptance. This implementation does not authorize a tooling upgrade.
+The maintainer's approved checkpoint disposition retains the exact qualified pin
+under all existing controls; it is not an unrestricted exception or deadline
+extension. No tooling upgrade is authorized by this closeout.
 
 ## Hosting and deployment boundary
 
@@ -120,8 +125,9 @@ This scope does not approve public marketing copy, unavailable routes, customer
 claims or assets. No pricing, commerce, accounts, contact forms, backend services
 or speculative product features belong in M1.2. An internal-preview designation
 is neither access control nor production deployment authorization. The [M1.2 shell qualification](m1-2-shell-qualification.md)
-records local and feature CI PASS, adversarial CONDITIONAL PASS, and corrective
-review in progress. Correction CI and the human/main acceptance gates remain pending.
+records local/feature CI history, the original adversarial CONDITIONAL PASS,
+resolved A12-01/A12-02, final main qualification (27/27), completed human visual
+review and formal M1.2 acceptance on October 8, 2026 (UTC).
 The current identity link assumes one page per language root. Before the first
 additional public child route, make its current-page treatment route-aware.
 
@@ -138,8 +144,9 @@ Carry the independent audit notes into M1.2 acceptance:
   route changes and responsive transitions. Do not implement a disclosure merely
   to exercise hypothetical behavior.
 
-Review the approved ESLint 9.39.5 maintenance exception at this first implementation
-checkpoint under the unchanged conditions above, no later than January 8, 2027.
+The first-implementation ESLint 9.39.5 review is satisfied by the maintainer's
+October 8, 2026 (UTC) approval of continued retention. The unchanged conditions
+above, targeted-update review triggers and January 8, 2027 maximum review date remain.
 Actual content owners, public destination sets, contact channels and assets still
 require separate approval. Later checkpoint scope and deployment decisions remain
 human gates; neither specification approval nor green CI grants publication.

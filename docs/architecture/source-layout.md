@@ -165,7 +165,9 @@ identifier. M1.2 Chromium and Firefox each pass nine production scenarios locall
 feature run 37752595132 attempt 2 qualifies all three engines at 9/9 each (27/27)
 on the signed implementation commit. The [shell record](../engineering/m1-2-shell-qualification.md#feature-branch-remote-qualification-2026-10-08)
 distinguishes the failed provisioning attempt from the successful rerun. A12-01/A12-02
-correction review is in progress; correction CI and main integration/CI remain pending.
+are resolved; [final main qualification](../engineering/m1-2-shell-qualification.md#final-merged-main-qualification-and-human-acceptance-2026-10-08)
+passes all 27 scenarios at `e5f690977273ce721998f6f778b946924b5a443f`.
+M1.2 is formally accepted; M1.3 is authorized but not started.
 Fedora ARM64 WebKit native runtime remains unqualified.
 
 M0.5's [quality/CI contract](../engineering/quality-and-ci.md) adds lint/format,

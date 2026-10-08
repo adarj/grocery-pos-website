@@ -71,6 +71,47 @@ The inherited `XDG_DATA_DIRS` caused WebKit subprocess GSettings lookup failure;
 omitting it only from Linux-CI WebKit browser children restored the full suite.
 The exact defective search-path entry was not exhaustively determined.
 
+## M0.6.3 qualification evidence
+
+**Technical qualification passes; human ESLint approval and final acceptance remain pending.**
+The qualification began with a clean worktree/staging area at signed feature HEAD
+`de6ccda2cd99c8c068801962e95851509832738b`, one commit ahead of main baseline
+`a85611d2c863386f9600c29abf48d84dbc609f12`.
+
+[Feature CI run 37725244132](https://github.com/adarj/grocery-pos-website/actions/runs/37725244132)
+tests that exact feature SHA. Run/job `Quality and browsers` (ID `113141811106`)
+conclude success; metadata, step conclusions, logs and GitHub signature verification
+were independently inspected. This is feature qualification, not post-integration
+main evidence. Failure-artifact upload was correctly skipped.
+
+| Category | Fresh local result | Exact feature CI result | Acceptance |
+| --- | --- | --- | --- |
+| Nix/toolchain | Fedora Linux aarch64; Nix 2.34.7; Node 24.21.0, pnpm 12.9.0, just 1.51.0 resolve through the website Nix environment | Ubuntu 24.04 x86_64; Nix 2.35.2; repository flake supplies the same project versions | PASS |
+| Clean regeneration / frozen installation | `just clean`, then `pnpm install --frozen-lockfile` pass; dependency metadata unchanged | Frozen installation and pinned browser provisioning pass | PASS |
+| Lint / formatting | `just check`: zero-warning ESLint and non-mutating ReScript formatting pass | PASS | PASS |
+| Pure / supervisor tests | 15/15 pure tests; seven supervisor cases pass with all owned processes gone | Same counts pass | PASS |
+| Typecheck / build | Canonical typegen/strict TypeScript and production build pass; `/en` statically generated | PASS; static `/en` preserved | PASS |
+| Chromium | 7/7 production scenarios pass | 7/7 | PASS |
+| Firefox | `just test-e2e --project=firefox`: 7/7 pass using the same build | 7/7 | PASS |
+| WebKit | Not run on the unqualified Fedora ARM64 native runtime | 7/7; blocking Linux-CI child-environment correction retained | Supported-host PASS |
+| Security / accessibility | Response/CSP diagnostics, zero axe violations, native keyboard/focus, JS-disabled SSR and hydration pass in both local engines | All three engines pass | PASS; no WCAG/HTTPS claim |
+| Documentation / source cleanliness | Local paths/heading links pass; all 71 tracked hashes unchanged after execution; generated output ignored; no test server remains | Source-cleanliness step passes | PASS; this closeout record is a subsequent documentation change |
+| ESLint exception | No explicit maintainer authorization supplied; proposal remains pending | CI success does not grant approval | PENDING |
+
+Fresh production inspection confirms `/en` is the sole public prerendered route
+(apart from Next's built-in error routes), `lang="en"`/`dir="ltr"`, no pseudo page,
+and only Counter from application source in the client-reference manifest. The
+26 inspected public HTML/RSC/segment/client files contain neither withheld fixture
+identifier. Counter's generated runtime imports only React/JSX; server policy and
+catalog logic remain outside its client graph. No remote script source or
+high-confidence tracked credential pattern was found.
+
+F06-01 corrections are incorporated in the tested M0.6.2 commit. F06-02 still
+requires maintainer sign-off on the exact proposal below; F06-03 remains the
+accepted framework note. No new BLOCKER or MAJOR was found. The only runtime
+warnings were Node's `NO_COLOR`/`FORCE_COLOR` notices. No source, test, dependency,
+CI or security configuration was changed for qualification.
+
 ## Accepted limitations and future triggers
 
 - Fedora ARM64 WebKit native-runtime compatibility remains unqualified; supported
@@ -138,9 +179,10 @@ Final acceptance requires all of the following:
    into main, then actual main-branch CI passes at the integrated SHA.
 6. The human records the formal Milestone 0 acceptance and M1 authorization decision.
 
-The qualification sequence and new CI evidence belong to M0.6.3. They were not
-executed during this documentation-only correction pass. Do not invent a final
-acceptance date, future commit SHA or CI run ID.
+M0.6.2 did not execute the qualification sequence; the M0.6.3 results are recorded
+above. After human review/signing of this closeout record, its feature CI and
+post-integration main CI remain required. Do not invent a final acceptance date,
+future commit SHA or CI run ID, or infer exception approval from passing checks.
 
 ## Current status
 
@@ -148,8 +190,9 @@ acceptance date, future commit SHA or CI run ID.
 | --- | --- |
 | M0.1–M0.5 | Complete, signed, merged and qualified on main |
 | M0.6.1 | Independent assessment complete: CONDITIONAL PASS |
-| M0.6.2 | Bounded documentation correction set prepared for human review; ESLint exception proposal pending sign-off |
-| M0.6.3 | Final local/remote qualification and human acceptance still required |
-| M1 | Not authorized |
+| M0.6.2 | Corrections committed as `de6ccda2cd99c8c068801962e95851509832738b` and feature-CI qualified; ESLint exception proposal pending sign-off |
+| M0.6.3 | Fresh local qualification and exact feature CI pass; closeout-record review/CI, ESLint approval, main integration/CI and formal human acceptance remain |
+| M1 | Not authorized; GO recommendation only after the remaining human/CI conditions |
 
-**Milestone 0 final acceptance pending M0.6.3 and human sign-off.**
+**Milestone 0 final acceptance pending maintainer ESLint approval, closeout-record
+review/qualification, main integration/CI and formal human sign-off.**

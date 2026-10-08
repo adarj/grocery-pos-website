@@ -75,8 +75,8 @@ records the maintainer's explicit formal decision and signed main closeout
 `ad69f632129231bb2604a3a71678ac959900046c`, run 37827607606 (30/30).
 D13-01–D13-03 remain **DEFERRED, UNVERIFIED — M1.5**.
 **M1.4 — Reviewed Templates & Content: AUTHORIZED October 8, 2026 (UTC).**
-**M1.4.1 — Content Readiness & Publication Matrix: AUTHORIZED; implementation under review.**
-The [content-readiness register](docs/product/m1-4-1-content-readiness.md) owns candidate pages,
+**M1.4.1 — Content Readiness & Publication Matrix: FORMALLY ACCEPTED October 8, 2026 (UTC).**
+The [content-readiness acceptance record](docs/product/m1-4-1-content-readiness.md#formal-m141-acceptance-2026-10-08-utc) owns candidate pages,
 evidence, unresolved maturity and separate disclosure decisions. This checkpoint
 is documentation-only; no substantive content set is publication-approved.
 Do not begin M1.4.2. M1.3 acceptance grants no publication or deployment approval.

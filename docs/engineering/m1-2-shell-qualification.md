@@ -39,7 +39,7 @@ M1.4.2 and future commercial publication are not authorized.
 | Main integration and CI | COMPLETE; 27/27 and source cleanliness pass |
 | M1.2 formal acceptance | ACCEPTED October 8, 2026 (UTC) |
 | M1.3 acceptance | FORMALLY ACCEPTED October 8, 2026 (UTC); main closeout `ad69f632129231bb2604a3a71678ac959900046c`, run 37827607606: 30/30 and source cleanliness; [record](m1-3-3-design-system-qualification.md#formal-m13-acceptance-2026-10-08-utc) preserves audit history and DEFERRED, UNVERIFIED — M1.5 obligations |
-| M1.4 / commercial publication | M1.4/M1.4.1 documentation planning authorized October 8, 2026 (UTC), under review; M1.4.2 and substantive publication NOT AUTHORIZED |
+| M1.4 / commercial publication | M1.4 authorized and M1.4.1 documentation planning formally accepted October 8, 2026 (UTC); M1.4.2 and substantive publication NOT AUTHORIZED |
 
 An internal-preview label is neither access control nor deployment authorization.
 No marketing content, new routes, publication grants or product availability claims
@@ -283,10 +283,10 @@ Primitives: FORMALLY ACCEPTED October 8, 2026 (UTC)** by the human maintainer. T
 | M1.3.2 assessment | No-extraction decision accepted October 8, 2026 (UTC); signed main commit `e14416956296233844b833526ccc32d21b86f47e`, run 37797004595: 30/30 and source cleanliness PASS |
 | M1.3.3 | Merged at signed commit `b3175b473710279152e78598019812ff43e15a08`; adversarial audit PASS; main run 37804897764: 30/30 and source cleanliness PASS |
 | M1.3.4 / overall acceptance | Historical CONDITIONAL PASS retained; human gates subsequently resolved; M1.3 FORMALLY ACCEPTED October 8, 2026 (UTC), main closeout `ad69f632129231bb2604a3a71678ac959900046c`, run 37827607606 (30/30); [record](m1-3-3-design-system-qualification.md#formal-m13-acceptance-2026-10-08-utc) retains the approved, unverified M1.5 deferrals |
-| M1.4 | Authorized October 8, 2026 (UTC); M1.4.1 documentation planning under review; [content-readiness register](../product/m1-4-1-content-readiness.md); M1.4.2 not authorized |
+| M1.4 | Authorized October 8, 2026 (UTC); M1.4.1 documentation planning formally accepted October 8, 2026 (UTC); [content-readiness register](../product/m1-4-1-content-readiness.md); M1.4.2 not authorized |
 
 Follow the approved M1 plan and design-system specification. M1.3 is formally accepted;
-M1.4.1 is documentation-only and under review; M1.4.2 remains unauthorized.
+M1.4.1 documentation planning is formally accepted October 8, 2026 (UTC); M1.4.2 remains unauthorized.
 
 - Before the first additional public child route, make identity-link current-page
   handling route-aware; preserve the shared-layout safeguard recorded above.

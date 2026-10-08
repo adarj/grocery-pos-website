@@ -1,5 +1,19 @@
 # M1.4.1 content readiness and publication matrix
 
+## Current checkpoint status
+
+**M1.4.1 — Content Readiness & Publication Matrix: FORMALLY ACCEPTED October 8, 2026 (UTC).**
+The [dated acceptance record](#formal-m141-acceptance-2026-10-08-utc) below records
+explicit maintainer acceptance and merged-main qualification. Acceptance validates
+this readiness assessment and its governance. All twelve claim subjects and all
+eight substantive publication sets remain **WITHHELD**. M1.4.2, later implementation,
+public disclosure and deployment remain **NOT AUTHORIZED**.
+
+The planning sections below retain their original pre-merge wording, starting
+baseline and then-pending acceptance/CI statements as historical evidence. The
+appended acceptance outcome supersedes those status statements; it does not
+change their claim, evidence, maturity or disclosure decisions.
+
 ## Authorization and baseline
 
 **M1.4 — Reviewed Templates & Content: AUTHORIZED October 8, 2026 (UTC).**
@@ -378,3 +392,81 @@ The eventual signed commit still requires supported Ubuntu exact-SHA CI with all
 30 existing scenarios and source cleanliness. The current `docs/**` branch does
 not trigger push CI automatically; use the unchanged PR-to-main or manual-dispatch
 path under human control. No Git or GitHub mutation is performed by this checkpoint.
+
+## Formal M1.4.1 acceptance (2026-10-08 UTC)
+
+**M1.4.1 — Content Readiness & Publication Matrix: FORMALLY ACCEPTED October 8, 2026 (UTC).**
+The human repository maintainer explicitly accepted the overall checkpoint after
+reviewing its independent adversarial audit, the bounded A141-01 correction and
+the merged checkpoint's successful main CI.
+
+### Accepted commit and qualification evidence
+
+- Accepted signed main commit: `cf6ce944ce081366a6470f91500c116d11dff9de`.
+  [GitHub commit verification](https://github.com/adarj/grocery-pos-website/commit/cf6ce944ce081366a6470f91500c116d11dff9de)
+  reports the signature **verified**, reason `valid`.
+- [Main GitHub Actions run 37836356422](https://github.com/adarj/grocery-pos-website/actions/runs/37836356422),
+  attempt 1, tested that exact commit on `main` and concluded **SUCCESS**.
+- The supported Ubuntu workflow passed repository Nix/toolchain qualification,
+  frozen pnpm installation, browser provisioning, lint, non-mutating formatting,
+  15 pure tests, seven supervisor regressions, canonical typechecking and the
+  production build.
+- Chromium **10/10**, Firefox **10/10**, WebKit **10/10**: aggregate **30/30**,
+  **one worker, zero browser retries**. The source-cleanliness step passed.
+  This qualifies the merged planning checkpoint and existing engineering preview,
+  not any proposed substantive page or deployment.
+
+### Historical audit and corrected finding
+
+The original independent adversarial decision remains
+**CONDITIONAL PASS — BOUNDED CORRECTIONS REQUIRED**. It is not retroactively
+rewritten as an unconditional PASS.
+
+**A141-01: RESOLVED.** Both complete route examples,
+`/en/resources/<reviewed-slug>` and `/en/docs/<reviewed-slug>`, use Markdown
+inline-code delimiters so their placeholders remain literal text. Neither example
+registers a route. No remaining substantiated BLOCKER, MAJOR or MINOR documentation
+finding is outstanding after this bounded correction.
+
+### Accepted planning scope and retained withholding
+
+Acceptance covers eight assessed primary page candidates, twelve claim subjects,
+seven source groups, the conditional homepage-first recommendation, a reviewed
+editorial article as an alternative, and the lightweight evidence/disclosure
+approval process. It validates the assessment and governance, not the truth or
+publication eligibility of every proposed claim.
+
+**All C01–C12 claim subjects remain WITHHELD for substantive public disclosure.**
+**All P01–P08 proposed substantive publication sets remain WITHHELD.** The source
+register and separate evidence, maturity, disclosure and page-readiness decisions
+are unchanged. Unknown maturity remains **UNVERIFIED / UNRESOLVED**; acceptance
+assigns no AVAILABLE, PILOT, PREVIEW, PLANNED or INTERNAL classification.
+
+| Milestone / authority | Current disposition |
+| --- | --- |
+| M1.3 | FORMALLY ACCEPTED October 8, 2026 (UTC); accepted 43-property tokens and M1.3.2 no-extraction architecture retained |
+| M1.4 | AUTHORIZED October 8, 2026 (UTC) |
+| M1.4.1 | FORMALLY ACCEPTED October 8, 2026 (UTC) |
+| M1.4.2 and later M1.4 implementation | NOT AUTHORIZED |
+| Substantive public disclosure and deployment | NOT AUTHORIZED |
+
+No new content, assets, routes, public metadata, navigation destinations or
+commercial claims are authorized. The homepage-first recommendation does not
+permit replacing `/en`. Before actual M1.4.2 implementation, the maintainer must
+authorize its exact scope and approve the required factual inputs, exact content,
+qualifications, ownership and separate disclosure decisions. An unsatisfied gate
+requires withholding, not manufactured copy.
+
+D13-01 screen-reader, D13-02 physical touch/device and D13-03 actual OS high-contrast
+verification remain **DEFERRED, UNVERIFIED — M1.5**. M1.3's accepted manual observations
+do not qualify new content or waive its accessibility requirements. No WCAG
+conformance, device qualification, deployment or public product readiness is claimed.
+Before the first additional public child route, make identity-link current-page
+handling route-aware. Retain exactly pinned ESLint 9.39.5, every accepted exception
+control and the **January 8, 2027** maximum review date.
+
+This administrative acceptance-record change still requires human review, a
+human-controlled signed commit and successful supported Ubuntu CI on that exact
+future commit, using the unchanged 30-scenario three-browser gate and source
+cleanliness. The accepted run above does not qualify this subsequent documentation
+diff. No Git or GitHub integration action is performed by this record update.

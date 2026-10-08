@@ -25,8 +25,8 @@ records the maintainer's explicit formal decision, signed main closeout
 its human gates were resolved by five human-reported PASS observations and three
 explicitly approved deferrals. D13-01–D13-03 remain **DEFERRED, UNVERIFIED — M1.5**.
 **M1.4 — Reviewed Templates & Content: AUTHORIZED October 8, 2026 (UTC).**
-**M1.4.1 — Content Readiness & Publication Matrix: AUTHORIZED; implementation under review.**
-The [content-readiness register](product/m1-4-1-content-readiness.md) owns candidate-page
+**M1.4.1 — Content Readiness & Publication Matrix: FORMALLY ACCEPTED October 8, 2026 (UTC).**
+The [accepted content-readiness register](product/m1-4-1-content-readiness.md#formal-m141-acceptance-2026-10-08-utc) owns candidate-page
 readiness, claim provenance and separate publication decisions. No substantive
 content set is approved; M1.4.2 remains unauthorized. The approved M1 plan and
 design-system specification remain governing; acceptance grants no publication

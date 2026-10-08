@@ -160,7 +160,7 @@ for completeness or manufacture a second page to justify it. M1.3.4's authorized
 final audit and subsequent human dispositions are preserved in the
 [acceptance record](m1-3-3-design-system-qualification.md#formal-m13-acceptance-2026-10-08-utc). M1.3 is formally
 accepted; later implementation requires separate authorization.
-M1.4.1 is documentation-only and under review; M1.4.2 remains unauthorized.
+M1.4.1 documentation planning is formally accepted October 8, 2026 (UTC); M1.4.2 remains unauthorized.
 
 Reconsider extraction when approved real pages repeat meaningful semantic
 composition, require consistent inputs or expose maintenance drift that CSS cannot

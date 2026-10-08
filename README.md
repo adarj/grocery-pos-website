@@ -30,8 +30,8 @@ M1.3.4's historical CONDITIONAL PASS remains intact; its human gates were resolv
 by five human-reported PASS observations and three explicitly approved deferrals.
 D13-01–D13-03 remain **DEFERRED, UNVERIFIED — M1.5**.
 **M1.4 — Reviewed Templates & Content: AUTHORIZED October 8, 2026 (UTC).**
-**M1.4.1 — Content Readiness & Publication Matrix: AUTHORIZED; implementation under review.**
-The [internal content-readiness register](docs/product/m1-4-1-content-readiness.md) proposes a
+**M1.4.1 — Content Readiness & Publication Matrix: FORMALLY ACCEPTED October 8, 2026 (UTC).**
+The [accepted content-readiness register](docs/product/m1-4-1-content-readiness.md#formal-m141-acceptance-2026-10-08-utc) proposes a
 bounded first content slice; all candidate substantive publication sets remain
 withheld pending evidence and approval. M1.4.2 has not begun and is not authorized.
 M1.3 acceptance grants no public product or deployment approval.
@@ -53,7 +53,7 @@ and final main [run 37780086710](https://github.com/adarj/grocery-pos-website/ac
 at `e5f690977273ce721998f6f778b946924b5a443f`: Chromium/Firefox/WebKit 9/9 each,
 27/27, one worker, zero retries and source cleanliness PASS. The maintainer confirmed
 completion of visual review, formal M1.2 acceptance and M1.3 authorization on
-October 8, 2026 (UTC). M1.4.1 is documentation-only and under review;
+October 8, 2026 (UTC). M1.4.1 is formally accepted as documentation-only planning;
 M1.4.2 is not authorized. No public marketing
 page, customer claim, asset or deployment is authorized. The broader palette
 remains exploratory. The [M1.2 lint review](docs/engineering/quality-and-ci.md#m12-eslint-compatibility-review-2026-10-08)

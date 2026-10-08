@@ -178,11 +178,13 @@ decision October 8, 2026 (UTC); signed main commit
 `e14416956296233844b833526ccc32d21b86f47e` and run 37797004595 qualify it (30/30).
 The [M1.3.3 qualification](../engineering/m1-3-3-design-system-qualification.md)
 is merged and main-qualified at `b3175b473710279152e78598019812ff43e15a08`,
-run 37804897764 (30/30), with adversarial audit PASS. The final M1.3.4 audit
-retains its CONDITIONAL PASS with no implementation defects. The
-[closeout candidate](../engineering/m1-3-3-design-system-qualification.md#final-acceptance-readiness-closeout-2026-10-08-utc)
-records subsequent human observations and approved, unverified M1.5 deferrals.
-Overall M1.3 acceptance is PENDING final maintainer sign-off; M1.4 remains unauthorized.
+run 37804897764 (30/30), with adversarial audit PASS.
+M1.3 was formally accepted October 8, 2026 (UTC); the
+[acceptance record](../engineering/m1-3-3-design-system-qualification.md#formal-m13-acceptance-2026-10-08-utc)
+owns signed main closeout `ad69f632129231bb2604a3a71678ac959900046c`,
+run 37827607606 (30/30), the preserved M1.3.4 CONDITIONAL PASS and subsequent human
+gate resolution. D13-01–D13-03 remain DEFERRED, UNVERIFIED — M1.5.
+M1.4 remains unauthorized.
 Fedora ARM64 WebKit native runtime remains unqualified.
 
 M0.5's [quality/CI contract](../engineering/quality-and-ci.md) adds lint/format,

@@ -5,15 +5,16 @@
 **M1.3.1 — ACCEPTED and merged on main.** Main qualification passes at signed
 commit `61784aec86d53f35aa839c9ef7fce780d3cd4805`, run 37791509300 (30/30).
 The original pre-merge adversarial CONDITIONAL PASS and its final finding
-dispositions are preserved below. M1.3 is not complete; the
+dispositions are preserved below. M1.3 was formally accepted October 8, 2026 (UTC); the
 [M1.3.2 no-extraction decision](m1-3-2-primitives-qualification.md) is human-accepted,
 merged and main-qualified. The
 [M1.3.3 qualification](m1-3-3-design-system-qualification.md) is merged and
 main-qualified (30/30), with adversarial audit PASS. Its
-[dated closeout candidate](m1-3-3-design-system-qualification.md#final-acceptance-readiness-closeout-2026-10-08-utc) preserves
-the final M1.3.4 CONDITIONAL PASS and subsequent human observations/approved,
-unverified M1.5 deferrals. Overall M1.3 acceptance is PENDING final maintainer
-sign-off; M1.4 is not authorized.
+[formal acceptance record](m1-3-3-design-system-qualification.md#formal-m13-acceptance-2026-10-08-utc) preserves
+the final M1.3.4 historical CONDITIONAL PASS and subsequent human gate resolution.
+Signed main closeout `ad69f632129231bb2604a3a71678ac959900046c` passes run
+37827607606 (30/30 and source cleanliness). D13-01–D13-03 remain
+DEFERRED, UNVERIFIED — M1.5; M1.4 remains unauthorized.
 This slice consolidates demonstrated presentation values in `app/globals.css`.
 No components, routes, content, publication grants or dependencies are added.
 The [approved design-system contract](../design/design-system-specification.md),

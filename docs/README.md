@@ -13,20 +13,19 @@ owns that record and the approved M1.2 scope. The
 and feature qualification history, the original adversarial CONDITIONAL PASS,
 resolved A12-01/A12-02 and final main run 37780086710 (27/27). The maintainer
 confirmed completion of visual review, formal M1.2 acceptance and ESLint retention
-approval on October 8, 2026 (UTC). **M1.3 — Design Tokens & Reusable Primitives:
-AUTHORIZED.** M1.3.1 tokens are accepted, merged and qualified on main (30/30);
+approval on October 8, 2026 (UTC). **M1.3 — Design Tokens & Reusable Primitives: FORMALLY ACCEPTED October 8, 2026 (UTC).** M1.3.1 tokens are accepted, merged and qualified on main (30/30);
 the [token record](engineering/m1-3-1-token-qualification.md) owns that evidence.
 The [M1.3.2 no-extraction decision](engineering/m1-3-2-primitives-qualification.md)
 was human-accepted October 8, 2026 (UTC), merged and qualified on main (30/30).
 M1.3.3 is merged and main-qualified (30/30), with adversarial audit PASS.
-The final M1.3.4 audit retains its CONDITIONAL PASS with no implementation defects.
-The [canonical closeout candidate](engineering/m1-3-3-design-system-qualification.md#final-acceptance-readiness-closeout-2026-10-08-utc)
-records five human-reported manual PASS observations and three explicitly approved,
-unverified M1.5 deferrals on October 8, 2026 (UTC).
-Overall M1.3 acceptance is PENDING final maintainer sign-off; the documentation
-candidate still needs exact-commit CI. M1.4 is not authorized. The approved M1 plan
-and design-system specification remain governing. Architecture, templates and
-proposed URLs are not publication approval or evidence of commercially released features.
+The [canonical acceptance record](engineering/m1-3-3-design-system-qualification.md#formal-m13-acceptance-2026-10-08-utc)
+records the maintainer's explicit formal decision, signed main closeout
+`ad69f632129231bb2604a3a71678ac959900046c` and successful run 37827607606
+(30/30 and source cleanliness). M1.3.4's historical CONDITIONAL PASS is preserved;
+its human gates were resolved by five human-reported PASS observations and three
+explicitly approved deferrals. D13-01–D13-03 remain **DEFERRED, UNVERIFIED — M1.5**.
+M1.4 remains unauthorized. The approved M1 plan and design-system specification
+remain governing; acceptance grants no publication or deployment approval.
 
 | Question | Canonical document |
 | --- | --- |

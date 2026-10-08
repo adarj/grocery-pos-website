@@ -2,15 +2,16 @@
 
 ## Scope, baseline and current status
 
-**M1.3 CLOSEOUT CANDIDATE — READY FOR HUMAN REVIEW.**
-M1.3.3 is merged and main-qualified at signed commit
-`b3175b473710279152e78598019812ff43e15a08`, run 37804897764 (30/30).
-Its independent adversarial audit passed. The final M1.3.4 audit retains its
-CONDITIONAL PASS with no implementation defects. The
-[dated closeout section](#final-acceptance-readiness-closeout-2026-10-08-utc)
-records the later human observations and approved, unverified M1.5 deferrals.
-**Formal overall M1.3 acceptance: PENDING final maintainer sign-off.**
-This documentation candidate still requires exact-commit CI; M1.4 is unauthorized.
+**M1.3 — Design Tokens & Reusable Primitives: FORMALLY ACCEPTED October 8, 2026 (UTC).**
+The [formal acceptance section](#formal-m13-acceptance-2026-10-08-utc) records the
+maintainer's explicit decision, signed merged closeout
+`ad69f632129231bb2604a3a71678ac959900046c` and successful main run
+37827607606 (30/30 and source cleanliness). M1.3.3's independent audit PASS and
+M1.3.4's historical CONDITIONAL PASS are preserved below. Five human-reported
+manual PASS observations and three explicitly approved deferrals resolved the
+human acceptance gates; D13-01–D13-03 remain **DEFERRED, UNVERIFIED — M1.5**.
+**M1.4 remains unauthorized.** Acceptance applies to the internal engineering-preview
+subset and grants no public product or deployment approval.
 
 ### Historical local qualification and starting baseline
 
@@ -272,6 +273,11 @@ and its January 8, 2027 maximum review date.
 
 ## Final acceptance-readiness closeout (2026-10-08 UTC)
 
+This historical preparation record was merged at
+`ad69f632129231bb2604a3a71678ac959900046c`. Its candidate status and pending
+gates below describe the period before the maintainer's explicit final decision;
+the [formal acceptance section](#formal-m13-acceptance-2026-10-08-utc) records their subsequent disposition.
+
 **M1.3 CLOSEOUT CANDIDATE — READY FOR HUMAN REVIEW.**
 **Formal overall M1.3 acceptance: PENDING final maintainer sign-off.**
 The maintainer supplied the manual observations and approved the bounded deferrals
@@ -410,3 +416,65 @@ maximum review date.
   implementation or publication set requires separate explicit authorization.
 
 No final overall acceptance date, future closeout SHA or CI run is invented.
+
+## Formal M1.3 acceptance (2026-10-08 UTC)
+
+**M1.3 — Design Tokens & Reusable Primitives: FORMALLY ACCEPTED October 8, 2026 (UTC).**
+The human repository maintainer explicitly issued this final overall acceptance
+decision on October 8, 2026 (UTC). It supersedes the pending-sign-off status of the
+historical closeout candidate above.
+
+The final closeout commit is `ad69f632129231bb2604a3a71678ac959900046c`,
+signed and merged into main. GitHub verifies its signature. Independently verified
+[main run 37827607606](https://github.com/adarj/grocery-pos-website/actions/runs/37827607606)
+tests that exact SHA and succeeds on Ubuntu 24.04 x86_64: repository Nix toolchain,
+frozen installation, normal quality/typecheck/production-build gates, Chromium
+10/10, Firefox 10/10, WebKit 10/10, aggregate **30/30**, one worker, zero browser
+retries and source cleanliness. This is qualification of the merged closeout,
+not a new execution or qualification of this later administrative recording diff.
+
+The accepted scope is the existing internal engineering-preview design system:
+the approved 43-property semantic token foundation, measured implemented pairings,
+M1.3.2's maintainer-approved no-extraction decision and existing CSS patterns/
+server-rendered ReScript composition. No additional primitive or runtime change
+is required by this acceptance.
+
+### Historical audit and resolved acceptance gates
+
+M1.3.4's original **CONDITIONAL PASS — ACCEPTANCE GATES OUTSTANDING** remains
+the audit decision. No BLOCKER, MAJOR or MINOR implementation defect was found;
+the final maintainer decision does not rewrite that historical audit as PASS.
+
+- **A134-01 — RESOLVED through documented human dispositions:** five human-reported
+  PASS observations (keyboard-only navigation, navigation without JavaScript,
+  native 400% browser zoom, focus visibility/overlap, text enlargement/spacing)
+  and three explicitly approved M1.5 deferrals addressed the human acceptance
+  gates. The exact browser version, OS and detailed manual test configuration
+  remain unspecified; no independent reproduction is claimed.
+- **A134-02 — RESOLVED:** the final closeout was signed, merged and main-qualified
+  at the exact commit/run above. Current-status summaries now record the
+  maintainer's explicit formal M1.3 acceptance.
+
+### Retained unverified obligations and boundaries
+
+| Obligation | Current disposition |
+| --- | --- |
+| D13-01 — Screen-reader verification | **DEFERRED, UNVERIFIED — M1.5** |
+| D13-02 — Physical touch/device verification | **DEFERRED, UNVERIFIED — M1.5** |
+| D13-03 — Actual OS high-contrast verification | **DEFERRED, UNVERIFIED — M1.5** |
+
+The original October 8, 2026 (UTC) deferral approvals, bounded rationale and
+[required future checks](#explicitly-approved-m15-deferrals) remain unchanged.
+These items are not PASS and are not waived. Revisit them at M1.5, record actual
+environments/results and correct any discovered current defect.
+
+**M1.4 remains unauthorized.** Formal M1.3 acceptance does not authorize public
+marketing pages, claims, product disclosures, assets, commerce, backend work or
+deployment. It establishes neither WCAG conformance, actual device or assistive
+technology qualification, production deployment readiness nor public product
+readiness. Server-first/static /en, English-only public language authorization,
+development-only pseudo content, Counter-only application client ownership,
+fictional-data withholding and CSP/security controls remain intact. Make identity
+current-page handling route-aware before the first additional public child route.
+The pinned ESLint 9.39.5 exception and all controls retain the January 8, 2027
+maximum review date.

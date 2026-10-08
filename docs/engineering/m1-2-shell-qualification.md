@@ -9,20 +9,20 @@ qualification passes at the correction commit recorded below. The independent
 audit's original **CONDITIONAL PASS — BOUNDED CORRECTIONS** remains historical
 evidence, not a retroactively changed audit result.
 
-**M1.3 — Design Tokens & Reusable Primitives: AUTHORIZED** by the maintainer on
-October 8, 2026 (UTC). M1.3.1 tokens are accepted, merged and qualified on main
+**M1.3 — Design Tokens & Reusable Primitives: FORMALLY ACCEPTED October 8, 2026 (UTC).** M1.3.1 tokens are accepted, merged and qualified on main
 (30/30). The [M1.3.2 no-extraction decision](m1-3-2-primitives-qualification.md)
 was human-accepted October 8, 2026 (UTC), merged and main-qualified (30/30).
 The [M1.3.3 qualification](m1-3-3-design-system-qualification.md) is merged and
 main-qualified (30/30), with adversarial audit PASS. The
-[closeout candidate](m1-3-3-design-system-qualification.md#final-acceptance-readiness-closeout-2026-10-08-utc) preserves
-the final M1.3.4 CONDITIONAL PASS and subsequent human observations/approved,
-unverified M1.5 deferrals. Overall M1.3 acceptance is PENDING final maintainer
-sign-off. Scope remains governed by
+[acceptance record](m1-3-3-design-system-qualification.md#formal-m13-acceptance-2026-10-08-utc) preserves
+the final M1.3.4 historical CONDITIONAL PASS and subsequent human gate resolution.
+Signed main closeout `ad69f632129231bb2604a3a71678ac959900046c` passes run
+37827607606 (30/30 and source cleanliness); D13-01–D13-03 remain
+DEFERRED, UNVERIFIED — M1.5. Scope remains governed by
 the [M1 plan](milestone-1-plan.md) and
 [design-system specification](../design/design-system-specification.md).
 The [M1.3.1 token record](m1-3-1-token-qualification.md) owns subsequent token
-work; this document preserves M1.2 evidence. M1.3 is not complete.
+work; this document preserves M1.2 evidence. M1.3 is formally accepted.
 M1.4 and future commercial publication are not authorized.
 
 | Checkpoint evidence / decision | Status |
@@ -36,7 +36,7 @@ M1.4 and future commercial publication are not authorized.
 | Final correction qualification | PASSED on merged main: run 37780086710 at the exact correction commit below |
 | Main integration and CI | COMPLETE; 27/27 and source cleanliness pass |
 | M1.2 formal acceptance | ACCEPTED October 8, 2026 (UTC) |
-| M1.3 authorization | AUTHORIZED October 8, 2026 (UTC); M1.3.1–M1.3.3 merged/main-qualified (30/30 each); final audit and human manual dispositions recorded in the [closeout candidate](m1-3-3-design-system-qualification.md#final-acceptance-readiness-closeout-2026-10-08-utc); overall acceptance PENDING final maintainer sign-off |
+| M1.3 acceptance | FORMALLY ACCEPTED October 8, 2026 (UTC); main closeout `ad69f632129231bb2604a3a71678ac959900046c`, run 37827607606: 30/30 and source cleanliness; [record](m1-3-3-design-system-qualification.md#formal-m13-acceptance-2026-10-08-utc) preserves audit history and DEFERRED, UNVERIFIED — M1.5 obligations |
 | M1.4 / commercial publication | NOT AUTHORIZED |
 
 An internal-preview label is neither access control nor deployment authorization.
@@ -268,7 +268,7 @@ This is not an unrestricted exception or an automatic deadline extension.
 
 M1.2 is formally accepted, merged and qualified on main; its historical evidence
 and acceptance records above remain unchanged. **M1.3 — Design Tokens & Reusable
-Primitives: AUTHORIZED** by the human maintainer. The
+Primitives: FORMALLY ACCEPTED October 8, 2026 (UTC)** by the human maintainer. The
 [M1.3.1 token record](m1-3-1-token-qualification.md) owns the subsequent evidence:
 
 | M1.3 checkpoint | Current status |
@@ -280,10 +280,11 @@ Primitives: AUTHORIZED** by the human maintainer. The
 | M1.3.1 integration and main CI | Complete: run 37791509300, exact signed commit above, Chromium/Firefox/WebKit 10/10 each (30/30), source cleanliness PASS |
 | M1.3.2 assessment | No-extraction decision accepted October 8, 2026 (UTC); signed main commit `e14416956296233844b833526ccc32d21b86f47e`, run 37797004595: 30/30 and source cleanliness PASS |
 | M1.3.3 | Merged at signed commit `b3175b473710279152e78598019812ff43e15a08`; adversarial audit PASS; main run 37804897764: 30/30 and source cleanliness PASS |
-| M1.3.4 / overall acceptance | Historical CONDITIONAL PASS retained; subsequent manual observations and approved, unverified M1.5 deferrals recorded in the [closeout candidate](m1-3-3-design-system-qualification.md#final-acceptance-readiness-closeout-2026-10-08-utc); formal overall M1.3 acceptance PENDING |
+| M1.3.4 / overall acceptance | Historical CONDITIONAL PASS retained; human gates subsequently resolved; M1.3 FORMALLY ACCEPTED October 8, 2026 (UTC), main closeout `ad69f632129231bb2604a3a71678ac959900046c`, run 37827607606 (30/30); [record](m1-3-3-design-system-qualification.md#formal-m13-acceptance-2026-10-08-utc) retains the approved, unverified M1.5 deferrals |
 | M1.4 | Not authorized |
 
-Follow the approved M1 plan and design-system specification. M1.3 is not complete.
+Follow the approved M1 plan and design-system specification. M1.3 is formally accepted;
+M1.4 remains unauthorized.
 
 - Before the first additional public child route, make identity-link current-page
   handling route-aware; preserve the shared-layout safeguard recorded above.
@@ -291,7 +292,7 @@ Follow the approved M1 plan and design-system specification. M1.3 is not complet
   timeout, retry, mirror, cache or provisioning change is authorized.
 - Fedora ARM64 WebKit native runtime remains unqualified. M1.2's visual review did
   not establish screen-reader/native-zoom qualification. The subsequent
-  [M1.3 closeout](m1-3-3-design-system-qualification.md#final-acceptance-readiness-closeout-2026-10-08-utc) records
+  [M1.3 acceptance record](m1-3-3-design-system-qualification.md#formal-m13-acceptance-2026-10-08-utc) records
   human-reported native-zoom and other manual PASS observations with missing
   environment metadata; screen-reader/device/actual OS high-contrast checks are
   explicitly deferred, unverified at M1.5. No WCAG 2.2 AA conformance is asserted.

@@ -17,18 +17,19 @@ implementation. Its intended repository identity is `adarj/grocery-pos-website`.
 ## Current status
 
 Internal/preproduction; **M1.2 — Public Shell & Responsive Foundation** is accepted.
-**M1.3 — Design Tokens & Reusable Primitives: AUTHORIZED.** M1.3.1 tokens are
+**M1.3 — Design Tokens & Reusable Primitives: FORMALLY ACCEPTED October 8, 2026 (UTC).** M1.3.1 tokens are
 accepted, merged and qualified on main (30/30); see the
 [token qualification record](docs/engineering/m1-3-1-token-qualification.md).
 The [M1.3.2 no-extraction decision](docs/engineering/m1-3-2-primitives-qualification.md)
 was human-accepted October 8, 2026 (UTC), merged and qualified on main (30/30).
 M1.3.3 is merged and main-qualified (30/30), with adversarial audit PASS.
-The M1.3.4 final audit retains its CONDITIONAL PASS with no implementation defects.
-The [closeout candidate](docs/engineering/m1-3-3-design-system-qualification.md#final-acceptance-readiness-closeout-2026-10-08-utc)
-records five human-reported manual PASS observations and three explicitly approved,
-unverified M1.5 deferrals on October 8, 2026 (UTC).
-**Overall M1.3 acceptance is PENDING final maintainer sign-off.** M1.4 remains
-unauthorized; this documentation candidate still requires exact-commit CI.
+The [formal acceptance record](docs/engineering/m1-3-3-design-system-qualification.md#formal-m13-acceptance-2026-10-08-utc)
+identifies signed main closeout `ad69f632129231bb2604a3a71678ac959900046c`
+and successful main run 37827607606 (30/30 and source cleanliness).
+M1.3.4's historical CONDITIONAL PASS remains intact; its human gates were resolved
+by five human-reported PASS observations and three explicitly approved deferrals.
+D13-01–D13-03 remain **DEFERRED, UNVERIFIED — M1.5**.
+**M1.4 remains unauthorized.** This acceptance grants no public product or deployment approval.
 The accepted surface remains the
 internal engineering-preview shell. The human maintainer
 formally accepted Milestone 0 and authorized M1 on October 8, 2026 (UTC).

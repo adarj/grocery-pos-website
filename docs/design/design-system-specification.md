@@ -26,12 +26,14 @@ existing container/section CSS patterns and ReScript composition sufficient;
 no additional component extraction is justified. The maintainer accepted the
 no-extraction decision October 8, 2026 (UTC); merged main CI passes 30/30.
 The [M1.3.3 qualification](../engineering/m1-3-3-design-system-qualification.md)
-is merged and main-qualified (30/30), with adversarial audit PASS. Its
-[dated closeout candidate](../engineering/m1-3-3-design-system-qualification.md#final-acceptance-readiness-closeout-2026-10-08-utc)
-preserves the final M1.3.4 CONDITIONAL PASS, five human-reported manual PASS
-observations and three explicitly approved, unverified M1.5 deferrals.
-Overall M1.3 acceptance is PENDING final maintainer sign-off; the wider proposed
-roles below and M1.4 remain outside this closeout's authorization.
+is merged and main-qualified (30/30), with adversarial audit PASS.
+**M1.3 — Design Tokens & Reusable Primitives: FORMALLY ACCEPTED October 8, 2026 (UTC).**
+The [acceptance record](../engineering/m1-3-3-design-system-qualification.md#formal-m13-acceptance-2026-10-08-utc)
+identifies signed main closeout `ad69f632129231bb2604a3a71678ac959900046c`
+and main run 37827607606 (30/30), preserving the final audit's historical
+CONDITIONAL PASS and subsequent human gate resolution. D13-01–D13-03 remain
+**DEFERRED, UNVERIFIED — M1.5**. The wider proposed roles below require their own
+implementation qualification; M1.4 remains unauthorized.
 
 Secondary/inverse/technical type, status/warning/error/disabled roles, contrasting
 panels, additional action variants and unneeded primitives remain proposals.

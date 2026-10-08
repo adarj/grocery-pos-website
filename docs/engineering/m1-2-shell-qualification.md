@@ -11,9 +11,11 @@ evidence, not a retroactively changed audit result.
 
 **M1.3 — Design Tokens & Reusable Primitives: AUTHORIZED** by the maintainer on
 October 8, 2026 (UTC). M1.3.1 tokens are accepted, merged and qualified on main
-(30/30). The [M1.3.2 assessment](m1-3-2-primitives-qualification.md) recommends no
-further extraction; human scope review and exact-commit remote CI remain pending
-for that documentation-only candidate. Scope remains governed by
+(30/30). The [M1.3.2 no-extraction decision](m1-3-2-primitives-qualification.md)
+was human-accepted October 8, 2026 (UTC), merged and main-qualified (30/30).
+The authorized [M1.3.3 qualification](m1-3-3-design-system-qualification.md) records
+independent inspection and bounded local probes over the unchanged UI; adversarial
+audit, exact-commit CI and human review remain pending. Scope remains governed by
 the [M1 plan](milestone-1-plan.md) and
 [design-system specification](../design/design-system-specification.md).
 The [M1.3.1 token record](m1-3-1-token-qualification.md) owns subsequent token
@@ -31,7 +33,7 @@ M1.4 and future commercial publication are not authorized.
 | Final correction qualification | PASSED on merged main: run 37780086710 at the exact correction commit below |
 | Main integration and CI | COMPLETE; 27/27 and source cleanliness pass |
 | M1.2 formal acceptance | ACCEPTED October 8, 2026 (UTC) |
-| M1.3 authorization | AUTHORIZED October 8, 2026 (UTC); M1.3.1 accepted/merged and main-qualified; M1.3.2 assessment prepared, human scope review and exact-commit CI pending |
+| M1.3 authorization | AUTHORIZED October 8, 2026 (UTC); M1.3.1 and the M1.3.2 no-extraction decision accepted/merged and main-qualified; M1.3.3 qualification authorized, audit/CI/human review pending |
 | M1.4 / commercial publication | NOT AUTHORIZED |
 
 An internal-preview label is neither access control nor deployment authorization.
@@ -273,8 +275,8 @@ Primitives: AUTHORIZED** by the human maintainer. The
 | M1.3.1 independent adversarial audit | Historical CONDITIONAL PASS — BOUNDED CORRECTIONS; A13-01 resolved in the merged commit; A13-02/A13-03 retained as NOTES; original audit decision preserved |
 | M1.3.1 human acceptance | Accepted baseline identified by the maintainer's M1.3.2 instruction; no additional manual accessibility coverage is asserted |
 | M1.3.1 integration and main CI | Complete: run 37791509300, exact signed commit above, Chromium/Firefox/WebKit 10/10 each (30/30), source cleanliness PASS |
-| M1.3.2 assessment | Existing CSS reuse retained; no additional component extraction justified; human scope review and exact-commit CI pending |
-| M1.3.3 | Not begun |
+| M1.3.2 assessment | No-extraction decision accepted October 8, 2026 (UTC); signed main commit `e14416956296233844b833526ccc32d21b86f47e`, run 37797004595: 30/30 and source cleanliness PASS |
+| M1.3.3 | Authorized October 8, 2026 (UTC); independent qualification recorded, adversarial audit/exact-commit CI/human review pending |
 | M1.4 | Not authorized |
 
 Follow the approved M1 plan and design-system specification. M1.3 is not complete.

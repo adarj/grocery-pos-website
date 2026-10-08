@@ -23,8 +23,12 @@ Supporting text inherits body size. These are the current qualified implementati
 not automatic approval of broader candidate sizes below. The
 [M1.3.2 assessment](../engineering/m1-3-2-primitives-qualification.md) finds the
 existing container/section CSS patterns and ReScript composition sufficient;
-no additional component extraction is justified. That assessment awaits human
-scope review and exact-commit remote CI; M1.3 is not complete.
+no additional component extraction is justified. The maintainer accepted the
+no-extraction decision October 8, 2026 (UTC); merged main CI passes 30/30.
+The authorized [M1.3.3 qualification](../engineering/m1-3-3-design-system-qualification.md)
+records independent inspection, inherited three-browser evidence and bounded
+local probes. It awaits adversarial audit, exact-commit CI and human review;
+M1.3 is not complete.
 
 Secondary/inverse/technical type, status/warning/error/disabled roles, contrasting
 panels, additional action variants and unneeded primitives remain proposals.

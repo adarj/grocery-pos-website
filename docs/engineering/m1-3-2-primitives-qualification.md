@@ -2,12 +2,18 @@
 
 ## Scope and status
 
-**EXTRACTION NOT JUSTIFIED — READY FOR HUMAN SCOPE REVIEW.** The existing semantic
-tokens, shared CSS patterns and ReScript composition already serve the implemented
-engineering preview. This is an evidence-backed documentation-only assessment;
-no new component, CSS rule, token, route, test or dependency is introduced.
-Human scope review and exact-commit remote CI remain pending. M1.3 is not complete;
-M1.3.3 has not begun and M1.4 remains unauthorized.
+**M1.3.2 — ACCEPTED by the human maintainer on October 8, 2026 (UTC).**
+The no-extraction decision retains the existing semantic tokens, shared CSS
+patterns and ReScript composition. The assessment was documentation-only;
+no new component, CSS rule, token, route, test or dependency was introduced.
+Signed main commit `e14416956296233844b833526ccc32d21b86f47e` is qualified by
+run 37797004595 (30/30), recorded below.
+
+The maintainer explicitly authorized M1.3.3 on the same date. Its
+[design-system qualification](m1-3-3-design-system-qualification.md) records
+independent inspection and bounded local probes over the unchanged UI;
+adversarial audit, exact-commit CI and human review remain pending.
+M1.3 is not complete; M1.3.4 has not begun and M1.4 remains unauthorized.
 
 Starting branch: `feat/m1-3-2-reusable-primitives`; HEAD/main/origin-main:
 `61784aec86d53f35aa839c9ef7fce780d3cd4805`, with clean worktree and staging.
@@ -67,7 +73,11 @@ controlled base-link fixtures and actual focus-adjacent surfaces. Decorative
 sage dividers are not essential boundaries. No new visual-parity experiment or
 focus-target claim is made; the historical post-Tab parity limitation remains.
 
-## Qualification evidence and limits
+## Qualification evidence at assessment time and limits
+
+The following preserves the original pre-merge assessment evidence. Its decision
+was **EXTRACTION NOT JUSTIFIED — READY FOR HUMAN SCOPE REVIEW**; its then-pending
+approval/CI state is superseded by the acceptance and main qualification below.
 
 The existing source, CSS, configuration and tests were inspected; no runtime file
 is changed by this assessment. The signed-baseline
@@ -101,6 +111,27 @@ Manual screen-reader/device and native browser-zoom review remain separate;
 320 CSS-pixel reflow and root-font enlargement do not prove browser-chrome zoom or
 WCAG conformance. Fedora ARM64 WebKit native runtime remains unqualified.
 
+## Independent audit, human acceptance and main qualification — October 8, 2026 (UTC)
+
+The read-only adversarial audit returned **M1.3.2 PASS — NO EXTRACTION JUSTIFIED;
+READY FOR HUMAN REVIEW**, with no new BLOCKER, MAJOR or MINOR finding. It
+independently challenged each proposed primitive and found the existing CSS
+patterns and ReScript ownership sufficient. The human maintainer formally
+accepted the no-extraction decision and authorized M1.3.3 on October 8, 2026 (UTC).
+That decision does not authorize new components, publication or deployment.
+
+Signed main commit: **`e14416956296233844b833526ccc32d21b86f47e`**.
+[Main run 37797004595](https://github.com/adarj/grocery-pos-website/actions/runs/37797004595)
+passes on that exact SHA; GitHub reports its signature as verified. The run,
+job conclusions and logs were independently inspected during M1.3.3.
+Ubuntu 24.04 x86_64 qualifies repository Nix tools (Node 24.21.0, pnpm 12.9.0,
+just 1.51.0), frozen installation, lint/format, 15 pure tests, seven supervisor
+cases, canonical typecheck and production build. Chromium **10/10**, Firefox
+**10/10** and WebKit **10/10** pass: **30/30**, one worker, zero browser retries.
+Static `/en` and source cleanliness pass. This qualifies the merged M1.3.2
+assessment; it does not qualify the future M1.3.3 documentation commit or prove
+additional manual accessibility/device coverage.
+
 ## Architecture, publication and security safeguards
 
 **Next routes. ReScript models. React presents. APIs connect.** Next retains
@@ -118,9 +149,10 @@ ESLint 9.39.5 exception retains every condition and the January 8, 2027 deadline
 
 ## Deferred primitives and subsequent checkpoint handoff
 
-Human review should accept this inventory or identify a concrete missing consumer;
-do not manufacture a second page to justify extraction. M1.3.3 may be considered
-only after separate authorization; this assessment does not begin it.
+The accepted inventory governs the authorized
+[M1.3.3 qualification](m1-3-3-design-system-qualification.md). Do not reopen extraction
+for completeness or manufacture a second page to justify it. M1.3.4 adversarial
+audit and any later implementation require separate authorization.
 
 Reconsider extraction when approved real pages repeat meaningful semantic
 composition, require consistent inputs or expose maintenance drift that CSS cannot

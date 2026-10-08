@@ -20,10 +20,13 @@ Internal/preproduction; **M1.2 — Public Shell & Responsive Foundation** is acc
 **M1.3 — Design Tokens & Reusable Primitives: AUTHORIZED.** M1.3.1 tokens are
 accepted, merged and qualified on main (30/30); see the
 [token qualification record](docs/engineering/m1-3-1-token-qualification.md).
-The [M1.3.2 assessment](docs/engineering/m1-3-2-primitives-qualification.md)
-finds existing CSS patterns sufficient; no additional component extraction is
-justified. Human scope review and exact-commit remote CI remain pending for that
-documentation-only candidate. M1.3 is not complete; M1.3.3 has not begun.
+The [M1.3.2 no-extraction decision](docs/engineering/m1-3-2-primitives-qualification.md)
+was human-accepted October 8, 2026 (UTC), merged and qualified on main (30/30).
+M1.3.3 was authorized on the same date; its
+[design-system qualification record](docs/engineering/m1-3-3-design-system-qualification.md)
+documents independent inspection and bounded local probes over the unchanged UI.
+Adversarial audit, exact-commit CI and human review remain pending. M1.3 is not
+complete; M1.3.4 has not begun.
 The accepted surface remains the
 internal engineering-preview shell. The human maintainer
 formally accepted Milestone 0 and authorized M1 on October 8, 2026 (UTC).

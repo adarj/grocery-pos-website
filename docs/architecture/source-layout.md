@@ -173,8 +173,13 @@ merged and qualified on main: run 37791509300 at
 `61784aec86d53f35aa839c9ef7fce780d3cd4805`, all three engines 10/10 (30/30).
 The [M1.3.2 assessment](../engineering/m1-3-2-primitives-qualification.md) retains
 the existing shared container/section CSS rules and ReScript composition; no
-additional component extraction is justified. Its human scope review and
-exact-commit remote CI remain pending. M1.3 is not complete; M1.3.3 has not begun.
+additional component extraction is justified. The maintainer accepted that
+decision October 8, 2026 (UTC); signed main commit
+`e14416956296233844b833526ccc32d21b86f47e` and run 37797004595 qualify it (30/30).
+The authorized [M1.3.3 qualification](../engineering/m1-3-3-design-system-qualification.md)
+inspects the unchanged source/artifacts and records bounded local probes;
+adversarial audit, exact-commit CI and human review remain pending.
+M1.3 is not complete; M1.3.4 has not begun.
 Fedora ARM64 WebKit native runtime remains unqualified.
 
 M0.5's [quality/CI contract](../engineering/quality-and-ci.md) adds lint/format,

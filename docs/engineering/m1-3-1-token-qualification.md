@@ -6,8 +6,11 @@
 commit `61784aec86d53f35aa839c9ef7fce780d3cd4805`, run 37791509300 (30/30).
 The original pre-merge adversarial CONDITIONAL PASS and its final finding
 dispositions are preserved below. M1.3 is not complete; the
-[M1.3.2 assessment](m1-3-2-primitives-qualification.md) is prepared for human scope
-review, M1.3.3 has not begun and M1.4 is not authorized.
+[M1.3.2 no-extraction decision](m1-3-2-primitives-qualification.md) is human-accepted,
+merged and main-qualified. The authorized
+[M1.3.3 qualification](m1-3-3-design-system-qualification.md) records independent
+inspection and bounded local probes over the unchanged UI; adversarial audit,
+exact-commit CI and human review remain pending. M1.4 is not authorized.
 This slice consolidates demonstrated presentation values in `app/globals.css`.
 No components, routes, content, publication grants or dependencies are added.
 The [approved design-system contract](../design/design-system-specification.md),

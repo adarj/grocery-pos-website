@@ -64,11 +64,13 @@ formal M1.2 acceptance and M1.3 authorization on October 8, 2026 (UTC).
 **M1.3 — Design Tokens & Reusable Primitives: AUTHORIZED.** M1.3.1 tokens are
 accepted, merged and qualified on main (30/30); see the
 [token record](docs/engineering/m1-3-1-token-qualification.md).
-The [M1.3.2 assessment](docs/engineering/m1-3-2-primitives-qualification.md)
-retains existing CSS patterns and ReScript composition; no additional component
-extraction is presently justified. Human scope review and exact-commit remote CI
-remain pending for this documentation-only candidate. M1.3 is not complete;
-do not begin M1.3.3 or M1.4.
+The [M1.3.2 no-extraction decision](docs/engineering/m1-3-2-primitives-qualification.md)
+is human-accepted October 8, 2026 (UTC), merged and qualified on main (30/30).
+The maintainer authorized M1.3.3 on the same date. Its
+[design-system qualification](docs/engineering/m1-3-3-design-system-qualification.md)
+records independent inspection and bounded local probes over the unchanged UI;
+adversarial audit, exact-commit CI and human review remain pending.
+M1.3 is not complete. Do not begin M1.3.4 or M1.4.
 Follow the [M1 plan](docs/engineering/milestone-1-plan.md) and approved
 [design-system specification](docs/design/design-system-specification.md).
 The [shell record](docs/engineering/m1-2-shell-qualification.md) preserves audit/CI

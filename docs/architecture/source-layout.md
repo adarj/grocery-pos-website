@@ -168,9 +168,13 @@ distinguishes the failed provisioning attempt from the successful rerun. A12-01/
 are resolved; [final main qualification](../engineering/m1-2-shell-qualification.md#final-merged-main-qualification-and-human-acceptance-2026-10-08)
 passes all 27 scenarios at `e5f690977273ce721998f6f778b946924b5a443f`.
 M1.2 is formally accepted; M1.3 is authorized. The bounded
-[M1.3.1 token slice](../engineering/m1-3-1-token-qualification.md) is locally
-implemented and qualified, awaiting review and exact-commit remote CI. M1.3.2
-component extraction has not started.
+[M1.3.1 token slice](../engineering/m1-3-1-token-qualification.md) is accepted,
+merged and qualified on main: run 37791509300 at
+`61784aec86d53f35aa839c9ef7fce780d3cd4805`, all three engines 10/10 (30/30).
+The [M1.3.2 assessment](../engineering/m1-3-2-primitives-qualification.md) retains
+the existing shared container/section CSS rules and ReScript composition; no
+additional component extraction is justified. Its human scope review and
+exact-commit remote CI remain pending. M1.3 is not complete; M1.3.3 has not begun.
 Fedora ARM64 WebKit native runtime remains unqualified.
 
 M0.5's [quality/CI contract](../engineering/quality-and-ci.md) adds lint/format,

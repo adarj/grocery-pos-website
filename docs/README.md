@@ -14,11 +14,13 @@ and feature qualification history, the original adversarial CONDITIONAL PASS,
 resolved A12-01/A12-02 and final main run 37780086710 (27/27). The maintainer
 confirmed completion of visual review, formal M1.2 acceptance and ESLint retention
 approval on October 8, 2026 (UTC). **M1.3 — Design Tokens & Reusable Primitives:
-AUTHORIZED.** M1.3.1 tokens are locally qualified; review and remote CI remain
-pending. The approved M1 plan and design-system
-specification govern its scope; the
-[token record](engineering/m1-3-1-token-qualification.md) owns the current bounded
-slice. M1.3 is not complete; M1.3.2 has not started; M1.4 is not authorized. Architecture,
+AUTHORIZED.** M1.3.1 tokens are accepted, merged and qualified on main (30/30);
+the [token record](engineering/m1-3-1-token-qualification.md) owns that evidence.
+The [M1.3.2 assessment](engineering/m1-3-2-primitives-qualification.md) retains
+existing CSS patterns without further component extraction; human scope review
+and exact-commit remote CI remain pending for this documentation-only candidate.
+The approved M1 plan and design-system specification govern the work. M1.3 is not
+complete; M1.3.3 has not begun; M1.4 is not authorized. Architecture,
 templates and proposed URLs
 are not publication approval or evidence of commercially released features.
 
@@ -30,6 +32,7 @@ are not publication approval or evidence of commercially released features.
 | What visual direction is approved? | [Visual direction](design/visual-direction.md) |
 | What are the first-party presentation/accessibility contracts? | [Design-system specification](design/design-system-specification.md) |
 | Which semantic tokens and pairings are implemented and qualified? | [M1.3.1 token record](engineering/m1-3-1-token-qualification.md) |
+| Which existing presentation patterns justify reuse or extraction? | [M1.3.2 primitives assessment](engineering/m1-3-2-primitives-qualification.md) |
 | What was accepted and qualified in M1.2, and which limits remain? | [Engineering-preview shell](engineering/m1-2-shell-qualification.md) |
 | What are the M1 scopes, approval record and checkpoint gates? | [Milestone 1 plan](engineering/milestone-1-plan.md) |
 | How does the eventual website fit together? | [Architecture overview](architecture/website-architecture.md) |

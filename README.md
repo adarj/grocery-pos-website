@@ -18,9 +18,13 @@ implementation. Its intended repository identity is `adarj/grocery-pos-website`.
 
 Internal/preproduction; **M1.2 — Public Shell & Responsive Foundation** is accepted.
 **M1.3 — Design Tokens & Reusable Primitives: AUTHORIZED.** M1.3.1 tokens are
-locally qualified; review and remote CI remain pending.
-See the [token qualification record](docs/engineering/m1-3-1-token-qualification.md);
-M1.3 is not complete and M1.3.2 has not started. The accepted surface remains the
+accepted, merged and qualified on main (30/30); see the
+[token qualification record](docs/engineering/m1-3-1-token-qualification.md).
+The [M1.3.2 assessment](docs/engineering/m1-3-2-primitives-qualification.md)
+finds existing CSS patterns sufficient; no additional component extraction is
+justified. Human scope review and exact-commit remote CI remain pending for that
+documentation-only candidate. M1.3 is not complete; M1.3.3 has not begun.
+The accepted surface remains the
 internal engineering-preview shell. The human maintainer
 formally accepted Milestone 0 and authorized M1 on October 8, 2026 (UTC).
 Final main [CI run 37727162386](https://github.com/adarj/grocery-pos-website/actions/runs/37727162386)

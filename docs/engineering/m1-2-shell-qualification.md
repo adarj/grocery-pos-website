@@ -10,8 +10,10 @@ audit's original **CONDITIONAL PASS — BOUNDED CORRECTIONS** remains historical
 evidence, not a retroactively changed audit result.
 
 **M1.3 — Design Tokens & Reusable Primitives: AUTHORIZED** by the maintainer on
-October 8, 2026 (UTC). M1.3.1 tokens are locally qualified; review and remote CI
-remain pending. Scope remains governed by
+October 8, 2026 (UTC). M1.3.1 tokens are accepted, merged and qualified on main
+(30/30). The [M1.3.2 assessment](m1-3-2-primitives-qualification.md) recommends no
+further extraction; human scope review and exact-commit remote CI remain pending
+for that documentation-only candidate. Scope remains governed by
 the [M1 plan](milestone-1-plan.md) and
 [design-system specification](../design/design-system-specification.md).
 The [M1.3.1 token record](m1-3-1-token-qualification.md) owns subsequent token
@@ -29,7 +31,7 @@ M1.4 and future commercial publication are not authorized.
 | Final correction qualification | PASSED on merged main: run 37780086710 at the exact correction commit below |
 | Main integration and CI | COMPLETE; 27/27 and source cleanliness pass |
 | M1.2 formal acceptance | ACCEPTED October 8, 2026 (UTC) |
-| M1.3 authorization | AUTHORIZED October 8, 2026 (UTC); M1.3.1 locally implemented; review and remote CI pending |
+| M1.3 authorization | AUTHORIZED October 8, 2026 (UTC); M1.3.1 accepted/merged and main-qualified; M1.3.2 assessment prepared, human scope review and exact-commit CI pending |
 | M1.4 / commercial publication | NOT AUTHORIZED |
 
 An internal-preview label is neither access control nor deployment authorization.
@@ -266,13 +268,13 @@ Primitives: AUTHORIZED** by the human maintainer. The
 
 | M1.3 checkpoint | Current status |
 | --- | --- |
-| M1.3.1 semantic token foundation | Implemented locally; uncommitted, not merged or formally accepted |
-| M1.3.1 local qualification | Reported PASS: Chromium 10/10, Firefox 10/10, lint/format, 15 pure tests, seven supervisor cases, canonical typecheck/build, accessibility and security/CSP checks |
-| M1.3.1 independent adversarial audit | CONDITIONAL PASS — BOUNDED CORRECTIONS; A13-01 documentation correction prepared for review; original audit decision preserved |
-| M1.3.1 human review | Pending |
-| M1.3.1 feature-branch remote CI | Pending on the exact future signed commit |
-| M1.3.1 integration and main CI | Pending |
-| M1.3.2 component extraction | Not started |
+| M1.3.1 semantic token foundation | Accepted and merged at signed commit `61784aec86d53f35aa839c9ef7fce780d3cd4805` |
+| M1.3.1 local qualification | Historical PASS: Chromium 10/10, Firefox 10/10, lint/format, 15 pure tests, seven supervisor cases, canonical typecheck/build, accessibility and security/CSP checks |
+| M1.3.1 independent adversarial audit | Historical CONDITIONAL PASS — BOUNDED CORRECTIONS; A13-01 resolved in the merged commit; A13-02/A13-03 retained as NOTES; original audit decision preserved |
+| M1.3.1 human acceptance | Accepted baseline identified by the maintainer's M1.3.2 instruction; no additional manual accessibility coverage is asserted |
+| M1.3.1 integration and main CI | Complete: run 37791509300, exact signed commit above, Chromium/Firefox/WebKit 10/10 each (30/30), source cleanliness PASS |
+| M1.3.2 assessment | Existing CSS reuse retained; no additional component extraction justified; human scope review and exact-commit CI pending |
+| M1.3.3 | Not begun |
 | M1.4 | Not authorized |
 
 Follow the approved M1 plan and design-system specification. M1.3 is not complete.

@@ -2,7 +2,7 @@
 
 **Status: M1.1 specification approved by the human maintainer on October 8, 2026 (UTC);
 partially implemented in the engineering preview.** M1.3.1 semantic tokens are
-locally qualified; human review and exact-commit remote CI remain pending.
+accepted, merged and qualified on main (30/30); the token record below owns that evidence.
 Approval does not authorize public claims, routes, assets or deployment; remaining
 candidate measurements and palette values still require qualification.
 This document owns semantic presentation roles, primitive scope and qualification.
@@ -20,8 +20,11 @@ focus, decorative dividers and essential control boundaries. Typography and spac
 retain M1.2 values: system sans, 1rem body, 1.25rem identity, 1.5rem h2, fluid
 1.75–2.75rem h1, 68ch prose, 60rem container and fluid 1–2rem gutters.
 Supporting text inherits body size. These are the current qualified implementation,
-not automatic approval of broader candidate sizes below. No reusable-component
-extraction has occurred; M1.3.2 remains outside this slice.
+not automatic approval of broader candidate sizes below. The
+[M1.3.2 assessment](../engineering/m1-3-2-primitives-qualification.md) finds the
+existing container/section CSS patterns and ReScript composition sufficient;
+no additional component extraction is justified. That assessment awaits human
+scope review and exact-commit remote CI; M1.3 is not complete.
 
 Secondary/inverse/technical type, status/warning/error/disabled roles, contrasting
 panels, additional action variants and unneeded primitives remain proposals.

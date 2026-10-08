@@ -2,11 +2,12 @@
 
 ## Scope and status
 
-**Local qualification reported PASS. Independent adversarial audit: CONDITIONAL
-PASS — BOUNDED CORRECTIONS; A13-01 documentation correction prepared for review.
-Human review, exact-commit feature CI, integration and main CI remain pending.
-M1.3.1 is uncommitted and not formally accepted; M1.3 is not complete, M1.3.2 has
-not started and M1.4 is not authorized.**
+**M1.3.1 — ACCEPTED and merged on main.** Main qualification passes at signed
+commit `61784aec86d53f35aa839c9ef7fce780d3cd4805`, run 37791509300 (30/30).
+The original pre-merge adversarial CONDITIONAL PASS and its final finding
+dispositions are preserved below. M1.3 is not complete; the
+[M1.3.2 assessment](m1-3-2-primitives-qualification.md) is prepared for human scope
+review, M1.3.3 has not begun and M1.4 is not authorized.
 This slice consolidates demonstrated presentation values in `app/globals.css`.
 No components, routes, content, publication grants or dependencies are added.
 The [approved design-system contract](../design/design-system-specification.md),
@@ -140,9 +141,40 @@ The supervised dev server was stopped before the canonical production gate.
 Experiments ran in memory without permanent diagnostic scripts. Dependency,
 Nix, routing, i18n, publication, security-header/CSP and browser configuration
 remain unchanged. All three browser projects remain blocking, one worker, zero
-retries. The new media regression makes the expected next remote matrix **30/30**
-(10 per engine); no new remote result is claimed here. Fedora ARM64 WebKit native
-runtime remains unqualified; supported Ubuntu CI must qualify this exact change.
+retries. At local implementation time the expected remote matrix was **30/30**
+(10 per engine); that historical local report did not claim remote qualification.
+The subsequent verified main result follows. Fedora ARM64 WebKit native runtime
+remains unqualified.
+
+## Independent audit and final main qualification — October 8, 2026 (UTC)
+
+The independent pre-merge audit returned **M1.3.1 CONDITIONAL PASS — BOUNDED
+CORRECTIONS**, with no BLOCKER, MAJOR or runtime defect. That historical decision
+is not retroactively rewritten as PASS.
+
+| Audit item | Final disposition |
+| --- | --- |
+| A13-01 — Stale checkpoint status | RESOLVED: contradictory M1.2/M1.3 status and stale audit-pending summaries were corrected in the merged token commit. |
+| A13-02 — Base-link role | NOTE retained: the semantic role is justified; identity/skip links override its default foreground, while controlled DOM-only link fixtures qualify the base treatment. No CSS correction was required. |
+| A13-03 — Parity snapshot focus | NOTE retained: the post-Tab parity snapshot did not assert its focused target. The evidence limitation is documented above; independent keyboard regressions verify actual focus. No probe rerun or implementation change was required. |
+
+Signed main commit: **`61784aec86d53f35aa839c9ef7fce780d3cd4805`**.
+[Main run 37791509300](https://github.com/adarj/grocery-pos-website/actions/runs/37791509300)
+is a successful push-to-main run on that exact SHA. GitHub reports its commit
+signature as verified. The run and job logs were independently inspected during
+M1.3.2; the repository maintainer identifies these merged tokens as the accepted
+baseline for that checkpoint.
+
+Ubuntu 24.04 x86_64 qualifies the repository Nix environment (Node 24.21.0,
+pnpm 12.9.0, just 1.51.0), frozen installation, zero-warning lint, non-mutating
+ReScript formatting, 15 pure tests, seven supervisor regression cases, canonical
+typecheck and production build. Chromium **10/10**, Firefox **10/10** and WebKit
+**10/10** pass: **30/30**, one worker, zero browser retries. The scenarios include
+JS-disabled server content, hydration, routing/pseudo rejection, security headers,
+CSP diagnostics, axe/keyboard, measured contrast, responsive/text-spacing and
+forced-colors/reduced-motion checks. The build retains static `/en`; source
+cleanliness passes. This supersedes the local report's pending remote evidence,
+without claiming Fedora ARM64 WebKit support, WCAG conformance or deployment approval.
 
 ## Limits and M1.3.2 handoff
 
@@ -154,9 +186,11 @@ Existing security controls and sensitive-surface/CSP/HTTPS review triggers remai
 in the [security baseline](security-baseline.md). The approved ESLint 9.39.5
 exception and January 8, 2027 deadline remain unchanged.
 
-M1.3.2 may extract only demonstrated reusable presentation patterns under the
-[M1 plan](milestone-1-plan.md), consuming semantic roles rather than palette values.
-Component extraction, cards/callouts without real uses, status/disabled/loading
+The [M1.3.2 assessment](m1-3-2-primitives-qualification.md) retains the existing
+CSS patterns and ReScript composition because no further component extraction is
+currently justified. Future extraction under the [M1 plan](milestone-1-plan.md)
+must follow demonstrated reuse and consume semantic roles rather than palette values.
+Additional component extraction, cards/callouts without real uses, status/disabled/loading
 families, technical type, dark mode, theme switching, shadows and remote fonts
 remain deferred. A new contrast surface or interaction needs new measured evidence.
 Make identity current-state handling route-aware **before the first public child

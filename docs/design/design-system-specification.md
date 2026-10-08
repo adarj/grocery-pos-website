@@ -1,13 +1,32 @@
 # First-party design-system specification
 
 **Status: M1.1 specification approved by the human maintainer on October 8, 2026 (UTC);
-not implemented.** Approval does not authorize public claims, routes, assets or
-deployment; candidate measurements and palette values still require qualification.
+partially implemented in the engineering preview.** M1.3.1 semantic tokens are
+locally qualified; human review and exact-commit remote CI remain pending.
+Approval does not authorize public claims, routes, assets or deployment; remaining
+candidate measurements and palette values still require qualification.
 This document owns semantic presentation roles, primitive scope and qualification.
 [Visual direction](visual-direction.md) explains the rationale;
 [information architecture](../product/website-information-architecture.md) owns
 navigation behavior and page/content governance. Follow
 [ADR 0006](../adr/0006-css-and-design-system-foundation.md).
+
+## Implemented subset and proposed roles
+
+The [M1.3.1 token record](../engineering/m1-3-1-token-qualification.md) owns actual
+CSS values, naming, measured pairings and validation. The current shell implements
+page/white/subtle surfaces, primary text, links/actions and their hover/active states,
+focus, decorative dividers and essential control boundaries. Typography and spacing
+retain M1.2 values: system sans, 1rem body, 1.25rem identity, 1.5rem h2, fluid
+1.75–2.75rem h1, 68ch prose, 60rem container and fluid 1–2rem gutters.
+Supporting text inherits body size. These are the current qualified implementation,
+not automatic approval of broader candidate sizes below. No reusable-component
+extraction has occurred; M1.3.2 remains outside this slice.
+
+Secondary/inverse/technical type, status/warning/error/disabled roles, contrasting
+panels, additional action variants and unneeded primitives remain proposals.
+Harvest remains an unused palette candidate. New consumers need actual contrast,
+behavior and publication review; no dark-mode or theme system is implied.
 
 ## Color contract
 
@@ -31,7 +50,8 @@ normal text at least 4.5:1, qualifying large text at least 3:1, and required
 non-text indicators/controls at least 3:1 against relevant adjacent colors.
 Use the exact applicable exceptions rather than assuming every border needs
 identical treatment. Targets follow [WCAG 2.2 guidance](https://www.w3.org/WAI/WCAG22/quickref/).
-No candidate pair is declared compliant here; names such as “accessible green”
+Only the implemented combinations in the linked measurement record have evidence;
+unimplemented candidate pairs remain unqualified; names such as “accessible green”
 are not evidence. Do not rely on opacity alone to create secondary text, disabled
 states or focus indicators.
 
@@ -49,7 +69,8 @@ Typography styles describe presentation, not heading semantics.
 | Caption/supporting | 0.875–1 rem; 1.4–1.6 | Secondary context, never critical qualifications hidden in tiny type |
 | Technical | Around 1 rem; 1.5 | Selectable identifiers/code; wrap prose references and handle long examples |
 
-All measurements are candidates. Fluid sizing keeps rem-based bounds and must
+The table describes broader candidates; implemented values are distinguished above.
+Fluid sizing keeps rem-based bounds and must
 remain responsive to user zoom/text enlargement; viewport-only type is unsuitable.
 Aim for prose around 60–70 ch, narrower summaries around 40–50 ch, and wider
 technical/specification regions only when useful. No justified body text or
@@ -63,7 +84,9 @@ Candidate rem scale: 0.25, 0.5, 0.75, 1, 1.5, 2, 3 and 4. Choose semantic usages
 for every arbitrary measurement. Section rhythm may range 2–4 rem on narrow screens
 to 4–6 rem on wide screens, subject to real content review.
 
-Use a centered page container around 72–80 rem maximum, with fluid inline gutters
+The present shell retains its qualified 60rem maximum. For future wider content,
+a centered page container around 72–80 rem maximum is a candidate, with fluid
+inline gutters
 around 1–2 rem. Reading containers retain the narrower prose measure. Begin with
 one column; add two/three columns only when each remains readable. A candidate
 card minimum around 18 rem is a starting point, not a requirement that overflows

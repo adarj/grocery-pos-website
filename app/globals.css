@@ -1,11 +1,53 @@
+/* Raw palette is private to the semantic role definitions below. */
 :root {
   color-scheme: light;
-  --preview-page: #f7f8f4;
-  --preview-surface: #ffffff;
-  --preview-text: #152b30;
-  --preview-action: #236d58;
-  --preview-subtle: #ddebe4;
-  --preview-focus: #152b30;
+  --palette-ink: #152b30;
+  --palette-paper: #f7f8f4;
+  --palette-evergreen: #236d58;
+  --palette-sage: #ddebe4;
+  --palette-white: #ffffff;
+
+  --color-page: var(--palette-paper);
+  --color-surface: var(--palette-white);
+  --color-surface-subtle: var(--palette-sage);
+  --color-text: var(--palette-ink);
+  --color-link: var(--palette-evergreen);
+  --color-link-interaction: var(--palette-ink);
+  --color-action: var(--palette-evergreen);
+  --color-on-action: var(--palette-white);
+  --color-action-interaction: var(--palette-ink);
+  --color-focus: var(--palette-ink);
+  --color-divider: var(--palette-sage);
+  --color-control-border: var(--palette-evergreen);
+  --color-control-border-interaction: var(--palette-ink);
+
+  --font-body: system-ui, sans-serif;
+  --text-body: 1rem;
+  --text-identity: 1.25rem;
+  --text-heading: 1.5rem;
+  --text-display: clamp(1.75rem, 1.25rem + 2vw, 2.75rem);
+  --line-body: 1.6;
+  --line-heading: 1.25;
+  --line-control: 1.5;
+  --measure-prose: 68ch;
+
+  /* Quarter-rem steps with demonstrated consumers; fluid layout stays fluid. */
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-16: 4rem;
+  --layout-gutter: clamp(var(--space-4), 4vw, var(--space-8));
+  --layout-container: 60rem;
+  --control-min-size: 2.75rem;
+  --radius-control: 0.25rem;
+  --border-divider: 1px;
+  --border-control: 2px;
+  --focus-width: 3px;
+  --focus-offset: 4px;
+  --link-emphasis: 0.15em;
 }
 
 * {
@@ -14,15 +56,15 @@
 
 body {
   margin: 0;
-  color: var(--preview-text);
-  background: var(--preview-page);
-  font-family: system-ui, sans-serif;
-  font-size: 1rem;
-  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-page);
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  line-height: var(--line-body);
 }
 
 a {
-  color: var(--preview-action);
+  color: var(--color-link);
   text-decoration: underline;
   text-underline-offset: 0.2em;
   overflow-wrap: anywhere;
@@ -30,45 +72,45 @@ a {
 
 a:hover,
 a:active {
-  color: var(--preview-text);
-  text-decoration-thickness: 0.15em;
+  color: var(--color-link-interaction);
+  text-decoration-thickness: var(--link-emphasis);
 }
 
 :focus-visible {
-  outline: 3px solid var(--preview-focus);
-  outline-offset: 4px;
+  outline: var(--focus-width) solid var(--color-focus);
+  outline-offset: var(--focus-offset);
 }
 
 .preview-container {
-  inline-size: calc(100% - 2 * clamp(1rem, 4vw, 2rem));
-  max-inline-size: 60rem;
+  inline-size: calc(100% - 2 * var(--layout-gutter));
+  max-inline-size: var(--layout-container);
   margin-inline: auto;
 }
 
 .preview-header {
-  background: var(--preview-surface);
-  border-block-end: 1px solid var(--preview-subtle);
+  background: var(--color-surface);
+  border-block-end: var(--border-divider) solid var(--color-divider);
 }
 
 .preview-header-content {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.5rem 2rem;
-  padding-block: 1rem;
+  gap: var(--space-2) var(--space-8);
+  padding-block: var(--space-4);
 }
 
 .preview-identity {
   display: inline-flex;
   align-items: center;
-  min-block-size: 2.75rem;
-  color: var(--preview-text);
-  font-size: 1.25rem;
+  min-block-size: var(--control-min-size);
+  color: var(--color-text);
+  font-size: var(--text-identity);
   font-weight: 700;
 }
 
 .preview-identity[aria-current="page"] {
-  text-decoration-thickness: 0.15em;
+  text-decoration-thickness: var(--link-emphasis);
 }
 
 .preview-status {
@@ -77,45 +119,45 @@ a:active {
 }
 
 .preview-main {
-  padding-block: clamp(2rem, 6vw, 4rem);
-  scroll-margin-block-start: 1rem;
+  padding-block: clamp(var(--space-8), 6vw, var(--space-16));
+  scroll-margin-block-start: var(--space-4);
   overflow-wrap: anywhere;
 }
 
 h1,
 h2 {
-  line-height: 1.25;
+  line-height: var(--line-heading);
   text-wrap: balance;
 }
 
 h1 {
-  margin-block: 0 1.5rem;
+  margin-block: 0 var(--space-6);
   max-inline-size: 27ch;
-  font-size: clamp(1.75rem, 1.25rem + 2vw, 2.75rem);
+  font-size: var(--text-display);
 }
 
 h2 {
-  margin-block: 0 1rem;
-  font-size: 1.5rem;
+  margin-block: 0 var(--space-4);
+  font-size: var(--text-heading);
 }
 
 p {
-  max-inline-size: 68ch;
-  margin-block: 0 1rem;
+  max-inline-size: var(--measure-prose);
+  margin-block: 0 var(--space-4);
 }
 
 .preview-main section {
-  margin-block-start: 2.5rem;
-  padding-block-start: 1.5rem;
-  border-block-start: 1px solid var(--preview-subtle);
+  margin-block-start: var(--space-10);
+  padding-block-start: var(--space-6);
+  border-block-start: var(--border-divider) solid var(--color-divider);
 }
 
 ul {
-  padding-inline-start: 1.5rem;
+  padding-inline-start: var(--space-6);
 }
 
 dl {
-  margin-block: 0 1.5rem;
+  margin-block: 0 var(--space-6);
 }
 
 dt {
@@ -124,35 +166,35 @@ dt {
 
 dd {
   margin-inline-start: 0;
-  margin-block-end: 0.75rem;
+  margin-block-end: var(--space-3);
 }
 
 button {
-  min-block-size: 2.75rem;
+  min-block-size: var(--control-min-size);
   max-inline-size: 100%;
   padding-block: 0.65rem;
-  padding-inline: 1rem;
-  border: 2px solid var(--preview-action);
-  border-radius: 0.25rem;
-  color: var(--preview-surface);
-  background: var(--preview-action);
+  padding-inline: var(--space-4);
+  border: var(--border-control) solid var(--color-control-border);
+  border-radius: var(--radius-control);
+  color: var(--color-on-action);
+  background: var(--color-action);
   font: inherit;
   font-weight: 600;
-  line-height: 1.5;
+  line-height: var(--line-control);
   overflow-wrap: anywhere;
   cursor: pointer;
 }
 
 button:hover,
 button:active {
-  background: var(--preview-text);
-  border-color: var(--preview-text);
+  background: var(--color-action-interaction);
+  border-color: var(--color-control-border-interaction);
 }
 
 .preview-footer {
-  padding-block: 1.5rem;
-  border-block-start: 1px solid var(--preview-subtle);
-  background: var(--preview-surface);
+  padding-block: var(--space-6);
+  border-block-start: var(--border-divider) solid var(--color-divider);
+  background: var(--color-surface);
   overflow-wrap: anywhere;
 }
 
@@ -163,15 +205,15 @@ button:active {
 .skip-link {
   position: absolute;
   z-index: 1;
-  inset-block-start: 1rem;
-  inset-inline-start: 1rem;
-  max-inline-size: calc(100% - 2rem);
-  padding-block: 0.75rem;
-  padding-inline: 1rem;
-  color: var(--preview-text);
-  background: var(--preview-subtle);
+  inset-block-start: var(--space-4);
+  inset-inline-start: var(--space-4);
+  max-inline-size: calc(100% - var(--space-8));
+  padding-block: var(--space-3);
+  padding-inline: var(--space-4);
+  color: var(--color-text);
+  background: var(--color-surface-subtle);
   font-weight: 600;
-  transform: translateY(calc(-100% - 2rem));
+  transform: translateY(calc(-100% - var(--space-8)));
 }
 
 .skip-link:focus-visible {

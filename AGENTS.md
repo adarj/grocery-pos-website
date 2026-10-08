@@ -61,7 +61,11 @@ Milestone 0 is accepted and M1 authorized; see the
 M1.1 specifications and the M1.2 internal engineering-preview shell are accepted,
 merged and qualified on main. The maintainer confirmed completed visual review,
 formal M1.2 acceptance and M1.3 authorization on October 8, 2026 (UTC).
-**M1.3 — Design Tokens & Reusable Primitives: AUTHORIZED; implementation not started.**
+**M1.3 — Design Tokens & Reusable Primitives: AUTHORIZED.** M1.3.1 tokens are
+locally qualified; review and remote CI remain pending.
+M1.3.1 is limited to semantic tokens and qualification; see the
+[token record](docs/engineering/m1-3-1-token-qualification.md). Do not start M1.3.2
+component extraction in this slice.
 Follow the [M1 plan](docs/engineering/milestone-1-plan.md) and approved
 [design-system specification](docs/design/design-system-specification.md).
 The [shell record](docs/engineering/m1-2-shell-qualification.md) preserves audit/CI
@@ -81,7 +85,7 @@ Nix must already work in the outer Linux environment; never bootstrap a substitu
 Do not commit, push, merge, rebase, reset, tag, create releases, force-update refs,
 perform destructive Git operations, or create/modify GitHub remotes. Safe Git
 status/diff/read operations are allowed. A later explicit human instruction is
-required to authorize an exception; this closeout authorizes no Git mutation. Do not stage, cherry-pick,
+required to authorize an exception; this slice authorizes no Git mutation. Do not stage, cherry-pick,
 or create/delete/switch branches. Leave implementation,
 validation results, and a suggested commit message for human review.
 

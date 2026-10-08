@@ -6,7 +6,10 @@ is implemented, merged and qualified on main. The maintainer confirmed completio
 of the visual review and formally accepted M1.2 on October 8, 2026 (UTC).
 A12-01/A12-02 are resolved; the original adversarial CONDITIONAL PASS remains
 historical evidence. **M1.3 — Design Tokens & Reusable Primitives: AUTHORIZED**
-on the same date; implementation has not started. M1.4 is not authorized.
+on the same date; the bounded M1.3.1 semantic-token slice is locally implemented.
+Its [qualification record](m1-3-1-token-qualification.md) owns measured evidence;
+human review and exact-commit remote CI remain pending. M1.3 is not
+complete and M1.3.2 component extraction has not started. M1.4 is not authorized.
 Later checkpoints retain their scope and human review gates. Specification approval grants no publication or
 production deployment authorization. Milestone 0 is complete and accepted;
 see the [qualification record](milestone-0-qualification.md).
@@ -20,7 +23,7 @@ see the [qualification record](milestone-0-qualification.md).
 | Signed specification commit / feature CI | [Run 37728971554](https://github.com/adarj/grocery-pos-website/actions/runs/37728971554) passes at `efa76de8dc5afec83c7f4858afa2cbfcfeeab2e1`; Chromium/Firefox/WebKit 7/7 each, 21/21, one worker, zero retries; source cleanliness passes |
 | M1.1 branch integration / main CI | Merged; [main run 37749346349](https://github.com/adarj/grocery-pos-website/actions/runs/37749346349) passes at `cea8dea94bafe182af40ef30fe390cc9b667ac07`, including 21/21 and source cleanliness |
 | M1.2 | ACCEPTED by the maintainer October 8, 2026 (UTC); visual review completed, A12-01/A12-02 resolved, ESLint retention approved; [shell record](m1-2-shell-qualification.md) preserves history and final main run 37780086710 at `e5f690977273ce721998f6f778b946924b5a443f`: 27/27 and source cleanliness PASS |
-| M1.3 | Design Tokens & Reusable Primitives: AUTHORIZED October 8, 2026 (UTC); implementation not started; approved scope and review gate below remain governing |
+| M1.3 | Design Tokens & Reusable Primitives: AUTHORIZED October 8, 2026 (UTC); M1.3.1 locally implemented, review/remote CI pending; approved scope and review gate below remain governing |
 
 ## Objective and implementation starting point
 
@@ -47,7 +50,7 @@ samples as product claims or delete unique coverage without replacement.
 | --- | --- | --- | --- | --- |
 | M1.1 — Specifications | Approved audience/IA, target navigation and templates, visual direction and component contracts; accepted M0 baseline | Adversarial audit PASS; exact feature CI PASS; working document links; documentation-only scope | No components, assets, public copy, routes or M1.2 execution | Specification/design approval recorded October 8, 2026 (UTC); merged main CI passes |
 | M1.2 — Internal engineering-preview shell | Approved identity header, skip link, responsive container, existing qualification proof and minimal footer; essential accessible styling; navigation/disclosure only when eligible destinations justify them | Server-first/client-reference review; JS-disabled usability; keyboard/focus/axe; measured actual contrast/control states; narrow-to-wide/pseudo checks; preserved security/hydration/publication regressions; typecheck/build; full supported CI | No fabricated marketing content, unavailable routes/links, pricing, commerce, accounts, contact forms, backend services, speculative features, mega-menu/search, real second language or broad token library | Maintainer visual review and formal acceptance recorded October 8, 2026 (UTC); first-implementation ESLint review satisfied by explicit retention approval |
-| M1.3 — Tokens/primitives | Measure palette pairs; consolidate minimal M1.2 styling into semantic tokens and demonstrated container/section/link/button/card/callout patterns | Contrast/state pairing sheet; responsive/expanded-text/forced-colors/reduced-motion checks; proportionate tests and canonical gates | No UI framework, remote fonts, generic component factory, complex forms/data grids or commerce controls | Implementation authorized October 8, 2026 (UTC), not started; approve the resulting measured visual system and justified component inventory |
+| M1.3 — Tokens/primitives | Measure palette pairs; consolidate minimal M1.2 styling into semantic tokens and demonstrated container/section/link/button/card/callout patterns | Contrast/state pairing sheet; responsive/expanded-text/forced-colors/reduced-motion checks; proportionate tests and canonical gates | No UI framework, remote fonts, generic component factory, complex forms/data grids or commerce controls | Implementation authorized October 8, 2026 (UTC); M1.3.1 tokens locally qualified, M1.3.2 not started; approve the resulting measured visual system and justified component inventory |
 | M1.4 — Reviewed templates/content | Integrate a small approved subset of IA templates and actual reviewed copy/assets; depends on owners, maturity/disclosure evidence and M1.3 | Claim/source review; metadata and link checks; public-safe projection/withholding; real SSR; content-specific a11y/performance checks and CI | No requirement to populate every sitemap area; no fake claims, CMS/docs platform, pricing, commerce/account or submission backend | Approve every publication set and its qualifications; withhold unsupported pages |
 | M1.5 — Audit/qualification | Adversarial architecture, publication, accessibility, responsive and measured performance review of the implemented scope | Chromium/Firefox/WebKit; manual screen-reader/keyboard/zoom/contrast review; responsive matrix; static/client graph and asset review; canonical local + CI evidence | No deployment certification, WCAG claim from automation, speculative scanners or features added to fill gaps | Accept/correct M1 based on actual evidence; authorize subsequent work separately |
 
@@ -67,7 +70,8 @@ before each implementation instruction.
   semantic roles, candidate measurements, component/state scope and test scenarios.
 
 These M1.1 specifications are human-approved. Approval is not evidence that a
-public route, capability, approved asset or measured token exists. The candidate
+public route, capability or approved asset exists. Only the implemented token
+combinations in the M1.3.1 record have local measured evidence; the wider candidate
 palette remains exploratory and requires contrast/state qualification.
 
 ## Verification and maintenance

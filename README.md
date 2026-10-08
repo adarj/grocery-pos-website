@@ -17,8 +17,11 @@ implementation. Its intended repository identity is `adarj/grocery-pos-website`.
 ## Current status
 
 Internal/preproduction; **M1.2 — Public Shell & Responsive Foundation** is accepted.
-**M1.3 — Design Tokens & Reusable Primitives: AUTHORIZED; implementation not started.**
-The accepted surface remains the internal engineering-preview shell. The human maintainer
+**M1.3 — Design Tokens & Reusable Primitives: AUTHORIZED.** M1.3.1 tokens are
+locally qualified; review and remote CI remain pending.
+See the [token qualification record](docs/engineering/m1-3-1-token-qualification.md);
+M1.3 is not complete and M1.3.2 has not started. The accepted surface remains the
+internal engineering-preview shell. The human maintainer
 formally accepted Milestone 0 and authorized M1 on October 8, 2026 (UTC).
 Final main [CI run 37727162386](https://github.com/adarj/grocery-pos-website/actions/runs/37727162386)
 qualifies commit `780ba8b89364fd16dba8609a0cb2a13779c24348`, including all 21

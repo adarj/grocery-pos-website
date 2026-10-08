@@ -11,7 +11,7 @@ This is an engineering surface with fictional fixtures, not a capability ledger.
 app/
   [lang]/layout.tsx                   Validated HTML language/direction, metadata, static params, shell
   [lang]/page.tsx                     Obtain typed views/language and render the ReScript page
-  globals.css                         Accessible responsive preview-shell/proof CSS
+  globals.css                         Semantic tokens and accessible preview-shell/proof CSS
 proxy.ts                              Bare-root temporary public language redirect
 src/
   domain/Capability.res + .resi        Opaque capability, maturity, disclosure, decoder
@@ -33,7 +33,7 @@ tests/
   unit/InternationalizationTest.res    Language, exposure, messages, and pseudo invariants
   e2e/framework-smoke.spec.ts          Visible SSR without JS, then interactive hydration
   e2e/accessibility.spec.ts            Whole-page axe and native keyboard/focus behavior
-  e2e/shell.spec.ts                    Measured contrast, responsive reflow and expanded text
+  e2e/shell.spec.ts                    Measured contrast, reflow, expanded text and forced-colors/reduced-motion
   e2e/security-headers.spec.ts         Production page/redirect/404 HTTP security policy
   e2e/browser-diagnostics.ts           Shared browser/hydration/CSP error gate
   tooling/dev-supervisor.test.mjs      Isolated process-group regression fixtures
@@ -167,7 +167,10 @@ on the signed implementation commit. The [shell record](../engineering/m1-2-shel
 distinguishes the failed provisioning attempt from the successful rerun. A12-01/A12-02
 are resolved; [final main qualification](../engineering/m1-2-shell-qualification.md#final-merged-main-qualification-and-human-acceptance-2026-10-08)
 passes all 27 scenarios at `e5f690977273ce721998f6f778b946924b5a443f`.
-M1.2 is formally accepted; M1.3 is authorized but not started.
+M1.2 is formally accepted; M1.3 is authorized. The bounded
+[M1.3.1 token slice](../engineering/m1-3-1-token-qualification.md) is locally
+implemented and qualified, awaiting review and exact-commit remote CI. M1.3.2
+component extraction has not started.
 Fedora ARM64 WebKit native runtime remains unqualified.
 
 M0.5's [quality/CI contract](../engineering/quality-and-ci.md) adds lint/format,

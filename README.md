@@ -19,8 +19,9 @@ implementation. Its intended repository identity is `adarj/grocery-pos-website`.
 Internal/preproduction; **Website M0.5 — Quality, Security & CI Foundation**.
 Local acceptance includes linting, accessibility smoke, security headers, and CSP.
 The first Ubuntu x86_64 CI run qualifies the toolchain and Chromium/Firefox;
-the Playwright 1.64.0 CI run also passes those engines but still fails WebKit document
-navigation. Temporary supported-host isolation awaits remote results.
+the Playwright 1.64.0 CI run also passes those engines. Native isolation identifies
+an inherited `XDG_DATA_DIRS`/GSettings interaction; the WebKit Linux-CI browser-child
+correction awaits full remote requalification.
 M0.5 is conditional and must not yet merge; see [quality and CI](docs/engineering/quality-and-ci.md).
 `/` redirects to `/en`, the sole public content language. The engineering page
 demonstrates a ReScript-owned public capability projection and an isolated hydration
@@ -81,8 +82,9 @@ WebKit's Ubuntu fallback lacks compatible native libraries there; the full matri
 reports that failure rather than skipping it. Prior Ubuntu CI ran all three engines:
 Chromium/Firefox passed; Playwright 1.63.0 WebKit navigation failed with an internal
 error matching an upstream bundle defect. The stable 1.64.0 run still fails navigation
-after the library update; cause is unconfirmed. WebKit remains required and blocking. See the [toolchain qualification
-record](docs/engineering/toolchain.md) for versions, interop, native-runtime limits,
+after the library update. Subsequent isolation identifies an `XDG_DATA_DIRS`/GSettings
+environment interaction; the targeted correction awaits the full remote gate.
+WebKit remains required and blocking. See the [toolchain qualification record](docs/engineering/toolchain.md) for versions, interop, native-runtime limits,
 and workflow details. Local `just browsers` never installs host OS packages;
 CI provisions system libraries only on its disposable Ubuntu runner.
 

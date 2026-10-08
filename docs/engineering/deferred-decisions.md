@@ -36,10 +36,11 @@ are **M0.2 proof work**, rather than unresolved product architecture. CI/test
 configuration is implemented in M0.5. CI run 37550037169 qualifies the x86_64
 runtime and Chromium/Firefox. The stable 1.64.0 upgrade includes verified local
 libsoup 3.6.6, but CI run 37716799825 still fails WebKit document navigation while
-Chromium/Firefox pass. Current cause is unconfirmed; do not reuse the old 3.6.5
-attribution. Temporary supported-host native/network/environment isolation is
-prepared; remote results and a successful unchanged full CI gate remain required
-before M0.5 acceptance.
+Chromium/Firefox pass. Diagnostic run 37719629240 then isolates inherited
+`XDG_DATA_DIRS`/GSettings lookup: removing only that variable restores minimal HTTP.
+The narrow Linux-CI WebKit browser-child correction is implemented; successful
+full supported-host WebKit and CI execution remain required before M0.5 acceptance.
+The old 3.6.5 attribution does not explain the remaining 2370 failure.
 See the [qualification evidence and remaining acceptance boundary](quality-and-ci.md).
 
 When a trigger arrives, identify the owner/requirement, evaluate the smallest

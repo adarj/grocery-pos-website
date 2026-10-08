@@ -9,8 +9,9 @@ development pseudo qualification is recorded in the
 [i18n foundation](../architecture/internationalization.md). M0.5 adds lint/format,
 supervisor acceptance, security response tests, axe/keyboard smoke, and a
 [CI workflow](quality-and-ci.md) with x86_64/Chromium/Firefox qualification.
-Playwright 1.64.0 still fails WebKit document navigation in CI; temporary isolation
-awaits remote results and does not replace the blocking browser matrix. Component-unit tooling remains deferred.
+Native isolation identifies inherited `XDG_DATA_DIRS`/GSettings lookup behind WebKit
+2370 HTTP failures. The Linux-CI browser-child correction awaits the full blocking
+production matrix; diagnostic success is not acceptance. Component-unit tooling remains deferred.
 
 ## Intended verification layers
 

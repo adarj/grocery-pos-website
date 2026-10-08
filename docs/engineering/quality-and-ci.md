@@ -2,9 +2,10 @@
 
 Local gates implement the quality/security floor over fictional M0.4 engineering
 content. The first Ubuntu x86_64 CI run qualifies the repository toolchain and
-Chromium/Firefox. The subsequent stable Playwright 1.64.0 run still fails WebKit
-document navigation after the bundled libsoup update. Cause remains unconfirmed;
-temporary supported-host isolation is prepared and awaits remote CI. **M0.5 remains conditional**
+Chromium/Firefox. Native isolation in run 37719629240 identifies an inherited
+`XDG_DATA_DIRS`/GSettings interaction behind WebKit 2370 HTTP failures. The narrow
+browser-child environment correction is implemented; the full production WebKit
+suite awaits remote requalification. **M0.5 remains conditional**
 until the required supported-host WebKit scenarios pass; do not merge yet.
 M0.6 audits the foundation; M1 owns public content, the visual shell, and design system.
 
@@ -172,7 +173,7 @@ Release-note review requires no test/config changes: device descriptors now forw
 mode, or hidden-iframe assertion. The new optional default-project selection is not
 adopted. All three projects, one worker, zero retries, and browser diagnostics remain.
 
-### Current remote result: 2026-10-08
+### Stable-upgrade remote result before native isolation: 2026-10-08
 
 [Website CI run 37716799825](https://github.com/adarj/grocery-pos-website/actions/runs/37716799825)
 ran commit `ea08a586e5ee1154bb881bf5d926d7a133789e25` on Ubuntu 24.04 x86_64.
@@ -189,20 +190,54 @@ The diagnostic preparation pass independently inspected job logs and artifact me
 the artifact download returned HTTP 403, so its trace contents were not independently
 re-read in this pass. Job logs contain no `pw:browser` native stderr or crash stack.
 
-**Current cause: unconfirmed.** The old libsoup 3.6.5 hypothesis cannot explain this
+**Cause at this stage: unconfirmed.** The old libsoup 3.6.5 hypothesis cannot explain this
 run without new evidence: the fix is present in the verified local 2370 bundle and
 the same symptom persists. An application/CSP defect, native networking/runtime
 failure, and environment/library interaction remain hypotheses. Request/API success
 uses Node networking and does not qualify WebKit's native network process.
 
-### Temporary WebKit 2370 isolation: remote results pending
+### Native isolation and targeted correction: 2026-10-08
+
+[Website CI run 37719629240](https://github.com/adarj/grocery-pos-website/actions/runs/37719629240)
+ran diagnostic commit `631076e0501e4f27db5eeb7a0ac566715a4ac745` on Ubuntu 24.04
+x86_64 with Playwright 1.64.0 / WebKit 2370 (27.2). The unchanged canonical gate
+again reports 17 passed and four WebKit navigation failures; frozen installation,
+core quality, Chromium/Firefox, final source cleanliness, and failure-artifact
+upload succeed.
+
+The failure-only diagnostic records successful browser launch, `about:blank`, and
+data-document navigation. Plain and inline-script HTTP navigation fail under the
+inherited environment; the loopback server receives no request. Browser-native
+stderr repeatedly reports `GLib-GIO-ERROR: No GSettings schemas are installed on
+the system`. Removing the diagnostic set of native-environment variables restores
+HTTP, the production CSP probe, and Next `/en` loading with and without JavaScript.
+The separate probe removing **only `XDG_DATA_DIRS`** restores plain HTTP navigation:
+status 200, server request received, response finished, and document fully loaded.
+
+This differential strongly identifies a GSettings schema-lookup interaction with
+inherited `XDG_DATA_DIRS`, rather than an application/CSP failure or the historical
+libsoup 3.6.5 defect. The exact offending search-path entry has not been established.
+The single-variable probe qualifies minimal HTTP, not the full production suite.
+
+[Playwright configuration](../../playwright.config.ts) now copies all defined
+process-environment values except `XDG_DATA_DIRS` into `use.launchOptions.env` for
+**WebKit on Linux CI only**. Playwright's supported browser-launch option changes
+only browser-child inheritance; global `process.env`, the Next production server,
+Node/test runner, Chromium, and Firefox keep their original environment. Omission
+uses the native default lookup demonstrated by the probe, with no invented path,
+replacement library, or removal of other diagnostic variables. The full seven
+WebKit production scenarios remain required and await remote requalification.
+
+### Temporary diagnostic retention: one more remote qualification run
 
 [scripts/diagnostics/webkit-navigation.mjs](../../scripts/diagnostics/webkit-navigation.mjs)
 is temporary M0.5 tooling, not a website test layer or acceptance substitute.
 One isolated workflow step runs only after the unchanged canonical qualification
 fails on a push to `feat/m0-5-quality-security-ci`. It never runs on main or PRs.
 Its non-blocking diagnostic status does not change the already-blocking `just ci`
-result. Remove the step and script after diagnosis.
+result. Retain the step and script for one more remote run of the corrected canonical
+gate. If that gate succeeds, remove both as the immediate cleanup task; if it fails,
+retain the failure diagnostics for analysis.
 
 The installed project Playwright runs bounded probes of `about:blank`, a data HTML
 URL, plain loopback HTTP without JS/security headers, and loopback HTTP with inline
@@ -232,8 +267,9 @@ only a bounded tail plus structured probe events. Existing failure artifacts inc
 these files. Navigation, launch, worker (90 seconds), overall (330 seconds), and CI
 step (eight minutes) deadlines bound execution. Cleanup closes browser contexts,
 Playwright-owned process groups, the production child, and loopback connections.
-Local Chromium checks validate the probe's control flow/cleanup only. Supported-host
-WebKit results, native crash attribution, and any corrective change are still pending.
+Local Chromium checks validate the probe's control flow/cleanup only. The supported-host
+isolation above establishes the single-variable correction candidate; a successful
+unchanged full WebKit suite with that correction is still pending.
 
 WebKit remains **required and blocking**. No prerelease, skip, retry-based acceptance,
 CSP relaxation, preload, ABI symlink, emulation, or substitute browser is adopted.

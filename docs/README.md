@@ -2,7 +2,7 @@
 
 M0.1 records the constitution; M0.2 qualifies the toolchain; M0.3 proves source boundaries;
 M0.4 establishes typed language routing/messages; M0.5 adds local quality/security
-gates and partial remote qualification; supported-host WebKit remains blocked
+gates and partial remote qualification; Playwright 1.64.0 WebKit requalification is pending
 under the [quality/CI evidence](engineering/quality-and-ci.md).
 Architectural choices are policy, not evidence that product features exist.
 

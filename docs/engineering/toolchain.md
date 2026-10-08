@@ -6,8 +6,9 @@ fictional capability-publication slice documented in the
 replaced; the counter remains an isolated client qualification control.
 M0.4's [language/message boundary](../architecture/internationalization.md) serves
 the proof at `/en`. M0.5's first [quality/CI run](quality-and-ci.md) qualifies Ubuntu
-x86_64 runtime and Chromium/Firefox; WebKit navigation remains blocked by a likely
-upstream bundle defect. The visual system remains M1 work.
+x86_64 runtime and Chromium/Firefox. The targeted Playwright 1.64.0 upgrade is locally
+qualified on those engines; supported-host WebKit requalification remains pending
+remote CI. The visual system remains M1 work.
 
 ## Ownership and environment
 
@@ -41,7 +42,7 @@ are execution-qualified: ARM64 locally and x86_64 in CI run 37550037169 at commi
 | ReScript | 12.3.1 |
 | `@rescript/react` | 0.15.0 |
 | `@rescript/runtime` | 12.3.1, direct runtime dependency |
-| Playwright Test | 1.63.0 |
+| Playwright Test | 1.64.0; locally qualified in Chromium/Firefox, remote requalification pending |
 
 `flake.lock` owns the exact Nix revision and content hash. This supported stable
 pin supplies Node 24 and a cached pnpm 12 package without extra inputs or a custom
@@ -208,14 +209,14 @@ downloads the Ubuntu 24.04 ARM64 fallback:
 
 | Engine | Provisioned version / revision | Production smoke |
 | --- | --- | --- |
-| Chromium | 153.0.8010.12 / 1243 | Passed |
-| Firefox | 155.0 / 1543 | Passed |
-| WebKit | 26.6 / 2359 | Failed before page load: native dependency validation |
+| Chromium | 156.0.8078.4 / 1248 | All seven scenarios passed |
+| Firefox | 157.0 / 1555 | All seven scenarios passed |
+| WebKit | 27.2 / 2370 | Not run: provisioning still reports missing native dependencies |
 
 Chromium/Firefox use the existing compatible Linux runtime here. WebKit lacks
 GTK4, ICU74, GStreamer components, flite, JPEG8, AVIF16 and related libraries.
-`ldd` also identifies `libjxl.so.0.8`; the pinned Nixpkgs supplies libjxl 0.11.2,
-not an ABI-compatible 0.8 package. Its bundled MiniBrowser launcher overwrites
+Inspection of the earlier revision 2359 also identified `libjxl.so.0.8`; the pinned
+Nixpkgs supplies libjxl 0.11.2, not an ABI-compatible 0.8 package. Its bundled MiniBrowser launcher overwrites
 `LD_LIBRARY_PATH`, so exporting a few Nix library paths would not suffice. This is
 a native-runtime limitation, not an application or ReScript failure.
 
@@ -226,13 +227,18 @@ target exists in Playwright, but changing its fallback/platform assumptions was
 not adopted merely to obtain a green matrix. No extra Nix input or custom legacy
 library derivation is justified by this small spike.
 
-Ubuntu 24.04 x86_64 CI now qualifies the shell, frozen install, core quality,
-and all seven Chromium/Firefox scenarios. WebKit launches and passes three request/API
-scenarios, but four document-navigation scenarios fail before a recorded HTTP response.
-Playwright 1.63.0 / `webkit-2359` matches an upstream libsoup 3.6.5 network-process defect;
-the local ARM64 fallback bundle also contains that version. Exact CI crash causation
-remains an inference without a native stack or fixed-build A/B result.
-See the [run, traces, upstream links, and stable 1.64 trigger](quality-and-ci.md).
+The existing Ubuntu 24.04 x86_64 CI evidence, using Playwright 1.63.0, qualifies the
+shell, frozen install, core quality, and all seven Chromium/Firefox scenarios.
+WebKit launches and passes three request/API scenarios, but four document-navigation
+scenarios fail before a recorded HTTP response. Revision 2359 matches an upstream
+libsoup 3.6.5 network-process defect; the local ARM64 fallback bundle corroborates
+that version. Exact crash causation remains an inference without a native stack or
+fixed-build A/B result.
+
+The targeted stable Playwright 1.64.0 upgrade provisions the revisions above.
+Its downloaded ARM64 WebKit 2370 GTK/WPE libraries both contain `libsoup/3.6.6`.
+Local Chromium/Firefox regressions pass; the unchanged blocking CI matrix must still
+qualify WebKit on Ubuntu x86_64. See the [run, upstream links, and upgrade evidence](quality-and-ci.md).
 
 `just test-e2e` and `just ci` keep WebKit required and blocking. M0.5 remains
 **conditional** until supported-host WebKit navigation and the complete gate pass.
@@ -245,8 +251,9 @@ successful supply-chain policy checks. No required lifecycle-script failure or
 approval notice occurred during M0.2. M0.5 explicitly denies the lint resolver's
 fallback script through `allowBuilds`; see [quality and CI](quality-and-ci.md).
 Native compiler/SWC payloads arrive through platform-specific packages. No blanket
-script approval or isolation weakening was introduced; the single root policy
-only adds the explicit resolver-script denial.
+script approval or isolation weakening was introduced. The root policy retains the
+explicit resolver-script denial; pnpm also recorded exact-version release-age
+exceptions for the three approved new Playwright 1.64.0 packages, as documented there.
 
 Next decisions were checked against installed `node_modules/next/dist/docs/`:
 manual installation, TypeScript/typegen, server/client boundaries, CLI, AI-agent

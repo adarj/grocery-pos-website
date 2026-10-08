@@ -2,3 +2,7 @@
 # Linux native bindings arrive as pinned optional packages; no fallback download.
 allowBuilds:
   unrs-resolver: false
+minimumReleaseAgeExclude:
+  - '@playwright/test@1.64.0'
+  - playwright-core@1.64.0
+  - playwright@1.64.0

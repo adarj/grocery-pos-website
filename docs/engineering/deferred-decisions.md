@@ -34,9 +34,11 @@ calls for evidence and a decision; it does not automatically authorize implement
 Exact dependency versions, ReScript output conventions, and executable commands
 are **M0.2 proof work**, rather than unresolved product architecture. CI/test
 configuration is implemented in M0.5. CI run 37550037169 qualifies the x86_64
-runtime and Chromium/Firefox; WebKit navigation remains a likely upstream blocker.
-Stable Playwright 1.64 with the promised Linux bundle fix is the preferred targeted
-upgrade trigger, subject to human approval and a successful unchanged full CI gate.
+runtime and Chromium/Firefox; the prior Playwright 1.63.0 WebKit navigation failure
+remains a likely upstream blocker. The human-authorized stable 1.64.0 upgrade is
+implemented, its downloaded ARM64 WebKit bundle contains libsoup 3.6.6, and local
+Chromium/Firefox regressions pass. Supported-host WebKit requalification through the
+unchanged full CI gate is still required before M0.5 acceptance.
 See the [qualification evidence and remaining acceptance boundary](quality-and-ci.md).
 
 When a trigger arrives, identify the owner/requirement, evaluate the smallest

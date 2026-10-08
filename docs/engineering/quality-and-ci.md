@@ -2,7 +2,9 @@
 
 Local gates implement the quality/security floor over fictional M0.4 engineering
 content. The first Ubuntu x86_64 CI run qualifies the repository toolchain and
-Chromium/Firefox, but WebKit document navigation fails. **M0.5 remains conditional**
+Chromium/Firefox; Playwright 1.63.0 WebKit document navigation fails. The targeted
+stable 1.64.0 upgrade is implemented and locally qualified in Chromium/Firefox;
+supported-host WebKit requalification awaits remote CI. **M0.5 remains conditional**
 until the required supported-host WebKit scenarios pass; do not merge yet.
 M0.6 audits the foundation; M1 owns public content, the visual shell, and design system.
 
@@ -27,8 +29,9 @@ workflow is sequential. Development diagnostics are not acceptance; see [toolcha
 ## Lint and dependency decisions
 
 Direct additions: `eslint` 9.39.5, matching `eslint-config-next` 16.3.8, and
-`@axe-core/playwright` 4.13.0 (resolved axe-core 4.13.0). Existing framework/compiler,
-Playwright, and Nix versions remain pinned. No formatter framework, Vitest, or RTL.
+`@axe-core/playwright` 4.13.0 (resolved axe-core 4.13.0). Existing framework/compiler
+and Nix versions remain pinned. The subsequent targeted Playwright 1.64.0 upgrade
+is recorded below. No formatter framework, Vitest, or RTL.
 The flat config excludes generated `.res.mjs`, `.gen.tsx`, Next declarations,
 compiler state, and build/report/cache output. Basic undefined/unused/unreachable
 rules also cover handwritten `.mjs`. A missing-alt image probe is rejected by Next
@@ -47,8 +50,13 @@ incidentally upgrade qualified Next to hide it.
 keeps one application. `allowBuilds` explicitly denies `unrs-resolver`'s fallback
 postinstall. The pinned Linux optional native binding loads without that script;
 the first CI run's frozen install and lint gate qualify the x86_64 path as well.
-Unknown install scripts retain default restrictions.
-No global configuration, hoisting, or blanket build permission changed.
+Unknown install scripts retain default restrictions. During the explicitly approved
+stable upgrade, pnpm recorded `minimumReleaseAgeExclude` entries for exactly
+`@playwright/test@1.64.0`, `playwright@1.64.0`, and `playwright-core@1.64.0`.
+These permit the newly published versions without changing `allowBuilds` or other
+packages' release-age policy. Both repeated frozen installs leave all three package
+metadata files unchanged. No global configuration, hoisting, or blanket build
+permission changed.
 ReScript formatting was applied once to seven existing files. Checks never rewrite them.
 
 ## Workflow
@@ -113,10 +121,11 @@ No CSP violation precedes the failure. JavaScript-enabled and disabled navigatio
 both fail, before hydration, axe, or keyboard assertions execute.
 Request/API tests use Playwright's Node HTTP path, not WebKit's document network process.
 
-### WebKit diagnosis and stable upgrade trigger
+### WebKit diagnosis and stable requalification
 
 [Playwright issue 42803](https://github.com/microsoft/playwright/issues/42803)
-identifies Playwright 1.63.0 / `webkit-2359` as bundling libsoup 3.6.5.
+is closed with the `v1.64` classification. It identifies Playwright 1.63.0 /
+`webkit-2359` as bundling libsoup 3.6.5.
 The library has a confirmed heap-use-after-free that can crash `WPENetworkProcess`
 and surface the same navigation error.
 The local Ubuntu-fallback ARM64 `webkit-2359` cache independently contains
@@ -127,9 +136,10 @@ limitation still prevents a useful local WebKit reproduction.
 The [WebKit libsoup 3.6.6 update](https://github.com/WebKit/WebKit/pull/74619)
 is merged, and the [Playwright maintainer](https://github.com/microsoft/playwright/issues/42803#issuecomment-5837772701)
 states that the fixed build will be included in 1.64.
-As checked on 2026-10-07, the [npm stable package](https://registry.npmjs.org/@playwright/test/latest)
-and [latest stable GitHub release](https://github.com/microsoft/playwright/releases/tag/v1.63.0)
-are still 1.63.0; stable 1.64 is unavailable.
+Stable 1.64 was unavailable during the initial diagnosis. The official
+[Playwright 1.64.0 release](https://github.com/microsoft/playwright/releases/tag/v1.64.0)
+was subsequently published on 2026-10-07; its release metadata marks it as neither
+prerelease nor draft.
 
 **Diagnosis: likely upstream blocker.** Affected versions and the failure pattern
 strongly match, with no observed application HTTP, routing, CSP, hydration, or axe
@@ -138,11 +148,36 @@ and this CI artifact has no native crash stack or fixed-library A/B result provi
 the exact libsoup failure. Do not describe application incompatibility or exact
 crash causation as established.
 
-Wait for stable Playwright 1.64, verify that its Linux WebKit bundle includes the
-promised libsoup fix, then request human approval for a targeted stable upgrade.
-Reprovision through Playwright and rerun the unchanged full `just ci` gate on Ubuntu.
-If navigation still fails, collect native network-process diagnostics or an isolated
-HTTP navigation probe; do not assume the upgrade guarantees success.
+The human-authorized targeted upgrade to `@playwright/test` 1.64.0 is now implemented.
+Only its `playwright` / `playwright-core` dependencies and affected peer references
+change in the lockfile; framework, axe, ESLint, Nix, and workflow pins are unchanged.
+Two `pnpm install --frozen-lockfile` runs succeed without changing package metadata.
+
+The [tagged browser manifest](https://github.com/microsoft/playwright/blob/v1.64.0/packages/playwright-core/browsers.json)
+and installed manifest agree: Chromium 156.0.8078.4 / revision 1248, Firefox 157.0 /
+revision 1555, and WebKit 27.2 / revision 2370. Provisioning uses the project-owned
+Playwright package and the normal user cache. Read-only inspection of the downloaded
+Ubuntu 24.04 ARM64 `webkit-2370` GTK and WPE `libsoup-3.0.so.0` libraries finds
+`libsoup/3.6.6`, replacing the affected 3.6.5 bundle. This verifies the local bundle's
+version; it is not a fixed-build CI result or an inspection of the x86_64 library.
+
+On the upgraded local stack, `just clean` then `just check` passes, followed by all
+seven Firefox production scenarios. Each engine reports zero axe violations and
+incomplete checks; SSR, hydration, security headers, and CSP diagnostics pass, and
+`/en` remains statically generated. Local WebKit is not run: provisioning still
+reports Fedora ARM64 native dependencies missing. No host libraries are modified.
+
+Release-note review requires no test/config changes: device descriptors now forward
+`screen`, which these tests do not inspect; there is no test JSX, snapshot-update
+mode, or hidden-iframe assertion. The new optional default-project selection is not
+adopted. All three projects, one worker, zero retries, and browser diagnostics remain.
+
+**Next step: supported-host WebKit requalification is pending remote CI.** After
+human review and push, rerun the unchanged full `just ci` gate on Ubuntu x86_64.
+The existing workflow provisions revision 2370 through the updated package. Do not
+claim WebKit is fixed or M0.5 complete before that run succeeds. If navigation still
+fails, collect native network-process diagnostics or an isolated HTTP navigation
+probe; the upgraded library alone does not prove the previous crash's exact cause.
 
 WebKit remains **required and blocking**. No prerelease, skip, retry-based acceptance,
 CSP relaxation, preload, ABI symlink, emulation, or substitute browser is adopted.

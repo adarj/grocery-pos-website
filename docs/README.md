@@ -10,7 +10,10 @@ audit and feature CI run 37728971554 pass. Main run 37749346349 qualifies the me
 specifications. The [M1 plan](engineering/milestone-1-plan.md#m11-approval-and-qualification-record)
 owns that record and the approved M1.2 scope. The
 [internal-preview shell record](engineering/m1-2-shell-qualification.md) owns local
-implementation evidence and pending adversarial/remote qualification. Architecture,
+qualification PASS, feature CI PASS (27/27), the adversarial CONDITIONAL PASS,
+and A12-01/A12-02 correction review in progress. Correction CI, human checkpoint
+decisions, main integration/CI and formal M1.2 acceptance remain pending; M1.3
+authorization is not granted. Architecture,
 templates and proposed URLs
 are not publication approval or evidence of commercially released features.
 
@@ -21,7 +24,7 @@ are not publication approval or evidence of commercially released features.
 | Who is the website for, and how should pages/navigation work? | [Website information architecture](product/website-information-architecture.md) |
 | What visual direction is approved? | [Visual direction](design/visual-direction.md) |
 | What are the first-party presentation/accessibility contracts? | [Design-system specification](design/design-system-specification.md) |
-| What is implemented and locally qualified in M1.2? | [Engineering-preview shell](engineering/m1-2-shell-qualification.md) |
+| What is implemented and qualified in M1.2, and what remains pending? | [Engineering-preview shell](engineering/m1-2-shell-qualification.md) |
 | What are the M1 scopes, approval record and checkpoint gates? | [Milestone 1 plan](engineering/milestone-1-plan.md) |
 | How does the eventual website fit together? | [Architecture overview](architecture/website-architecture.md) |
 | Where does source code belong? | [Source layout and application boundary](architecture/source-layout.md) |

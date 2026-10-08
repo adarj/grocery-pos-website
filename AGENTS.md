@@ -63,7 +63,9 @@ only the approved internal engineering-preview shell around fictional proof data
 see the [M1 plan](docs/engineering/milestone-1-plan.md) and
 [shell qualification record](docs/engineering/m1-2-shell-qualification.md).
 Keep navigation limited to actual approved destinations and qualify accessible
-styling now. M1.2 awaits adversarial review and supported remote CI; do not begin M1.3.
+styling now. M1.2 local and feature CI qualification pass; the adversarial audit
+returned CONDITIONAL PASS. A12-01/A12-02 corrections are under review; correction
+CI, human checkpoint decisions and main qualification remain pending. Do not begin M1.3.
 Review the approved ESLint exception at the first M1 implementation checkpoint
 and targeted lint-stack updates, no later than January 8, 2027 unless explicitly revised.
 Use `just check` locally and `just ci` on a supported full browser runtime for

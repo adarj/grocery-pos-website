@@ -14,6 +14,20 @@ function contrast(first: string, second: string) {
 
 test("preview shell has measured text, action and focus contrast", async ({ page }, info) => {
   await page.goto("/en");
+  const banner = page.getByRole("banner");
+  const identity = banner.getByRole("link", { name: "Grocery POS — engineering preview home", exact: true });
+  await expect(identity).toHaveAttribute("href", "/en");
+  await expect(identity).toHaveAttribute("aria-current", "page");
+  await expect(identity).toHaveCSS("text-decoration-line", "underline");
+  const currentUnderline = await identity.evaluate(element => {
+    const style = getComputedStyle(element);
+    return parseFloat(style.textDecorationThickness) / parseFloat(style.fontSize);
+  });
+  expect(currentUnderline).toBeGreaterThanOrEqual(0.14);
+  await expect(banner.getByRole("link")).toHaveCount(1);
+  await expect(page.getByRole("navigation")).toHaveCount(0);
+  await expect(banner.getByRole("button")).toHaveCount(0);
+  await expect(banner.locator("details, summary")).toHaveCount(0);
   const button = page.getByRole("button", { name: "Increment counter", exact: true });
   const measured = await page.evaluate(() => {
     const body = getComputedStyle(document.body);
@@ -58,10 +72,25 @@ test("preview shell has measured text, action and focus contrast", async ({ page
   results.skipText = contrast(focused.text, focused.background);
   results.skipFocusSurface = contrast(focused.outline, measured.surface);
   results.skipFocusFill = contrast(focused.outline, focused.background);
+  await page.keyboard.press("Tab");
+  await expect(identity).toBeFocused();
+  await expect(identity).toBeInViewport();
+  const identityFocus = await identity.evaluate(element => {
+    const style = getComputedStyle(element);
+    return { visible: element.matches(":focus-visible"), outline: style.outlineColor,
+      style: style.outlineStyle, width: parseFloat(style.outlineWidth), offset: parseFloat(style.outlineOffset) };
+  });
+  expect(identityFocus.visible).toBe(true);
+  expect(identityFocus.style).toBe("solid");
+  expect(identityFocus.width).toBeGreaterThanOrEqual(3);
+  expect(identityFocus.offset).toBeGreaterThanOrEqual(4);
+  results.identityFocusSurface = contrast(identityFocus.outline, measured.surface);
+  await page.keyboard.press("Tab");
+  await expect(button).toBeFocused();
   for (const key of ["pageText", "identityText", "buttonText", "buttonHoverText", "buttonActiveText", "skipText"]) {
     expect(results[key], key).toBeGreaterThanOrEqual(4.5);
   }
-  for (const key of ["buttonBoundary", "skipFocusSurface", "skipFocusFill"]) {
+  for (const key of ["buttonBoundary", "skipFocusSurface", "skipFocusFill", "identityFocusSurface"]) {
     expect(results[key], key).toBeGreaterThanOrEqual(3);
   }
   await info.attach("shell-contrast", { body: JSON.stringify({ measured, results }, null, 2), contentType: "application/json" });

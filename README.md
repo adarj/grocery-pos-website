@@ -28,8 +28,11 @@ specifications, adversarial audit PASS and feature [CI run 37728971554](https://
 M1.1 is merged and qualified by main [CI run 37749346349](https://github.com/adarj/grocery-pos-website/actions/runs/37749346349)
 at `cea8dea94bafe182af40ef30fe390cc9b667ac07`. M1.2 adds a server-rendered identity
 header, skip link, responsive proof container and preview footer; no additional
-navigation destinations exist. See the [local shell qualification](docs/engineering/m1-2-shell-qualification.md)
-for measured styling and pending adversarial/remote review. No public marketing
+navigation destinations exist. See the [shell qualification record](docs/engineering/m1-2-shell-qualification.md)
+for local PASS, feature CI PASS (27/27 on attempt 2 of run 37752595132), and the
+independent adversarial CONDITIONAL PASS. A12-01/A12-02 correction review, correction
+CI, human visual/accessibility and ESLint decisions, main integration/CI and formal
+M1.2 acceptance remain pending; M1.3 authorization is not granted. No public marketing
 page, customer claim, asset or deployment is authorized. The broader palette
 remains exploratory. The [M1.2 lint review](docs/engineering/quality-and-ci.md#m12-eslint-compatibility-review-2026-10-08)
 retains the bounded exception and its January 8, 2027 maximum review date.

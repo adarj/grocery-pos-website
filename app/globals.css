@@ -67,6 +67,10 @@ a:active {
   font-weight: 700;
 }
 
+.preview-identity[aria-current="page"] {
+  text-decoration-thickness: 0.15em;
+}
+
 .preview-status {
   margin: 0;
   max-inline-size: 35ch;

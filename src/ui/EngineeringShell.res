@@ -1,4 +1,6 @@
 // Server-rendered preview only; navigation awaits real approved destinations.
+// Only language-root pages exist today. Make current state route-aware before
+// adding a child page to this shared layout.
 @genType @react.component
 let make = (~language: Language.t, ~children: React.element) => {
   <>
@@ -11,6 +13,7 @@ let make = (~language: Language.t, ~children: React.element) => {
           className="preview-identity"
           href={"/" ++ Language.routeCode(language)}
           ariaLabel={Messages.get(language, IdentityHome)}
+          ariaCurrent={#page}
         >
           {React.string(Messages.get(language, SiteIdentity))}
         </a>

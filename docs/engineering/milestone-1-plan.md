@@ -2,9 +2,11 @@
 
 **Status: M1.1 planning specification approved by the human maintainer on
 October 8, 2026 (UTC).** The initial M1.2 internal engineering-preview scope below
-is implemented with local qualification recorded separately; adversarial review
-and supported remote CI remain pending. Later checkpoints retain their scope
-and human review gates. Specification approval grants no publication or
+is implemented: local and feature remote qualification pass, and the independent
+adversarial audit returned CONDITIONAL PASS. A12-01/A12-02 corrective review is in
+progress; correction CI, human checkpoint decisions, main integration/CI and formal
+M1.2 acceptance remain pending. M1.3 authorization is not granted. Later checkpoints
+retain their scope and human review gates. Specification approval grants no publication or
 production deployment authorization. Milestone 0 is complete and accepted;
 see the [qualification record](milestone-0-qualification.md).
 
@@ -16,7 +18,7 @@ see the [qualification record](milestone-0-qualification.md).
 | Independent adversarial specification audit | **M1.1 PASS — READY FOR HUMAN DESIGN APPROVAL**; no BLOCKER, MAJOR or MINOR defects; A11-01–A11-03 carried below |
 | Signed specification commit / feature CI | [Run 37728971554](https://github.com/adarj/grocery-pos-website/actions/runs/37728971554) passes at `efa76de8dc5afec83c7f4858afa2cbfcfeeab2e1`; Chromium/Firefox/WebKit 7/7 each, 21/21, one worker, zero retries; source cleanliness passes |
 | M1.1 branch integration / main CI | Merged; [main run 37749346349](https://github.com/adarj/grocery-pos-website/actions/runs/37749346349) passes at `cea8dea94bafe182af40ef30fe390cc9b667ac07`, including 21/21 and source cleanliness |
-| M1.2 | Approved internal-preview scope implemented; [local qualification](m1-2-shell-qualification.md) passes; adversarial review, supported remote CI and human acceptance pending |
+| M1.2 | Approved scope implemented; [shell record](m1-2-shell-qualification.md): local PASS, feature CI PASS (27/27), adversarial CONDITIONAL PASS; A12-01/A12-02 correction review in progress; correction CI, human decisions, main integration/CI and formal acceptance pending; M1.3 not authorized |
 
 ## Objective and implementation starting point
 
@@ -117,8 +119,11 @@ October 8, 2026 (UTC), consisting of:
 This scope does not approve public marketing copy, unavailable routes, customer
 claims or assets. No pricing, commerce, accounts, contact forms, backend services
 or speculative product features belong in M1.2. An internal-preview designation
-is neither access control nor production deployment authorization. The [M1.2 shell qualification](m1-2-shell-qualification.md) records local evidence;
-implementation is locally qualified and awaits adversarial/remote review.
+is neither access control nor production deployment authorization. The [M1.2 shell qualification](m1-2-shell-qualification.md)
+records local and feature CI PASS, adversarial CONDITIONAL PASS, and corrective
+review in progress. Correction CI and the human/main acceptance gates remain pending.
+The current identity link assumes one page per language root. Before the first
+additional public child route, make its current-page treatment route-aware.
 
 Carry the independent audit notes into M1.2 acceptance:
 

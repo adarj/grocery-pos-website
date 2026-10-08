@@ -64,7 +64,10 @@ not part of the client island. The root layout passes its validated language and
 children through the generated shell props. ArchitectureProof owns the sole
 focusable main landmark; the shell's native skip anchor works without JavaScript.
 Only the existing validated language home destination is linked; no empty
-navigation or mobile disclosure is introduced.
+navigation or mobile disclosure is introduced. The identity link marks home current
+with `aria-current="page"` and an emphasized underline under the current single-page
+language-root assumption. Before adding a public child route, make current-state
+composition route-aware; the shared layout must not mark home current on child pages.
 
 The qualification module owns the fictional sample inputs and calls the application
 projection. Qualification artifacts exercise architectural/runtime properties;
@@ -159,8 +162,11 @@ The clean production build lists only `ui/qualification/Counter.res.mjs` from
 application source in Next's client-reference manifest; the capability modules
 remain in the server tree. Static HTML/RSC output contains neither withheld sample
 identifier. M1.2 Chromium and Firefox each pass nine production scenarios locally;
-prior merged main CI qualifies all three engines. Supported Ubuntu CI must qualify
-the expanded M1.2 suite. Fedora ARM64 WebKit native runtime remains unqualified.
+feature run 37752595132 attempt 2 qualifies all three engines at 9/9 each (27/27)
+on the signed implementation commit. The [shell record](../engineering/m1-2-shell-qualification.md#feature-branch-remote-qualification-2026-10-08)
+distinguishes the failed provisioning attempt from the successful rerun. A12-01/A12-02
+correction review is in progress; correction CI and main integration/CI remain pending.
+Fedora ARM64 WebKit native runtime remains unqualified.
 
 M0.5's [quality/CI contract](../engineering/quality-and-ci.md) adds lint/format,
 supervisor, and production accessibility/security gates to `just check`.

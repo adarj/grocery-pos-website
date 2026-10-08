@@ -16,7 +16,9 @@ test.describe("visible server-rendered content", () => {
     await expect(page.getByRole("banner")).toHaveCount(1);
     await expect(page.getByRole("contentinfo")).toContainText("Engineering preview.");
     await expect(page.getByRole("navigation")).toHaveCount(0);
-    await expect(page.getByRole("banner").getByRole("link", { name: "Grocery POS — engineering preview home", exact: true })).toHaveAttribute("href", "/en");
+    const identity = page.getByRole("banner").getByRole("link", { name: "Grocery POS — engineering preview home", exact: true });
+    await expect(identity).toHaveAttribute("href", "/en");
+    await expect(identity).toHaveAttribute("aria-current", "page");
     await page.keyboard.press("Tab");
     const skip = page.getByRole("link", { name: "Skip to main content", exact: true });
     await expect(skip).toBeFocused();

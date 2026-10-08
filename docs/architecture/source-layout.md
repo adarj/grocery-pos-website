@@ -1,16 +1,17 @@
 # Source layout and application boundary
 
 M0.3 proves the responsibility map with a small capability-publication slice;
-M0.4 adds a typed internationalization boundary over that slice.
+M0.4 adds a typed internationalization boundary over that slice; M1.2 adds a
+server-rendered [engineering-preview shell](../engineering/m1-2-shell-qualification.md).
 This is an engineering surface with fictional fixtures, not a capability ledger.
 
 ## Actual source structure
 
 ```text
 app/
-  [lang]/layout.tsx                   Validated HTML language/direction, static params, metadata
+  [lang]/layout.tsx                   Validated HTML language/direction, metadata, static params, shell
   [lang]/page.tsx                     Obtain typed views/language and render the ReScript page
-  globals.css                         Minimal qualification-page CSS
+  globals.css                         Accessible responsive preview-shell/proof CSS
 proxy.ts                              Bare-root temporary public language redirect
 src/
   domain/Capability.res + .resi        Opaque capability, maturity, disclosure, decoder
@@ -23,7 +24,8 @@ src/
   adapters/next/language.ts            Registry result to Next notFound/mode seam
   qualification/CapabilityProofData.res Fictional sample composition for architecture proof
   ui/
-    ArchitectureProof.res             Engineering-page composition; GenType component export
+    EngineeringShell.res              Server-rendered identity, skip link, footer; GenType export
+    ArchitectureProof.res             Sole main landmark and engineering-page composition
     CapabilityList.res                Semantic rendering of public views
     qualification/Counter.res         Isolated M0.2 hydration qualification island
 tests/
@@ -31,6 +33,7 @@ tests/
   unit/InternationalizationTest.res    Language, exposure, messages, and pseudo invariants
   e2e/framework-smoke.spec.ts          Visible SSR without JS, then interactive hydration
   e2e/accessibility.spec.ts            Whole-page axe and native keyboard/focus behavior
+  e2e/shell.spec.ts                    Measured contrast, responsive reflow and expanded text
   e2e/security-headers.spec.ts         Production page/redirect/404 HTTP security policy
   e2e/browser-diagnostics.ts           Shared browser/hydration/CSP error gate
   tooling/dev-supervisor.test.mjs      Isolated process-group regression fixtures
@@ -46,6 +49,7 @@ qualification; it is not an application feature or a design-system primitive.
 proxy.ts --> i18n/Language (public-only root selection)
 app/[lang] --> adapters/next/language --> i18n/Language
            --> qualification/CapabilityProofData --> application --> domain
+           --> ui/EngineeringShell --> i18n/Messages, i18n/Language (server only)
            --> ui/ArchitectureProof --> ui/CapabilityList --> application view type
                                     --> i18n/Messages --> i18n/Language
                                     --> ui/qualification/Counter (resolved labels; client island)
@@ -56,7 +60,11 @@ depends on the domain and owns whether a public view exists. The list receives
 only `id` and a closed semantic `maturityCode`, never publication internals, and makes
 no eligibility decision. `Messages` maps these codes exhaustively to display labels.
 UI imports of the application view are type dependencies; policy and catalogs are
-not part of the client island.
+not part of the client island. The root layout passes its validated language and
+children through the generated shell props. ArchitectureProof owns the sole
+focusable main landmark; the shell's native skip anchor works without JavaScript.
+Only the existing validated language home destination is linked; no empty
+navigation or mobile disclosure is introduced.
 
 The qualification module owns the fictional sample inputs and calls the application
 projection. Qualification artifacts exercise architectural/runtime properties;
@@ -150,8 +158,9 @@ samples are absent, and the separate counter hydrates without errors.
 The clean production build lists only `ui/qualification/Counter.res.mjs` from
 application source in Next's client-reference manifest; the capability modules
 remain in the server tree. Static HTML/RSC output contains neither withheld sample
-identifier. Chromium and Firefox pass both production smoke scenarios on the
-current ARM64 host; WebKit retains the M0.2 native-runtime qualification limit.
+identifier. M1.2 Chromium and Firefox each pass nine production scenarios locally;
+prior merged main CI qualifies all three engines. Supported Ubuntu CI must qualify
+the expanded M1.2 suite. Fedora ARM64 WebKit native runtime remains unqualified.
 
 M0.5's [quality/CI contract](../engineering/quality-and-ci.md) adds lint/format,
 supervisor, and production accessibility/security gates to `just check`.

@@ -226,7 +226,7 @@ both were explicit human decisions.
 | M0.6.2 | Corrections committed as `de6ccda2cd99c8c068801962e95851509832738b` and feature-CI qualified; bounded ESLint exception approved October 8, 2026 (UTC) |
 | M0.6.3 | Local/feature qualification and final main run 37727162386 pass; human foundation acceptance recorded October 8, 2026 (UTC) |
 | Milestone 0 | Formally accepted by the human maintainer October 8, 2026 (UTC); ongoing limitations/review obligations retained |
-| M1 | Authorized; M1.1 specifications active, subsequent checkpoint scope/design/publication decisions remain separate |
+| M1 | Authorized; M1.1 specifications approved, merged and qualified; the [M1 plan](milestone-1-plan.md) tracks M1.2 and subsequent scope/design/publication gates |
 
 **Milestone 0 accepted; M1 authorized. Production deployment and commercial
 feature publication remain separately gated.**

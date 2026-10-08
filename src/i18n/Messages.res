@@ -1,4 +1,9 @@
 type key =
+  | SiteIdentity
+  | IdentityHome
+  | SkipToMain
+  | PreviewStatus
+  | PreviewFooter
   | PageTitle
   | MetadataDescription
   | ArchitectureExplanation
@@ -16,6 +21,11 @@ type key =
 // The complete English source catalog; adding a key requires an exhaustive entry.
 let english = key =>
   switch key {
+  | SiteIdentity => "Grocery POS"
+  | IdentityHome => "Grocery POS — engineering preview home"
+  | SkipToMain => "Skip to main content"
+  | PreviewStatus => "Internal engineering preview"
+  | PreviewFooter => "Engineering preview. No product availability or production deployment is claimed."
   | PageTitle => "Grocery POS Website — M0.4 internationalized architecture proof"
   | MetadataDescription => "Engineering qualification of language routing and public-safe capability presentation."
   | ArchitectureExplanation => "Publication decisions come from the ReScript application boundary."

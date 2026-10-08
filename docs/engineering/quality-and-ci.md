@@ -63,6 +63,36 @@ metadata files unchanged. No global configuration, hoisting, or blanket build
 permission changed.
 ReScript formatting was applied once to seven existing files. Checks never rewrite them.
 
+## M1.2 ESLint compatibility review: 2026-10-08
+
+The first implementation checkpoint rechecked current stable package metadata
+and the installed rule implementations. Stable ESLint is 10.12.0; the qualified
+`eslint-config-next` 16.3.8 permits ESLint `>=9.0.0`, but that broad peer does not
+establish support across its plugin stack. Current stable `eslint-plugin-react` 7.37.5,
+`eslint-plugin-jsx-a11y` 6.10.2 and `eslint-plugin-import` 2.32.0 still exclude ESLint 10 in their declared
+peer ranges. `eslint-plugin-react-hooks` 7.1.1 and TypeScript ESLint 8.71.1 support 10; these do not
+resolve the other constraints. Registry evidence: [React](https://registry.npmjs.org/eslint-plugin-react/7.37.5),
+[JSX accessibility](https://registry.npmjs.org/eslint-plugin-jsx-a11y/6.10.2),
+[import](https://registry.npmjs.org/eslint-plugin-import/2.32.0).
+
+Installed React tooling still calls `SourceCode.getJSDocComment` in
+`lib/util/componentUtil.js`, an API removed by
+[ESLint 10](https://eslint.org/docs/latest/use/migrate-to-10.0.0).
+A caught failure can change rule behavior; a green forced install alone would not
+prove semantic compatibility. No complete supported migration was established.
+No peer overrides, dependency changes, rule removals or experimental ESLint 10 run
+were made. Keep exactly pinned ESLint 9.39.5 under the approved development/CI-only
+exception, zero-warning enforcement, existing rule coverage and frozen installation.
+
+**Checkpoint disposition:** technical review completed; the human maintainer must
+review continued retention at M1.2 acceptance under the existing exception.
+This record does not grant a new renewal or alter its January 8, 2027 maximum
+review date. Stable whole-stack compatibility without overrides, preserved active
+rules/coverage, and passing local/remote gates remain the upgrade criteria.
+See the [approved exception](milestone-0-qualification.md#approved-eslint-9-maintenance-exception)
+for ownership and expiration behavior, and the
+[shell record](m1-2-shell-qualification.md) for current local regression evidence.
+
 ## Workflow
 
 [Website CI](../../.github/workflows/ci.yml) has one `Quality and browsers` job on

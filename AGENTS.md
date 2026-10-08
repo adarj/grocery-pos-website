@@ -58,12 +58,12 @@ contradictions rather than silently substituting another architecture.
 
 Milestone 0 is accepted and M1 authorized; see the
 [qualification record](docs/engineering/milestone-0-qualification.md).
-M1.1 specifications are human-approved October 8, 2026 (UTC); audit/feature CI pass,
-branch integration/main CI remain pending. Follow the
-[M1 plan](docs/engineering/milestone-1-plan.md) for the approved initial M1.2 internal
-engineering-preview scope and A11-01–A11-03 acceptance notes. M1.2 implementation
-has not started; this closeout is documentation-only. Do not begin M1.2 or change
-application, CSS, tests, dependencies, tooling or CI during this task.
+M1.1 specifications are approved, merged and qualified on main. M1.2 implements
+only the approved internal engineering-preview shell around fictional proof data;
+see the [M1 plan](docs/engineering/milestone-1-plan.md) and
+[shell qualification record](docs/engineering/m1-2-shell-qualification.md).
+Keep navigation limited to actual approved destinations and qualify accessible
+styling now. M1.2 awaits adversarial review and supported remote CI; do not begin M1.3.
 Review the approved ESLint exception at the first M1 implementation checkpoint
 and targeted lint-stack updates, no later than January 8, 2027 unless explicitly revised.
 Use `just check` locally and `just ci` on a supported full browser runtime for
@@ -76,7 +76,7 @@ Nix must already work in the outer Linux environment; never bootstrap a substitu
 Do not commit, push, merge, rebase, reset, tag, create releases, force-update refs,
 perform destructive Git operations, or create/modify GitHub remotes. Safe Git
 status/diff/read operations are allowed. A later explicit human instruction is
-required to authorize an exception; M1.1 authorizes no Git mutation. Do not stage, cherry-pick,
+required to authorize an exception; M1.2 authorizes no Git mutation. Do not stage, cherry-pick,
 or create/delete/switch branches. Leave implementation,
 validation results, and a suggested commit message for human review.
 

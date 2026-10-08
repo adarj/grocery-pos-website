@@ -180,7 +180,8 @@ No template requires fabricated proof to look complete.
 
 The maintainer approved this specification and an initial internal engineering-preview
 shell on October 8, 2026 (UTC); see the [approved M1.2 boundary](../engineering/milestone-1-plan.md#approved-m12-boundary-and-acceptance-checklist).
-M1.2 implementation has not begun. Omit empty navigation and its mobile disclosure
+The [M1.2 shell record](../engineering/m1-2-shell-qualification.md) tracks implementation
+and qualification. Omit empty navigation and its mobile disclosure
 when eligible destinations are insufficient. The preview designation is neither
 access control nor production deployment authorization.
 

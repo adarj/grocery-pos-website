@@ -20,6 +20,13 @@ test("Counter supports keyboard activation and retains visible focus", async ({ 
   const button = page.getByRole("button", { name: "Increment counter", exact: true });
   const count = page.getByRole("status", { name: "Count", exact: true });
   await expect(count).toHaveText("0");
+  const skip = page.getByRole("link", { name: "Skip to main content", exact: true });
+  await page.keyboard.press("Tab");
+  await expect(skip).toBeFocused();
+  await expect(skip).toBeInViewport();
+  await expect(skip).toHaveAttribute("href", "#main-content");
+  await page.keyboard.press("Enter");
+  await expect(page.getByRole("main")).toBeFocused();
   await page.keyboard.press("Tab");
   await expect(button).toBeFocused();
   expect(await button.evaluate(element => {

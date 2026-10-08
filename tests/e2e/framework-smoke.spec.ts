@@ -12,6 +12,18 @@ test.describe("visible server-rendered content", () => {
     await expect(page).toHaveTitle("Grocery POS Website — M0.4 internationalized architecture proof");
     await expect(page.locator('meta[name="description"]')).toHaveAttribute("content", "Engineering qualification of language routing and public-safe capability presentation.");
     await expect(page.locator('link[rel="canonical"], link[hreflang]')).toHaveCount(0);
+    await expect(page.getByRole("main")).toHaveCount(1);
+    await expect(page.getByRole("banner")).toHaveCount(1);
+    await expect(page.getByRole("contentinfo")).toContainText("Engineering preview.");
+    await expect(page.getByRole("navigation")).toHaveCount(0);
+    await expect(page.getByRole("banner").getByRole("link", { name: "Grocery POS — engineering preview home", exact: true })).toHaveAttribute("href", "/en");
+    await page.keyboard.press("Tab");
+    const skip = page.getByRole("link", { name: "Skip to main content", exact: true });
+    await expect(skip).toBeFocused();
+    await expect(skip).toBeInViewport();
+    await page.keyboard.press("Enter");
+    await expect(page.getByRole("main")).toBeFocused();
+    await expect(page).toHaveURL(/\/en#main-content$/);
     const samples = page.getByRole("region", { name: "Public-safe capability samples" });
     await expect(samples.getByText("sample-authorized-preview", { exact: true })).toBeVisible();
     await expect(samples.getByText("PREVIEW", { exact: true })).toBeVisible();

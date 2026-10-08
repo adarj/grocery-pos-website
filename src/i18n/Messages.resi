@@ -1,4 +1,9 @@
 type key =
+  | SiteIdentity
+  | IdentityHome
+  | SkipToMain
+  | PreviewStatus
+  | PreviewFooter
   | PageTitle
   | MetadataDescription
   | ArchitectureExplanation

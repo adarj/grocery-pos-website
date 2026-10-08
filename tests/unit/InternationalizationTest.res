@@ -96,6 +96,11 @@ test(
   "pseudo lookup transforms the same complete message keys deterministically with expansion",
   () => {
     let keys: array<Messages.key> = [
+      SiteIdentity,
+      IdentityHome,
+      SkipToMain,
+      PreviewStatus,
+      PreviewFooter,
       PageTitle,
       MetadataDescription,
       ArchitectureExplanation,

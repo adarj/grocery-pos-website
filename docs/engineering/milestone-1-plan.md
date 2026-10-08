@@ -2,8 +2,9 @@
 
 **Status: M1.1 planning specification approved by the human maintainer on
 October 8, 2026 (UTC).** The initial M1.2 internal engineering-preview scope below
-is approved; implementation has not begun. Later checkpoints retain their
-scope and human review gates. Specification approval grants no publication or
+is implemented with local qualification recorded separately; adversarial review
+and supported remote CI remain pending. Later checkpoints retain their scope
+and human review gates. Specification approval grants no publication or
 production deployment authorization. Milestone 0 is complete and accepted;
 see the [qualification record](milestone-0-qualification.md).
 
@@ -14,8 +15,8 @@ see the [qualification record](milestone-0-qualification.md).
 | Human specification/design approval | Approved October 8, 2026 (UTC); leading direction: **Modern infrastructure for the independent grocer** |
 | Independent adversarial specification audit | **M1.1 PASS — READY FOR HUMAN DESIGN APPROVAL**; no BLOCKER, MAJOR or MINOR defects; A11-01–A11-03 carried below |
 | Signed specification commit / feature CI | [Run 37728971554](https://github.com/adarj/grocery-pos-website/actions/runs/37728971554) passes at `efa76de8dc5afec83c7f4858afa2cbfcfeeab2e1`; Chromium/Firefox/WebKit 7/7 each, 21/21, one worker, zero retries; source cleanliness passes |
-| M1.1 branch integration / main CI | **Pending**; feature evidence does not establish integration or qualify this subsequent closeout edit |
-| M1.2 | Initial scope approved; implementation not started |
+| M1.1 branch integration / main CI | Merged; [main run 37749346349](https://github.com/adarj/grocery-pos-website/actions/runs/37749346349) passes at `cea8dea94bafe182af40ef30fe390cc9b667ac07`, including 21/21 and source cleanliness |
+| M1.2 | Approved internal-preview scope implemented; [local qualification](m1-2-shell-qualification.md) passes; adversarial review, supported remote CI and human acceptance pending |
 
 ## Objective and implementation starting point
 
@@ -24,9 +25,11 @@ on the accepted foundation. M1 is not auth, commerce, provider integration, real
 multilingual rollout or deployment qualification.
 
 The current app has thin /[lang] layout/page seams, a fictional ReScript capability
-proof, typed Language/Messages modules, minimal global CSS, and one qualification
-Counter. Existing tests protect policy/decoding, i18n, SSR/hydration, headers/CSP,
-keyboard/axe and supervisor cleanup. No public navigation or design system exists.
+proof, typed Language/Messages modules, a server-rendered ReScript preview shell,
+minimal global CSS, and one qualification Counter. Existing tests protect
+policy/decoding, i18n, SSR/hydration, headers/CSP,
+keyboard/axe, shell contrast/reflow and supervisor cleanup. No multi-destination
+public navigation or broader design system exists.
 
 Future shell composition should consume public-safe, reviewed navigation/content
 and typed messages; Next retains route/metadata ownership. ReScript owns UI and
@@ -38,7 +41,7 @@ samples as product claims or delete unique coverage without replacement.
 
 | Checkpoint | Scope and dependencies | Acceptance evidence | Explicit exclusions | Human gate |
 | --- | --- | --- | --- | --- |
-| M1.1 — Specifications | Approved audience/IA, target navigation and templates, visual direction and component contracts; accepted M0 baseline | Adversarial audit PASS; exact feature CI PASS; working document links; documentation-only scope | No components, assets, public copy, routes or M1.2 execution | Specification/design approval recorded October 8, 2026 (UTC); branch integration/main CI pending |
+| M1.1 — Specifications | Approved audience/IA, target navigation and templates, visual direction and component contracts; accepted M0 baseline | Adversarial audit PASS; exact feature CI PASS; working document links; documentation-only scope | No components, assets, public copy, routes or M1.2 execution | Specification/design approval recorded October 8, 2026 (UTC); merged main CI passes |
 | M1.2 — Internal engineering-preview shell | Approved identity header, skip link, responsive container, existing qualification proof and minimal footer; essential accessible styling; navigation/disclosure only when eligible destinations justify them | Server-first/client-reference review; JS-disabled usability; keyboard/focus/axe; measured actual contrast/control states; narrow-to-wide/pseudo checks; preserved security/hydration/publication regressions; typecheck/build; full supported CI | No fabricated marketing content, unavailable routes/links, pricing, commerce, accounts, contact forms, backend services, speculative features, mega-menu/search, real second language or broad token library | Review the implemented bounded scope and **review the approved ESLint exception at this first implementation checkpoint** |
 | M1.3 — Tokens/primitives | Measure palette pairs; consolidate minimal M1.2 styling into semantic tokens and demonstrated container/section/link/button/card/callout patterns | Contrast/state pairing sheet; responsive/expanded-text/forced-colors/reduced-motion checks; proportionate tests and canonical gates | No UI framework, remote fonts, generic component factory, complex forms/data grids or commerce controls | Approve measured visual system and justified component inventory |
 | M1.4 — Reviewed templates/content | Integrate a small approved subset of IA templates and actual reviewed copy/assets; depends on owners, maturity/disclosure evidence and M1.3 | Claim/source review; metadata and link checks; public-safe projection/withholding; real SSR; content-specific a11y/performance checks and CI | No requirement to populate every sitemap area; no fake claims, CMS/docs platform, pricing, commerce/account or submission backend | Approve every publication set and its qualifications; withhold unsupported pages |
@@ -80,7 +83,10 @@ no later than January 8, 2027 unless explicitly revised. Check stable plugin
 support, active rules and coverage; use no forced peer overrides. If a supported
 migration remains unavailable at review, record explicit renewal or a supported
 alternative per the [accepted exception](milestone-0-qualification.md#approved-eslint-9-maintenance-exception).
-M1.1 does not authorize a tooling upgrade.
+The [M1.2 compatibility review](quality-and-ci.md#m12-eslint-compatibility-review-2026-10-08)
+finds the stable plugin stack still unsuitable for an unsupported forced migration.
+Retain the qualified pin; the maintainer's checkpoint disposition remains part of
+M1.2 acceptance. This implementation does not authorize a tooling upgrade.
 
 ## Hosting and deployment boundary
 
@@ -111,8 +117,8 @@ October 8, 2026 (UTC), consisting of:
 This scope does not approve public marketing copy, unavailable routes, customer
 claims or assets. No pricing, commerce, accounts, contact forms, backend services
 or speculative product features belong in M1.2. An internal-preview designation
-is neither access control nor production deployment authorization. Implementation
-has not started; this closeout remains documentation-only.
+is neither access control nor production deployment authorization. The [M1.2 shell qualification](m1-2-shell-qualification.md) records local evidence;
+implementation is locally qualified and awaits adversarial/remote review.
 
 Carry the independent audit notes into M1.2 acceptance:
 

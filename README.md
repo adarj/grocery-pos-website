@@ -16,9 +16,8 @@ implementation. Its intended repository identity is `adarj/grocery-pos-website`.
 
 ## Current status
 
-Internal/preproduction; **M1.1 — Information Architecture, Visual Direction &
-Design-System Specification** was human-approved on October 8, 2026 (UTC);
-closeout is documentation-only. The human maintainer
+Internal/preproduction; **M1.2 — Public Shell & Responsive Foundation** implements
+the approved internal engineering-preview shell. The human maintainer
 formally accepted Milestone 0 and authorized M1 on October 8, 2026 (UTC).
 Final main [CI run 37727162386](https://github.com/adarj/grocery-pos-website/actions/runs/37727162386)
 qualifies commit `780ba8b89364fd16dba8609a0cb2a13779c24348`, including all 21
@@ -26,11 +25,14 @@ Chromium/Firefox/WebKit scenarios. See the
 [foundation acceptance record](docs/engineering/milestone-0-qualification.md).
 The [M1 checkpoint plan](docs/engineering/milestone-1-plan.md) records the approved
 specifications, adversarial audit PASS and feature [CI run 37728971554](https://github.com/adarj/grocery-pos-website/actions/runs/37728971554) PASS.
-M1.1 branch integration/main CI remain pending. M1.2 is approved only as an initial
-internal engineering-preview shell; implementation has not started. No public
-marketing page, customer claim, asset or deployment is authorized by specification
-approval. The palette remains exploratory. The bounded ESLint exception requires
-review at M1.2 and retains its January 8, 2027 maximum review date.
+M1.1 is merged and qualified by main [CI run 37749346349](https://github.com/adarj/grocery-pos-website/actions/runs/37749346349)
+at `cea8dea94bafe182af40ef30fe390cc9b667ac07`. M1.2 adds a server-rendered identity
+header, skip link, responsive proof container and preview footer; no additional
+navigation destinations exist. See the [local shell qualification](docs/engineering/m1-2-shell-qualification.md)
+for measured styling and pending adversarial/remote review. No public marketing
+page, customer claim, asset or deployment is authorized. The broader palette
+remains exploratory. The [M1.2 lint review](docs/engineering/quality-and-ci.md#m12-eslint-compatibility-review-2026-10-08)
+retains the bounded exception and its January 8, 2027 maximum review date.
 `/` redirects to `/en`, the sole public content language. The engineering page
 demonstrates a ReScript-owned public capability projection and an isolated hydration
 counter. All capability data is fictional qualification data, not product claims.

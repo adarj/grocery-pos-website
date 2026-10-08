@@ -3,15 +3,17 @@
 M0.3 proves the responsibility map with a small capability-publication slice;
 M0.4 adds a typed internationalization boundary over that slice; M1.2 adds a
 server-rendered [engineering-preview shell](../engineering/m1-2-shell-qualification.md).
-This is an engineering surface with fictional fixtures, not a capability ledger.
+That engineering surface is historical. M1.4.2 now composes the exact reviewed
+[homepage](../engineering/m1-4-2-homepage-qualification.md); fictional capability
+and Counter fixtures are retained only under test, not imported by public routes.
 
 ## Actual source structure
 
 ```text
 app/
   [lang]/layout.tsx                   Validated HTML language/direction, metadata, static params, shell
-  [lang]/page.tsx                     Obtain typed views/language and render the ReScript page
-  globals.css                         Semantic tokens and accessible preview-shell/proof CSS
+  [lang]/page.tsx                     Validate language and render the approved ReScript homepage
+  globals.css                         Accepted semantic tokens, homepage and retained qualification styling
 proxy.ts                              Bare-root temporary public language redirect
 src/
   domain/Capability.res + .resi        Opaque capability, maturity, disclosure, decoder
@@ -24,14 +26,16 @@ src/
   adapters/next/language.ts            Registry result to Next notFound/mode seam
   qualification/CapabilityProofData.res Fictional sample composition for architecture proof
   ui/
-    EngineeringShell.res              Server-rendered identity, skip link, footer; GenType export
-    ArchitectureProof.res             Sole main landmark and engineering-page composition
+    EngineeringShell.res              Server-rendered identity and skip link; GenType export
+    Homepage.res                      Sole main and exact approved typed homepage sections
+    ArchitectureProof.res             Test-only engineering composition; never a public route import
     CapabilityList.res                Semantic rendering of public views
-    qualification/Counter.res         Isolated M0.2 hydration qualification island
+    qualification/Counter.res         Retained M0.2 client fixture; Node SSR only today
 tests/
   unit/CapabilityPublicationTest.res   Direct pure-core tests, compiled for Node's test runner
   unit/InternationalizationTest.res    Language, exposure, messages, and pseudo invariants
-  e2e/framework-smoke.spec.ts          Visible SSR without JS, then interactive hydration
+  unit/QualificationPresentationTest.res Retained proof/Counter initial-state Node SSR
+  e2e/framework-smoke.spec.ts          Exact SSR/metadata, JS-enabled HTML/RSC/script exposure
   e2e/accessibility.spec.ts            Whole-page axe and native keyboard/focus behavior
   e2e/shell.spec.ts                    Measured contrast, reflow, expanded text and forced-colors/reduced-motion
   e2e/security-headers.spec.ts         Production page/redirect/404 HTTP security policy
@@ -40,19 +44,22 @@ tests/
 ```
 
 The generic server-tree `FrameworkProof.res` and `src/spike/` are superseded.
-The counter remains useful for ongoing ReScript client-directive/hydration
-qualification; it is not an application feature or a design-system primitive.
+The Counter source/directive and initial-state SSR fixture remain available.
+It is not a homepage feature or design-system primitive. Live browser hydration
+and activation are not currently exercised; the homepage record owns that explicit
+migration and the requirement to restore coverage before a real client island returns.
 
 ## Dependency direction
 
 ```text
 proxy.ts --> i18n/Language (public-only root selection)
 app/[lang] --> adapters/next/language --> i18n/Language
-           --> qualification/CapabilityProofData --> application --> domain
            --> ui/EngineeringShell --> i18n/Messages, i18n/Language (server only)
-           --> ui/ArchitectureProof --> ui/CapabilityList --> application view type
-                                    --> i18n/Messages --> i18n/Language
-                                    --> ui/qualification/Counter (resolved labels; client island)
+           --> ui/Homepage --> i18n/Messages (server only)
+
+tests/unit --> qualification/CapabilityProofData --> application --> domain
+           --> ui/ArchitectureProof --> ui/CapabilityList
+                                    --> ui/qualification/Counter (Node SSR fixture)
 ```
 
 Domain code imports no Next, React, browser, or provider APIs. Application code
@@ -60,8 +67,9 @@ depends on the domain and owns whether a public view exists. The list receives
 only `id` and a closed semantic `maturityCode`, never publication internals, and makes
 no eligibility decision. `Messages` maps these codes exhaustively to display labels.
 UI imports of the application view are type dependencies; policy and catalogs are
-not part of the client island. The root layout passes its validated language and
-children through the generated shell props. ArchitectureProof owns the sole
+not client application imports. No application-source client island is referenced
+by the current production homepage. The root layout passes its validated language and
+children through the generated shell props. Homepage owns the sole
 focusable main landmark; the shell's native skip anchor works without JavaScript.
 Only the existing validated language home destination is linked; no empty
 navigation or mobile disclosure is introduced. The identity link marks home current
@@ -73,8 +81,9 @@ The qualification module owns the fictional sample inputs and calls the applicat
 projection. Qualification artifacts exercise architectural/runtime properties;
 they are not production data, marketing truth, or provider implementations.
 It performs no I/O, does not simulate a provider, and exports only
-its typed `load` operation to TypeScript through GenType. `page.tsx` passes its
-result to the generated ReScript component interface. There are no handwritten
+its typed `load` operation through GenType. The historical engineering page passed
+that result to ArchitectureProof; M1.4.2 removes both imports from `page.tsx`.
+Retained Node SSR tests still exercise the fixture projection and semantic output. There are no handwritten
 TypeScript model mirrors, unchecked route imports, speculative ports, or extra
 network hops. Being called by a Next page does not make this module a Next adapter.
 Next request/cache/metadata details belong in framework entrypoints or genuine
@@ -154,14 +163,18 @@ Library remains deferred until component behavior warrants it.
 
 The disclosure invariant followed red/green development: a projection without
 the approval check failed the default/explicit-withholding tests; adding the gate
-made them pass. Decoder cases cover known and unknown values directly. Framework
-smoke tests prove the authorized sample is visible without JavaScript, withheld
-samples are absent, and the separate counter hydrates without errors.
+made them pass. Decoder cases cover known and unknown values directly. Historical framework
+smoke tests proved the authorized sample visible without JavaScript and separate
+Counter hydration. The M1.4.2 migration retains projection/withholding via pure
+and Node SSR tests while proving all qualification output absent from public
+HTML, RSC and loaded scripts. Exact homepage SSR/metadata and native keyboard
+navigation replace obsolete page assumptions; live Counter hydration is retired.
 
-The clean production build lists only `ui/qualification/Counter.res.mjs` from
-application source in Next's client-reference manifest; the capability modules
-remain in the server tree. Static HTML/RSC output contains neither withheld sample
-identifier. M1.2 Chromium and Firefox each pass nine production scenarios locally;
+The historical M1.2 clean production build listed only `ui/qualification/Counter.res.mjs`
+from application source in Next's client-reference manifest; capability modules
+stayed in the server tree and neither withheld identifier entered HTML/RSC.
+M1.4.2's clean production build has zero application-source client references and
+excludes every qualification identifier/label from public HTML/RSC/JavaScript. M1.2 Chromium and Firefox each pass nine production scenarios locally;
 feature run 37752595132 attempt 2 qualifies all three engines at 9/9 each (27/27)
 on the signed implementation commit. The [shell record](../engineering/m1-2-shell-qualification.md#feature-branch-remote-qualification-2026-10-08)
 distinguishes the failed provisioning attempt from the successful rerun. A12-01/A12-02
@@ -184,9 +197,11 @@ M1.3 was formally accepted October 8, 2026 (UTC); the
 owns signed main closeout `ad69f632129231bb2604a3a71678ac959900046c`,
 run 37827607606 (30/30), the preserved M1.3.4 CONDITIONAL PASS and subsequent human
 gate resolution. D13-01–D13-03 remain DEFERRED, UNVERIFIED — M1.5.
-M1.4/M1.4.1 documentation planning is authorized October 8, 2026 (UTC); see the
-[content-readiness register](../product/m1-4-1-content-readiness.md). No source layout or
-runtime change is made. M1.4.2 and substantive publication remain unauthorized.
+M1.4.1 is formally accepted; M1.4.2 was subsequently authorized October 8, 2026
+(UTC) for only the [exact scoped homepage payload](../product/m1-4-1-content-readiness.md#post-acceptance-homepage-approval-2026-10-08-utc).
+The [homepage record](../engineering/m1-4-2-homepage-qualification.md) owns current
+local evidence and pending review/CI. Other assertions and later work remain
+withheld/unauthorized. No public release or deployment is authorized.
 Fedora ARM64 WebKit native runtime remains unqualified.
 
 M0.5's [quality/CI contract](../engineering/quality-and-ci.md) adds lint/format,

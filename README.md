@@ -32,11 +32,13 @@ D13-01–D13-03 remain **DEFERRED, UNVERIFIED — M1.5**.
 **M1.4 — Reviewed Templates & Content: AUTHORIZED October 8, 2026 (UTC).**
 **M1.4.1 — Content Readiness & Publication Matrix: FORMALLY ACCEPTED October 8, 2026 (UTC).**
 The [accepted content-readiness register](docs/product/m1-4-1-content-readiness.md#formal-m141-acceptance-2026-10-08-utc) proposes a
-bounded first content slice; all candidate substantive publication sets remain
-withheld pending evidence and approval. M1.4.2 has not begun and is not authorized.
-M1.3 acceptance grants no public product or deployment approval.
-The accepted surface remains the
-internal engineering-preview shell. The human maintainer
+bounded first content slice. The maintainer subsequently authorized M1.4.2 on
+October 8, 2026 (UTC), with exact four-section homepage wording and metadata;
+see the [scoped approval](docs/product/m1-4-1-content-readiness.md#post-acceptance-homepage-approval-2026-10-08-utc).
+The [homepage implementation](docs/engineering/m1-4-2-homepage-qualification.md) replaces
+the fictional `/en` proof locally and awaits independent audit, human acceptance
+and exact-commit CI. Other assertions and P02–P08 remain withheld. No public release
+or deployment is authorized. The human maintainer
 formally accepted Milestone 0 and authorized M1 on October 8, 2026 (UTC).
 Final main [CI run 37727162386](https://github.com/adarj/grocery-pos-website/actions/runs/37727162386)
 qualifies commit `780ba8b89364fd16dba8609a0cb2a13779c24348`, including all 21
@@ -54,14 +56,14 @@ at `e5f690977273ce721998f6f778b946924b5a443f`: Chromium/Firefox/WebKit 9/9 each,
 27/27, one worker, zero retries and source cleanliness PASS. The maintainer confirmed
 completion of visual review, formal M1.2 acceptance and M1.3 authorization on
 October 8, 2026 (UTC). M1.4.1 is formally accepted as documentation-only planning;
-M1.4.2 is not authorized. No public marketing
-page, customer claim, asset or deployment is authorized. The broader palette
+M1.4.2 is authorized only for the exact approved informational homepage.
+No additional claim, route, asset, public release or deployment is authorized. The broader palette
 remains exploratory. The [M1.2 lint review](docs/engineering/quality-and-ci.md#m12-eslint-compatibility-review-2026-10-08)
 and explicit maintainer retention approval satisfy the first-implementation-checkpoint
 requirement under the existing bounded exception and January 8, 2027 maximum review date.
-`/` redirects to `/en`, the sole public content language. The engineering page
-demonstrates a ReScript-owned public capability projection and an isolated hydration
-counter. All capability data is fictional qualification data, not product claims.
+`/` redirects to `/en`, the sole public content language. The homepage renders all reviewed sections on the server with no application
+client island. The capability-projection proof and Counter remain test fixtures;
+fictional qualification data is excluded from public homepage output.
 Development-only `/en-XA` derives expanded pseudo messages from English; production
 rejects it and all unsupported languages. See the
 [i18n foundation](docs/architecture/internationalization.md) and

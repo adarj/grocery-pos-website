@@ -73,12 +73,16 @@ Domain facts and publication eligibility remain language-independent. Localizati
 occurs only after the public-safe projection, so withheld fixtures never reach the
 rendered HTML/RSC or client output.
 
+M1.4.2 uses this same registry/catalog for the exact reviewed homepage and metadata;
+see its [qualification and fixture migration](../engineering/m1-4-2-homepage-qualification.md).
+Legacy qualification/maturity keys remain test-only consumers, not public content.
+
 Server components receive language explicitly. `next/root-params` was evaluated;
 passing one value keeps the ReScript boundary explicit without an ambient framework
-dependency. No global client language context exists. Counter remains the sole
-application-source client island and receives resolved label strings, not a language
-registry or catalog. Its count uses a semantic label/value pair, avoiding concatenated
-translated sentence fragments. ICU/plural/interpolation machinery is not needed yet.
+dependency. No global client language context exists. The historical Counter received resolved label strings, not a language registry
+or catalog, and used a semantic label/value pair. It is now a retained test fixture;
+the production homepage has no application-source client island. Pure maturity-code
+and unchanged-machine-fact tests remain despite removal of the public proof. ICU/plural/interpolation machinery is not needed yet.
 
 ## Metadata and public discovery
 
@@ -98,17 +102,34 @@ pluralization/interpolation, or resource-loading needs justify more machinery.
 `just test-unit` checks strict registry decoding/exposure, production versus
 qualification access, default-only negotiation, semantic English/pseudo messages,
 all maturity labels, deterministic expansion, and unchanged machine facts.
-`just check` includes those tests, canonical type validation, a production build,
-and Chromium production routing/SSR/metadata/hydration tests. Firefox runs the same
-scenarios with `just test-e2e --project=firefox`. Main CI run 37721922700 qualifies
-the Ubuntu x86_64 repository runtime and all three engines; Fedora ARM64 WebKit
-native-runtime compatibility remains unqualified. See the
-[toolchain record](../engineering/toolchain.md).
+Retained qualification fixtures also have Node SSR coverage, including Counter's
+initial output; this is not browser hydration or activation evidence.
+
+The M1.4.2 production homepage is server-rendered and has no authored client island
+or client interaction. `just check` includes canonical type validation, a production
+build and Chromium checks of the actual approved homepage, metadata, routing,
+keyboard navigation, accessibility, responsive behavior and withholding across
+HTML/RSC/scripts. Firefox runs the same scenarios with
+`just test-e2e --project=firefox`. The
+[homepage record](../engineering/m1-4-2-homepage-qualification.md#regression-migration-matrix)
+owns the deliberate retirement of live Counter browser coverage and its restoration
+requirement before a real application client island is introduced. Maintainer
+acknowledgment of that tradeoff and exact-commit supported Ubuntu CI remain pending.
 
 For controlled pseudo qualification, run `just dev`, visit `/en-XA`, and inspect
-expanded visible text, title/description, `lang="en-XA"`, `dir="ltr"`, and robots
-metadata. IDs/codes must remain intact and the labeled counter must hydrate.
-The M0.4 Chromium experiment proved this both with JavaScript disabled and enabled;
-Next DevTools found `/[lang]` and no compilation/runtime
-errors in the connected pseudo-page session. Stop dev before canonical production
-validation, preserving the version-sensitive Next generated-type workflow.
+all four expanded homepage sections, title/description, `lang="en-XA"`, `dir="ltr"`,
+and `noindex, nofollow` robots metadata. Check native skip/identity navigation,
+main-target focus and reflow with expanded text. No Counter is rendered on the
+current English or pseudo homepage; unchanged machine IDs/codes remain separately
+covered by retained fixture tests. Stop dev before canonical production validation,
+preserving the version-sensitive Next generated-type workflow.
+
+Historical M0.4 evidence applies to the former architecture-proof page: its
+Chromium experiment verified expanded text, metadata and unchanged machine facts
+with JavaScript disabled and enabled, with Counter hydration/interaction in the
+JavaScript-enabled case. Next DevTools found `/[lang]` and no compilation/runtime
+errors in that connected pseudo-page session. Historical M0.5 main CI run
+37721922700 qualified the repository runtime and the then-current proof/Counter
+suite across all three engines on Ubuntu x86_64; it does not qualify the new
+homepage. Fedora ARM64 WebKit native-runtime compatibility remains unqualified.
+See the [toolchain record](../engineering/toolchain.md) for that historical evidence.

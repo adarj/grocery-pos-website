@@ -5,9 +5,11 @@
 **M1.4.1 — Content Readiness & Publication Matrix: FORMALLY ACCEPTED October 8, 2026 (UTC).**
 The [dated acceptance record](#formal-m141-acceptance-2026-10-08-utc) below records
 explicit maintainer acceptance and merged-main qualification. Acceptance validates
-this readiness assessment and its governance. All twelve claim subjects and all
-eight substantive publication sets remain **WITHHELD**. M1.4.2, later implementation,
-public disclosure and deployment remain **NOT AUTHORIZED**.
+this readiness assessment and its governance. The subsequent
+[scoped M1.4.2 approval](#post-acceptance-homepage-approval-2026-10-08-utc) authorizes
+exact homepage wording, composition and metadata for implementation only. Other
+assertions and P02–P08 sets remain **WITHHELD**. Later implementation, public release
+and deployment remain **NOT AUTHORIZED**.
 
 The planning sections below retain their original pre-merge wording, starting
 baseline and then-pending acceptance/CI statements as historical evidence. The
@@ -470,3 +472,69 @@ human-controlled signed commit and successful supported Ubuntu CI on that exact
 future commit, using the unchanged 30-scenario three-browser gate and source
 cleanliness. The accepted run above does not qualify this subsequent documentation
 diff. No Git or GitHub integration action is performed by this record update.
+
+## Post-acceptance homepage approval (2026-10-08 UTC)
+
+The human repository maintainer explicitly authorized **M1.4.2 — First Reviewed
+Homepage Template** on October 8, 2026 (UTC), in the checkpoint instruction titled
+“Grocery POS Website — M1.4.2 First Reviewed Homepage Template”. That instruction
+is the authoritative exact content approval for this bounded implementation.
+The M1.4.1 acceptance and preceding withholding tables above remain historical
+records of their original decisions; this update does not rewrite them.
+
+### Exact approved content set
+
+Only the following English wording, punctuation and section order are approved:
+
+**Introduction** — visible introductory label; primary H1: **Grocery POS**.
+
+Grocery POS is a point-of-sale software project being developed for independent grocery stores. It is currently in pre-production development and is not yet available or suitable for use in a live retail environment.
+
+**What has been developed** — H2.
+
+Development has established an internal, single-register, cash-only checkout foundation with transaction recording, recovery mechanisms, and cash-accountability workflows. This implementation remains pre-production software. Payment-card integration, physical device support, and qualification for live retail operation are not yet complete.
+
+**Local-first by design** — H2.
+
+Grocery POS is being designed around a local-first architecture, with the goal of keeping essential checkout operations functional even when internet connectivity is unavailable. This is a development objective, not a claim of proven reliability in production grocery environments.
+
+**About this website** — H2.
+
+This website is intended to provide information about the Grocery POS project and its development. Checkout transactions and day-to-day grocery store operations belong to the separate POS software, not to this website.
+
+**Page title:** Grocery POS — Pre-production Grocery Point-of-Sale Project
+
+**Meta description:** Learn about Grocery POS, a pre-production point-of-sale project for independent grocery stores. It is not yet available or suitable for live retail use.
+
+### Scope, ownership and remaining withholding
+
+The maintainer approves exactly this P01 homepage slice: C01 identity and the
+approved development-status portion of C05; the bounded C05 implementation
+statement; C04 as an architectural objective explicitly disavowing proven
+production reliability; and the bounded C02 responsibilities statement. This
+approves neither all assertions under C01–C05 nor an entire claim category.
+Other assertions remain withheld. No AVAILABLE, PILOT or PREVIEW status is assigned;
+unknown maturity outside these exact statements remains unresolved.
+
+P02–P08 remain WITHHELD. The editorial alternative, broader platform evidence,
+assets, contact/support channels, commercial terms, new routes, navigation,
+public-discovery metadata and deployment receive no approval. The maintainer is
+the content/disclosure authority and exact wording reviewer; no delegated owner
+or additional factual source is invented.
+
+M1.4.2 may replace the `/en` fictional qualification page with this server-rendered
+informational homepage and the exact metadata above. Non-substantive interface
+labels may support identity/home and skip navigation. Remove obsolete preview
+labels rather than inventing footer content. This is implementation and scoped
+content-disclosure approval, **not deployment or public-release authorization**.
+M1.4.2 acceptance, independent audit, human review and exact-commit remote CI
+remain pending; M1.4.3 and later work remain unauthorized.
+
+Retain the accepted tokens, native accessibility, strict language contract,
+server-first rendering, publication boundaries and security controls. Preserve
+useful engineering fixtures under test without a public testing route. The
+[homepage qualification record](../engineering/m1-4-2-homepage-qualification.md)
+owns implementation evidence and the regression migration/tradeoff. Make identity
+current state route-aware before the first additional public child route.
+D13-01–D13-03 remain DEFERRED, UNVERIFIED — M1.5 and do not waive new-content review.
+The ESLint 9.39.5 exception and January 8, 2027 deadline remain unchanged.

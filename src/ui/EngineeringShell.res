@@ -1,4 +1,4 @@
-// Server-rendered preview only; navigation awaits real approved destinations.
+// Server-rendered site identity and native skip navigation; no eligible extra destinations.
 // Only language-root pages exist today. Make current state route-aware before
 // adding a child page to this shared layout.
 @genType @react.component
@@ -17,14 +17,8 @@ let make = (~language: Language.t, ~children: React.element) => {
         >
           {React.string(Messages.get(language, SiteIdentity))}
         </a>
-        <p className="preview-status"> {React.string(Messages.get(language, PreviewStatus))} </p>
       </div>
     </header>
     {children}
-    <footer className="preview-footer">
-      <div className="preview-container">
-        <p> {React.string(Messages.get(language, PreviewFooter))} </p>
-      </div>
-    </footer>
   </>
 }

@@ -39,10 +39,10 @@ async function focusIndicator(element: Locator) {
   return indicator.color;
 }
 
-test("preview shell has measured text, action and focus contrast", async ({ page }, info) => {
+test("homepage shell has measured text, action and focus contrast", async ({ page }, info) => {
   await page.goto("/en");
   const banner = page.getByRole("banner");
-  const identity = banner.getByRole("link", { name: "Grocery POS — engineering preview home", exact: true });
+  const identity = banner.getByRole("link", { name: "Grocery POS home", exact: true });
   await expect(identity).toHaveAttribute("href", "/en");
   await expect(identity).toHaveAttribute("aria-current", "page");
   await expect(identity).toHaveCSS("text-decoration-line", "underline");
@@ -55,17 +55,24 @@ test("preview shell has measured text, action and focus contrast", async ({ page
   await expect(page.getByRole("navigation")).toHaveCount(0);
   await expect(banner.getByRole("button")).toHaveCount(0);
   await expect(banner.locator("details, summary")).toHaveCount(0);
-  const button = page.getByRole("button", { name: "Increment counter", exact: true });
+  // Test-only retained control styling: no button exists on the real homepage.
+  await page.locator("main").evaluate(node => {
+    const button = document.createElement("button");
+    button.dataset.controlProbe = "true";
+    button.textContent = "Control styling probe";
+    node.append(button);
+  });
+  const button = page.locator("[data-control-probe]");
   const body = await colors(page.locator("body"));
   const header = await colors(banner);
-  const footer = await colors(page.getByRole("contentinfo"));
+
   const results: Record<string, { foreground: string; background: string; ratio: number; minimum: number }> = {};
   const pair = (name: string, foreground: string, background: string, minimum = 4.5) => {
     results[name] = { foreground, background, ratio: contrast(foreground, background), minimum };
   };
   pair("pageText", body.text, body.background);
-  pair("headerText", (await colors(banner.locator("p"))).text, header.background);
-  pair("footerText", (await colors(page.getByRole("contentinfo").locator("p"))).text, footer.background);
+  pair("headerText", header.text, header.background);
+  pair("mainParagraphText", (await colors(page.locator("main p").first())).text, body.background);
   pair("identityText", (await colors(identity)).text, header.background);
   await identity.hover();
   pair("identityHoverText", (await colors(identity)).text, header.background);
@@ -95,8 +102,8 @@ test("preview shell has measured text, action and focus contrast", async ({ page
     await page.mouse.up();
   }
   // Controlled test-only anchors exercise the generic link rule on both current
-  // surfaces. They are removed before keyboard traversal; no app route is added.
-  for (const [host, background] of [["main", body.background], ["footer", footer.background]]) {
+  // page/header surfaces. Removed before traversal; no application route is added.
+  for (const [host, background] of [["main", body.background], ["header", header.background]]) {
     await page.locator(host).evaluate(node => {
       const link = document.createElement("a");
       link.dataset.contrastProbe = "true";
@@ -134,6 +141,12 @@ test("preview shell has measured text, action and focus contrast", async ({ page
   await page.keyboard.press("Tab");
   await expect(identity).toBeFocused();
   pair("identityFocusSurface", await focusIndicator(identity), header.background, 3);
+  await page.locator("main").evaluate(node => {
+    const button = document.createElement("button");
+    button.dataset.controlProbe = "true";
+    button.textContent = "Control styling probe";
+    node.append(button);
+  });
   await page.keyboard.press("Tab");
   await expect(button).toBeFocused();
   // The 4px offset leaves page background adjacent to the 3px indicator;
@@ -150,15 +163,15 @@ test("preview shell has measured text, action and focus contrast", async ({ page
   await info.attach("shell-contrast", { body: JSON.stringify(results, null, 2), contentType: "application/json" });
 });
 
-test("preview shell reflows with narrow widths, enlarged text and spacing overrides", async ({ page }) => {
+test("homepage shell reflows with narrow widths, enlarged text and spacing overrides", async ({ page }) => {
   await page.goto("/en");
-  const button = page.getByRole("button", { name: "Increment counter", exact: true });
+  const identity = page.getByRole("banner").getByRole("link");
   for (const width of [320, 375, 768, 1024, 1440]) {
     await page.setViewportSize({ width, height: 900 });
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), `${width}px overflow`).toBe(true);
     await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
-    await expect(button).toBeVisible();
-    const bounds = await button.boundingBox();
+    await expect(identity).toBeVisible();
+    const bounds = await identity.boundingBox();
     expect(bounds!.x).toBeGreaterThanOrEqual(0);
     expect(bounds!.x + bounds!.width).toBeLessThanOrEqual(width);
   }
@@ -173,16 +186,15 @@ test("preview shell reflows with narrow widths, enlarged text and spacing overri
   await expect(page.getByRole("link", { name: "Skip to main content", exact: true })).toBeInViewport();
   await page.keyboard.press("Tab");
   await expect(page.getByRole("banner").getByRole("link")).toBeFocused();
-  await page.keyboard.press("Tab");
-  await expect(button).toBeFocused();
-  await expect(button).toBeInViewport();
+  await expect(identity).toBeInViewport();
+  await page.keyboard.press("Shift+Tab");
   await page.keyboard.press("Enter");
-  await expect(page.getByRole("status", { name: "Count", exact: true })).toHaveText("1");
-  await expect(button).toBeFocused();
+  await expect(page.getByRole("main")).toBeFocused();
+  await expect(page.getByRole("heading", { level: 1 })).toBeInViewport();
 });
 
 
-test("preview shell retains native controls and focus with forced colors and reduced motion", async ({ page }) => {
+test("homepage shell retains native controls and focus with forced colors and reduced motion", async ({ page }) => {
   await page.emulateMedia({ forcedColors: "active", reducedMotion: "reduce" });
   await page.goto("/en");
   expect(await page.evaluate(() => matchMedia("(forced-colors: active)").matches)).toBe(true);
@@ -198,27 +210,41 @@ test("preview shell retains native controls and focus with forced colors and red
   await focusIndicator(skip);
   await page.keyboard.press("Enter");
   await expect(page.getByRole("main")).toBeFocused();
-  await page.keyboard.press("Tab");
-  const button = page.getByRole("button", { name: "Increment counter", exact: true });
-  await expect(button).toBeFocused();
-  const outline = await focusIndicator(button);
-  const systemColors = await button.evaluate(node => {
+  await focusIndicator(page.getByRole("main"));
+  await page.keyboard.press("Shift+Tab");
+  const identity = page.getByRole("link", { name: "Grocery POS home", exact: true });
+  await expect(identity).toBeFocused();
+  const outline = await focusIndicator(identity);
+  const highlight = await identity.evaluate(node => {
     const probe = document.createElement("span");
     node.append(probe);
     try {
       probe.style.color = "Highlight";
-      const highlight = getComputedStyle(probe).color;
-      probe.style.color = "ButtonText";
-      return { highlight, buttonText: getComputedStyle(probe).color };
+      return getComputedStyle(probe).color;
     } finally {
       probe.remove();
     }
   });
-  expect(outline).toBe(systemColors.highlight);
-  await expect(button).toHaveCSS("border-top-color", systemColors.buttonText);
-  await expect(button).toHaveCSS("border-top-width", "2px");
-  await page.keyboard.press("Enter");
-  await page.keyboard.press("Space");
-  await expect(page.getByRole("status", { name: "Count", exact: true })).toHaveText("2");
-  await expect(button).toBeFocused();
+  expect(outline).toBe(highlight);
+  // Retain forced-colors boundary coverage for the existing control CSS without
+  // claiming that the homepage contains a Counter or exercising its hydration.
+  await page.locator("main").evaluate(node => {
+    const button = document.createElement("button");
+    button.dataset.controlProbe = "true";
+    button.textContent = "Control styling probe";
+    node.append(button);
+  });
+  const button = page.locator("[data-control-probe]");
+  try {
+    const buttonText = await button.evaluate(node => {
+      const probe = document.createElement("span");
+      node.append(probe);
+      try {
+        probe.style.color = "ButtonText";
+        return getComputedStyle(probe).color;
+      } finally { probe.remove(); }
+    });
+    await expect(button).toHaveCSS("border-top-color", buttonText);
+    await expect(button).toHaveCSS("border-top-width", "2px");
+  } finally { await button.evaluate(node => node.remove()); }
 });

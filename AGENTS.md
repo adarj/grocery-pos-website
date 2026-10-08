@@ -77,15 +77,20 @@ D13-01–D13-03 remain **DEFERRED, UNVERIFIED — M1.5**.
 **M1.4 — Reviewed Templates & Content: AUTHORIZED October 8, 2026 (UTC).**
 **M1.4.1 — Content Readiness & Publication Matrix: FORMALLY ACCEPTED October 8, 2026 (UTC).**
 The [content-readiness acceptance record](docs/product/m1-4-1-content-readiness.md#formal-m141-acceptance-2026-10-08-utc) owns candidate pages,
-evidence, unresolved maturity and separate disclosure decisions. This checkpoint
-is documentation-only; no substantive content set is publication-approved.
-Do not begin M1.4.2. M1.3 acceptance grants no publication or deployment approval.
+evidence, unresolved maturity and separate disclosure decisions.
+**M1.4.2 — First Reviewed Homepage Template: AUTHORIZED October 8, 2026 (UTC).**
+Only the exact four statements, composition and metadata in the
+[post-acceptance approval](docs/product/m1-4-1-content-readiness.md#post-acceptance-homepage-approval-2026-10-08-utc)
+are approved for this implementation. The [homepage record](docs/engineering/m1-4-2-homepage-qualification.md)
+owns local qualification and fixture migration. Independent audit, human acceptance
+and exact-commit CI remain pending. Do not begin M1.4.3 or M1.5. No public release
+or deployment is authorized; other claim subjects remain withheld.
 Follow the [M1 plan](docs/engineering/milestone-1-plan.md) and approved
 [design-system specification](docs/design/design-system-specification.md).
 The [shell record](docs/engineering/m1-2-shell-qualification.md) preserves audit/CI
 history, resolved A12-01/A12-02 and final main qualification. Keep navigation limited
 to eligible destinations; make identity current-state handling route-aware before
-the first public child route. M1.4.2, public product claims and deployment are not authorized.
+the first public child route. No additional route, claim, asset or deployment is authorized.
 The maintainer approved ESLint retention at M1.2, satisfying its first-implementation
 review. Retain all exception controls; review targeted lint-stack updates and no
 later than January 8, 2027 unless explicitly revised.

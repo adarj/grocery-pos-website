@@ -69,7 +69,7 @@ test("English messages and metadata come from semantic keys", () => {
     Messages.get(
       English,
       PageTitle,
-    ) == "Grocery POS Website — M0.4 internationalized architecture proof",
+    ) == "Grocery POS — Pre-production Grocery Point-of-Sale Project",
   )
   let metadata = Messages.pageMetadata(English)
   expectTrue(metadata.title == Messages.get(English, PageTitle))
@@ -103,6 +103,15 @@ test(
       PreviewFooter,
       PageTitle,
       MetadataDescription,
+      IntroductionLabel,
+      IntroductionParagraph,
+      DevelopedHeading,
+      DevelopedParagraph,
+      LocalFirstHeading,
+      LocalFirstParagraph,
+      WebsiteHeading,
+      WebsiteParagraph,
+      QualificationTitle,
       ArchitectureExplanation,
       FictionalDisclaimer,
       CapabilitySection,

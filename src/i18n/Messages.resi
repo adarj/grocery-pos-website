@@ -6,6 +6,15 @@ type key =
   | PreviewFooter
   | PageTitle
   | MetadataDescription
+  | IntroductionLabel
+  | IntroductionParagraph
+  | DevelopedHeading
+  | DevelopedParagraph
+  | LocalFirstHeading
+  | LocalFirstParagraph
+  | WebsiteHeading
+  | WebsiteParagraph
+  | QualificationTitle
   | ArchitectureExplanation
   | FictionalDisclaimer
   | CapabilitySection

@@ -19,13 +19,20 @@ and provision binaries with `just browsers`. Acceptance commands do neither auto
 | `just lint` / `pnpm lint` | Handwritten JS/TS/TSX: Next flat Core Web Vitals, TypeScript, and JSX accessibility; zero warnings |
 | `just format-check` | ReScript 12's non-mutating `format --check` |
 | `just quality` | Sequential lint, formatting, pure tests, supervisor tests, canonical typecheck, one production build |
-| `just check` | Quality plus all Chromium production scenarios, including response security, axe, keyboard, SSR, and hydration |
+| `just check` | Quality plus all Chromium production scenarios, including response security, axe, keyboard, SSR and HTML/RSC/script exposure; hydration when a real client island exists |
 | `just ci` | Quality plus the same scenarios in Chromium, Firefox, and WebKit |
 | `just test-e2e --project=firefox` | Selected engine against an existing production build |
 | `just test-a11y` | Focused Chromium axe/keyboard smoke against an existing production build |
 
 Stop development before canonical validation because the Next generated-type
 workflow is sequential. Development diagnostics are not acceptance; see [toolchain](toolchain.md).
+
+The [M1.4.2 homepage record](m1-4-2-homepage-qualification.md#regression-migration-matrix)
+owns current regression migration: ten scenarios per engine remain, but the actual
+homepage has no Counter/client island. Live Counter hydration and activation are
+retired explicitly; retained fixtures have Node SSR coverage, and future real
+client interactions require renewed production hydration/keyboard coverage.
+No canonical command, browser configuration or workflow is changed.
 
 ## Lint and dependency decisions
 

@@ -27,8 +27,12 @@ explicitly approved deferrals. D13-01–D13-03 remain **DEFERRED, UNVERIFIED —
 **M1.4 — Reviewed Templates & Content: AUTHORIZED October 8, 2026 (UTC).**
 **M1.4.1 — Content Readiness & Publication Matrix: FORMALLY ACCEPTED October 8, 2026 (UTC).**
 The [accepted content-readiness register](product/m1-4-1-content-readiness.md#formal-m141-acceptance-2026-10-08-utc) owns candidate-page
-readiness, claim provenance and separate publication decisions. No substantive
-content set is approved; M1.4.2 remains unauthorized. The approved M1 plan and
+readiness, claim provenance and separate publication decisions. Its
+[post-acceptance update](product/m1-4-1-content-readiness.md#post-acceptance-homepage-approval-2026-10-08-utc)
+records exact homepage content/metadata approval and M1.4.2 authorization October 8,
+2026 (UTC). The [homepage record](engineering/m1-4-2-homepage-qualification.md) owns
+implementation and local evidence; audit, human acceptance and exact-commit CI
+remain pending. Other content sets remain withheld; M1.4.3 remains unauthorized. The approved M1 plan and
 design-system specification remain governing; acceptance grants no publication
 or deployment approval.
 
@@ -43,6 +47,7 @@ or deployment approval.
 | Which semantic tokens and pairings are implemented and qualified? | [M1.3.1 token record](engineering/m1-3-1-token-qualification.md) |
 | Which existing presentation patterns justify reuse or extraction? | [M1.3.2 primitives assessment](engineering/m1-3-2-primitives-qualification.md) |
 | What qualifies the implemented design-system subset, and what remains manual? | [M1.3.3 design-system qualification](engineering/m1-3-3-design-system-qualification.md) |
+| How is the first reviewed homepage implemented and qualified? | [M1.4.2 homepage](engineering/m1-4-2-homepage-qualification.md) |
 | What was accepted and qualified in M1.2, and which limits remain? | [Engineering-preview shell](engineering/m1-2-shell-qualification.md) |
 | What are the M1 scopes, approval record and checkpoint gates? | [Milestone 1 plan](engineering/milestone-1-plan.md) |
 | How does the eventual website fit together? | [Architecture overview](architecture/website-architecture.md) |

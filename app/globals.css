@@ -152,6 +152,13 @@ p {
   border-block-start: var(--border-divider) solid var(--color-divider);
 }
 
+/* The introduction leads the page; separators belong between sections. */
+.preview-main > section:first-child {
+  margin-block-start: 0;
+  padding-block-start: 0;
+  border-block-start: 0;
+}
+
 ul {
   padding-inline-start: var(--space-6);
 }

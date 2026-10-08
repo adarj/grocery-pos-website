@@ -1,7 +1,7 @@
 # First-party design-system specification
 
 **Status: M1.1 specification approved by the human maintainer on October 8, 2026 (UTC);
-partially implemented in the engineering preview.** M1.3.1 semantic tokens are
+implemented subset retained from the engineering preview and consumed by M1.4.2.** M1.3.1 semantic tokens are
 accepted, merged and qualified on main (30/30); the token record below owns that evidence.
 Approval does not authorize public claims, routes, assets or deployment; remaining
 candidate measurements and palette values still require qualification.
@@ -14,9 +14,11 @@ navigation behavior and page/content governance. Follow
 ## Implemented subset and proposed roles
 
 The [M1.3.1 token record](../engineering/m1-3-1-token-qualification.md) owns actual
-CSS values, naming, measured pairings and validation. The current shell implements
+CSS values, naming, measured pairings and validation. The accepted stylesheet retains
 page/white/subtle surfaces, primary text, links/actions and their hover/active states,
-focus, decorative dividers and essential control boundaries. Typography and spacing
+focus, decorative dividers and essential control boundaries. The actual M1.4.2
+homepage has no action control or footer; controlled test-only fixtures retain
+coverage of those existing styling roles. Typography and spacing
 retain M1.2 values: system sans, 1rem body, 1.25rem identity, 1.5rem h2, fluid
 1.75–2.75rem h1, 68ch prose, 60rem container and fluid 1–2rem gutters.
 Supporting text inherits body size. These are the current qualified implementation,
@@ -36,7 +38,10 @@ CONDITIONAL PASS and subsequent human gate resolution. D13-01–D13-03 remain
 implementation qualification. M1.4/M1.4.1 documentation planning was subsequently
 authorized October 8, 2026 (UTC); the
 [content-readiness register](../product/m1-4-1-content-readiness.md) owns that scope.
-M1.4.2 remains unauthorized; no substantive content or asset publication is approved.
+M1.4.2 was subsequently authorized for only the exact reviewed homepage and metadata;
+see the [scoped content approval](../product/m1-4-1-content-readiness.md#post-acceptance-homepage-approval-2026-10-08-utc)
+and [homepage qualification](../engineering/m1-4-2-homepage-qualification.md).
+No additional claim, asset, route, public release or deployment is approved.
 
 Secondary/inverse/technical type, status/warning/error/disabled roles, contrasting
 panels, additional action variants and unneeded primitives remain proposals.

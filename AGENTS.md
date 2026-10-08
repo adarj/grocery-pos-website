@@ -58,9 +58,12 @@ contradictions rather than silently substituting another architecture.
 
 Milestone 0 is accepted and M1 authorized; see the
 [qualification record](docs/engineering/milestone-0-qualification.md).
-M1.1 is documentation/specification-only; follow the
-[proposed M1 plan](docs/engineering/milestone-1-plan.md). Do not begin M1.2 or change
-application, CSS, tests, dependencies, tooling or CI during this checkpoint.
+M1.1 specifications are human-approved October 8, 2026 (UTC); audit/feature CI pass,
+branch integration/main CI remain pending. Follow the
+[M1 plan](docs/engineering/milestone-1-plan.md) for the approved initial M1.2 internal
+engineering-preview scope and A11-01–A11-03 acceptance notes. M1.2 implementation
+has not started; this closeout is documentation-only. Do not begin M1.2 or change
+application, CSS, tests, dependencies, tooling or CI during this task.
 Review the approved ESLint exception at the first M1 implementation checkpoint
 and targeted lint-stack updates, no later than January 8, 2027 unless explicitly revised.
 Use `just check` locally and `just ci` on a supported full browser runtime for

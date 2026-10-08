@@ -1,11 +1,12 @@
 # Visual direction
 
-**Status: M1.1 leading hypothesis, pending human design approval.**
+**Status: M1.1 visual-direction specification approved by the human maintainer
+on October 8, 2026 (UTC).**
 Canonical direction for later implementation; no asset, font or component is
 created here. Pair with [information architecture](../product/website-information-architecture.md)
 and the [design-system contract](design-system-specification.md).
 
-## Leading hypothesis
+## Approved leading direction
 
 **Modern infrastructure for the independent grocer.**
 
@@ -14,7 +15,7 @@ hierarchy and clear explanations. Keep it approachable for an owner/operator:
 readability and practical context should carry more weight than spectacle.
 “Premium” means attentive spacing, legible details and disciplined materials,
 not luxury exclusivity or a price/availability claim. This phrase is an internal
-direction hypothesis, not approved public marketing copy.
+design direction, not approved public marketing copy.
 
 Ground the site in real grocery environments and verified product relationships.
 Do not imply operational features or deployed performance through decorative
@@ -94,9 +95,12 @@ page with no motion until an interaction justifies it.
 
 ## Approval evidence and open choices
 
-Human approval selects the direction, not accessibility certification. M1.2/M1.3
+The maintainer approved **Modern infrastructure for the independent grocer** as
+the leading direction on October 8, 2026 (UTC). This approves the specification,
+not public claims/assets, deployment or accessibility certification. M1.2/M1.3
 must qualify actual layouts, palette pairs, focus states and imagery under the
 [responsive scenarios](design-system-specification.md#responsive-and-accessibility-qualification).
-Confirm appetite for warm paper/evergreen balance, the desired level of technical
-density, existing brand/asset constraints and available truthful photography.
+Palette balance, final measurements, implementation density and truthful asset
+selection remain subject to implementation/content review. The candidate palette
+remains exploratory, not an approved contrast-verified token system.
 Do not generate assets or lock final palette/type measurements during M1.1.

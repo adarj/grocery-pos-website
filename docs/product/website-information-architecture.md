@@ -1,6 +1,7 @@
 # Website information architecture
 
-**Status: M1.1 proposal for human review.** This is the canonical audience,
+**Status: M1.1 specification approved by the human maintainer on October 8, 2026 (UTC).**
+This is the canonical audience,
 sitemap, navigation and template specification. It creates no route or publication
 grant. The [M1 plan](../engineering/milestone-1-plan.md) defines implementation gates;
 [visual direction](../design/visual-direction.md) and the
@@ -17,9 +18,9 @@ grant. The [M1 plan](../engineering/milestone-1-plan.md) defines implementation 
 | Existing customer | Locate documentation, commercial support or account access | Find relevant version guidance → locate an existing support destination → enter a separately qualified commercial account when available |
 | General visitor | Learn who Grocery POS is and how it approaches its work | Read approach → understand verified company information → choose a relevant next step |
 
-Owner/operator evaluation is the proposed initial editorial priority, with IT
+Owner/operator evaluation is the approved initial editorial priority, with IT
 evidence close at hand. Multi-store evaluation is an audience need, not a claim of
-released multi-store functionality. Validate that priority with the maintainer.
+released multi-store functionality.
 
 These journeys help people decide and manage a commercial relationship.
 Inventory, employees, shifts, live registers, device control and transaction
@@ -34,27 +35,30 @@ engineering surface at /en, the root redirect, and controlled development pseudo
 behavior exist today. No sitemap file, extra language or route is created here.
 
 Readiness has three independent dimensions:
-**architecture defined** means this proposal explains the area's role;
+**architecture defined** means this approved specification explains the area's role;
 **implementation ready** means a later checkpoint may build it once listed inputs
 and human scope approval exist; **publication authorized** requires a separate
 review of the actual content. Page readiness is not a capability maturity status.
 No AVAILABLE/PILOT/PREVIEW/PLANNED/INTERNAL status is assigned by this table.
+The target sitemap is approved as a specification; the proposed public pages
+remain unimplemented. Their URL examples grant no route or content publication
+approval; the existing /en engineering surface remains qualification content.
 
 | Area and proposed URL | Purpose / primary audience | Information required and dependencies | Architecture defined | Implementation ready | Publication authorized |
 | --- | --- | --- | --- | --- | --- |
-| Home — /en | Orient visitors; owner/operator first | Reviewed proposition, boundaries, relevant next steps; approved destination set | Yes, proposed | Conditional M1 template candidate; copy approval needed | No new public homepage/content approved |
-| Platform — /en/platform | Explain product approach; owners, regional decision-makers, IT | Evidenced architecture/capabilities, limitations and maturity qualifiers; authoritative product review | Yes, proposed | Conditional M1 overview candidate | No |
-| Solutions — /en/solutions; child path `/en/solutions/<reviewed-slug>` | Explain fit for an evidenced situation; owners/regional buyers | Real audience problem, applicability and exclusions; evidence of any claimed workflow/scale | Yes, proposed | Conditional M1 candidate; omit unsupported sectors | No |
-| Hardware — /en/hardware; child path `/en/hardware/<reviewed-slug>` | Clarify physical/technical fit; owners and IT | Verified device/specification/version scope, requirements, images and sourcing rights; no assumed certification | Yes, proposed | Conditional M1 candidate with real approved facts/assets | No |
-| Resources — /en/resources; article path `/en/resources/<reviewed-slug>` | Explain ideas and evaluation considerations; all audiences | Reviewed editorial corpus, authorship/review responsibility and relevant related links | Yes, proposed | Conditional M1 article/index candidate; no empty index | No |
-| Documentation — /en/docs; article path `/en/docs/<reviewed-slug>` | Answer actual implementation/use questions; IT and customers | Versioned verified instructions, audience scope and ownership; content maintenance process | Yes, proposed | Conditional article candidate; full docs platform deferred | No |
-| Developers — /en/developers | Explain published interoperability; prospective partners/IT | Actual approved contracts, version/support/access limitations; no fake API examples or credentials | Yes, proposed | Deferred until real approved integration information exists | No |
-| Company — /en/company | Explain approach and verified identity; general visitors | Reviewed organization/contact facts; approved people/assets and positioning | Yes, proposed | Conditional M1 informational candidate | No |
-| Contact — /en/contact | Provide a genuine next step; prospective evaluators/customers | Maintainer-approved destination, ownership, privacy and response expectations | Yes, proposed | Conditional informational candidate; submission backend deferred | No |
-| Support — /en/support | Route existing customers to real guidance/help | Actual support availability/access and destination ownership; no invented SLA | Yes, proposed | Deferred until service/destination is approved; cases remain later work | No |
-| Pricing — /en/pricing | Explain an actual commercial offering | Authoritative priced scope, currency/market/tax treatment and approval | Yes, proposed | Deferred outside initial M1; no public price invented | No |
-| Commerce — /en/order (illustrative only) | Future purchase/quote journey | Qualified server price/payment/fulfillment authority and security design | Yes, proposed | Deferred; path and journey not selected | No |
-| Commercial account — /en/account (illustrative only) | Future commercial relationship access | Identity, organization scope, authorization/cache isolation; account path vs subdomain decision | Yes, proposed | Deferred; URL does not decide deployment topology | No |
+| Home — /en | Orient visitors; owner/operator first | Reviewed proposition, boundaries, relevant next steps; approved destination set | Yes, specification approved | Conditional M1 template candidate; copy approval needed | No new public homepage/content approved |
+| Platform — /en/platform | Explain product approach; owners, regional decision-makers, IT | Evidenced architecture/capabilities, limitations and maturity qualifiers; authoritative product review | Yes, specification approved | Conditional M1 overview candidate | No |
+| Solutions — /en/solutions; child path `/en/solutions/<reviewed-slug>` | Explain fit for an evidenced situation; owners/regional buyers | Real audience problem, applicability and exclusions; evidence of any claimed workflow/scale | Yes, specification approved | Conditional M1 candidate; omit unsupported sectors | No |
+| Hardware — /en/hardware; child path `/en/hardware/<reviewed-slug>` | Clarify physical/technical fit; owners and IT | Verified device/specification/version scope, requirements, images and sourcing rights; no assumed certification | Yes, specification approved | Conditional M1 candidate with real approved facts/assets | No |
+| Resources — /en/resources; article path `/en/resources/<reviewed-slug>` | Explain ideas and evaluation considerations; all audiences | Reviewed editorial corpus, authorship/review responsibility and relevant related links | Yes, specification approved | Conditional M1 article/index candidate; no empty index | No |
+| Documentation — /en/docs; article path `/en/docs/<reviewed-slug>` | Answer actual implementation/use questions; IT and customers | Versioned verified instructions, audience scope and ownership; content maintenance process | Yes, specification approved | Conditional article candidate; full docs platform deferred | No |
+| Developers — /en/developers | Explain published interoperability; prospective partners/IT | Actual approved contracts, version/support/access limitations; no fake API examples or credentials | Yes, specification approved | Deferred until real approved integration information exists | No |
+| Company — /en/company | Explain approach and verified identity; general visitors | Reviewed organization/contact facts; approved people/assets and positioning | Yes, specification approved | Conditional M1 informational candidate | No |
+| Contact — /en/contact | Provide a genuine next step; prospective evaluators/customers | Maintainer-approved destination, ownership, privacy and response expectations | Yes, specification approved | Conditional informational candidate; submission backend deferred | No |
+| Support — /en/support | Route existing customers to real guidance/help | Actual support availability/access and destination ownership; no invented SLA | Yes, specification approved | Deferred until service/destination is approved; cases remain later work | No |
+| Pricing — /en/pricing | Explain an actual commercial offering | Authoritative priced scope, currency/market/tax treatment and approval | Yes, specification approved | Deferred outside initial M1; no public price invented | No |
+| Commerce — /en/order (illustrative only) | Future purchase/quote journey | Qualified server price/payment/fulfillment authority and security design | Yes, specification approved | Deferred; path and journey not selected | No |
+| Commercial account — /en/account (illustrative only) | Future commercial relationship access | Identity, organization scope, authorization/cache isolation; account path vs subdomain decision | Yes, specification approved | Deferred; URL does not decide deployment topology | No |
 
 Public URLs retain exact registry language identifiers. /fr, /es, aliases and
 pseudo discovery remain unavailable until separately authorized real-language work.
@@ -172,10 +176,15 @@ Section order is a starting point, not a requirement to fill every slot. Omit
 irrelevant optional sections; vary density and visual composition to fit the task.
 No template requires fabricated proof to look complete.
 
-## Decisions for human review
+## Approval and remaining publication decisions
 
-Confirm the initial audience priority, first publishable area set and content
-owners; approve whether Documentation/Developers should appear under Resources
-contextually or as utility links when real content exists. Confirm real contact
-channels and available truthful imagery. The five primary labels are a target
+The maintainer approved this specification and an initial internal engineering-preview
+shell on October 8, 2026 (UTC); see the [approved M1.2 boundary](../engineering/milestone-1-plan.md#approved-m12-boundary-and-acceptance-checklist).
+M1.2 implementation has not begun. Omit empty navigation and its mobile disclosure
+when eligible destinations are insufficient. The preview designation is neither
+access control nor production deployment authorization.
+
+Actual public content, destination sets, content owners, contact channels and
+truthful assets still require separate review. Decide Documentation/Developers
+placement when real content exists. The five primary labels remain a target
 architecture, not a requirement to launch five empty sections.

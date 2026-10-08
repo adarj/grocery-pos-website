@@ -17,16 +17,20 @@ implementation. Its intended repository identity is `adarj/grocery-pos-website`.
 ## Current status
 
 Internal/preproduction; **M1.1 — Information Architecture, Visual Direction &
-Design-System Specification** is active and documentation-only. The human maintainer
+Design-System Specification** was human-approved on October 8, 2026 (UTC);
+closeout is documentation-only. The human maintainer
 formally accepted Milestone 0 and authorized M1 on October 8, 2026 (UTC).
 Final main [CI run 37727162386](https://github.com/adarj/grocery-pos-website/actions/runs/37727162386)
 qualifies commit `780ba8b89364fd16dba8609a0cb2a13779c24348`, including all 21
 Chromium/Firefox/WebKit scenarios. See the
 [foundation acceptance record](docs/engineering/milestone-0-qualification.md).
-The [M1 checkpoint plan](docs/engineering/milestone-1-plan.md), information architecture
-and visual/design-system specifications are proposals for human review; M1.2 has
-not begun. No public marketing page or commercial capability is approved by those
-specifications. The bounded ESLint exception remains subject to its review gates.
+The [M1 checkpoint plan](docs/engineering/milestone-1-plan.md) records the approved
+specifications, adversarial audit PASS and feature [CI run 37728971554](https://github.com/adarj/grocery-pos-website/actions/runs/37728971554) PASS.
+M1.1 branch integration/main CI remain pending. M1.2 is approved only as an initial
+internal engineering-preview shell; implementation has not started. No public
+marketing page, customer claim, asset or deployment is authorized by specification
+approval. The palette remains exploratory. The bounded ESLint exception requires
+review at M1.2 and retains its January 8, 2027 maximum review date.
 `/` redirects to `/en`, the sole public content language. The engineering page
 demonstrates a ReScript-owned public capability projection and an isolated hydration
 counter. All capability data is fictional qualification data, not product claims.

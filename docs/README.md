@@ -5,18 +5,21 @@ main run 37727162386 qualifies the merged foundation on all three browser engine
 The [qualification record](engineering/milestone-0-qualification.md) owns acceptance,
 evidence and the approved bounded ESLint exception. Detailed CI history remains in
 [quality and CI](engineering/quality-and-ci.md).
-M1.1 produces proposed information/visual/design specifications for human review;
-M1.2 has not begun. Architecture, templates and proposed URLs are not publication
-approval or evidence of commercially released features.
+M1.1 specifications were human-approved October 8, 2026 (UTC); the independent
+audit and feature CI run 37728971554 pass. Branch integration/main CI remain
+pending. The [M1 plan](engineering/milestone-1-plan.md#m11-approval-and-qualification-record)
+owns that closeout record and the approved initial M1.2 internal engineering-preview
+scope; implementation has not started. Architecture, templates and proposed URLs
+are not publication approval or evidence of commercially released features.
 
 | Question | Canonical document |
 | --- | --- |
 | What is this repository and its next checkpoint? | [Root README](../README.md) |
 | Is the engineering foundation qualified for M1? | [Milestone 0 qualification](engineering/milestone-0-qualification.md) |
 | Who is the website for, and how should pages/navigation work? | [Website information architecture](product/website-information-architecture.md) |
-| What visual direction is proposed? | [Visual direction](design/visual-direction.md) |
+| What visual direction is approved? | [Visual direction](design/visual-direction.md) |
 | What are the first-party presentation/accessibility contracts? | [Design-system specification](design/design-system-specification.md) |
-| What are the proposed M1 checkpoints and approval gates? | [Milestone 1 plan](engineering/milestone-1-plan.md) |
+| What are the M1 scopes, approval record and checkpoint gates? | [Milestone 1 plan](engineering/milestone-1-plan.md) |
 | How does the eventual website fit together? | [Architecture overview](architecture/website-architecture.md) |
 | Where does source code belong? | [Source layout and application boundary](architecture/source-layout.md) |
 | How do languages, messages, and pseudo qualification work? | [Internationalization foundation](architecture/internationalization.md) |

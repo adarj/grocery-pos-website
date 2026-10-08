@@ -1,6 +1,8 @@
 # First-party design-system specification
 
-**Status: proposed M1.1 contract for human review; not implemented.**
+**Status: M1.1 specification approved by the human maintainer on October 8, 2026 (UTC);
+not implemented.** Approval does not authorize public claims, routes, assets or
+deployment; candidate measurements and palette values still require qualification.
 This document owns semantic presentation roles, primitive scope and qualification.
 [Visual direction](visual-direction.md) explains the rationale;
 [information architecture](../product/website-information-architecture.md) owns
@@ -123,8 +125,12 @@ messages after public-safe projection; design tokens never become publication po
 Server HTML is the default. No theme/language/global client provider is justified.
 
 M1.2 may establish minimal shell-specific styles; M1.3 consolidates demonstrated
-patterns into tokens/primitives. This ordering must not duplicate components or
-quietly begin a broad system during shell work.
+patterns into tokens/primitives. M1.2 must verify actual text/background contrast,
+meaningful control boundaries, focus indicators and interactive states; token
+consolidation in M1.3 cannot defer accessibility correctness (A11-02). This ordering
+must not duplicate components or quietly begin a broad system during shell work.
+The [approved M1.2 checklist](../engineering/milestone-1-plan.md#approved-m12-boundary-and-acceptance-checklist)
+also governs eligible navigation and conditional disclosure qualification.
 
 ## Responsive and accessibility qualification
 

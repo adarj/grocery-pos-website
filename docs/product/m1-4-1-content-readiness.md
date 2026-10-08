@@ -8,8 +8,14 @@ explicit maintainer acceptance and merged-main qualification. Acceptance validat
 this readiness assessment and its governance. The subsequent
 [scoped M1.4.2 approval](#post-acceptance-homepage-approval-2026-10-08-utc) authorizes
 exact homepage wording, composition and metadata for implementation only. Other
-assertions and P02–P08 sets remain **WITHHELD**. Later implementation, public release
-and deployment remain **NOT AUTHORIZED**.
+assertions and P02–P08 sets remain **WITHHELD**.
+M1.4.2 is now **FORMALLY ACCEPTED October 8, 2026 (UTC)**; its
+[canonical acceptance record](../engineering/m1-4-2-homepage-qualification.md#formal-m142-acceptance--october-8-2026-utc)
+owns signed main commit `017fa33125310fb2d6bbc3bcd517ce9af738254d` and run
+37848845430 (30/30). That later outcome supersedes the approval-time pending
+statements below without widening the exact disclosure set. M1.4 remains authorized
+and incomplete; M1.4.3 and later implementation, public release and deployment
+remain **NOT AUTHORIZED**.
 
 The planning sections below retain their original pre-merge wording, starting
 baseline and then-pending acceptance/CI statements as historical evidence. The

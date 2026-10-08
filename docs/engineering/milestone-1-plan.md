@@ -25,9 +25,14 @@ The [content-readiness register](../product/m1-4-1-content-readiness.md) owns th
 candidate inventory and claim/evidence decisions. The maintainer subsequently
 authorized M1.4.2 October 8, 2026 (UTC): only the exact four-section homepage and
 metadata in the [scoped approval](../product/m1-4-1-content-readiness.md#post-acceptance-homepage-approval-2026-10-08-utc).
-The [homepage record](m1-4-2-homepage-qualification.md) owns implementation evidence;
-independent audit, human acceptance and exact-commit CI remain pending. M1.4.3,
-later implementation, public release and deployment remain unauthorized.
+**M1.4.2 — First Reviewed Homepage Template: FORMALLY ACCEPTED October 8, 2026 (UTC).**
+The [formal homepage acceptance record](m1-4-2-homepage-qualification.md#formal-m142-acceptance--october-8-2026-utc)
+owns signed main commit `017fa33125310fb2d6bbc3bcd517ce9af738254d`, successful
+main run 37848845430 (30/30 and source cleanliness), the preserved conditional
+audit, resolved A142-01, human-accepted Counter coverage retirement and human
+manual observations. M1.4 is authorized and incomplete. M1.4.3 and later
+implementation, public release and deployment remain unauthorized; M1.5 has not
+started and retains its qualification obligations.
 Later checkpoints retain their scope and human review gates. Specification approval grants no publication or
 production deployment authorization. Milestone 0 is complete and accepted;
 see the [qualification record](milestone-0-qualification.md).
@@ -72,7 +77,7 @@ samples as product claims or delete unique coverage without replacement.
 | M1.1 — Specifications | Approved audience/IA, target navigation and templates, visual direction and component contracts; accepted M0 baseline | Adversarial audit PASS; exact feature CI PASS; working document links; documentation-only scope | No components, assets, public copy, routes or M1.2 execution | Specification/design approval recorded October 8, 2026 (UTC); merged main CI passes |
 | M1.2 — Internal engineering-preview shell | Approved identity header, skip link, responsive container, existing qualification proof and minimal footer; essential accessible styling; navigation/disclosure only when eligible destinations justify them | Server-first/client-reference review; JS-disabled usability; keyboard/focus/axe; measured actual contrast/control states; narrow-to-wide/pseudo checks; preserved security/hydration/publication regressions; typecheck/build; full supported CI | No fabricated marketing content, unavailable routes/links, pricing, commerce, accounts, contact forms, backend services, speculative features, mega-menu/search, real second language or broad token library | Maintainer visual review and formal acceptance recorded October 8, 2026 (UTC); first-implementation ESLint review satisfied by explicit retention approval |
 | M1.3 — Tokens/primitives | Measure palette pairs; consolidate minimal M1.2 styling into semantic tokens and demonstrated container/section/link/button/card/callout patterns | Contrast/state pairing sheet; responsive/expanded-text/forced-colors/reduced-motion checks; proportionate tests and canonical gates | No UI framework, remote fonts, generic component factory, complex forms/data grids or commerce controls | FORMALLY ACCEPTED October 8, 2026 (UTC); measured 43-property system and no-extraction composition retained; merged closeout/main CI 30/30; three approved, unverified M1.5 deferrals remain obligations |
-| M1.4 — Reviewed templates/content | Authorized October 8, 2026 (UTC); M1.4.1 assesses content/evidence first; later template work requires an approved exact set, M1.3 and explicit checkpoint authorization | M1.4.1 documentation review, links/anchors and scope integrity; later implementation retains claim/exposure, SSR, content-specific accessibility/performance and CI gates | No runtime work in M1.4.1; no requirement to populate every area, fake claims, CMS, pricing, commerce/account or backend | M1.4.1 FORMALLY ACCEPTED October 8, 2026 (UTC); approve each disclosure set separately; M1.4.2 authorized only for exact reviewed homepage; its acceptance/CI pending; M1.4.3 not authorized |
+| M1.4 — Reviewed templates/content | Authorized October 8, 2026 (UTC); M1.4.1 assesses content/evidence first; later template work requires an approved exact set, M1.3 and explicit checkpoint authorization | M1.4.1 documentation review, links/anchors and scope integrity; later implementation retains claim/exposure, SSR, content-specific accessibility/performance and CI gates | No runtime work in M1.4.1; no requirement to populate every area, fake claims, CMS, pricing, commerce/account or backend | M1.4.1 FORMALLY ACCEPTED October 8, 2026 (UTC); approve each disclosure set separately; M1.4.2 FORMALLY ACCEPTED October 8, 2026 (UTC) only for the exact reviewed homepage; signed main commit `017fa33125310fb2d6bbc3bcd517ce9af738254d`, run 37848845430 (30/30); M1.4 incomplete, M1.4.3 not authorized |
 | M1.5 — Audit/qualification | Adversarial architecture, publication, accessibility, responsive and measured performance review of the implemented scope | Chromium/Firefox/WebKit; manual screen-reader/keyboard/zoom/contrast review; responsive matrix; static/client graph and asset review; canonical local + CI evidence | No deployment certification, WCAG claim from automation, speculative scanners or features added to fill gaps | Accept/correct M1 based on actual evidence; authorize subsequent work separately |
 
 The maintainer explicitly approved D13-01 screen-reader, D13-02 physical-device
@@ -96,11 +101,17 @@ documentation-only page/claim/source/asset planning artifact, formally accepted
 October 8, 2026 (UTC). Acceptance validates the assessment and governance; it
 grants no claim, content, route, asset or publication approval.
 
-M1.4.2 is explicitly authorized for one server-rendered homepage at the existing
-`/en` route, exact approved headings/paragraphs and title/description, and a
-minimal identity/skip shell. No extra navigation, assets, routes, claims or client
-component is needed. Preserve pure publication/language tests and qualify the
-[documented regression migration](m1-4-2-homepage-qualification.md#regression-migration-matrix).
+M1.4.2 was authorized and is now formally accepted October 8, 2026 (UTC) for one
+server-rendered homepage at the existing `/en` route, exact approved
+headings/paragraphs and title/description, and a minimal identity/skip shell.
+No extra navigation, assets, routes, claims or client component is approved.
+Pure publication/language tests and the
+[documented regression migration](m1-4-2-homepage-qualification.md#regression-migration-matrix)
+remain controls. The maintainer accepted bounded retirement of Counter browser
+coverage; its retained SSR fixture is not hydration evidence. Before the next real
+application client island, restore appropriate production-browser regression tests
+for hydration, activation, state updates, keyboard interaction and retained focus,
+as applicable to that component. This restoration is a future gate, not completed work.
 Do not begin M1.4.3. Further content and public release/deployment require separate
 human decisions. Maintain route-aware identity handling before the first additional
 public child route and qualify actual new-content accessibility.

@@ -1,5 +1,10 @@
 # M1.4.2 reviewed homepage implementation and qualification
 
+Current status: **FORMALLY ACCEPTED October 8, 2026 (UTC).** The
+[dated formal acceptance](#formal-m142-acceptance--october-8-2026-utc) below
+supersedes the historical implementation-time pending statements; the original
+baseline, local evidence and review gates are preserved.
+
 ## Authorization, baseline and status
 
 **M1.4.2 — First Reviewed Homepage Template: AUTHORIZED October 8, 2026 (UTC).**
@@ -119,3 +124,118 @@ Remaining: independent adversarial audit, maintainer review of exact content,
 visual/accessibility behavior and regression tradeoff; human signed commit/push,
 exact-SHA full CI, human main integration/main CI and checkpoint acceptance.
 M1.4.3 and later implementation are unauthorized. No deployment occurred or is approved.
+
+## Formal M1.4.2 acceptance — October 8, 2026 (UTC)
+
+**M1.4.2 — First Reviewed Homepage Template: FORMALLY ACCEPTED October 8, 2026 (UTC).**
+
+The human maintainer explicitly accepted the implemented homepage after reviewing
+the independent adversarial audit and bounded correction, accepting the Counter
+coverage tradeoff, merging the signed implementation, reviewing successful main
+CI and reporting all requested manual homepage checks passing. This dated outcome
+supersedes the implementation-time pending statements above; their local evidence,
+starting baseline and original scope remain historical records.
+
+### Signed implementation and exact-commit main qualification
+
+Accepted implementation commit:
+[`017fa33125310fb2d6bbc3bcd517ce9af738254d`](https://github.com/adarj/grocery-pos-website/commit/017fa33125310fb2d6bbc3bcd517ce9af738254d),
+`feat(web): implement reviewed pre-production homepage`. Local
+`git verify-commit` returned a good signature from the maintainer.
+
+[Main CI run 37848845430](https://github.com/adarj/grocery-pos-website/actions/runs/37848845430)
+and its [Quality and browsers job](https://github.com/adarj/grocery-pos-website/actions/runs/37848845430/job/113556439870)
+completed successfully on supported Ubuntu. The job log checks out the exact
+implementation SHA from main and records the following results:
+
+| Gate | Exact implementation-commit evidence |
+| --- | --- |
+| Nix toolchain / frozen dependency installation / browser provisioning | PASS |
+| Lint / ReScript formatting | PASS; zero-warning lint gate retained |
+| Pure / retained SSR fixture tests | PASS: 17/17 |
+| Development-supervisor regressions | PASS: 7/7 |
+| Canonical typecheck / production build | PASS; static `/en` retained |
+| Chromium | PASS: 10/10 |
+| Firefox | PASS: 10/10 |
+| WebKit | PASS: 10/10 |
+| Aggregate / browser execution policy | PASS: 30/30, one worker, zero browser retries |
+| Source cleanliness | PASS: tracked diff, staged diff and nonignored untracked checks |
+
+These are supported-host results for the accepted implementation commit. Earlier
+local results remain local historical evidence; neither run qualifies the future
+administrative acceptance-record commit, which requires its own exact-SHA CI.
+
+### Original adversarial decision and final dispositions
+
+The independent audit's actual decision remains
+**M1.4.2 CONDITIONAL PASS — BOUNDED CORRECTIONS OR HUMAN DECISIONS REQUIRED**.
+It is not retroactively changed to an unconditional PASS.
+
+| Finding | Final disposition |
+| --- | --- |
+| A142-01 — MINOR | **RESOLVED.** Current internationalization/accessibility guidance was reconciled with the server-rendered homepage; obsolete current Counter/hydration claims were corrected and historical qualification preserved. |
+| A142-02 — NOTE | **HUMAN-ACCEPTED BOUNDED RETIREMENT.** The maintainer explicitly approved retirement of live Counter browser interaction coverage for this checkpoint, subject to the binding restoration gate below. |
+| A142-03 — NOTE | **SATISFIED.** Supported Ubuntu exact-SHA main CI passed all three browsers. |
+
+No substantiated BLOCKER, MAJOR or outstanding MINOR implementation finding remains.
+
+Counter implementation/fixture source and its initial SSR tests remain. Live
+browser hydration, state updates, Enter/Space activation and retained-focus
+behavior are no longer exercised. SSR-only tests are not equivalent to browser
+interaction tests; the accepted homepage has no authored application client island.
+
+**Before introducing the next real application client island, restore appropriate
+production-browser regression tests covering hydration, activation, state updates,
+keyboard interaction and retained focus as applicable to that component.**
+
+This restoration remains a future obligation, not completed work. Acceptance
+does not authorize a test-only public route, homepage Counter or new harness.
+
+### Human-reported manual homepage review
+
+The maintainer explicitly reported all requested checks passing on October 8,
+2026 (UTC):
+
+| Requested review | Human-reported outcome |
+| --- | --- |
+| Exact visible content and section hierarchy | PASS |
+| Narrow-layout presentation | PASS |
+| Keyboard Tab/Shift+Tab behavior | PASS |
+| Skip-link behavior and focus visibility | PASS |
+| Native 400% browser zoom and content reflow | PASS |
+| Absence of misleading commercial-availability presentation | PASS |
+
+These are maintainer observations, not independent reproduction or new automated
+evidence. Exact browser/version, operating system and detailed test configuration
+were not supplied. No assistive-technology combination, screenshot, measurement
+or instrumentation is inferred. These results do not complete the separate
+M1.5 deferrals or establish WCAG conformance.
+
+### Accepted scope and retained obligations
+
+Acceptance covers only the four exact approved homepage statements, four-section
+composition/headings, exact title/description and existing `/en` implementation
+linked in the [scoped content approval](../product/m1-4-1-content-readiness.md#post-acceptance-homepage-approval-2026-10-08-utc).
+Other substantive assertions and P02–P08 publication sets remain **WITHHELD**.
+No additional routes, assets, commercial services, purchase opportunities, pilot
+enrollment, customer accounts, support channels or availability classifications
+are approved.
+
+**Acceptance does not authorize production deployment, public release or Vercel
+configuration.** Exact content disclosure approval remains separate from the
+future deployment gate.
+
+- D13-01 — Screen-reader verification: **DEFERRED, UNVERIFIED — M1.5**.
+- D13-02 — Physical touch/device verification: **DEFERRED, UNVERIFIED — M1.5**.
+- D13-03 — Actual OS high-contrast verification: **DEFERRED, UNVERIFIED — M1.5**.
+
+These [retained deferrals](m1-3-3-design-system-qualification.md#explicitly-approved-m15-deferrals)
+do not waive defects in new content. Keep identity-link current state route-aware
+before the first additional public child route. The exactly pinned ESLint 9.39.5
+maintenance exception and January 8, 2027 review deadline remain unchanged.
+
+M1.3 and M1.4.1 remain formally accepted. M1.4 is authorized and incomplete;
+M1.4.3 is **NOT AUTHORIZED**, and M1.5 has not started. This documentation-only
+closeout leaves runtime behavior unchanged and requires human review, a
+human-controlled signed commit and successful existing supported Ubuntu CI on
+that future exact SHA. No Git integration or deployment is performed here.

@@ -30,11 +30,16 @@ The [accepted content-readiness register](product/m1-4-1-content-readiness.md#fo
 readiness, claim provenance and separate publication decisions. Its
 [post-acceptance update](product/m1-4-1-content-readiness.md#post-acceptance-homepage-approval-2026-10-08-utc)
 records exact homepage content/metadata approval and M1.4.2 authorization October 8,
-2026 (UTC). The [homepage record](engineering/m1-4-2-homepage-qualification.md) owns
-implementation and local evidence; audit, human acceptance and exact-commit CI
-remain pending. Other content sets remain withheld; M1.4.3 remains unauthorized. The approved M1 plan and
-design-system specification remain governing; acceptance grants no publication
-or deployment approval.
+2026 (UTC). **M1.4.2 — First Reviewed Homepage Template: FORMALLY ACCEPTED October 8, 2026 (UTC).**
+The [formal homepage acceptance record](engineering/m1-4-2-homepage-qualification.md#formal-m142-acceptance--october-8-2026-utc)
+owns signed main commit `017fa33125310fb2d6bbc3bcd517ce9af738254d`, successful
+run 37848845430 (30/30 and source cleanliness), the historical conditional audit,
+resolved findings, human-accepted Counter coverage retirement and human-reported
+manual checks. Browser interaction coverage must return before the next real
+application client island. M1.4 is authorized and incomplete; M1.4.3 remains
+unauthorized and M1.5 has not started. Other assertions and P02–P08 remain withheld.
+The approved M1 plan and design-system specification remain governing; acceptance
+grants no additional disclosure, public release or deployment approval.
 
 | Question | Canonical document |
 | --- | --- |

@@ -199,8 +199,13 @@ run 37827607606 (30/30), the preserved M1.3.4 CONDITIONAL PASS and subsequent hu
 gate resolution. D13-01–D13-03 remain DEFERRED, UNVERIFIED — M1.5.
 M1.4.1 is formally accepted; M1.4.2 was subsequently authorized October 8, 2026
 (UTC) for only the [exact scoped homepage payload](../product/m1-4-1-content-readiness.md#post-acceptance-homepage-approval-2026-10-08-utc).
-The [homepage record](../engineering/m1-4-2-homepage-qualification.md) owns current
-local evidence and pending review/CI. Other assertions and later work remain
+M1.4.2 is formally accepted October 8, 2026 (UTC). The
+[homepage acceptance record](../engineering/m1-4-2-homepage-qualification.md#formal-m142-acceptance--october-8-2026-utc)
+owns signed main commit `017fa33125310fb2d6bbc3bcd517ce9af738254d`, successful
+run 37848845430 (30/30), audit dispositions and human observations. The maintainer
+accepted bounded Counter browser-coverage retirement; restore applicable browser
+interaction coverage before the next real application client island.
+Other assertions and later work remain
 withheld/unauthorized. No public release or deployment is authorized.
 Fedora ARM64 WebKit native runtime remains unqualified.
 

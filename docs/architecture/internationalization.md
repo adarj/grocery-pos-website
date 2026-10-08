@@ -113,8 +113,11 @@ HTML/RSC/scripts. Firefox runs the same scenarios with
 `just test-e2e --project=firefox`. The
 [homepage record](../engineering/m1-4-2-homepage-qualification.md#regression-migration-matrix)
 owns the deliberate retirement of live Counter browser coverage and its restoration
-requirement before a real application client island is introduced. Maintainer
-acknowledgment of that tradeoff and exact-commit supported Ubuntu CI remain pending.
+requirement before a real application client island is introduced. The maintainer
+accepted that bounded retirement and formally accepted M1.4.2 October 8, 2026 (UTC);
+[the acceptance record](../engineering/m1-4-2-homepage-qualification.md#formal-m142-acceptance--october-8-2026-utc)
+records exact-SHA supported Ubuntu run 37848845430 (30/30). The future browser
+interaction-test restoration requirement remains unsatisfied.
 
 For controlled pseudo qualification, run `just dev`, visit `/en-XA`, and inspect
 all four expanded homepage sections, title/description, `lang="en-XA"`, `dir="ltr"`,

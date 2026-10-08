@@ -35,10 +35,17 @@ The [accepted content-readiness register](docs/product/m1-4-1-content-readiness.
 bounded first content slice. The maintainer subsequently authorized M1.4.2 on
 October 8, 2026 (UTC), with exact four-section homepage wording and metadata;
 see the [scoped approval](docs/product/m1-4-1-content-readiness.md#post-acceptance-homepage-approval-2026-10-08-utc).
-The [homepage implementation](docs/engineering/m1-4-2-homepage-qualification.md) replaces
-the fictional `/en` proof locally and awaits independent audit, human acceptance
-and exact-commit CI. Other assertions and P02–P08 remain withheld. No public release
-or deployment is authorized. The human maintainer
+**M1.4.2 — First Reviewed Homepage Template: FORMALLY ACCEPTED October 8, 2026 (UTC).**
+The [formal homepage acceptance record](docs/engineering/m1-4-2-homepage-qualification.md#formal-m142-acceptance--october-8-2026-utc)
+identifies signed main commit `017fa33125310fb2d6bbc3bcd517ce9af738254d` and
+successful run 37848845430: Chromium/Firefox/WebKit 10/10 each, 30/30 with one
+worker, zero retries and source cleanliness. The original conditional audit remains
+historical; the maintainer accepted the bounded Counter browser-coverage retirement
+and reported the requested manual homepage checks passing. Restore applicable
+browser interaction tests before the next real application client island.
+M1.4 remains authorized and incomplete; M1.4.3 is not authorized and M1.5 has not
+started. Other assertions and P02–P08 remain withheld. No public release or
+deployment is authorized. The human maintainer
 formally accepted Milestone 0 and authorized M1 on October 8, 2026 (UTC).
 Final main [CI run 37727162386](https://github.com/adarj/grocery-pos-website/actions/runs/37727162386)
 qualifies commit `780ba8b89364fd16dba8609a0cb2a13779c24348`, including all 21
@@ -56,7 +63,7 @@ at `e5f690977273ce721998f6f778b946924b5a443f`: Chromium/Firefox/WebKit 9/9 each,
 27/27, one worker, zero retries and source cleanliness PASS. The maintainer confirmed
 completion of visual review, formal M1.2 acceptance and M1.3 authorization on
 October 8, 2026 (UTC). M1.4.1 is formally accepted as documentation-only planning;
-M1.4.2 is authorized only for the exact approved informational homepage.
+M1.4.2 is formally accepted only for the exact approved informational homepage.
 No additional claim, route, asset, public release or deployment is authorized. The broader palette
 remains exploratory. The [M1.2 lint review](docs/engineering/quality-and-ci.md#m12-eslint-compatibility-review-2026-10-08)
 and explicit maintainer retention approval satisfy the first-implementation-checkpoint

@@ -29,15 +29,17 @@ enlarged/spaced text, forced colors and reduced motion. Controlled synthetic
 anchors/buttons separately exercise retained generic CSS rules and control
 boundaries. Synthetic button probes establish neither a button on the homepage nor
 working user-facing button interaction. The
-[homepage record](m1-4-2-homepage-qualification.md) owns current local results and
+[homepage record](m1-4-2-homepage-qualification.md) owns local and exact-SHA main results and
 measurement limits; browser diagnostics also reject console/page/CSP errors.
 
 **A142-02 — NOTE: Counter browser coverage consciously retired.** Counter source
 remains available and its initial server-rendered output is tested. Live browser
 hydration, state updates, Enter/Space activation and retained focus are no longer
 exercised. The actual homepage has no authored client island. SSR-only tests are
-not equivalent to browser interaction tests; maintainer acknowledgment of this
-tradeoff remains pending.
+not equivalent to browser interaction tests. The maintainer explicitly accepted
+this bounded retirement October 8, 2026 (UTC); the
+[formal acceptance record](m1-4-2-homepage-qualification.md#formal-m142-acceptance--october-8-2026-utc)
+preserves the audit's NOTE and the mandatory future restoration gate.
 
 **Before introducing the next real application client island, reinstate appropriate
 production-browser tests for hydration, activation, state updates, keyboard
@@ -82,8 +84,14 @@ The checklist below was unperformed at M0.5. M1.3's later human-reported PASS
 observations retain their historical scope; D13-01–D13-03 remain
 **DEFERRED, UNVERIFIED — M1.5** in the
 [canonical manual-obligation record](m1-3-3-design-system-qualification.md#retained-unverified-obligations-and-boundaries).
-They do not qualify the new homepage or waive discovered defects. Human review of
-the actual M1.4.2 surface remains pending:
+They do not qualify the new homepage or waive discovered defects. The maintainer
+reported the requested homepage checks passing October 8, 2026 (UTC), including
+keyboard/skip focus, narrow layout, native 400% zoom/reflow, exact content/hierarchy
+and absence of misleading commercial presentation. These are human-reported
+observations, with no supplied browser/OS/version details; they do not establish
+screen-reader, physical-device or actual OS high-contrast qualification.
+The [acceptance record](m1-4-2-homepage-qualification.md#formal-m142-acceptance--october-8-2026-utc)
+owns that evidence. Retain the broader checklist for later review:
 
 - Keyboard-only operation, coherent focus order, visible/unobscured focus, and
   appropriate focus return across the complete surface.

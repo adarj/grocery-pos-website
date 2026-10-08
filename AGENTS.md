@@ -78,13 +78,18 @@ D13-01–D13-03 remain **DEFERRED, UNVERIFIED — M1.5**.
 **M1.4.1 — Content Readiness & Publication Matrix: FORMALLY ACCEPTED October 8, 2026 (UTC).**
 The [content-readiness acceptance record](docs/product/m1-4-1-content-readiness.md#formal-m141-acceptance-2026-10-08-utc) owns candidate pages,
 evidence, unresolved maturity and separate disclosure decisions.
-**M1.4.2 — First Reviewed Homepage Template: AUTHORIZED October 8, 2026 (UTC).**
-Only the exact four statements, composition and metadata in the
-[post-acceptance approval](docs/product/m1-4-1-content-readiness.md#post-acceptance-homepage-approval-2026-10-08-utc)
-are approved for this implementation. The [homepage record](docs/engineering/m1-4-2-homepage-qualification.md)
-owns local qualification and fixture migration. Independent audit, human acceptance
-and exact-commit CI remain pending. Do not begin M1.4.3 or M1.5. No public release
-or deployment is authorized; other claim subjects remain withheld.
+**M1.4.2 — First Reviewed Homepage Template: FORMALLY ACCEPTED October 8, 2026 (UTC).**
+Acceptance covers only the exact four statements, composition and metadata in the
+[post-acceptance approval](docs/product/m1-4-1-content-readiness.md#post-acceptance-homepage-approval-2026-10-08-utc).
+The [formal homepage acceptance record](docs/engineering/m1-4-2-homepage-qualification.md#formal-m142-acceptance--october-8-2026-utc)
+owns signed main commit `017fa33125310fb2d6bbc3bcd517ce9af738254d`, run
+37848845430 (30/30 and source cleanliness), the preserved conditional audit,
+resolved A142-01 and human-accepted A142-02 retirement. Before the next real
+application client island, restore applicable production-browser hydration,
+activation, state-update, keyboard and retained-focus coverage; SSR alone is not
+interaction evidence. M1.4 remains authorized and incomplete; M1.4.3 is not
+authorized and M1.5 has not started. No public release or deployment is authorized;
+other claim subjects and P02–P08 remain withheld.
 Follow the [M1 plan](docs/engineering/milestone-1-plan.md) and approved
 [design-system specification](docs/design/design-system-specification.md).
 The [shell record](docs/engineering/m1-2-shell-qualification.md) preserves audit/CI

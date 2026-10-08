@@ -1,13 +1,13 @@
 # M0.5 quality and CI contract
 
 Local gates implement the quality/security floor over fictional M0.4 engineering
-content. The first Ubuntu x86_64 CI run qualifies the repository toolchain and
-Chromium/Firefox. Native isolation in run 37719629240 identifies an inherited
-`XDG_DATA_DIRS`/GSettings interaction behind WebKit 2370 HTTP failures. The narrow
-browser-child environment correction is implemented; the full production WebKit
-suite awaits remote requalification. **M0.5 remains conditional**
-until the required supported-host WebKit scenarios pass; do not merge yet.
-M0.6 audits the foundation; M1 owns public content, the visual shell, and design system.
+content. Ubuntu x86_64 [CI run 37720760809](https://github.com/adarj/grocery-pos-website/actions/runs/37720760809)
+qualifies the repository toolchain and all 21 Chromium/Firefox/WebKit production
+scenarios. The inherited `XDG_DATA_DIRS`/GSettings failure is resolved by the narrow
+WebKit browser-child correction. Temporary diagnosis infrastructure is removed;
+this final cleanup still requires a successful remote CI run before merge review.
+M0.6 has not begun; it audits the foundation separately. M1 owns public content,
+the visual shell, and design system.
 
 ## Commands and ownership
 
@@ -96,6 +96,48 @@ axe with no violations/exclusions, keyboard behavior, and CSP diagnostics. Stati
 no config/session errors. See [security](security-baseline.md) and
 [accessibility](accessibility-and-performance.md) for intentional limits.
 
+### Successful supported-host qualification: 2026-10-08
+
+[Website CI run 37720760809](https://github.com/adarj/grocery-pos-website/actions/runs/37720760809),
+attempt 1, executed signed commit `ea43696930d129d848ad0a67d3ef2e0a98cadeb8`
+(`fix(test): isolate WebKit GSettings lookup from Nix environment`). The run and
+`Quality and browsers` job both conclude **success** on Ubuntu 24.04 x86_64.
+The run metadata, job steps, and logs were independently reviewed.
+
+| Evidence | Result |
+| --- | --- |
+| Repository Nix shell | PASS: x86_64-linux; outer Nix 2.35.2; Node 24.21.0, pnpm 12.9.0, just 1.51.0 from `/nix/store` |
+| Frozen pnpm installation / browser provisioning | PASS: project-owned Playwright 1.64.0; Chromium 1248, Firefox 1555, WebKit 2370 / 27.2 |
+| Lint / ReScript formatting | PASS: zero-warning lint and non-mutating format check |
+| Pure / supervisor tests | PASS: 15 pure tests and seven process-cleanup regression cases |
+| Canonical typecheck / production build | PASS; `/en` remains statically generated HTML |
+| Chromium | PASS: 7/7 production scenarios |
+| Firefox | PASS: 7/7 production scenarios |
+| WebKit | PASS: 7/7 production scenarios, including document navigation |
+| Security / accessibility | PASS in all three engines: response headers, CSP/browser diagnostics, zero axe violations, keyboard/focus behavior, SSR without JS, and hydration |
+| Browser aggregate | PASS: 21/21, one worker, zero retries |
+| Source cleanliness | PASS |
+| Temporary diagnostic / failure artifact steps | Correctly skipped on success |
+
+The GitHub Actions Nix environment's inherited `XDG_DATA_DIRS` caused a GSettings
+schema-lookup failure in WebKit subprocesses. Omitting this variable from the
+Linux CI WebKit child environment restored document navigation and all seven
+production browser scenarios. The exact defective search-path entry has not been
+exhaustively determined; this is an observed environment interaction, not a claim
+that Nix or WebKit is generally incompatible.
+
+Ubuntu x86_64 repository-runtime qualification, supported-host WebKit application
+qualification, and the previously unknown CI browser failure are resolved.
+Fedora ARM64 WebKit native-runtime compatibility remains unqualified. Axe smoke
+is not WCAG 2.2 AA conformance; HTTPS/HSTS deployment qualification remains deferred.
+The ESLint 9 EOL obligation and root Proxy method-scope note remain unchanged.
+
+The temporary isolation script and its failure-only workflow step are removed in
+this cleanup. The canonical gate, security settings, failure artifacts, and source
+cleanliness enforcement remain intact. The cleanup commit must pass remote CI
+before final human merge review; the passing run above qualifies its tested commit,
+not an unpushed cleanup revision.
+
 ### First remote qualification: 2026-10-07
 
 [Website CI run 37550037169](https://github.com/adarj/grocery-pos-website/actions/runs/37550037169),
@@ -122,56 +164,27 @@ No CSP violation precedes the failure. JavaScript-enabled and disabled navigatio
 both fail, before hydration, axe, or keyboard assertions execute.
 Request/API tests use Playwright's Node HTTP path, not WebKit's document network process.
 
-### WebKit diagnosis and stable requalification
+### Historical upstream investigation and stable upgrade
 
 [Playwright issue 42803](https://github.com/microsoft/playwright/issues/42803)
-is closed with the `v1.64` classification. It identifies Playwright 1.63.0 /
-`webkit-2359` as bundling libsoup 3.6.5.
-The library has a confirmed heap-use-after-free that can crash `WPENetworkProcess`
-and surface the same navigation error.
-The local Ubuntu-fallback ARM64 `webkit-2359` cache independently contains
-`libsoup/3.6.5` in both GTK and WPE libraries. This is version corroboration,
-not an inspection of the CI runner's loaded library; Fedora's separate native-runtime
-limitation still prevents a useful local WebKit reproduction.
-
-The [WebKit libsoup 3.6.6 update](https://github.com/WebKit/WebKit/pull/74619)
-is merged, and the [Playwright maintainer](https://github.com/microsoft/playwright/issues/42803#issuecomment-5837772701)
-states that the fixed build will be included in 1.64.
-Stable 1.64 was unavailable during the initial diagnosis. The official
-[Playwright 1.64.0 release](https://github.com/microsoft/playwright/releases/tag/v1.64.0)
-was subsequently published on 2026-10-07; its release metadata marks it as neither
-prerelease nor draft.
-
-**Historical 1.63.0 diagnosis: likely upstream blocker.** Affected versions and the failure pattern
-strongly match, with no observed application HTTP, routing, CSP, hydration, or axe
-failure preceding navigation. The upstream reproduction used a different host/load,
-and this CI artifact has no native crash stack or fixed-library A/B result proving
-the exact libsoup failure. Do not describe application incompatibility or exact
-crash causation as established.
-
-The human-authorized targeted upgrade to `@playwright/test` 1.64.0 is now implemented.
-Only its `playwright` / `playwright-core` dependencies and affected peer references
-change in the lockfile; framework, axe, ESLint, Nix, and workflow pins are unchanged.
-Two `pnpm install --frozen-lockfile` runs succeed without changing package metadata.
+identifies Playwright 1.63.0 / WebKit 2359's bundled libsoup 3.6.5 heap-use-after-free,
+which can produce the same navigation symptom. The local ARM64 fallback libraries
+corroborated that version, but no native stack proved that defect caused this CI
+failure. The [WebKit libsoup 3.6.6 update](https://github.com/WebKit/WebKit/pull/74619)
+is merged; the [maintainer's 1.64 fix statement](https://github.com/microsoft/playwright/issues/42803#issuecomment-5837772701)
+justified the subsequent targeted [stable 1.64.0 upgrade](https://github.com/microsoft/playwright/releases/tag/v1.64.0).
+It was real upstream context, not a sufficient explanation of the persistent 2370 failure.
 
 The [tagged browser manifest](https://github.com/microsoft/playwright/blob/v1.64.0/packages/playwright-core/browsers.json)
-and installed manifest agree: Chromium 156.0.8078.4 / revision 1248, Firefox 157.0 /
-revision 1555, and WebKit 27.2 / revision 2370. Provisioning uses the project-owned
-Playwright package and the normal user cache. Read-only inspection of the downloaded
-Ubuntu 24.04 ARM64 `webkit-2370` GTK and WPE `libsoup-3.0.so.0` libraries finds
-`libsoup/3.6.6`, replacing the affected 3.6.5 bundle. This verifies the local bundle's
-version; it is not a fixed-build CI result or an inspection of the x86_64 library.
+and installed package agree: Chromium 156.0.8078.4 / 1248, Firefox 157.0 / 1555,
+WebKit 27.2 / 2370. Downloaded Ubuntu-fallback ARM64 GTK/WPE libraries contain
+`libsoup/3.6.6`; Fedora's native-runtime limitation still prevents local WebKit
+qualification. Chromium/Firefox local regressions and repeated frozen installs pass.
 
-On the upgraded local stack, `just clean` then `just check` passes, followed by all
-seven Firefox production scenarios. Each engine reports zero axe violations and
-incomplete checks; SSR, hydration, security headers, and CSP diagnostics pass, and
-`/en` remains statically generated. Local WebKit is not run: provisioning still
-reports Fedora ARM64 native dependencies missing. No host libraries are modified.
-
-Release-note review requires no test/config changes: device descriptors now forward
-`screen`, which these tests do not inspect; there is no test JSX, snapshot-update
-mode, or hidden-iframe assertion. The new optional default-project selection is not
-adopted. All three projects, one worker, zero retries, and browser diagnostics remain.
+Only Playwright and its required lockfile references were upgraded; other framework,
+axe, ESLint, Nix, and action pins stayed unchanged. Release-note review found no
+current test/config incompatibility. All three projects, one worker, zero retries,
+and browser diagnostics were retained.
 
 ### Stable-upgrade remote result before native isolation: 2026-10-08
 
@@ -226,55 +239,20 @@ only browser-child inheritance; global `process.env`, the Next production server
 Node/test runner, Chromium, and Firefox keep their original environment. Omission
 uses the native default lookup demonstrated by the probe, with no invented path,
 replacement library, or removal of other diagnostic variables. The full seven
-WebKit production scenarios remain required and await remote requalification.
+WebKit production scenarios subsequently pass in run 37720760809 above.
 
-### Temporary diagnostic retention: one more remote qualification run
+### Temporary diagnostics removed after successful qualification
 
-[scripts/diagnostics/webkit-navigation.mjs](../../scripts/diagnostics/webkit-navigation.mjs)
-is temporary M0.5 tooling, not a website test layer or acceptance substitute.
-One isolated workflow step runs only after the unchanged canonical qualification
-fails on a push to `feat/m0-5-quality-security-ci`. It never runs on main or PRs.
-Its non-blocking diagnostic status does not change the already-blocking `just ci`
-result. Retain the step and script for one more remote run of the corrected canonical
-gate. If that gate succeeds, remove both as the immediate cleanup task; if it fails,
-retain the failure diagnostics for analysis.
-
-The installed project Playwright runs bounded probes of `about:blank`, a data HTML
-URL, plain loopback HTTP without JS/security headers, and loopback HTTP with inline
-JS. Each minimal HTTP result records server receipt, response `finish`, byte count,
-and browser events; `finish` means delivery to the server stream, not proven browser
-receipt. No external origin or host package is involved.
-
-Only if plain HTTP loads, the probe starts the existing production build via Next's
-ordinary CLI on an ephemeral loopback port. It compares identity/gzip HTTP response
-status, selected headers, length/transfer/compression, body hash and completion;
-tests a tiny document with the actual production CSP; and navigates the unchanged
-`/en` with JS enabled and disabled. If full production loading fails, commit/DCL
-observations and captured-HTML variants with bare versus production security headers
-provide isolation evidence. Asset requests in these replay variants use the same
-owned production server. None is an acceptance result or production config change.
-
-The same binary is launched with inherited browser environment and with only named
-native-loader/GLib/GIO/GTK variables removed through Playwright's child `env` option.
-Node, PATH, HOME, toolchain and browser selection are unchanged. Only presence and
-Nix-path classification are reported, not environment values. If sanitization changes
-a failed navigation result, single-variable removal probes seek the smallest cause;
-an unresolved interaction requires another experiment, not a broad committed reset.
-
-`DEBUG=pw:browser` captures launch/native stderr and exit signals. Each variant retains
-about 64 KiB (head/tail) under ignored `test-results/webkit-isolation/`; logs print
-only a bounded tail plus structured probe events. Existing failure artifacts include
-these files. Navigation, launch, worker (90 seconds), overall (330 seconds), and CI
-step (eight minutes) deadlines bound execution. Cleanup closes browser contexts,
-Playwright-owned process groups, the production child, and loopback connections.
-Local Chromium checks validate the probe's control flow/cleanup only. The supported-host
-isolation above establishes the single-variable correction candidate; a successful
-unchanged full WebKit suite with that correction is still pending.
+The failure-only isolation script `scripts/diagnostics/webkit-navigation.mjs` and
+its feature-branch-only workflow step are removed. Their bounded native/network
+probe evidence remains in historical run 37719629240 and its failure artifact.
+They were non-authoritative and correctly skipped in successful run 37720760809;
+no diagnostic step or special diagnostic upload is added to routine CI.
 
 WebKit remains **required and blocking**. No prerelease, skip, retry-based acceptance,
 CSP relaxation, preload, ABI symlink, emulation, or substitute browser is adopted.
-Do not merge or begin M0.6 before successful supported-host WebKit qualification.
-That future result will qualify application compatibility, not Fedora ARM64 native runtime support.
+Supported-host application qualification does not establish Fedora ARM64 native
+runtime compatibility. M0.6 is a separate task and has not begun.
 
 `pnpm audit` is a separate manual dependency-review input, not a network-dependent
 correctness gate. Triage changing advisory reports when reviewing dependencies.

@@ -55,12 +55,6 @@ jobs:
       - name: Quality, security, accessibility, and full browser matrix
         id: qualification
         run: nix develop --command just ci
-      # Temporary M0.5 isolation; remove once WebKit is diagnosed. Never runs on main/fork PRs.
-      - name: Diagnose WebKit 2370 navigation on M0.5 branch
-        if: ${{ failure() && github.event_name == 'push' && github.ref == 'refs/heads/feat/m0-5-quality-security-ci' && steps.qualification.outcome == 'failure' }}
-        continue-on-error: true
-        timeout-minutes: 8
-        run: nix develop --command node scripts/diagnostics/webkit-navigation.mjs
       - name: Verify checkout remains source-clean
         if: ${{ always() && steps.checkout.outcome == 'success' }}
         run: |

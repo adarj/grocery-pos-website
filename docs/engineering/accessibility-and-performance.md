@@ -10,10 +10,11 @@ accessibility audit, WCAG conformance, benchmark, or working design system.
 `/en` page. The selected, verified tags are `wcag2a`, `wcag2aa`, `wcag21a`,
 `wcag21aa`, and `wcag22aa` (70 rules in this version). There are no disabled rules
 or element exclusions; any reported violation fails the test. Local Chromium and
-Firefox scans passed with zero violations. Ubuntu x86_64 CI also passes both
-engines' axe and keyboard scenarios; Playwright 1.63.0 WebKit failed navigation before
-its scan could run. The stable 1.64.0 upgrade passes local Chromium/Firefox scans;
-WebKit 2370 still fails navigation in CI, so its supported-host scan remains unqualified. See the [qualification evidence](quality-and-ci.md).
+Firefox scans passed with zero violations. Ubuntu x86_64 CI run 37720760809 at
+commit `ea43696930d129d848ad0a67d3ef2e0a98cadeb8` passes all three engines' axe and
+keyboard scenarios, including WebKit 2370 after the browser-child GSettings lookup
+correction. Fedora ARM64 WebKit native-runtime compatibility remains unqualified.
+See the [qualification evidence](quality-and-ci.md).
 
 A separate keyboard smoke tabs to the named native Counter button, verifies a
 visible focus treatment, activates it with Enter and Space, and checks the count

@@ -2,8 +2,9 @@
 
 M0.1 records the constitution; M0.2 qualifies the toolchain; M0.3 proves source boundaries;
 M0.4 establishes typed language routing/messages; M0.5 adds local quality/security
-gates and partial remote qualification; the isolated WebKit 2370 environment correction
-awaits full remote requalification under the [quality/CI evidence](engineering/quality-and-ci.md).
+gates with Ubuntu x86_64 and all three browsers qualified in run 37720760809.
+Temporary diagnostics are removed; final cleanup CI and merge review remain under
+the [quality/CI evidence](engineering/quality-and-ci.md).
 Architectural choices are policy, not evidence that product features exist.
 
 | Question | Canonical document |

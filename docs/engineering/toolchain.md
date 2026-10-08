@@ -5,11 +5,11 @@ fictional capability-publication slice documented in the
 [source architecture](../architecture/source-layout.md). The server-tree proof is
 replaced; the counter remains an isolated client qualification control.
 M0.4's [language/message boundary](../architecture/internationalization.md) serves
-the proof at `/en`. M0.5's first [quality/CI run](quality-and-ci.md) qualifies Ubuntu
-x86_64 runtime and Chromium/Firefox. Playwright 1.64.0 also passes those engines in
-CI. Run 37719629240 isolates WebKit 2370 HTTP failure to inherited
-`XDG_DATA_DIRS`/GSettings lookup. A Linux-CI WebKit browser-child correction is
-implemented; full production requalification remains pending.
+the proof at `/en`. M0.5 [CI run 37720760809](quality-and-ci.md) qualifies the Ubuntu
+x86_64 repository runtime and all seven scenarios in each of Chromium, Firefox,
+and WebKit. The Linux-CI WebKit browser-child correction resolves inherited
+`XDG_DATA_DIRS`/GSettings lookup failure; temporary diagnostics are removed.
+Final cleanup remote CI remains required before merge review.
 The visual system remains M1 work.
 
 ## Ownership and environment
@@ -44,7 +44,7 @@ are execution-qualified: ARM64 locally and x86_64 in CI run 37550037169 at commi
 | ReScript | 12.3.1 |
 | `@rescript/react` | 0.15.0 |
 | `@rescript/runtime` | 12.3.1, direct runtime dependency |
-| Playwright Test | 1.64.0; Chromium/Firefox qualified locally and in CI, WebKit CI environment correction awaits qualification |
+| Playwright Test | 1.64.0; Chromium/Firefox qualified locally and in CI, WebKit also qualified on Ubuntu x86_64 CI |
 
 `flake.lock` owns the exact Nix revision and content hash. This supported stable
 pin supplies Node 24 and a cached pnpm 12 package without extra inputs or a custom
@@ -245,13 +245,17 @@ historical, not a demonstrated explanation for revision 2370. Diagnostic run
 37719629240 records fatal GSettings errors before any HTTP request; removing only
 `XDG_DATA_DIRS` from the browser child restores minimal HTTP navigation. The
 Playwright configuration applies that omission only to WebKit on Linux CI, leaving
-all other defined variables and process environments intact. The full unchanged
-blocking matrix awaits successful Ubuntu x86_64 WebKit execution. See the
-[diagnostic evidence and pending requalification](quality-and-ci.md).
+all other defined variables and process environments intact. CI run 37720760809
+at commit `ea43696930d129d848ad0a67d3ef2e0a98cadeb8` passes all 21 production scenarios,
+including WebKit 7/7, axe/keyboard checks, security/CSP diagnostics, static `/en`,
+and final source cleanliness. Omitting `XDG_DATA_DIRS` restored WebKit navigation;
+the exact defective search-path entry has not been exhaustively identified.
+See the [successful qualification and diagnosis](quality-and-ci.md).
 
-`just test-e2e` and `just ci` keep WebKit required and blocking. M0.5 remains
-**conditional** until supported-host WebKit navigation and the complete gate pass.
-Fedora's native-runtime limitation is separate and is not retired by x86_64 evidence.
+`just test-e2e` and `just ci` keep WebKit required and blocking. The supported-host
+runtime/browser blockers are resolved; final cleanup still awaits its own remote
+CI result before merge review. Fedora's native-runtime limitation is separate and
+is not retired by x86_64 evidence.
 
 ## Supply chain and framework guidance
 
@@ -291,5 +295,6 @@ All six M0.1 ADRs remain valid. The accepted architecture is unchanged; only the
 old milestone description of language routing was aligned with M0.4. Hosting,
 commercial authority integrations, authentication, real translations, and the
 design system remain outside this spike. M0.5's quality/CI expansion is recorded
-separately above; remote x86_64/Chromium/Firefox qualification has passed, while
-successful supported-host WebKit qualification remains required before M0.5 acceptance.
+separately above; remote x86_64 runtime and all three browser engines are qualified
+at the corrected commit. Final cleanup CI and human merge review remain; M0.6 has
+not begun.

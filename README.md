@@ -18,11 +18,11 @@ implementation. Its intended repository identity is `adarj/grocery-pos-website`.
 
 Internal/preproduction; **Website M0.5 — Quality, Security & CI Foundation**.
 Local acceptance includes linting, accessibility smoke, security headers, and CSP.
-The first Ubuntu x86_64 CI run qualifies the toolchain and Chromium/Firefox;
-the Playwright 1.64.0 CI run also passes those engines. Native isolation identifies
-an inherited `XDG_DATA_DIRS`/GSettings interaction; the WebKit Linux-CI browser-child
-correction awaits full remote requalification.
-M0.5 is conditional and must not yet merge; see [quality and CI](docs/engineering/quality-and-ci.md).
+Ubuntu x86_64 [CI run 37720760809](https://github.com/adarj/grocery-pos-website/actions/runs/37720760809)
+qualifies the repository toolchain and Chromium/Firefox/WebKit: 21/21 production
+scenarios pass at commit `ea43696930d129d848ad0a67d3ef2e0a98cadeb8`.
+Temporary diagnostics are removed; final cleanup remote CI and human merge review
+remain. M0.6 has not begun; see [quality and CI](docs/engineering/quality-and-ci.md).
 `/` redirects to `/en`, the sole public content language. The engineering page
 demonstrates a ReScript-owned public capability projection and an isolated hydration
 counter. All capability data is fictional qualification data, not product claims.
@@ -79,12 +79,12 @@ just start                # Serve the last production build on 127.0.0.1:3000
 
 Chromium and Firefox passed on the current ARM64 Fedora development environment.
 WebKit's Ubuntu fallback lacks compatible native libraries there; the full matrix
-reports that failure rather than skipping it. Prior Ubuntu CI ran all three engines:
-Chromium/Firefox passed; Playwright 1.63.0 WebKit navigation failed with an internal
-error matching an upstream bundle defect. The stable 1.64.0 run still fails navigation
-after the library update. Subsequent isolation identifies an `XDG_DATA_DIRS`/GSettings
-environment interaction; the targeted correction awaits the full remote gate.
-WebKit remains required and blocking. See the [toolchain qualification record](docs/engineering/toolchain.md) for versions, interop, native-runtime limits,
+reports that failure rather than skipping it. Ubuntu x86_64 CI qualifies all three
+engines with Playwright 1.64.0. Omitting inherited `XDG_DATA_DIRS` only from Linux-CI
+WebKit browser children resolves their GSettings schema-lookup failure. This does
+not qualify Fedora ARM64 WebKit native-runtime compatibility. WebKit remains
+required and blocking. See the [toolchain qualification record](docs/engineering/toolchain.md)
+for versions, interop, native-runtime limits,
 and workflow details. Local `just browsers` never installs host OS packages;
 CI provisions system libraries only on its disposable Ubuntu runner.
 

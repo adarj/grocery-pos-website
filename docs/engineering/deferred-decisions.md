@@ -33,15 +33,14 @@ calls for evidence and a decision; it does not automatically authorize implement
 
 Exact dependency versions, ReScript output conventions, and executable commands
 are **M0.2 proof work**, rather than unresolved product architecture. CI/test
-configuration is implemented in M0.5. CI run 37550037169 qualifies the x86_64
-runtime and Chromium/Firefox. The stable 1.64.0 upgrade includes verified local
-libsoup 3.6.6, but CI run 37716799825 still fails WebKit document navigation while
-Chromium/Firefox pass. Diagnostic run 37719629240 then isolates inherited
-`XDG_DATA_DIRS`/GSettings lookup: removing only that variable restores minimal HTTP.
-The narrow Linux-CI WebKit browser-child correction is implemented; successful
-full supported-host WebKit and CI execution remain required before M0.5 acceptance.
-The old 3.6.5 attribution does not explain the remaining 2370 failure.
-See the [qualification evidence and remaining acceptance boundary](quality-and-ci.md).
+configuration is implemented in M0.5. CI run 37720760809 at commit
+`ea43696930d129d848ad0a67d3ef2e0a98cadeb8` qualifies the Ubuntu x86_64 repository
+runtime and Chromium/Firefox/WebKit 7/7 each. The inherited `XDG_DATA_DIRS`/GSettings
+failure is resolved by the Linux-CI WebKit browser-child correction. Temporary
+diagnostics are removed; final cleanup remote CI remains required before merge
+review. Fedora ARM64 WebKit native-runtime compatibility remains unqualified,
+and ESLint 9 EOL requires explicit M0.6 review. M0.6 has not begun.
+See the [qualification evidence and remaining review boundary](quality-and-ci.md).
 
 When a trigger arrives, identify the owner/requirement, evaluate the smallest
 adequate options, and record the outcome in an ADR or scoped engineering document.

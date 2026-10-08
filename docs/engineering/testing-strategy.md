@@ -9,8 +9,8 @@ development pseudo qualification is recorded in the
 [i18n foundation](../architecture/internationalization.md). M0.5 adds lint/format,
 supervisor acceptance, security response tests, axe/keyboard smoke, and a
 [CI workflow](quality-and-ci.md) with x86_64/Chromium/Firefox qualification.
-Playwright 1.64.0 WebKit requalification is pending remote CI after the prior bundle's
-navigation failure. Component-unit tooling remains deferred.
+Playwright 1.64.0 still fails WebKit document navigation in CI; temporary isolation
+awaits remote results and does not replace the blocking browser matrix. Component-unit tooling remains deferred.
 
 ## Intended verification layers
 

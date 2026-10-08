@@ -6,9 +6,10 @@ fictional capability-publication slice documented in the
 replaced; the counter remains an isolated client qualification control.
 M0.4's [language/message boundary](../architecture/internationalization.md) serves
 the proof at `/en`. M0.5's first [quality/CI run](quality-and-ci.md) qualifies Ubuntu
-x86_64 runtime and Chromium/Firefox. The targeted Playwright 1.64.0 upgrade is locally
-qualified on those engines; supported-host WebKit requalification remains pending
-remote CI. The visual system remains M1 work.
+x86_64 runtime and Chromium/Firefox. Playwright 1.64.0 also passes those engines in
+CI, but WebKit 2370 document navigation still fails. Temporary supported-host
+isolation is pending; the old libsoup attribution is not established for this failure.
+The visual system remains M1 work.
 
 ## Ownership and environment
 
@@ -42,7 +43,7 @@ are execution-qualified: ARM64 locally and x86_64 in CI run 37550037169 at commi
 | ReScript | 12.3.1 |
 | `@rescript/react` | 0.15.0 |
 | `@rescript/runtime` | 12.3.1, direct runtime dependency |
-| Playwright Test | 1.64.0; locally qualified in Chromium/Firefox, remote requalification pending |
+| Playwright Test | 1.64.0; Chromium/Firefox qualified locally and in CI, WebKit navigation unresolved |
 
 `flake.lock` owns the exact Nix revision and content hash. This supported stable
 pin supplies Node 24 and a cached pnpm 12 package without extra inputs or a custom
@@ -237,8 +238,11 @@ fixed-build A/B result.
 
 The targeted stable Playwright 1.64.0 upgrade provisions the revisions above.
 Its downloaded ARM64 WebKit 2370 GTK/WPE libraries both contain `libsoup/3.6.6`.
-Local Chromium/Firefox regressions pass; the unchanged blocking CI matrix must still
-qualify WebKit on Ubuntu x86_64. See the [run, upstream links, and upgrade evidence](quality-and-ci.md).
+Local Chromium/Firefox regressions pass. CI run 37716799825 also passes those engines
+with 1.64.0, but four WebKit document navigations still fail. The 3.6.5 hypothesis is
+historical, not a demonstrated explanation for revision 2370. The unchanged blocking
+matrix and temporary native/network/environment isolation await successful Ubuntu
+x86_64 WebKit execution. See the [runs and pending diagnosis](quality-and-ci.md).
 
 `just test-e2e` and `just ci` keep WebKit required and blocking. M0.5 remains
 **conditional** until supported-host WebKit navigation and the complete gate pass.

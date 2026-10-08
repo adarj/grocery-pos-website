@@ -2,9 +2,9 @@
 
 Local gates implement the quality/security floor over fictional M0.4 engineering
 content. The first Ubuntu x86_64 CI run qualifies the repository toolchain and
-Chromium/Firefox; Playwright 1.63.0 WebKit document navigation fails. The targeted
-stable 1.64.0 upgrade is implemented and locally qualified in Chromium/Firefox;
-supported-host WebKit requalification awaits remote CI. **M0.5 remains conditional**
+Chromium/Firefox. The subsequent stable Playwright 1.64.0 run still fails WebKit
+document navigation after the bundled libsoup update. Cause remains unconfirmed;
+temporary supported-host isolation is prepared and awaits remote CI. **M0.5 remains conditional**
 until the required supported-host WebKit scenarios pass; do not merge yet.
 M0.6 audits the foundation; M1 owns public content, the visual shell, and design system.
 
@@ -141,7 +141,7 @@ Stable 1.64 was unavailable during the initial diagnosis. The official
 was subsequently published on 2026-10-07; its release metadata marks it as neither
 prerelease nor draft.
 
-**Diagnosis: likely upstream blocker.** Affected versions and the failure pattern
+**Historical 1.63.0 diagnosis: likely upstream blocker.** Affected versions and the failure pattern
 strongly match, with no observed application HTTP, routing, CSP, hydration, or axe
 failure preceding navigation. The upstream reproduction used a different host/load,
 and this CI artifact has no native crash stack or fixed-library A/B result proving
@@ -172,12 +172,68 @@ Release-note review requires no test/config changes: device descriptors now forw
 mode, or hidden-iframe assertion. The new optional default-project selection is not
 adopted. All three projects, one worker, zero retries, and browser diagnostics remain.
 
-**Next step: supported-host WebKit requalification is pending remote CI.** After
-human review and push, rerun the unchanged full `just ci` gate on Ubuntu x86_64.
-The existing workflow provisions revision 2370 through the updated package. Do not
-claim WebKit is fixed or M0.5 complete before that run succeeds. If navigation still
-fails, collect native network-process diagnostics or an isolated HTTP navigation
-probe; the upgraded library alone does not prove the previous crash's exact cause.
+### Current remote result: 2026-10-08
+
+[Website CI run 37716799825](https://github.com/adarj/grocery-pos-website/actions/runs/37716799825)
+ran commit `ea08a586e5ee1154bb881bf5d926d7a133789e25` on Ubuntu 24.04 x86_64.
+Logs confirm Playwright 1.64.0 provisioning WebKit 27.2 / revision 2370, successful
+Nix/frozen installation/core quality, Chromium 7/7, Firefox 7/7, and WebKit request
+scenarios 3/3. All four WebKit document-navigation scenarios still fail with
+`WebKit encountered an internal error`: 17 passed, four failed, zero skips/retries.
+The final cleanliness step and upload of `browser-failure-37716799825-1`
+(artifact ID 11523709042) succeed.
+
+Human-reviewed traces again show document status `-1`, no captured response headers,
+and `about:blank`; these do not establish whether the server received the request.
+The diagnostic preparation pass independently inspected job logs and artifact metadata;
+the artifact download returned HTTP 403, so its trace contents were not independently
+re-read in this pass. Job logs contain no `pw:browser` native stderr or crash stack.
+
+**Current cause: unconfirmed.** The old libsoup 3.6.5 hypothesis cannot explain this
+run without new evidence: the fix is present in the verified local 2370 bundle and
+the same symptom persists. An application/CSP defect, native networking/runtime
+failure, and environment/library interaction remain hypotheses. Request/API success
+uses Node networking and does not qualify WebKit's native network process.
+
+### Temporary WebKit 2370 isolation: remote results pending
+
+[scripts/diagnostics/webkit-navigation.mjs](../../scripts/diagnostics/webkit-navigation.mjs)
+is temporary M0.5 tooling, not a website test layer or acceptance substitute.
+One isolated workflow step runs only after the unchanged canonical qualification
+fails on a push to `feat/m0-5-quality-security-ci`. It never runs on main or PRs.
+Its non-blocking diagnostic status does not change the already-blocking `just ci`
+result. Remove the step and script after diagnosis.
+
+The installed project Playwright runs bounded probes of `about:blank`, a data HTML
+URL, plain loopback HTTP without JS/security headers, and loopback HTTP with inline
+JS. Each minimal HTTP result records server receipt, response `finish`, byte count,
+and browser events; `finish` means delivery to the server stream, not proven browser
+receipt. No external origin or host package is involved.
+
+Only if plain HTTP loads, the probe starts the existing production build via Next's
+ordinary CLI on an ephemeral loopback port. It compares identity/gzip HTTP response
+status, selected headers, length/transfer/compression, body hash and completion;
+tests a tiny document with the actual production CSP; and navigates the unchanged
+`/en` with JS enabled and disabled. If full production loading fails, commit/DCL
+observations and captured-HTML variants with bare versus production security headers
+provide isolation evidence. Asset requests in these replay variants use the same
+owned production server. None is an acceptance result or production config change.
+
+The same binary is launched with inherited browser environment and with only named
+native-loader/GLib/GIO/GTK variables removed through Playwright's child `env` option.
+Node, PATH, HOME, toolchain and browser selection are unchanged. Only presence and
+Nix-path classification are reported, not environment values. If sanitization changes
+a failed navigation result, single-variable removal probes seek the smallest cause;
+an unresolved interaction requires another experiment, not a broad committed reset.
+
+`DEBUG=pw:browser` captures launch/native stderr and exit signals. Each variant retains
+about 64 KiB (head/tail) under ignored `test-results/webkit-isolation/`; logs print
+only a bounded tail plus structured probe events. Existing failure artifacts include
+these files. Navigation, launch, worker (90 seconds), overall (330 seconds), and CI
+step (eight minutes) deadlines bound execution. Cleanup closes browser contexts,
+Playwright-owned process groups, the production child, and loopback connections.
+Local Chromium checks validate the probe's control flow/cleanup only. Supported-host
+WebKit results, native crash attribution, and any corrective change are still pending.
 
 WebKit remains **required and blocking**. No prerelease, skip, retry-based acceptance,
 CSP relaxation, preload, ABI symlink, emulation, or substitute browser is adopted.

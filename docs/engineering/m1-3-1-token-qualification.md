@@ -14,7 +14,10 @@ main-qualified (30/30), with adversarial audit PASS. Its
 the final M1.3.4 historical CONDITIONAL PASS and subsequent human gate resolution.
 Signed main closeout `ad69f632129231bb2604a3a71678ac959900046c` passes run
 37827607606 (30/30 and source cleanliness). D13-01–D13-03 remain
-DEFERRED, UNVERIFIED — M1.5; M1.4 remains unauthorized.
+DEFERRED, UNVERIFIED — M1.5. M1.4/M1.4.1 documentation planning was subsequently
+authorized October 8, 2026 (UTC); see the
+[content-readiness register](../product/m1-4-1-content-readiness.md). M1.4.2 and substantive
+publication remain unauthorized.
 This slice consolidates demonstrated presentation values in `app/globals.css`.
 No components, routes, content, publication grants or dependencies are added.
 The [approved design-system contract](../design/design-system-specification.md),

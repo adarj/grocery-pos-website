@@ -33,7 +33,10 @@ identifies signed main closeout `ad69f632129231bb2604a3a71678ac959900046c`
 and main run 37827607606 (30/30), preserving the final audit's historical
 CONDITIONAL PASS and subsequent human gate resolution. D13-01–D13-03 remain
 **DEFERRED, UNVERIFIED — M1.5**. The wider proposed roles below require their own
-implementation qualification; M1.4 remains unauthorized.
+implementation qualification. M1.4/M1.4.1 documentation planning was subsequently
+authorized October 8, 2026 (UTC); the
+[content-readiness register](../product/m1-4-1-content-readiness.md) owns that scope.
+M1.4.2 remains unauthorized; no substantive content or asset publication is approved.
 
 Secondary/inverse/technical type, status/warning/error/disabled roles, contrasting
 panels, additional action variants and unneeded primitives remain proposals.

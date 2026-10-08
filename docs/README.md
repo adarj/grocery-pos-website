@@ -24,14 +24,20 @@ records the maintainer's explicit formal decision, signed main closeout
 (30/30 and source cleanliness). M1.3.4's historical CONDITIONAL PASS is preserved;
 its human gates were resolved by five human-reported PASS observations and three
 explicitly approved deferrals. D13-01–D13-03 remain **DEFERRED, UNVERIFIED — M1.5**.
-M1.4 remains unauthorized. The approved M1 plan and design-system specification
-remain governing; acceptance grants no publication or deployment approval.
+**M1.4 — Reviewed Templates & Content: AUTHORIZED October 8, 2026 (UTC).**
+**M1.4.1 — Content Readiness & Publication Matrix: AUTHORIZED; implementation under review.**
+The [content-readiness register](product/m1-4-1-content-readiness.md) owns candidate-page
+readiness, claim provenance and separate publication decisions. No substantive
+content set is approved; M1.4.2 remains unauthorized. The approved M1 plan and
+design-system specification remain governing; acceptance grants no publication
+or deployment approval.
 
 | Question | Canonical document |
 | --- | --- |
 | What is this repository and its next checkpoint? | [Root README](../README.md) |
 | Is the engineering foundation qualified for M1? | [Milestone 0 qualification](engineering/milestone-0-qualification.md) |
 | Who is the website for, and how should pages/navigation work? | [Website information architecture](product/website-information-architecture.md) |
+| Which content is evidenced, ready and separately approved for disclosure? | [M1.4.1 content readiness](product/m1-4-1-content-readiness.md) |
 | What visual direction is approved? | [Visual direction](design/visual-direction.md) |
 | What are the first-party presentation/accessibility contracts? | [Design-system specification](design/design-system-specification.md) |
 | Which semantic tokens and pairings are implemented and qualified? | [M1.3.1 token record](engineering/m1-3-1-token-qualification.md) |

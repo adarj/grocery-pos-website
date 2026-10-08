@@ -15,7 +15,10 @@ The [acceptance record](m1-3-3-design-system-qualification.md#formal-m13-accepta
 signed main closeout `ad69f632129231bb2604a3a71678ac959900046c` and run
 37827607606 (30/30 and source cleanliness), preserving M1.3.4's historical
 CONDITIONAL PASS and subsequent human gate resolution. D13-01–D13-03 remain
-DEFERRED, UNVERIFIED — M1.5. M1.4 remains unauthorized.
+DEFERRED, UNVERIFIED — M1.5. M1.4/M1.4.1 documentation planning was subsequently
+authorized October 8, 2026 (UTC); see the
+[content-readiness register](../product/m1-4-1-content-readiness.md). M1.4.2 and substantive
+publication remain unauthorized.
 
 Starting branch: `feat/m1-3-2-reusable-primitives`; HEAD/main/origin-main:
 `61784aec86d53f35aa839c9ef7fce780d3cd4805`, with clean worktree and staging.
@@ -156,7 +159,8 @@ The accepted inventory governs the completed
 for completeness or manufacture a second page to justify it. M1.3.4's authorized
 final audit and subsequent human dispositions are preserved in the
 [acceptance record](m1-3-3-design-system-qualification.md#formal-m13-acceptance-2026-10-08-utc). M1.3 is formally
-accepted; later implementation requires separate authorization. M1.4 remains unauthorized.
+accepted; later implementation requires separate authorization.
+M1.4.1 is documentation-only and under review; M1.4.2 remains unauthorized.
 
 Reconsider extraction when approved real pages repeat meaningful semantic
 composition, require consistent inputs or expose maintenance drift that CSS cannot

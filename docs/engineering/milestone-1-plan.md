@@ -18,7 +18,12 @@ identifies signed main closeout `ad69f632129231bb2604a3a71678ac959900046c`
 and successful main run 37827607606 (30/30 and source cleanliness).
 M1.3.4's historical CONDITIONAL PASS is preserved; five human-reported PASS
 observations and three explicitly approved M1.5 deferrals resolved its human gates.
-D13-01–D13-03 remain **DEFERRED, UNVERIFIED — M1.5**. M1.4 remains unauthorized.
+D13-01–D13-03 remain **DEFERRED, UNVERIFIED — M1.5**.
+**M1.4 — Reviewed Templates & Content: AUTHORIZED October 8, 2026 (UTC).**
+**M1.4.1 — Content Readiness & Publication Matrix: AUTHORIZED; implementation under review.**
+The [content-readiness register](../product/m1-4-1-content-readiness.md) owns the internal
+candidate inventory and claim/evidence decisions. No substantive publication set
+is approved; M1.4.2 and later implementation remain unauthorized.
 Later checkpoints retain their scope and human review gates. Specification approval grants no publication or
 production deployment authorization. Milestone 0 is complete and accepted;
 see the [qualification record](milestone-0-qualification.md).
@@ -60,7 +65,7 @@ samples as product claims or delete unique coverage without replacement.
 | M1.1 — Specifications | Approved audience/IA, target navigation and templates, visual direction and component contracts; accepted M0 baseline | Adversarial audit PASS; exact feature CI PASS; working document links; documentation-only scope | No components, assets, public copy, routes or M1.2 execution | Specification/design approval recorded October 8, 2026 (UTC); merged main CI passes |
 | M1.2 — Internal engineering-preview shell | Approved identity header, skip link, responsive container, existing qualification proof and minimal footer; essential accessible styling; navigation/disclosure only when eligible destinations justify them | Server-first/client-reference review; JS-disabled usability; keyboard/focus/axe; measured actual contrast/control states; narrow-to-wide/pseudo checks; preserved security/hydration/publication regressions; typecheck/build; full supported CI | No fabricated marketing content, unavailable routes/links, pricing, commerce, accounts, contact forms, backend services, speculative features, mega-menu/search, real second language or broad token library | Maintainer visual review and formal acceptance recorded October 8, 2026 (UTC); first-implementation ESLint review satisfied by explicit retention approval |
 | M1.3 — Tokens/primitives | Measure palette pairs; consolidate minimal M1.2 styling into semantic tokens and demonstrated container/section/link/button/card/callout patterns | Contrast/state pairing sheet; responsive/expanded-text/forced-colors/reduced-motion checks; proportionate tests and canonical gates | No UI framework, remote fonts, generic component factory, complex forms/data grids or commerce controls | FORMALLY ACCEPTED October 8, 2026 (UTC); measured 43-property system and no-extraction composition retained; merged closeout/main CI 30/30; three approved, unverified M1.5 deferrals remain obligations |
-| M1.4 — Reviewed templates/content | Integrate a small approved subset of IA templates and actual reviewed copy/assets; depends on owners, maturity/disclosure evidence and M1.3 | Claim/source review; metadata and link checks; public-safe projection/withholding; real SSR; content-specific a11y/performance checks and CI | No requirement to populate every sitemap area; no fake claims, CMS/docs platform, pricing, commerce/account or submission backend | Approve every publication set and its qualifications; withhold unsupported pages |
+| M1.4 — Reviewed templates/content | Authorized October 8, 2026 (UTC); M1.4.1 assesses content/evidence first; later template work requires an approved exact set, M1.3 and explicit checkpoint authorization | M1.4.1 documentation review, links/anchors and scope integrity; later implementation retains claim/exposure, SSR, content-specific accessibility/performance and CI gates | No runtime work in M1.4.1; no requirement to populate every area, fake claims, CMS, pricing, commerce/account or backend | M1.4.1 under review, not formally accepted; approve each disclosure set separately; M1.4.2 not authorized |
 | M1.5 — Audit/qualification | Adversarial architecture, publication, accessibility, responsive and measured performance review of the implemented scope | Chromium/Firefox/WebKit; manual screen-reader/keyboard/zoom/contrast review; responsive matrix; static/client graph and asset review; canonical local + CI evidence | No deployment certification, WCAG claim from automation, speculative scanners or features added to fill gaps | Accept/correct M1 based on actual evidence; authorize subsequent work separately |
 
 The maintainer explicitly approved D13-01 screen-reader, D13-02 physical-device
@@ -75,6 +80,21 @@ the published area set; do not create empty pages to satisfy the target sitemap.
 M1.5 sets measured performance follow-ups from real shell/content assets rather
 than demanding an arbitrary M1.1 score. Human review may revise checkpoint scopes
 before each implementation instruction.
+
+## M1.4 checkpoint boundary
+
+The maintainer authorized M1.4 and M1.4.1 on October 8, 2026 (UTC).
+[M1.4.1 content readiness](../product/m1-4-1-content-readiness.md) is the canonical
+documentation-only page/claim/source/asset planning artifact. Its implementation
+is under review; it is not formally accepted and grants no publication approval.
+
+M1.4.2 is a proposal only: after human approval of M1.4.1, a sufficient exact
+content set and separate implementation authorization, build one bounded
+server-rendered template. If evidence or disclosure approval remains insufficient,
+continue content review with no runtime change. Do not start M1.4.2 or populate
+the target sitemap with unsupported pages. Maintain route-aware identity handling
+before the first additional public child route and keep new-content qualification
+distinct from the accepted preview's evidence.
 
 ## Canonical specifications
 

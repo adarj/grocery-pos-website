@@ -10,8 +10,11 @@ maintainer's explicit decision, signed merged closeout
 M1.3.4's historical CONDITIONAL PASS are preserved below. Five human-reported
 manual PASS observations and three explicitly approved deferrals resolved the
 human acceptance gates; D13-01–D13-03 remain **DEFERRED, UNVERIFIED — M1.5**.
-**M1.4 remains unauthorized.** Acceptance applies to the internal engineering-preview
-subset and grants no public product or deployment approval.
+M1.4/M1.4.1 documentation planning was subsequently authorized October 8, 2026
+(UTC); the [content-readiness register](../product/m1-4-1-content-readiness.md) owns that
+scope. M1.4.2 and substantive publication remain unauthorized. M1.3 acceptance
+applies to the internal engineering-preview subset and grants no public product
+or deployment approval.
 
 ### Historical local qualification and starting baseline
 
@@ -468,8 +471,11 @@ The original October 8, 2026 (UTC) deferral approvals, bounded rationale and
 These items are not PASS and are not waived. Revisit them at M1.5, record actual
 environments/results and correct any discovered current defect.
 
-**M1.4 remains unauthorized.** Formal M1.3 acceptance does not authorize public
-marketing pages, claims, product disclosures, assets, commerce, backend work or
+At the time of this M1.3 acceptance decision, M1.4 remained unauthorized.
+The subsequent M1.4/M1.4.1 documentation-only authorization is separately recorded
+in the [content-readiness register](../product/m1-4-1-content-readiness.md).
+Formal M1.3 acceptance does not authorize public marketing pages, claims, product
+disclosures, assets, commerce, backend work or
 deployment. It establishes neither WCAG conformance, actual device or assistive
 technology qualification, production deployment readiness nor public product
 readiness. Server-first/static /en, English-only public language authorization,

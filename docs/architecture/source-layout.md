@@ -184,7 +184,9 @@ M1.3 was formally accepted October 8, 2026 (UTC); the
 owns signed main closeout `ad69f632129231bb2604a3a71678ac959900046c`,
 run 37827607606 (30/30), the preserved M1.3.4 CONDITIONAL PASS and subsequent human
 gate resolution. D13-01–D13-03 remain DEFERRED, UNVERIFIED — M1.5.
-M1.4 remains unauthorized.
+M1.4/M1.4.1 documentation planning is authorized October 8, 2026 (UTC); see the
+[content-readiness register](../product/m1-4-1-content-readiness.md). No source layout or
+runtime change is made. M1.4.2 and substantive publication remain unauthorized.
 Fedora ARM64 WebKit native runtime remains unqualified.
 
 M0.5's [quality/CI contract](../engineering/quality-and-ci.md) adds lint/format,

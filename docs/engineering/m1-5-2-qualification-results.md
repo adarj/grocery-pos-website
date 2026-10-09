@@ -2,11 +2,11 @@
 
 ## Authorization, baseline and checkpoint status
 
-**M1.5.2 — Accessibility & Performance Qualification: AUTHORIZED October 9, 2026 (UTC); technical execution complete, manual evidence incomplete; UNDER REVIEW, NOT ACCEPTED.**
+**M1.5.2 — Accessibility & Performance Qualification: AUTHORIZED October 9, 2026 (UTC); technical execution complete; scoped human-reported D13-01–D13-03 and M152-T01 PASS observations recorded; Windows forced-colors UNVERIFIED, accepted bounded limitation; UNDER REVIEW, NOT FORMALLY ACCEPTED.**
 
-**M1.5.2 TECHNICAL QUALIFICATION COMPLETE — READY FOR HUMAN MANUAL EVIDENCE AND INDEPENDENT AUDIT**
+Original technical-collection verdict (historical): **M1.5.2 TECHNICAL QUALIFICATION COMPLETE — READY FOR HUMAN MANUAL EVIDENCE AND INDEPENDENT AUDIT**
 
-**Evidence chronology:** The original execution sections below are historical agent-reported observations from October 9, 2026 (UTC). Their temporary raw evidence was unavailable at independent audit after a maintainer-reported VM restart. Original performance tables remain unchanged; they are not replacement measurements. The [dated correction and replacement run](#evidence-availability-correction-and-replacement-run--october-9-2026-utc) supersede availability-dependent assertions and record new, separately preserved evidence.
+**Evidence chronology:** The original execution sections below are historical agent-reported observations from October 9, 2026 (UTC). Their temporary raw evidence was unavailable at independent audit after a maintainer-reported VM restart. Original performance tables remain unchanged; they are not replacement measurements. The [dated correction and replacement run](#evidence-availability-correction-and-replacement-run--october-9-2026-utc) supersede availability-dependent assertions and record new, separately preserved evidence. Earlier environment, worksheet, Q17–Q19, A151-01–03, A152-02, M152-T01 and pending-gate statements preserve their contemporaneous state; the October 9 manual addenda and [current reconciliation](#current-manual-evidence-reconciliation--october-9-2026-utc) supersede their current applicability. The addenda's interim “unaffected obligations” statements apply at each append, before later observations.
 
 The human maintainer authorized exact-build inspection, existing tests, development pseudo-localization, temporary performance instrumentation and genuine manual evidence collection. Application corrections, M1.5.3, production deployment and public release remain unauthorized. M1.5 is authorized and in progress; neither M1.5 nor M1 is formally complete. M1.4 remains formally accepted and complete, with M1.4.3 reviewed and deferred.
 
@@ -18,7 +18,7 @@ The [accepted M1.5.1 assessment](m1-5-1-qualification-baseline.md#formal-m151-ac
 
 ## Environment and execution inventory
 
-Technical collection occurred October 9, 2026 (UTC), using the existing Nix environment.
+Technical collection occurred October 9, 2026 (UTC), using the existing Nix environment. This inventory records availability at original collection; later host/device access, versions and human observations are recorded in the manual addenda and [current reconciliation](#current-manual-evidence-reconciliation--october-9-2026-utc).
 
 | Item | Actual environment / availability |
 | --- | --- |
@@ -180,6 +180,8 @@ Generic link surfaces and button normal/hover/active/boundary/focus are **contro
 
 ## Human observations and common manual worksheet
 
+This is the original technical-collection observation register. M152-S01, M152-D01 and M152-H01 were unverified then; their later scoped human results are recorded in the October 9 addenda and [current reconciliation](#current-manual-evidence-reconciliation--october-9-2026-utc). M152-T01 was also unverified at original collection; the later [5/5 text-spacing addendum](#m152-t01--human-manual-text-spacing-qualification-october-9-2026-utc) and current reconciliation supersede that historical state within the recorded environment.
+
 The maintainer reported on October 9, 2026 (UTC): “Both browsers perform as expected when performing the actions listed,” then supplied the Firefox/Chrome and Fedora/KDE versions recorded above. This is genuine **human-reported** evidence for the requested actions on the current production page, not an independent repetition or invented detailed transcript.
 
 | Test ID | Requested action / expected result | Actual supplied outcome | Disposition / limits |
@@ -205,6 +207,8 @@ Unknown metadata remains unknown. Historical M1.3/M1.4.2 manual PASS reports rem
 
 ## D13-01 — Actual screen-reader disposition and worksheet
 
+Historical worksheet: the following status and unavailable-environment statements describe original collection. They are superseded for current D13-01/A151-01/Q17 status by the [8/8 VoiceOver/Safari addendum](#d13-01--actual-screen-reader-human-qualification-october-9-2026-utc) and [current reconciliation](#current-manual-evidence-reconciliation--october-9-2026-utc).
+
 **DEFERRED, UNVERIFIED — M1.5.** The prior approved deferral is retained; no renewed deferral or PASS has been granted.
 
 Follow the [accepted D13-01 protocol](m1-5-1-qualification-baseline.md#d13-01--actual-screen-reader-protocol) using an actual available screen reader and identified operator. Safari/VoiceOver is a possible future environment only once private access and actual AT availability are established; no such execution is claimed.
@@ -222,6 +226,8 @@ Record OS/browser/AT versions, input mode, actual announcements and reproduction
 
 ## D13-02 — Physical touch/device disposition and worksheet
 
+Historical worksheet: the following status and access gap describe original collection. They are superseded for current D13-02/A151-02/Q18 status by the [6/6 iPhone addendum](#d13-02--physical-device-human-qualification-october-9-2026-utc) and [current reconciliation](#current-manual-evidence-reconciliation--october-9-2026-utc).
+
 **DEFERRED, UNVERIFIED — M1.5.** iPhone 13 Pro exists; the missing prerequisite is access to the exact production build, plus recorded iOS/browser characteristics and actual observations.
 
 | Action on actual device | Expected observable result | Current disposition |
@@ -235,6 +241,8 @@ Record OS/browser/AT versions, input mode, actual announcements and reproduction
 Record model **iPhone 13 Pro**, iOS/browser versions, actual viewport/orientation/DPR/zoom, touch method, scrolling/activation observations and capture limitations. Desktop widths or Playwright mobile emulation cannot close this requirement.
 
 ## D13-03 — Actual OS contrast disposition and worksheet
+
+Historical worksheet: the following absent-environment statements describe original collection. The [5/5 macOS addendum](#d13-03--genuine-macos-accessibility-contrast-qualification-october-9-2026-utc) and [current reconciliation](#current-manual-evidence-reconciliation--october-9-2026-utc) supersede current D13-03/A151-03/Q19 status for that setting only; Windows forced-colors remains unverified.
 
 **DEFERRED, UNVERIFIED — M1.5.** A genuine OS contrast mode and suitable operator/browser have not been established. No system/VM provisioning was performed.
 
@@ -257,6 +265,8 @@ Only the exact C01/C02/C04/C05 homepage subset has disclosure approval. No compl
 
 ## Nine carried NOTE dispositions
 
+Historical technical-collection dispositions: A151-01–03 below predate the human sessions. See the [current reconciliation](#current-manual-evidence-reconciliation--october-9-2026-utc) for supplied observations, remaining coverage and metadata limits; the earlier gaps are retained as historical evidence.
+
 | Accepted ID | New disposition and evidence | Remaining action / acceptance significance |
 | --- | --- | --- |
 | A151-01 | UNVERIFIED: no actual AT result; D13-01 worksheet/access prerequisites above | Human operator/environment and genuine observations required; cannot close with axe |
@@ -272,7 +282,7 @@ Only the exact C01/C02/C04/C05 homepage subset has disclosure approval. No compl
 
 ## Reconciliation with the accepted verification inventory
 
-The [original 26-row inventory](m1-5-1-qualification-baseline.md#current-verification-inventory) is preserved. These current dispositions apply only to the stated property/environment; remote and local results remain distinct.
+The [original 26-row inventory](m1-5-1-qualification-baseline.md#current-verification-inventory) is preserved. These dispositions describe original collection and its evidence-availability correction; remote and local results remain distinct. Q17–Q19 below are historical and superseded by the [current manual-evidence entries](#current-manual-evidence-reconciliation--october-9-2026-utc); related Q11/Q12/Q16 limitations are reconciled there without converting scoped observations into complete verification.
 
 | Requirement ID | Current disposition / evidence added |
 | --- | --- |
@@ -305,6 +315,8 @@ The [original 26-row inventory](m1-5-1-qualification-baseline.md#current-verific
 
 ## New findings and corrective-work triggers
 
+The register below preserves findings at original technical collection. A152-02's missing-access/observation condition was subsequently partially addressed; its current residual coverage and metadata limitations are recorded in the [current reconciliation](#current-manual-evidence-reconciliation--october-9-2026-utc).
+
 No substantiated BLOCKER, MAJOR or MINOR application defect was found in the executed scope. Missing manual equipment/access/results are evidence gaps, not observed homepage failures. Their closure or explicit human disposition remains necessary for final qualification decisions.
 
 | ID / severity | Evidence / observed condition | Consequence / minimum next action | Requalification / authorization |
@@ -319,6 +331,8 @@ Potential M1.5.3 triggers are an actual AT/device/contrast failure, reproducible
 Before a first additional public child route, identity `aria-current` must become route-aware, with real eligible destinations and route/metadata/keyboard/accessibility/responsive tests. No child route or additional content is authorized by this checkpoint.
 
 ## Remaining human and independent-audit gates
+
+Historical pre-audit/manual gates follow. Their completion state is superseded by the [current review and acceptance gates](#current-manual-evidence-reconciliation--october-9-2026-utc); completed observation collection is not repeated as an unmet environment prerequisite.
 
 1. Independently audit build/log/trace provenance, metric definitions/cache accounting, complete-output scope and manual-attribution accuracy.
 2. Review the supplied desktop PASS observations and remaining metadata limits; obtain any additional manual spacing/whole-page observations required.
@@ -444,6 +458,8 @@ Exploratory historical/new paint medians are cold loopback 36→32, warm loopbac
 
 ### Current obligation reconciliation and finding proposal
 
+This heading and table preserve the replacement run's state before follow-up audit and human testing. The [current reconciliation](#current-manual-evidence-reconciliation--october-9-2026-utc) supersedes its D13, A151-01–03, A152-02 and A152A-01 pending-status statements; the original finding proposal remains historical evidence.
+
 | Obligation | Replacement disposition / retained gate |
 | --- | --- |
 | A151-01 / D13-01 | **DEFERRED, UNVERIFIED — M1.5**; no actual screen-reader observations supplied; Counter announcements remain N/A for the current homepage only |
@@ -468,6 +484,8 @@ M1.5.2 remains UNDER REVIEW, NOT ACCEPTED. M1.5/M1 remain incomplete. All manual
 
 ### Replacement validation, preservation and remaining review gates
 
+The following validation and gates are historical replacement-run records, not fresh checks of the later signed addenda. See the [current reconciliation](#current-manual-evidence-reconciliation--october-9-2026-utc) for remaining gates after follow-up audit and human observations.
+
 Documentation validation found **43 Markdown documents, 393 local links and 117 heading references**, with no missing local destination/anchor, trailing-whitespace or final-newline error. External URL availability was not comprehensively rechecked. `git diff --check` passed. Only this canonical qualification document changed during evidence recovery; the four pre-existing modified tracked summaries remain byte-identical to their starting candidate copies. Tracked application, tests, configuration, dependencies and assets are unchanged; staging remains empty, with unchanged refs, Git index, HEAD and configuration.
 
 The generated/build/report inventory changed from **587 to 593 files** through authorized execution: 484 unchanged, 100 regenerated, three removed old-build manifest paths and nine added files. The private pre-recovery archive retains all 587 starting files with matching hashes, and the fresh production archive retains all 25 inventoried public outputs with matching hashes. This preserves the replacement-run starting state, not the unavailable original 563-file backup. `final-generated-artifacts.json` and `final-integrity.json` identify the exact paths and hashes. All owned servers/probes were stopped; no listener remained on the used loopback ports.
@@ -475,3 +493,244 @@ The generated/build/report inventory changed from **587 to 593 files** through a
 Replacement payloads are readable in the private directory, with SHA-256/size inventory in `manifest.json` and independently checked `SHA256SUMS`; files are mode 0600 and directories 0700. Preservation does not assert tested restart survival or an off-VM backup. Follow-up audit requires authorized access to those actual files, verification of hashes and read-only recalculation from the raw records. A checksum alone cannot close A152A-01.
 
 Remaining gates are independent read-only follow-up audit, genuine D13 manual observations or an explicit maintainer decision about each missing environment, human review/integration, successful exact-SHA supported Ubuntu CI for the future signed documentation commit (17 fixtures, seven supervisor regressions and unchanged 30/30 three-engine gate, one worker, zero retries), and explicit checkpoint acceptance. No source correction, M1.5.3 execution, new public disclosure or deployment is authorized.
+
+### D13-02 — Physical-device human qualification, October 9, 2026 (UTC)
+
+**Disposition: PASS — human-reported, bounded to the tested physical device and conditions.**
+
+The human maintainer performed physical-device testing of the current Grocery POS informational homepage using an **iPhone 13 Pro running iOS 18.7.8 and Safari**, accessed through a temporary private-LAN relay to the local production server.
+
+The reported source revision is `a19b9f8447573534326aae189f6a9db7d0a05e6f`; the running server's exact checkout/build identity was not independently captured as part of this observation.
+
+| Test | Result | Evidence |
+| --- | --- | --- |
+| T01 — Portrait layout | PASS | Human reports expected readability, complete content and layout |
+| T02 — Landscape layout | PASS | Human reports expected reflow and full content accessibility |
+| T03 — Actual touch navigation | PASS | Human reports correct identity/home-link activation |
+| T04 — Scrolling and text selection | PASS | Human reports expected touch scrolling and selection behavior |
+| T05 — Touch-target usability | PASS | Human reports usable activation without problems |
+| T06 — Enlarged text/page zoom | PASS | Human reports expected behavior at default, 200% and 300% Safari enlargement, plus pinch zoom |
+
+**Supplementary observations:** Safari Show Reader and Listen to Page operated as expected, according to the maintainer. These observations are not substituted for screen-reader qualification.
+
+**Limitations:** Exact viewport, DPR, display scaling, Safari build number, JavaScript state and production build ID were not separately captured. Numerical WCAG 2.2 target-size conformance was not independently measured. No screenshots or browser instrumentation were supplied. Evidence is attributed to the human maintainer, not to automated execution or an independent device operator.
+
+**Disposition of A151-02 / D13-02:** The previously missing real physical-device observations have now been supplied and support a scoped human-reported PASS. Independent documentation review and formal M1.5.2 acceptance remain separate gates.
+
+**Unaffected obligations:** D13-01 actual screen-reader verification and D13-03 genuine OS high-contrast verification remain UNVERIFIED. M1.5.3, corrective application changes and production deployment remain unauthorized.
+
+### D13-01 — Actual screen-reader human qualification, October 9, 2026 (UTC)
+
+**Disposition: PASS — human-reported, bounded to the tested assistive-technology environment.**
+
+The human maintainer tested the Grocery POS informational homepage using macOS VoiceOver and Safari through the temporary private-LAN relay.
+
+**Environment**
+- Operating system: macOS 15.6
+- Browser: Safari 18.6 (20261.3.11.11.3)
+- Assistive technology: macOS VoiceOver; separate AT build/version not recorded
+- Input: Mac keyboard, Control+Option VoiceOver modifier
+- JavaScript: Enabled for ordinary testing; disabled for S08
+- Source revision reported: `a19b9f8447573534326aae189f6a9db7d0a05e6f`
+- Exact running checkout/build identity: Not independently captured
+
+| Test | Result |
+| --- | --- |
+| S01 — Page title and language | PASS |
+| S02 — Landmark navigation | PASS |
+| S03 — Heading hierarchy | PASS |
+| S04 — Complete reading order | PASS |
+| S05 — Accessible link names | PASS |
+| S06 — Skip link and focus | PASS |
+| S07 — Home link and reverse traversal | PASS |
+| S08 — JavaScript-disabled accessibility | PASS |
+
+**Actual observation:** The maintainer reported that everything worked as expected for all eight checks, including JavaScript-disabled testing.
+
+**Evidence limitations:** The operator did not provide a verbatim announcement transcript, screenshots, separate VoiceOver build number, exact build ID or detailed JavaScript-disable procedure. No independent execution was performed. Results establish a scoped human-reported PASS for the tested environment, not universal screen-reader compatibility.
+
+**Disposition of A151-01 / D13-01:** The outstanding requirement for real screen-reader observations is satisfied within the reported test scope. Independent documentation review and formal M1.5.2 acceptance remain separate gates.
+
+**Unaffected obligations:** D13-03 genuine operating-system contrast qualification remains UNVERIFIED. Application corrections, M1.5.3 execution and production deployment remain unauthorized.
+
+### D13-03 — Genuine macOS accessibility-contrast qualification, October 9, 2026 (UTC)
+
+**Disposition: PASS for the tested macOS Increase Contrast environment; Windows forced-colors coverage remains UNVERIFIED. Formal D13-03 closure requires an explicit maintainer decision concerning this coverage limitation.**
+
+The human maintainer tested the Grocery POS informational homepage using Safari on macOS with the operating system's genuine Increase Contrast accessibility setting enabled.
+
+**Environment**
+- Operating system: macOS 15.6
+- Browser: Safari 18.6 (20261.3.11.11.3)
+- Accessibility setting: Increase Contrast
+- Activation: System Settings → Accessibility → Display
+- Access: Temporary private-LAN relay
+- Source revision reported: `a19b9f8447573534326aae189f6a9db7d0a05e6f`
+- Exact running checkout/build identity: Not independently captured
+
+| Test | Result |
+| --- | --- |
+| H01 — Contrast activation and appearance | PASS |
+| H02 — Heading and paragraph readability | PASS |
+| H03 — Identity link and non-color cues | PASS |
+| H04 — Keyboard focus and skip navigation | PASS |
+| H05 — Full-page inspection and restoration | PASS |
+
+**Actual observations:** The maintainer reported that all five checks worked as expected, with no functionality or readability issues.
+
+Enabling Increase Contrast caused white borders to appear around several Safari interface elements. No visible changes were observed within the webpage itself.
+
+No supplementary accessibility settings were tested.
+
+**Evidence interpretation:** This is genuine human-operated macOS accessibility-setting evidence, not browser emulation. It supports a scoped compatibility PASS for the tested configuration. However, it does not demonstrate webpage color substitution or compatibility under Windows contrast themes.
+
+**Outstanding coverage:** Windows forced-colors behavior remains UNVERIFIED because no suitable Windows machine or VM was available. Existing automated forced-colors evidence retains its separate scope and does not replace a genuine OS/theme observation.
+
+**Finding disposition:** No application defect was reported. The remaining issue is incomplete environment coverage, requiring either later Windows testing or an explicit maintainer-approved qualification limitation.
+
+**Checkpoint status:** M1.5.2 remains UNDER REVIEW and NOT FORMALLY ACCEPTED. M1.5.3, corrective application changes and production deployment remain unauthorized.
+
+## Current manual-evidence reconciliation — October 9, 2026 (UTC)
+
+This is the authoritative current summary of the October 9 human observations, including the [M152-T01 text-spacing addendum](#m152-t01--human-manual-text-spacing-qualification-october-9-2026-utc), and the [explicit Windows limitation decision](#windows-forced-colors-limitation-decision--october-9-2026-utc). It reconciles reported observations against the [accepted protocols](m1-5-1-qualification-baseline.md#d13-01--actual-screen-reader-protocol); it is documentation review, not new execution or formal acceptance.
+
+The original reconciliation started at `fdb4a7ae3ab293bb91a0eae88aaf61299af609fe` on `docs/m1-5-2-qualification-results`. Main/origin-main and the reported accepted application baseline were `a19b9f8447573534326aae189f6a9db7d0a05e6f`; the branch then contained three subsequent documentation-only commits. Their local objects contained PGP signatures, but that reconciliation claimed no new cryptographic verification.
+
+This final disposition reconciliation starts at `256e0bfc154c746b5db19d1ee7f13e55b4072e9f` on the same branch, ahead 6/behind 0 against unchanged main/origin-main. The worktree and staging area were clean. That signed documentation addendum records M152-T01; it does not independently identify the running application build. This task performs no new browser, accessibility or performance execution.
+
+| Human evidence addendum | Documentation commit | Reported scope |
+| --- | --- | --- |
+| D13-02, first append | `98d327da6a3035ca1938031ae2a6a2d9d421112b` | 6/6 physical-device checks |
+| D13-01, second append | `df33e70a751446882c60b5114249765572e15bb1` | 8/8 VoiceOver/Safari checks |
+| D13-03, third append | `fdb4a7ae3ab293bb91a0eae88aaf61299af609fe` | 5/5 macOS Increase Contrast checks |
+| M152-T01, later append | `256e0bfc154c746b5db19d1ee7f13e55b4072e9f` | 5/5 Safari manual text-spacing checks after P03 clarification |
+
+All observations are attributed to the human maintainer, who reported source revision `a19b9f8447573534326aae189f6a9db7d0a05e6f` and temporary private-LAN relay access. Exact running checkout/build identity was not independently captured. These documentation commits record observations; they do not identify the running binary or establish their own successful exact-SHA CI.
+
+| Obligation / inventory entry | Current result | Remaining qualification boundary |
+| --- | --- | --- |
+| D13-01 / A151-01 / Q17 / M152-S01 | **Human-reported PASS — 8/8 VoiceOver/Safari checks**, macOS 15.6, Safari 18.6 (20261.3.11.11.3), including reported JS-disabled S08 | Q17 is PARTIALLY VERIFIED within that environment: exact build identity, separate VoiceOver version, verbatim announcements and detailed JS-disable procedure are absent; no independent repetition or universal AT compatibility claim |
+| D13-02 / A151-02 / Q18 / M152-D01 | **Human-reported PASS — 6/6 iPhone 13 Pro/Safari checks**, iOS 18.7.8 | Q18 is PARTIALLY VERIFIED: Safari build, viewport/DPR/display scale, JS state and exact running build were not captured; numerical target-size conformance was not measured |
+| D13-03 / A151-03 / Q19 / M152-H01 | **Human-reported PASS — 5/5 macOS Increase Contrast checks**, macOS 15.6 and the same reported Safari version | Q19 remains PARTIALLY VERIFIED for this setting only. **Windows forced-colors: UNVERIFIED; absence explicitly human-accepted as a bounded limitation October 9, 2026 (UTC)** for the current pre-production informational homepage; the coverage-disposition question is resolved, not the missing Windows verification |
+| M152-T01 / Q12 manual text-spacing portion | **Human-reported PASS — 5/5 Safari checks after P03 clarification**, macOS 15.6, Safari 18.6 (20261.3.11.11.3), 1324 CSS-pixel viewport | The separate spacing observation gap is satisfied within this environment; Q12 retains broader limits. Exact running-build identity and other recorded metadata limits remain; no manual coverage of every width, platform or combined 200% configuration is claimed |
+
+No application defect was reported from the three D13 sessions or the final M152-T01 assessment. Real AT/device observations now exist; earlier statements that none were supplied or host/device access was unavailable are historical. Safari Reader/Listen to Page observations remain supplementary and do not substitute for VoiceOver testing.
+
+Increase Contrast produced white borders in Safari interface elements; the webpage itself showed **no visible change**. This is compatibility evidence for that genuine macOS setting, not proof of webpage color substitution, Windows contrast-theme compatibility, universal accessibility or WCAG conformance. Automated forced-colors tests retain their separate emulation scope.
+
+A152-02 remains **PARTIALLY ADDRESSED**: the prior access and missing-session gaps were addressed within the reported environments; build/metadata limitations and untested Windows coverage remain, with the latter explicitly accepted as a bounded limitation. Q11/Q12/Q16 gain the scoped human observations but retain whole-requirement limits. M152-T01 now supplies the separate manual spacing observation within its recorded Safari environment; it does not establish every responsive width, platform or combined 200% configuration. The iPhone enlargement results remain separate evidence. Original desktop/native-400%-zoom observations and their missing metadata remain unchanged.
+
+The initial M152-T01 P03 FAIL and its clarification remain in the addendum: the wrapped heading lines were fully visible, with no overlap, horizontal clipping, unintended horizontal overflow or content loss reported. P03's final PASS is an evidence-backed classification correction, not an application change or independent execution.
+
+### Corroborated evidence-recovery disposition
+
+The independent read-only follow-up audit recorded earlier in this task's conversation returned **M1.5.2 FOLLOW-UP AUDIT — PASS, A152A-01 RESOLVED; MANUAL GATES OUTSTANDING**. It marked **A152A-01: RESOLVED — independently verified replacement evidence and corrected documentation**, after inspecting the 142 payloads/143 checksum checks, build/output provenance, raw measurements and traces. This is the corroborating audit disposition; this reconciliation performs no new technical audit and does not infer resolution from implementation completion alone. The original conditional decision and replacement-run resolution proposal remain intact above. Lost original records were not recovered.
+
+A151-04/A151-05 retain the follow-up audit's stated local laboratory/output scope. A151-06's future client-island test-restoration gate, A151-07's CSP/deployment limits, A151-08's historical metadata limits and A151-09's ESLint 9.39.5 exception/January 8, 2027 review deadline remain binding. Counter SSR remains distinct from hydration, and route-aware identity handling remains required before the first additional public child route.
+
+### Corroborated summary-correction disposition
+
+The focused read-only follow-up audit of `e93927db8eaa8f1d3a5226197581684367244687` returned **PASS; A152M-01 RESOLVED**. It verified the four corrected summaries against this reconciliation, preserved historical records and authorization boundaries, and performed no new qualification execution. The original CONDITIONAL PASS and MINOR finding remain historical; this later audit resolves that bounded inconsistency, not formal M1.5.2 acceptance.
+
+A152M-02's exact running-build and manual metadata/transcript limits remain explicit. A152M-03's separate manual text-spacing gap now has the scoped M152-T01 observations; its Windows evidence gap remains UNVERIFIED with the absence explicitly accepted as a bounded limitation. This disposition introduces no broader compatibility claim.
+
+### Current review and acceptance gates
+
+1. Independently review this final documentation reconciliation, the human addenda and explicit limitation decision against the accepted protocols; retain missing build identity, environment metadata and transcript limitations rather than inventing values or independent observations.
+2. Preserve the [maintainer's bounded Windows limitation decision](#windows-forced-colors-limitation-decision--october-9-2026-utc). The previously pending human coverage-disposition question is resolved; Windows testing has not occurred and Q19 is not fully verified.
+3. Review the scoped M152-T01 PASS and other applicable manual-rule evidence/limitations. No manual test of every width, platform or combined 200% configuration is claimed. Preserve private replacement evidence for review; this task neither recollects it nor establishes restart survival or an off-VM backup.
+4. Validate documentation integrity and obtain human signed integration with successful exact-SHA supported Ubuntu CI for the eventual reconciliation commit, retaining 17 fixtures, seven supervisor regressions, the blocking 30/30 three-engine matrix, one worker, zero retries and source cleanliness. Earlier CI is not qualification of these uncommitted changes.
+5. Obtain explicit human M1.5.2 acceptance after review. **M1.5.2 remains UNDER REVIEW, NOT FORMALLY ACCEPTED**; M1.5/M1 remain incomplete.
+
+Only the existing exact C01/C02/C04/C05 homepage subset remains disclosure-approved; other assertions and P02–P08 remain withheld. **M1.5.3, corrective application work and production deployment/public release remain NOT AUTHORIZED.**
+
+### M152-T01 — Human manual text-spacing qualification, October 9, 2026 (UTC)
+
+**Final disposition: PASS — 5/5 checks, human-reported, after clarification of P03.**
+
+The human maintainer tested the current informational homepage in Safari using temporary CSSOM text-spacing overrides.
+
+**Environment**
+- OS: macOS 15.6
+- Browser: Safari 18.6 (20261.3.11.11.3)
+- Viewport: 1324 CSS px
+- Access: Temporary private-LAN relay
+- Source revision reported: `a19b9f8447573534326aae189f6a9db7d0a05e6f`
+- Exact running-build identity: Not independently captured
+
+**Measured text-spacing values**
+- Line height: 24px (1.5 × 16px)
+- Paragraph spacing: 32px (2 × 16px)
+- Letter spacing: 1.92px (0.12em)
+- Word spacing: 2.56px (0.16em)
+
+| Check | Final result |
+| --- | --- |
+| P01 — Computed spacing values | PASS |
+| P02 — Four sections readable | PASS |
+| P03 — Text reflow and scrolling | PASS following clarification |
+| P04 — Keyboard focus/navigation | PASS |
+| P05 — Restoration | PASS |
+
+**P03 observation and clarification**
+
+The operator initially reported P03 as FAIL because all four headings wrapped onto two lines after the overrides were applied.
+
+Follow-up inspection established that:
+- All second lines were fully visible.
+- No overlap with following content was observed.
+- Document width equaled viewport width (1324px).
+- Horizontal overflow was false.
+- The heading diagnostic reported no horizontal clipping.
+- All content remained readable and accessible.
+
+The headings use `text-wrap: balance`. Wrapping onto additional readable lines does not constitute a text-spacing failure by itself.
+
+**Final interpretation:** The initial FAIL was a classification issue, not a demonstrated application defect. P03 is reclassified as PASS with its original observation retained.
+
+**Evidence limitations:** This is a human-reported visual and keyboard assessment supported by browser diagnostic values, not independent execution. Exact running-build identity and other previously identified metadata limitations remain.
+
+**Finding disposition:** No application correction warranted. The separate M152-T01 manual text-spacing evidence gap is satisfied within the recorded test environment. Formal M1.5.2 acceptance remains pending.
+
+## Windows forced-colors limitation decision — October 9, 2026 (UTC)
+
+On October 9, 2026 (UTC), the human maintainer explicitly accepted the absence of genuine Windows forced-colors testing as a **bounded qualification limitation for the current pre-production informational homepage**. This is an affirmative human coverage-disposition decision, not inferred approval and not evidence that Windows testing occurred.
+
+**Windows forced-colors remains UNVERIFIED. Q19 remains PARTIALLY VERIFIED.** The decision applies only to the existing approved four-section `/en` homepage. It does not establish Windows compatibility, complete Q19 verification, universal accessibility, WCAG conformance, production readiness or a future page/component's qualification.
+
+The evidence scopes remain separate:
+
+- Existing automated forced-colors checks demonstrate browser emulation within their recorded environments.
+- The five human-reported macOS Increase Contrast checks demonstrate compatibility for that genuine setting; the webpage itself showed no visible change.
+- Genuine Windows contrast-theme behavior was not tested. The maintainer accepted this absence for the current scope only.
+
+This decision resolves the previously pending human Windows coverage-disposition question in the earlier addendum and reconciliation gates. Those earlier requests preserve their contemporaneous meaning; they do not remain a pending decision after this dated outcome. Future scope or environment changes require their own qualification review.
+
+The signed M152-T01 addendum above supplies **human-reported PASS — 5/5 manual text-spacing checks after P03 clarification** in Safari 18.6 on macOS 15.6 at 1324 CSS px. Its initial FAIL, diagnostic observations and final interpretation remain unchanged. It does not claim every responsive width, platform or combined 200% configuration was manually exercised.
+
+Missing exact running-build identity and the other recorded manual browser, viewport, accessibility and transcript metadata limitations remain. No new execution, independent manual reproduction, performance result, application correction or raw-evidence change is claimed.
+
+**M1.5.2 remains UNDER REVIEW, NOT FORMALLY ACCEPTED.** Independent review of this reconciliation, documentation integrity, successful exact-SHA supported Ubuntu CI after human signed integration and explicit human acceptance remain gates. **M1.5.3, corrective application changes and production deployment/public release remain NOT AUTHORIZED.** No substantive disclosure approval is expanded.
+
+### A152M-02 evidence-provenance limitation decision — October 9, 2026 (UTC)
+
+On October 9, 2026 (UTC), the human maintainer explicitly stated:
+
+> I explicitly accept A152M-02's documented evidence-provenance limitations for the current pre-production homepage, without claiming that the missing metadata was verified.
+
+**A152M-02 — NOTE: HUMAN-ACCEPTED BOUNDED QUALIFICATION LIMITATION for the existing pre-production informational homepage.** This affirmative decision accepts the documented limitation within that scope. It does not supply or independently verify missing evidence, apply retrospectively to earlier checkpoints, or qualify future pages, components or environments.
+
+The accepted provenance limitations remain:
+
+- Missing exact running checkout/build identity linking the manual observations to the reported application revision.
+- Incomplete environment and browser metadata, including the separately unrecorded iPhone Safari build and VoiceOver version.
+- Incomplete display metadata where previously unrecorded, including viewport, DPR and display-scale details. M152-T01's recorded 1324 CSS-pixel viewport retains its specific scope.
+- Missing verbatim VoiceOver announcement transcripts and the detailed JavaScript-disable procedure.
+
+D13-01's 8/8 VoiceOver/Safari, D13-02's 6/6 iPhone 13 Pro/Safari, D13-03's 5/5 macOS Increase Contrast and M152-T01's 5/5 Safari text-spacing results remain **human-reported PASS observations within their recorded environments**. They are attributed to the maintainer, not to independent execution. M152-T01's initial P03 FAIL, subsequent diagnostic observations and final PASS after clarification remain unchanged. Existing partial-verification classifications are not promoted by this decision.
+
+The separate [Windows forced-colors limitation decision](#windows-forced-colors-limitation-decision--october-9-2026-utc) remains accepted for the current homepage only. **Windows forced-colors remains UNVERIFIED; Q19 remains PARTIALLY VERIFIED.** Automated forced-colors emulation and genuine macOS Increase Contrast observations retain their separate evidentiary scopes.
+
+The independent final disposition reconciliation audit of `834bffca8449a7a1326aa350e7748e2dc1dfbc34` returned **PASS — ready for human integration review**. No substantiated BLOCKER, MAJOR or MINOR application finding remains within the reviewed evidence. That audit and this limitation decision do not assert independent manual execution or complete verification. The independently audited A152A-01 and A152M-01 resolutions remain intact; the original temporary evidence loss and replacement evidence's laboratory/output limitations are unchanged.
+
+**M1.5.2 remains UNDER REVIEW, NOT FORMALLY ACCEPTED.** Human signed integration, successful exact-SHA supported Ubuntu CI for this documentation commit and explicit checkpoint acceptance remain separate gates. This decision authorizes no additional testing, application correction, content disclosure, milestone acceptance or deployment. **M1.5.3, corrective application changes and production deployment/public release remain NOT AUTHORIZED.** Existing client-island, route-awareness, security and tooling obligations remain binding.

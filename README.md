@@ -51,8 +51,12 @@ records the October 9, 2026 (UTC) outcome, signed closeout
 37877425523 (30/30 and source cleanliness).
 **M1.4.3 — Additional Reviewed Content & Navigation: REVIEWED AND DEFERRED;
 NO IMPLEMENTATION AUTHORIZED.** This intentional deferral is part of M1.4's
-accepted scope; no additional content was implemented. M1.5 is **NOT AUTHORIZED**
-and has not started. Other assertions and P02–P08 remain withheld. No public
+accepted scope; no additional content was implemented.
+**M1.5 — Final Qualification: AUTHORIZED October 9, 2026 (UTC).** Only
+**M1.5.1 — Qualification Baseline & Adversarial Review** is authorized for immediate
+execution; its [assessment](docs/engineering/m1-5-1-qualification-baseline.md) is
+under review, not formally accepted. M1.5.2 and M1.5.3 require separate execution
+authorization. Other assertions and P02–P08 remain withheld. No public
 release or deployment is authorized. The human maintainer
 formally accepted Milestone 0 and authorized M1 on October 8, 2026 (UTC).
 Final main [CI run 37727162386](https://github.com/adarj/grocery-pos-website/actions/runs/37727162386)

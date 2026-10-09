@@ -94,8 +94,12 @@ records the October 9, 2026 (UTC) decision, signed closeout
 `8729179ee18b0d154d8fa63b144d1d98212f8f39` and successful main run
 37877425523 (30/30 and source cleanliness). **M1.4.3 — Additional Reviewed Content
 & Navigation: REVIEWED AND DEFERRED; NO IMPLEMENTATION AUTHORIZED.** Its deferral
-is part of the accepted M1.4 scope, not implemented work. M1.5 is **NOT AUTHORIZED**
-and has not started. No public release or deployment is authorized; other claim subjects and
+is part of the accepted M1.4 scope, not implemented work.
+**M1.5 — Final Qualification: AUTHORIZED October 9, 2026 (UTC).** Immediate
+execution is limited to **M1.5.1 — Qualification Baseline & Adversarial Review**;
+its [assessment](docs/engineering/m1-5-1-qualification-baseline.md) is under review,
+not formally accepted. M1.5.2 and M1.5.3 require separate execution authorization.
+No public release or deployment is authorized; other claim subjects and
 P02–P08 remain withheld.
 Follow the [M1 plan](docs/engineering/milestone-1-plan.md) and approved
 [design-system specification](docs/design/design-system-specification.md).

@@ -44,7 +44,11 @@ records the October 9, 2026 (UTC) outcome, signed closeout
 37877425523 (30/30 and source cleanliness).
 **M1.4.3 — Additional Reviewed Content & Navigation: REVIEWED AND DEFERRED;
 NO IMPLEMENTATION AUTHORIZED.** This deferral is part of the accepted M1.4 scope,
-not an implemented checkpoint. M1.5 is **NOT AUTHORIZED** and has not started.
+not an implemented checkpoint.
+**M1.5 — Final Qualification: AUTHORIZED October 9, 2026 (UTC).** Immediate
+execution is limited to **M1.5.1 — Qualification Baseline & Adversarial Review**;
+the [assessment](engineering/m1-5-1-qualification-baseline.md) is under review,
+not formally accepted. M1.5.2 and M1.5.3 require separate execution authorization.
 Other assertions and P02–P08 remain withheld.
 The approved M1 plan and design-system specification remain governing; acceptance
 grants no additional disclosure, public release or deployment approval.
@@ -63,6 +67,7 @@ grants no additional disclosure, public release or deployment approval.
 | How is the first reviewed homepage implemented and qualified? | [M1.4.2 homepage](engineering/m1-4-2-homepage-qualification.md) |
 | What was accepted and qualified in M1.2, and which limits remain? | [Engineering-preview shell](engineering/m1-2-shell-qualification.md) |
 | What formally accepts M1.4's implemented scope and no-expansion decision? | [M1.4 formal acceptance](engineering/milestone-1-plan.md#formal-m14-acceptance--october-9-2026-utc) |
+| Which current properties are demonstrated, and how should final qualification proceed? | [M1.5.1 qualification baseline](engineering/m1-5-1-qualification-baseline.md) |
 | What are the M1 scopes, approval record and checkpoint gates? | [Milestone 1 plan](engineering/milestone-1-plan.md) |
 | How does the eventual website fit together? | [Architecture overview](architecture/website-architecture.md) |
 | Where does source code belong? | [Source layout and application boundary](architecture/source-layout.md) |

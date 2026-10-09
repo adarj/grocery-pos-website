@@ -45,10 +45,13 @@ records the October 9, 2026 (UTC) outcome, signed closeout
 **M1.4.3 — Additional Reviewed Content & Navigation: REVIEWED AND DEFERRED;
 NO IMPLEMENTATION AUTHORIZED.** This deferral is part of the accepted M1.4 scope,
 not an implemented checkpoint.
-**M1.5 — Final Qualification: AUTHORIZED October 9, 2026 (UTC).** Immediate
-execution is limited to **M1.5.1 — Qualification Baseline & Adversarial Review**;
-the [assessment](engineering/m1-5-1-qualification-baseline.md) is under review,
-not formally accepted. M1.5.2 and M1.5.3 require separate execution authorization.
+**M1.5 — Final Qualification: AUTHORIZED October 9, 2026 (UTC); IN PROGRESS.**
+**M1.5.1 — Qualification Baseline & Adversarial Review: FORMALLY ACCEPTED October 9, 2026 (UTC).**
+The [canonical acceptance record](engineering/m1-5-1-qualification-baseline.md#formal-m151-acceptance--october-9-2026-utc)
+owns audit PASS, signed integration, exact-commit main CI and retained obligations.
+Acceptance validates the baseline and proposed methods, not completed manual tests
+or measurements. **M1.5.2 and M1.5.3: NOT AUTHORIZED FOR EXECUTION.**
+Corrective application changes are not authorized.
 Other assertions and P02–P08 remain withheld.
 The approved M1 plan and design-system specification remain governing; acceptance
 grants no additional disclosure, public release or deployment approval.

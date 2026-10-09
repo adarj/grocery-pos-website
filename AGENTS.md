@@ -95,10 +95,13 @@ records the October 9, 2026 (UTC) decision, signed closeout
 37877425523 (30/30 and source cleanliness). **M1.4.3 — Additional Reviewed Content
 & Navigation: REVIEWED AND DEFERRED; NO IMPLEMENTATION AUTHORIZED.** Its deferral
 is part of the accepted M1.4 scope, not implemented work.
-**M1.5 — Final Qualification: AUTHORIZED October 9, 2026 (UTC).** Immediate
-execution is limited to **M1.5.1 — Qualification Baseline & Adversarial Review**;
-its [assessment](docs/engineering/m1-5-1-qualification-baseline.md) is under review,
-not formally accepted. M1.5.2 and M1.5.3 require separate execution authorization.
+**M1.5 — Final Qualification: AUTHORIZED October 9, 2026 (UTC); IN PROGRESS.**
+**M1.5.1 — Qualification Baseline & Adversarial Review: FORMALLY ACCEPTED October 9, 2026 (UTC).**
+The [formal acceptance record](docs/engineering/m1-5-1-qualification-baseline.md#formal-m151-acceptance--october-9-2026-utc)
+owns the independent audit PASS, signed implementation and exact-commit main CI.
+The nine NOTE obligations remain outstanding; baseline acceptance is not execution
+of the proposed procedures. **M1.5.2 and M1.5.3: NOT AUTHORIZED FOR EXECUTION.**
+Corrective application changes are not authorized.
 No public release or deployment is authorized; other claim subjects and
 P02–P08 remain withheld.
 Follow the [M1 plan](docs/engineering/milestone-1-plan.md) and approved

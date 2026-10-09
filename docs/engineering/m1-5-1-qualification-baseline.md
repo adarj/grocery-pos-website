@@ -1,5 +1,10 @@
 # M1.5.1 qualification baseline and adversarial review
 
+**Current outcome:** M1.5.1 is formally accepted October 9, 2026 (UTC); see the
+[dated formal acceptance](#formal-m151-acceptance--october-9-2026-utc).
+The original assessment and implementation-time pending status below are preserved
+as historical evidence and superseded by that later outcome.
+
 ## Authorization and accepted baseline
 
 **M1.5 — Final Qualification: AUTHORIZED October 9, 2026 (UTC).**
@@ -561,3 +566,101 @@ No M1/M1.5 acceptance is recorded by this checkpoint.
 **M1.5.2 and M1.5.3: NOT AUTHORIZED FOR EXECUTION.**
 **Production deployment/public release: NOT AUTHORIZED.**
 No application correction, Git integration or deployment occurs here.
+
+## Formal M1.5.1 acceptance — October 9, 2026 (UTC)
+
+**M1.5.1 — Qualification Baseline & Adversarial Review: FORMALLY ACCEPTED October 9, 2026 (UTC).**
+
+The human maintainer reviewed the independent adversarial audit's PASS decision,
+accepted the qualification evidence inventory and proposed procedures, integrated
+the signed implementation, reviewed successful exact-commit main CI and explicitly
+accepted M1.5.1. This records an already-issued human decision, not acceptance
+inferred from green CI. It supersedes the original pending implementation/review
+statements above; their starting SHA, evidence classifications and chronology
+remain intact.
+
+### Independent audit disposition
+
+The original decision remains
+**M1.5.1 INDEPENDENT AUDIT — PASS, READY FOR HUMAN REVIEW**.
+No BLOCKER, MAJOR or MINOR defect was substantiated. The independent review
+upheld all 26 inventory classifications and all nine NOTE obligations; acceptance
+does not change those obligations to PASS or mark them fulfilled.
+
+### Signed integration and exact-commit main qualification
+
+Accepted signed implementation:
+[`35e4fd72c170f0f4a28286044bf890ab69f33cfc`](https://github.com/adarj/grocery-pos-website/commit/35e4fd72c170f0f4a28286044bf890ab69f33cfc),
+`docs(web): establish M1.5 qualification baseline`.
+Read-only GitHub verification reports a valid signature for this commit.
+
+[Main run 37883330881](https://github.com/adarj/grocery-pos-website/actions/runs/37883330881)
+and [Quality and browsers job 113667723774](https://github.com/adarj/grocery-pos-website/actions/runs/37883330881/job/113667723774)
+completed successfully on supported Ubuntu. Retrieved job steps/logs identify
+the exact implementation SHA and establish the following results; the unchanged
+Playwright configuration specifies zero retries.
+
+| Gate | Accepted implementation-commit result |
+| --- | --- |
+| Unit / fixture tests | PASS: 17/17 |
+| Development-supervisor regressions | PASS: 7/7 |
+| Chromium | PASS: 10/10 |
+| Firefox | PASS: 10/10 |
+| WebKit | PASS: 10/10 |
+| Browser aggregate / execution policy | PASS: 30/30; one worker, zero retries |
+| Lint / formatting / ReScript and TypeScript typechecking | PASS |
+| Production build | PASS |
+| Source cleanliness | PASS |
+
+These results qualify the merged implementation commit, not this future
+administrative acceptance-record commit. No local build or browser suite is rerun
+to record acceptance. The eventual human-signed administrative commit requires
+its own successful exact-SHA supported Ubuntu CI with the unchanged gates.
+
+### Accepted deliverables and remaining obligations
+
+Acceptance validates the baseline and planning methodology: the 26-requirement
+inventory; ten evidence sources with exact provenance; evidence classifications;
+architecture, security and disclosure assessments; nine NOTE obligations;
+reproducible manual protocols; proposed performance methodology; regression
+coverage assessment; and prioritized prospective M1.5.2 checklist.
+It does not establish that the proposed manual tests or measurements occurred.
+
+- **D13-01 — Screen-reader verification: DEFERRED, UNVERIFIED — M1.5.**
+- **D13-02 — Physical touch/device verification: DEFERRED, UNVERIFIED — M1.5.**
+- **D13-03 — Actual OS high-contrast verification: DEFERRED, UNVERIFIED — M1.5.**
+
+Production performance measurements, fresh exact-build artifact qualification
+and the other recorded NOTE follow-ups remain outstanding. Earlier human-reported
+homepage observations retain their original scope; no new AT/device/OS result,
+WCAG conformance, production performance certification or security certification
+is claimed.
+
+A142-02's approved retirement remains binding: **before introducing the next real
+application client island, restore appropriate production-browser regression
+coverage for hydration, activation, state updates, keyboard interaction and
+retained focus, as applicable to that component.** Counter initial-state SSR
+tests are not browser hydration evidence; restoration is not complete.
+Before the first additional public child route, make the identity link's
+current-page indication route-aware and qualify the resulting navigation.
+Preserve the exactly pinned ESLint 9.39.5 bounded exception and January 8, 2027
+review deadline.
+
+### Current milestone and authorization boundaries
+
+| Scope | Current disposition |
+| --- | --- |
+| M1.4 — Reviewed Templates & Content | FORMALLY ACCEPTED AND COMPLETE |
+| M1.5 — Final Qualification | AUTHORIZED, IN PROGRESS |
+| M1.5.1 — Qualification Baseline & Adversarial Review | FORMALLY ACCEPTED October 9, 2026 (UTC) |
+| M1.5.2 | NOT AUTHORIZED FOR EXECUTION |
+| M1.5.3 | NOT AUTHORIZED FOR EXECUTION |
+| Corrective application changes | NOT AUTHORIZED |
+| Production deployment/public release | NOT AUTHORIZED |
+
+M1 and M1.5 overall are not formally accepted. M1.5.2 requires a separate execution
+decision identifying actual environments, responsible operators and
+evidence-recording arrangements. No new product copy, routes, capabilities,
+commercial maturity assertions or broader disclosure approval are granted.
+Only the exact previously approved homepage subset remains eligible; other
+substantive assertions and P02–P08 remain withheld.

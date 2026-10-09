@@ -74,7 +74,7 @@ The canonical [acceptance record](docs/engineering/m1-3-3-design-system-qualific
 records the maintainer's explicit formal decision and signed main closeout
 `ad69f632129231bb2604a3a71678ac959900046c`, run 37827607606 (30/30).
 D13-01–D13-03 remain **DEFERRED, UNVERIFIED — M1.5**.
-**M1.4 — Reviewed Templates & Content: AUTHORIZED October 8, 2026 (UTC).**
+**M1.4 — Reviewed Templates & Content: FORMALLY ACCEPTED AND COMPLETE October 9, 2026 (UTC).**
 **M1.4.1 — Content Readiness & Publication Matrix: FORMALLY ACCEPTED October 8, 2026 (UTC).**
 The [content-readiness acceptance record](docs/product/m1-4-1-content-readiness.md#formal-m141-acceptance-2026-10-08-utc) owns candidate pages,
 evidence, unresolved maturity and separate disclosure decisions.
@@ -87,12 +87,15 @@ owns signed main commit `017fa33125310fb2d6bbc3bcd517ce9af738254d`, run
 resolved A142-01 and human-accepted A142-02 retirement. Before the next real
 application client island, restore applicable production-browser hydration,
 activation, state-update, keyboard and retained-focus coverage; SSR alone is not
-interaction evidence. **M1.4: NO-EXPANSION CLOSEOUT AUTHORIZED; administrative
-acceptance/qualification pending.** The maintainer approved no additional content
-or navigation October 8, 2026 (UTC); the [scope-closeout decision](docs/engineering/milestone-1-plan.md#m14-no-expansion-scope-closeout--october-8-2026-utc)
-is canonical. **M1.4.3 — Additional Reviewed Content & Navigation: REVIEWED AND
-DEFERRED; NO IMPLEMENTATION AUTHORIZED.** M1.5 is not yet authorized and has not
-started. No public release or deployment is authorized; other claim subjects and
+interaction evidence. The maintainer approved no additional content or navigation
+October 8, 2026 (UTC); the [scope-closeout decision](docs/engineering/milestone-1-plan.md#m14-no-expansion-scope-closeout--october-8-2026-utc)
+preserves that chronology. The [formal M1.4 acceptance](docs/engineering/milestone-1-plan.md#formal-m14-acceptance--october-9-2026-utc)
+records the October 9, 2026 (UTC) decision, signed closeout
+`8729179ee18b0d154d8fa63b144d1d98212f8f39` and successful main run
+37877425523 (30/30 and source cleanliness). **M1.4.3 — Additional Reviewed Content
+& Navigation: REVIEWED AND DEFERRED; NO IMPLEMENTATION AUTHORIZED.** Its deferral
+is part of the accepted M1.4 scope, not implemented work. M1.5 is **NOT AUTHORIZED**
+and has not started. No public release or deployment is authorized; other claim subjects and
 P02–P08 remain withheld.
 Follow the [M1 plan](docs/engineering/milestone-1-plan.md) and approved
 [design-system specification](docs/design/design-system-specification.md).

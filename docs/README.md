@@ -24,7 +24,7 @@ records the maintainer's explicit formal decision, signed main closeout
 (30/30 and source cleanliness). M1.3.4's historical CONDITIONAL PASS is preserved;
 its human gates were resolved by five human-reported PASS observations and three
 explicitly approved deferrals. D13-01–D13-03 remain **DEFERRED, UNVERIFIED — M1.5**.
-**M1.4 — Reviewed Templates & Content: AUTHORIZED October 8, 2026 (UTC).**
+**M1.4 — Reviewed Templates & Content: FORMALLY ACCEPTED AND COMPLETE October 9, 2026 (UTC).**
 **M1.4.1 — Content Readiness & Publication Matrix: FORMALLY ACCEPTED October 8, 2026 (UTC).**
 The [accepted content-readiness register](product/m1-4-1-content-readiness.md#formal-m141-acceptance-2026-10-08-utc) owns candidate-page
 readiness, claim provenance and separate publication decisions. Its
@@ -36,11 +36,15 @@ owns signed main commit `017fa33125310fb2d6bbc3bcd517ce9af738254d`, successful
 run 37848845430 (30/30 and source cleanliness), the historical conditional audit,
 resolved findings, human-accepted Counter coverage retirement and human-reported
 manual checks. Browser interaction coverage must return before the next real
-application client island. **M1.4: NO-EXPANSION CLOSEOUT AUTHORIZED; administrative
-acceptance/qualification pending.** The [dated scope decision](engineering/milestone-1-plan.md#m14-no-expansion-scope-closeout--october-8-2026-utc)
-records the maintainer's October 8, 2026 (UTC) no-expansion approval and
+application client island. The [dated scope decision](engineering/milestone-1-plan.md#m14-no-expansion-scope-closeout--october-8-2026-utc)
+preserves the maintainer's October 8, 2026 (UTC) no-expansion approval.
+The [formal M1.4 acceptance](engineering/milestone-1-plan.md#formal-m14-acceptance--october-9-2026-utc)
+records the October 9, 2026 (UTC) outcome, signed closeout
+`8729179ee18b0d154d8fa63b144d1d98212f8f39` and successful main run
+37877425523 (30/30 and source cleanliness).
 **M1.4.3 — Additional Reviewed Content & Navigation: REVIEWED AND DEFERRED;
-NO IMPLEMENTATION AUTHORIZED.** M1.5 is proposed, not yet authorized or started.
+NO IMPLEMENTATION AUTHORIZED.** This deferral is part of the accepted M1.4 scope,
+not an implemented checkpoint. M1.5 is **NOT AUTHORIZED** and has not started.
 Other assertions and P02–P08 remain withheld.
 The approved M1 plan and design-system specification remain governing; acceptance
 grants no additional disclosure, public release or deployment approval.
@@ -58,7 +62,7 @@ grants no additional disclosure, public release or deployment approval.
 | What qualifies the implemented design-system subset, and what remains manual? | [M1.3.3 design-system qualification](engineering/m1-3-3-design-system-qualification.md) |
 | How is the first reviewed homepage implemented and qualified? | [M1.4.2 homepage](engineering/m1-4-2-homepage-qualification.md) |
 | What was accepted and qualified in M1.2, and which limits remain? | [Engineering-preview shell](engineering/m1-2-shell-qualification.md) |
-| What closes the implemented M1.4 scope without further content? | [M1.4 no-expansion decision](engineering/milestone-1-plan.md#m14-no-expansion-scope-closeout--october-8-2026-utc) |
+| What formally accepts M1.4's implemented scope and no-expansion decision? | [M1.4 formal acceptance](engineering/milestone-1-plan.md#formal-m14-acceptance--october-9-2026-utc) |
 | What are the M1 scopes, approval record and checkpoint gates? | [Milestone 1 plan](engineering/milestone-1-plan.md) |
 | How does the eventual website fit together? | [Architecture overview](architecture/website-architecture.md) |
 | Where does source code belong? | [Source layout and application boundary](architecture/source-layout.md) |

@@ -29,7 +29,7 @@ and successful main run 37827607606 (30/30 and source cleanliness).
 M1.3.4's historical CONDITIONAL PASS remains intact; its human gates were resolved
 by five human-reported PASS observations and three explicitly approved deferrals.
 D13-01–D13-03 remain **DEFERRED, UNVERIFIED — M1.5**.
-**M1.4 — Reviewed Templates & Content: AUTHORIZED October 8, 2026 (UTC).**
+**M1.4 — Reviewed Templates & Content: FORMALLY ACCEPTED AND COMPLETE October 9, 2026 (UTC).**
 **M1.4.1 — Content Readiness & Publication Matrix: FORMALLY ACCEPTED October 8, 2026 (UTC).**
 The [accepted content-readiness register](docs/product/m1-4-1-content-readiness.md#formal-m141-acceptance-2026-10-08-utc) proposes a
 bounded first content slice. The maintainer subsequently authorized M1.4.2 on
@@ -43,12 +43,16 @@ worker, zero retries and source cleanliness. The original conditional audit rema
 historical; the maintainer accepted the bounded Counter browser-coverage retirement
 and reported the requested manual homepage checks passing. Restore applicable
 browser interaction tests before the next real application client island.
-**M1.4: NO-EXPANSION CLOSEOUT AUTHORIZED; administrative acceptance/qualification
-pending.** The maintainer approved no further content or navigation October 8,
-2026 (UTC); see the [canonical scope closeout](docs/engineering/milestone-1-plan.md#m14-no-expansion-scope-closeout--october-8-2026-utc).
+The maintainer approved no further content or navigation October 8, 2026 (UTC);
+the [scope closeout](docs/engineering/milestone-1-plan.md#m14-no-expansion-scope-closeout--october-8-2026-utc)
+preserves that decision. The [formal M1.4 acceptance](docs/engineering/milestone-1-plan.md#formal-m14-acceptance--october-9-2026-utc)
+records the October 9, 2026 (UTC) outcome, signed closeout
+`8729179ee18b0d154d8fa63b144d1d98212f8f39` and successful main run
+37877425523 (30/30 and source cleanliness).
 **M1.4.3 — Additional Reviewed Content & Navigation: REVIEWED AND DEFERRED;
-NO IMPLEMENTATION AUTHORIZED.** M1.5 is the proposed next checkpoint, not yet
-authorized or started. Other assertions and P02–P08 remain withheld. No public
+NO IMPLEMENTATION AUTHORIZED.** This intentional deferral is part of M1.4's
+accepted scope; no additional content was implemented. M1.5 is **NOT AUTHORIZED**
+and has not started. Other assertions and P02–P08 remain withheld. No public
 release or deployment is authorized. The human maintainer
 formally accepted Milestone 0 and authorized M1 on October 8, 2026 (UTC).
 Final main [CI run 37727162386](https://github.com/adarj/grocery-pos-website/actions/runs/37727162386)

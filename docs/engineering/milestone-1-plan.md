@@ -19,7 +19,7 @@ and successful main run 37827607606 (30/30 and source cleanliness).
 M1.3.4's historical CONDITIONAL PASS is preserved; five human-reported PASS
 observations and three explicitly approved M1.5 deferrals resolved its human gates.
 D13-01–D13-03 remain **DEFERRED, UNVERIFIED — M1.5**.
-**M1.4 — Reviewed Templates & Content: AUTHORIZED October 8, 2026 (UTC).**
+**M1.4 — Reviewed Templates & Content: FORMALLY ACCEPTED AND COMPLETE October 9, 2026 (UTC).**
 **M1.4.1 — Content Readiness & Publication Matrix: FORMALLY ACCEPTED October 8, 2026 (UTC).**
 The [content-readiness register](../product/m1-4-1-content-readiness.md) owns the internal
 candidate inventory and claim/evidence decisions. The maintainer subsequently
@@ -30,11 +30,14 @@ The [formal homepage acceptance record](m1-4-2-homepage-qualification.md#formal-
 owns signed main commit `017fa33125310fb2d6bbc3bcd517ce9af738254d`, successful
 main run 37848845430 (30/30 and source cleanliness), the preserved conditional
 audit, resolved A142-01, human-accepted Counter coverage retirement and human
-manual observations. **M1.4: NO-EXPANSION CLOSEOUT AUTHORIZED; administrative
-acceptance/qualification pending.** The maintainer approved no additional content
-or navigation October 8, 2026 (UTC); the [dated scope decision](#m14-no-expansion-scope-closeout--october-8-2026-utc)
-records **M1.4.3 — Additional Reviewed Content & Navigation: REVIEWED AND DEFERRED;
-NO IMPLEMENTATION AUTHORIZED**. M1.5 is not yet authorized or started.
+manual observations. The maintainer approved no additional content or navigation
+October 8, 2026 (UTC); the [dated scope decision](#m14-no-expansion-scope-closeout--october-8-2026-utc)
+preserves that history. The [formal M1.4 acceptance](#formal-m14-acceptance--october-9-2026-utc)
+records the October 9, 2026 (UTC) outcome, signed closeout
+`8729179ee18b0d154d8fa63b144d1d98212f8f39` and successful main run 37877425523
+(30/30 and source cleanliness). **M1.4.3 — Additional Reviewed Content & Navigation:
+REVIEWED AND DEFERRED; NO IMPLEMENTATION AUTHORIZED** is part of the accepted scope,
+not implemented work. M1.5 is **NOT AUTHORIZED** and has not started.
 Later implementation, public release and deployment remain unauthorized.
 Later checkpoints retain their scope and human review gates. Specification approval grants no publication or
 production deployment authorization. Milestone 0 is complete and accepted;
@@ -80,8 +83,8 @@ samples as product claims or delete unique coverage without replacement.
 | M1.1 — Specifications | Approved audience/IA, target navigation and templates, visual direction and component contracts; accepted M0 baseline | Adversarial audit PASS; exact feature CI PASS; working document links; documentation-only scope | No components, assets, public copy, routes or M1.2 execution | Specification/design approval recorded October 8, 2026 (UTC); merged main CI passes |
 | M1.2 — Internal engineering-preview shell | Approved identity header, skip link, responsive container, existing qualification proof and minimal footer; essential accessible styling; navigation/disclosure only when eligible destinations justify them | Server-first/client-reference review; JS-disabled usability; keyboard/focus/axe; measured actual contrast/control states; narrow-to-wide/pseudo checks; preserved security/hydration/publication regressions; typecheck/build; full supported CI | No fabricated marketing content, unavailable routes/links, pricing, commerce, accounts, contact forms, backend services, speculative features, mega-menu/search, real second language or broad token library | Maintainer visual review and formal acceptance recorded October 8, 2026 (UTC); first-implementation ESLint review satisfied by explicit retention approval |
 | M1.3 — Tokens/primitives | Measure palette pairs; consolidate minimal M1.2 styling into semantic tokens and demonstrated container/section/link/button/card/callout patterns | Contrast/state pairing sheet; responsive/expanded-text/forced-colors/reduced-motion checks; proportionate tests and canonical gates | No UI framework, remote fonts, generic component factory, complex forms/data grids or commerce controls | FORMALLY ACCEPTED October 8, 2026 (UTC); measured 43-property system and no-extraction composition retained; merged closeout/main CI 30/30; three approved, unverified M1.5 deferrals remain obligations |
-| M1.4 — Reviewed templates/content | Authorized October 8, 2026 (UTC); M1.4.1 assesses content/evidence first; later template work requires an approved exact set, M1.3 and explicit checkpoint authorization | M1.4.1 documentation review, links/anchors and scope integrity; later implementation retains claim/exposure, SSR, content-specific accessibility/performance and CI gates | No runtime work in M1.4.1; no requirement to populate every area, fake claims, CMS, pricing, commerce/account or backend | M1.4.1 FORMALLY ACCEPTED October 8, 2026 (UTC); approve each disclosure set separately; M1.4.2 FORMALLY ACCEPTED October 8, 2026 (UTC) only for the exact reviewed homepage; signed main commit `017fa33125310fb2d6bbc3bcd517ce9af738254d`, run 37848845430 (30/30); M1.4 no-expansion closeout authorized, administrative acceptance/qualification pending; M1.4.3 reviewed and deferred, no implementation authorized; [dated decision](#m14-no-expansion-scope-closeout--october-8-2026-utc) |
-| M1.5 — Final qualification (proposed) | Adversarial architecture, publication, accessibility, responsive and measured performance review of the implemented scope | Chromium/Firefox/WebKit; manual screen-reader/keyboard/zoom/contrast review; responsive matrix; static/client graph and asset review; canonical local + CI evidence | No deployment certification, WCAG claim from automation, speculative scanners or features added to fill gaps | NOT YET AUTHORIZED; not started. Accept/correct M1 based on actual evidence after separate authorization; no deployment approval |
+| M1.4 — Reviewed templates/content | Authorized October 8, 2026 (UTC); M1.4.1 assesses content/evidence first; later template work requires an approved exact set, M1.3 and explicit checkpoint authorization | M1.4.1 documentation review, links/anchors and scope integrity; later implementation retains claim/exposure, SSR, content-specific accessibility/performance and CI gates | No runtime work in M1.4.1; no requirement to populate every area, fake claims, CMS, pricing, commerce/account or backend | M1.4.1 FORMALLY ACCEPTED October 8, 2026 (UTC); approve each disclosure set separately; M1.4.2 FORMALLY ACCEPTED October 8, 2026 (UTC) only for the exact reviewed homepage; signed main commit `017fa33125310fb2d6bbc3bcd517ce9af738254d`, run 37848845430 (30/30); M1.4 FORMALLY ACCEPTED AND COMPLETE October 9, 2026 (UTC); signed scope closeout `8729179ee18b0d154d8fa63b144d1d98212f8f39`, main run 37877425523 (30/30 and source cleanliness); M1.4.3 reviewed and deferred, no implementation authorized; [formal outcome](#formal-m14-acceptance--october-9-2026-utc) |
+| M1.5 — Final qualification (proposed) | Adversarial architecture, publication, accessibility, responsive and measured performance review of the implemented scope | Chromium/Firefox/WebKit; manual screen-reader/keyboard/zoom/contrast review; responsive matrix; static/client graph and asset review; canonical local + CI evidence | No deployment certification, WCAG claim from automation, speculative scanners or features added to fill gaps | NOT AUTHORIZED; not started. Accept/correct M1 based on actual evidence after separate authorization; no deployment approval |
 
 The maintainer explicitly approved D13-01 screen-reader, D13-02 physical-device
 and D13-03 actual OS high-contrast deferrals to M1.5 on October 8, 2026 (UTC).
@@ -370,3 +373,105 @@ above, targeted-update review triggers and January 8, 2027 maximum review date r
 Actual content owners, public destination sets, contact channels and assets still
 require separate approval. Later checkpoint scope and deployment decisions remain
 human gates; neither specification approval nor green CI grants publication.
+
+## Formal M1.4 acceptance — October 9, 2026 (UTC)
+
+**M1.4 — Reviewed Templates & Content: FORMALLY ACCEPTED AND COMPLETE October 9, 2026 (UTC).**
+
+The human maintainer explicitly accepted M1.4 after reviewing the independent
+no-expansion closeout audit, integrating the signed closeout commit and verifying
+successful exact-SHA main CI. This records an already-issued human decision;
+it does not authorize further implementation, M1.5 or deployment.
+
+### Acceptance chronology and audit disposition
+
+- **October 8, 2026 (UTC):** M1.4.1 and M1.4.2 were individually formally accepted.
+  The maintainer also approved no additional M1.4 content/navigation, deferred
+  M1.4.3 and authorized the documentation-only scope closeout.
+- **October 9, 2026 (UTC):** the signed closeout commit and successful main CI
+  were verified; the maintainer explicitly declared M1.4 accepted and complete.
+
+The independent audit's original decision remains
+**M1.4 NO-EXPANSION CLOSEOUT — PASS, READY FOR HUMAN REVIEW**.
+No BLOCKER, MAJOR or MINOR findings were substantiated. This formal outcome
+supersedes the then-pending acceptance/qualification statements in the
+[October 8 scope-closeout record](#m14-no-expansion-scope-closeout--october-8-2026-utc);
+its starting baseline, decision dates and historical evidence remain unchanged.
+
+### Signed closeout and exact-commit main qualification
+
+Accepted signed closeout:
+[`8729179ee18b0d154d8fa63b144d1d98212f8f39`](https://github.com/adarj/grocery-pos-website/commit/8729179ee18b0d154d8fa63b144d1d98212f8f39),
+`docs(web): close M1.4 scope without content expansion`.
+The maintainer verified signed integration and main qualification on October 9,
+2026 (UTC). Read-only inspection confirms the commit identity, subject and
+embedded signature; the GitHub job log checks out that exact SHA from main.
+
+[Main run 37877425523](https://github.com/adarj/grocery-pos-website/actions/runs/37877425523)
+and its [Quality and browsers job](https://github.com/adarj/grocery-pos-website/actions/runs/37877425523/job/113649110848)
+completed successfully on supported Ubuntu. Job steps and logs establish:
+
+| Gate | Accepted closeout-commit result |
+| --- | --- |
+| Nix/toolchain, frozen dependency installation and browser provisioning | PASS |
+| Unit / retained SSR fixture tests | PASS: 17/17 |
+| Development-supervisor regressions | PASS: 7/7 |
+| Chromium | PASS: 10/10 |
+| Firefox | PASS: 10/10 |
+| WebKit | PASS: 10/10 |
+| Browser aggregate / execution policy | PASS: 30/30, one browser worker, zero test retries |
+| Lint / formatting / canonical typecheck / production build | PASS |
+| Source cleanliness | PASS |
+
+These results qualify the merged no-expansion closeout commit, not this subsequent
+administrative acceptance-record change. The future human-signed acceptance-record
+commit requires its own successful exact-SHA Ubuntu CI with the unchanged gates.
+No local build or browser suite is rerun merely to record the acceptance decision.
+
+### Accepted milestone scope
+
+| Checkpoint | Accepted disposition and boundary |
+| --- | --- |
+| M1.4.1 — Content Readiness & Publication Matrix | FORMALLY ACCEPTED October 8, 2026 (UTC). The [canonical register](../product/m1-4-1-content-readiness.md#formal-m141-acceptance-2026-10-08-utc) retains page-candidate analysis, claim/evidence provenance, independent maturity/disclosure controls and withholding decisions. |
+| M1.4.2 — First Reviewed Homepage Template | FORMALLY ACCEPTED October 8, 2026 (UTC). The [canonical homepage record](m1-4-2-homepage-qualification.md#formal-m142-acceptance--october-8-2026-utc) retains the approved four-section `/en` homepage, exact wording/metadata, server-first architecture, scoped accessibility evidence and regression migration. |
+| M1.4.3 — Additional Reviewed Content & Navigation | **REVIEWED AND DEFERRED; NO IMPLEMENTATION AUTHORIZED.** It was not implemented, qualified or independently accepted as a completed implementation. Its intentional deferral is part of the accepted M1.4 scope decision and does not prevent milestone completion. |
+
+M1.3 remains formally accepted. Additional content may be reconsidered only through
+the existing [re-entry criteria](#future-content-re-entry-criteria): new evidence,
+exact disclosure approvals and separate implementation authorization.
+**Next routes. ReScript models. React presents. APIs connect.**
+The accepted 43-property token foundation and no-extraction composition remain unchanged.
+
+### Publication boundaries and binding future obligations
+
+Only the exact M1.4.2 homepage statements under the bounded C01/C02/C04/C05 subset,
+their approved composition and metadata retain disclosure approval. No entire claim
+category is approved; other assertions and P02–P08 remain **WITHHELD**.
+Acceptance establishes neither production retail suitability, commercial product
+availability, customer deployment, pilot access, verified hardware compatibility,
+support commitments, public pricing/commerce nor additional public routes.
+Unknown maturity remains unresolved.
+
+**M1.4 acceptance is not permission to deploy the website.**
+**M1.5 — Final Qualification: NOT AUTHORIZED; not started.**
+**Production deployment/public release: NOT AUTHORIZED.**
+
+Before the next real application client island, restore appropriate
+production-browser coverage for hydration, activation, state updates, keyboard
+behavior and retained focus, as applicable to that component. Counter SSR tests
+are not equivalent to live browser hydration tests; restoration remains a future gate.
+
+Before the first additional public child route, make the shared identity link's
+current-page indication route-aware and qualify the resulting navigation behavior,
+including current-page semantics, language/metadata, keyboard, accessibility and reflow.
+
+- D13-01 — Screen reader: **DEFERRED, UNVERIFIED — M1.5**.
+- D13-02 — Physical touch/device: **DEFERRED, UNVERIFIED — M1.5**.
+- D13-03 — Actual OS high contrast: **DEFERRED, UNVERIFIED — M1.5**.
+
+Human-reported homepage observations retain their recorded scope and do not
+complete those deferrals or establish full WCAG conformance. Correct discovered
+current defects; no deferred check is silently waived.
+Preserve exactly pinned ESLint 9.39.5, its bounded exception controls and the
+January 8, 2027 review deadline. No runtime, test, configuration, dependency or
+publication change is authorized by this administrative acceptance record.

@@ -43,9 +43,13 @@ worker, zero retries and source cleanliness. The original conditional audit rema
 historical; the maintainer accepted the bounded Counter browser-coverage retirement
 and reported the requested manual homepage checks passing. Restore applicable
 browser interaction tests before the next real application client island.
-M1.4 remains authorized and incomplete; M1.4.3 is not authorized and M1.5 has not
-started. Other assertions and P02–P08 remain withheld. No public release or
-deployment is authorized. The human maintainer
+**M1.4: NO-EXPANSION CLOSEOUT AUTHORIZED; administrative acceptance/qualification
+pending.** The maintainer approved no further content or navigation October 8,
+2026 (UTC); see the [canonical scope closeout](docs/engineering/milestone-1-plan.md#m14-no-expansion-scope-closeout--october-8-2026-utc).
+**M1.4.3 — Additional Reviewed Content & Navigation: REVIEWED AND DEFERRED;
+NO IMPLEMENTATION AUTHORIZED.** M1.5 is the proposed next checkpoint, not yet
+authorized or started. Other assertions and P02–P08 remain withheld. No public
+release or deployment is authorized. The human maintainer
 formally accepted Milestone 0 and authorized M1 on October 8, 2026 (UTC).
 Final main [CI run 37727162386](https://github.com/adarj/grocery-pos-website/actions/runs/37727162386)
 qualifies commit `780ba8b89364fd16dba8609a0cb2a13779c24348`, including all 21

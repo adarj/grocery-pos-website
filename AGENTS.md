@@ -87,9 +87,13 @@ owns signed main commit `017fa33125310fb2d6bbc3bcd517ce9af738254d`, run
 resolved A142-01 and human-accepted A142-02 retirement. Before the next real
 application client island, restore applicable production-browser hydration,
 activation, state-update, keyboard and retained-focus coverage; SSR alone is not
-interaction evidence. M1.4 remains authorized and incomplete; M1.4.3 is not
-authorized and M1.5 has not started. No public release or deployment is authorized;
-other claim subjects and P02–P08 remain withheld.
+interaction evidence. **M1.4: NO-EXPANSION CLOSEOUT AUTHORIZED; administrative
+acceptance/qualification pending.** The maintainer approved no additional content
+or navigation October 8, 2026 (UTC); the [scope-closeout decision](docs/engineering/milestone-1-plan.md#m14-no-expansion-scope-closeout--october-8-2026-utc)
+is canonical. **M1.4.3 — Additional Reviewed Content & Navigation: REVIEWED AND
+DEFERRED; NO IMPLEMENTATION AUTHORIZED.** M1.5 is not yet authorized and has not
+started. No public release or deployment is authorized; other claim subjects and
+P02–P08 remain withheld.
 Follow the [M1 plan](docs/engineering/milestone-1-plan.md) and approved
 [design-system specification](docs/design/design-system-specification.md).
 The [shell record](docs/engineering/m1-2-shell-qualification.md) preserves audit/CI

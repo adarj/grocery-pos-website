@@ -2,7 +2,11 @@
 
 ## Authorization, baseline and checkpoint status
 
-**M1.5.2 — Accessibility & Performance Qualification: AUTHORIZED October 9, 2026 (UTC); technical execution complete; scoped human-reported D13-01–D13-03 and M152-T01 PASS observations recorded; Windows forced-colors UNVERIFIED, accepted bounded limitation; UNDER REVIEW, NOT FORMALLY ACCEPTED.**
+**M1.5.2 — Accessibility & Performance Qualification: FORMALLY ACCEPTED AND COMPLETE October 9, 2026 (UTC).**
+
+The [dated formal acceptance record](#formal-m152-acceptance--october-9-2026-utc) owns the human decision, signed main integration, exact-SHA CI and accepted qualification limitations. It supersedes the earlier pending checkpoint statuses and acceptance gates below; their historical evidence and verification limits remain unchanged.
+
+Pre-acceptance status (historical): **M1.5.2 — Accessibility & Performance Qualification: AUTHORIZED October 9, 2026 (UTC); technical execution complete; scoped human-reported D13-01–D13-03 and M152-T01 PASS observations recorded; Windows forced-colors UNVERIFIED, accepted bounded limitation; UNDER REVIEW, NOT FORMALLY ACCEPTED.**
 
 Original technical-collection verdict (historical): **M1.5.2 TECHNICAL QUALIFICATION COMPLETE — READY FOR HUMAN MANUAL EVIDENCE AND INDEPENDENT AUDIT**
 
@@ -592,6 +596,8 @@ No supplementary accessibility settings were tested.
 
 ## Current manual-evidence reconciliation — October 9, 2026 (UTC)
 
+This reconciliation records the final pre-acceptance evidence state. Its human observations and limitations remain applicable; the later [formal acceptance](#formal-m152-acceptance--october-9-2026-utc) supersedes its pending integration, CI and checkpoint-acceptance statements and those in the following addenda.
+
 This is the authoritative current summary of the October 9 human observations, including the [M152-T01 text-spacing addendum](#m152-t01--human-manual-text-spacing-qualification-october-9-2026-utc), and the [explicit Windows limitation decision](#windows-forced-colors-limitation-decision--october-9-2026-utc). It reconciles reported observations against the [accepted protocols](m1-5-1-qualification-baseline.md#d13-01--actual-screen-reader-protocol); it is documentation review, not new execution or formal acceptance.
 
 The original reconciliation started at `fdb4a7ae3ab293bb91a0eae88aaf61299af609fe` on `docs/m1-5-2-qualification-results`. Main/origin-main and the reported accepted application baseline were `a19b9f8447573534326aae189f6a9db7d0a05e6f`; the branch then contained three subsequent documentation-only commits. Their local objects contained PGP signatures, but that reconciliation claimed no new cryptographic verification.
@@ -734,3 +740,60 @@ The separate [Windows forced-colors limitation decision](#windows-forced-colors-
 The independent final disposition reconciliation audit of `834bffca8449a7a1326aa350e7748e2dc1dfbc34` returned **PASS — ready for human integration review**. No substantiated BLOCKER, MAJOR or MINOR application finding remains within the reviewed evidence. That audit and this limitation decision do not assert independent manual execution or complete verification. The independently audited A152A-01 and A152M-01 resolutions remain intact; the original temporary evidence loss and replacement evidence's laboratory/output limitations are unchanged.
 
 **M1.5.2 remains UNDER REVIEW, NOT FORMALLY ACCEPTED.** Human signed integration, successful exact-SHA supported Ubuntu CI for this documentation commit and explicit checkpoint acceptance remain separate gates. This decision authorizes no additional testing, application correction, content disclosure, milestone acceptance or deployment. **M1.5.3, corrective application changes and production deployment/public release remain NOT AUTHORIZED.** Existing client-island, route-awareness, security and tooling obligations remain binding.
+
+## Formal M1.5.2 acceptance — October 9, 2026 (UTC)
+
+**M1.5.2 — Accessibility & Performance Qualification: FORMALLY ACCEPTED AND COMPLETE October 9, 2026 (UTC).**
+
+Following verified signed main integration and successful exact-SHA CI, the human maintainer explicitly stated on October 9, 2026 (UTC):
+
+> I formally accept M1.5.2 — Accessibility & Performance Qualification.
+
+This records an already-issued human decision. It supersedes the historical UNDER REVIEW, NOT FORMALLY ACCEPTED statuses and provisional acceptance gates above without changing the evidence available at those earlier stages. The accepted M1.5.1 baseline, original collection records, evidence-loss chronology, replacement observations and manual addenda remain intact.
+
+### Signed integration and exact-commit CI
+
+Accepted signed main integration: [`b5c090709145d3fc48efef0f12e3aa8630f7d07e`](https://github.com/adarj/grocery-pos-website/commit/b5c090709145d3fc48efef0f12e3aa8630f7d07e), `docs(web): integrate M1.5.2 qualification evidence`. Read-only verification of the commit signature succeeded with signing-key fingerprint `681BCC59679E3F0D41B14917B7FC55469B5007B0`.
+
+[GitHub Actions run 37978959204](https://github.com/adarj/grocery-pos-website/actions/runs/37978959204) completed successfully for that exact SHA on main. Its [Quality and browsers job](https://github.com/adarj/grocery-pos-website/actions/runs/37978959204/job/113984287348) ran the unchanged `nix develop --command just ci` workflow in the supported Ubuntu 24.04 x86_64 environment. Run metadata, job steps and execution logs were reviewed read-only for this record.
+
+| Qualification gate | Verified integration-commit result |
+| --- | --- |
+| Unit/fixture tests | PASS — 17/17 |
+| Development-supervisor regressions | PASS — 7/7 |
+| Chromium production scenarios | PASS — 10/10 |
+| Firefox production scenarios | PASS — 10/10 |
+| WebKit production scenarios | PASS — 10/10 |
+| Browser aggregate and execution policy | PASS — 30/30; one worker; zero configured retries |
+| Lint and formatting | PASS — zero-warning lint and ReScript formatting checks |
+| Typechecking and production build | PASS — ReScript, generated Next types, TypeScript and Next production build |
+| Source cleanliness | PASS — tracked diff, staging and nonignored untracked-file checks |
+
+The worker/retry policy remains the unchanged Playwright configuration. These results qualify the signed integration SHA above, not the future administrative acceptance-record commit. No build, browser suite or new manual qualification was run to prepare this acceptance record. After human signed integration, the new documentation commit requires its own successful exact-SHA supported Ubuntu CI with the unchanged three-browser matrix.
+
+### Independent review and accepted evidence scope
+
+The [replacement-evidence follow-up audit](#corroborated-evidence-recovery-disposition) returned **M1.5.2 FOLLOW-UP AUDIT — PASS, A152A-01 RESOLVED; MANUAL GATES OUTSTANDING**. The focused current-summary correction audit returned **PASS; A152M-01 RESOLVED**. The final disposition reconciliation audit of `834bffca8449a7a1326aa350e7748e2dc1dfbc34` returned **PASS — ready for human integration review**. The original conditional audit decisions remain historical evidence. No substantiated BLOCKER, MAJOR or MINOR application finding remains within the reviewed evidence.
+
+The original temporary raw evidence was lost; it was not recovered or independently reviewed after its loss. A152A-01's resolution concerns corrected documentation and independently inspected replacement evidence within the recorded scope. Replacement performance measurements remain local laboratory observations; artifact and client-import conclusions retain their inspected-output boundaries. Acceptance establishes neither field performance metrics nor universal secret detection or security certification.
+
+| Manual record | Accepted human-reported observation and scope |
+| --- | --- |
+| D13-01 / M152-S01 | PASS — 8/8 VoiceOver/Safari checks on macOS 15.6, within the recorded environment |
+| D13-02 / M152-D01 | PASS — 6/6 iPhone 13 Pro/Safari checks on iOS 18.7.8, within the recorded environment |
+| D13-03 / M152-H01 | PASS — 5/5 macOS Increase Contrast checks, limited to that setting |
+| [M152-T01](#m152-t01--human-manual-text-spacing-qualification-october-9-2026-utc) | PASS — 5/5 Safari 18.6 text-spacing checks on macOS 15.6 at 1324 CSS px, after P03 clarification |
+
+These observations are attributed to the human maintainer, not independently executed by the recording agent. M152-T01's initial P03 FAIL, readable two-line heading wrap, follow-up absence of clipping, overlap, horizontal overflow or lost content, and final PASS remain preserved. This does not establish manual coverage of every width, platform or combined 200% configuration.
+
+The [Windows forced-colors limitation decision](#windows-forced-colors-limitation-decision--october-9-2026-utc) explicitly accepts missing genuine Windows testing as a bounded limitation of the current pre-production homepage. **Windows forced-colors remains UNVERIFIED; Q19 remains PARTIALLY VERIFIED.** Automated forced-colors emulation and genuine macOS Increase Contrast observations remain separate evidence. The macOS session reported unchanged webpage appearance; it does not establish webpage forced-color transformation or Windows compatibility.
+
+The [A152M-02 decision](#a152m-02-evidence-provenance-limitation-decision--october-9-2026-utc) explicitly accepts the documented provenance limitations for this homepage. Exact running-build identity and the unrecorded environment, browser, display and VoiceOver transcript/procedure metadata remain missing and unverified. Acceptance does not promote Q11/Q12/Q16–Q19 or other partially verified requirements to complete verification. It implies neither universal accessibility nor WCAG conformance.
+
+### Retained authority and future obligations
+
+M1.5 overall remains **IN PROGRESS, NOT FORMALLY COMPLETE**; M1 overall remains **NOT FORMALLY COMPLETE**. **M1.5.3, corrective application changes and production deployment/public release remain NOT AUTHORIZED.** Checkpoint acceptance is separate from release approval and authorizes no hosting, Vercel, domain, HTTPS/HSTS or operational changes.
+
+Only the exact approved homepage statements under the bounded C01/C02/C04/C05 subset, their composition and metadata retain disclosure approval. Additional homepage content, new routes and P02–P08 remain unauthorized and withheld. No commercial availability, live-retail suitability or new maturity classification is approved.
+
+Before introducing the next real application client island, restore applicable production-browser hydration, activation, state-update, keyboard and retained-focus regression coverage; retained Counter SSR tests do not satisfy that gate. Before the first additional public child route, make the shared identity link's current-page handling route-aware and qualify its navigation behavior. Existing security boundaries, the bounded ESLint 9.39.5 exception and January 8, 2027 review deadline remain binding. None of these future implementation gates is authorized by this acceptance record.

@@ -74,7 +74,8 @@ The canonical [acceptance record](docs/engineering/m1-3-3-design-system-qualific
 records the maintainer's explicit formal decision and signed main closeout
 `ad69f632129231bb2604a3a71678ac959900046c`, run 37827607606 (30/30).
 At M1.3 acceptance, D13-01–D13-03 were **DEFERRED, UNVERIFIED — M1.5**;
-the later October 9 human observations are summarized below.
+the later scoped human observations and accepted limitations are recorded in
+the M1.5.2 acceptance linked below.
 **M1.4 — Reviewed Templates & Content: FORMALLY ACCEPTED AND COMPLETE October 9, 2026 (UTC).**
 **M1.4.1 — Content Readiness & Publication Matrix: FORMALLY ACCEPTED October 8, 2026 (UTC).**
 The [content-readiness acceptance record](docs/product/m1-4-1-content-readiness.md#formal-m141-acceptance-2026-10-08-utc) owns candidate pages,
@@ -100,20 +101,17 @@ is part of the accepted M1.4 scope, not implemented work.
 **M1.5.1 — Qualification Baseline & Adversarial Review: FORMALLY ACCEPTED October 9, 2026 (UTC).**
 The [formal acceptance record](docs/engineering/m1-5-1-qualification-baseline.md#formal-m151-acceptance--october-9-2026-utc)
 owns the independent audit PASS, signed implementation and exact-commit main CI.
-**M1.5.2 — Accessibility & Performance Qualification: AUTHORIZED October 9, 2026 (UTC); technical qualification completed; UNDER REVIEW, NOT FORMALLY ACCEPTED.**
-The [current reconciliation](docs/engineering/m1-5-2-qualification-results.md#current-manual-evidence-reconciliation--october-9-2026-utc) records the independent replacement-evidence
-follow-up audit PASS and A152A-01 resolved within its audited scope; the focused
-summary-correction audit returned PASS and resolved A152M-01. October 9
-human-reported PASS observations are D13-01: 8/8 VoiceOver/Safari checks;
-D13-02: 6/6 iPhone 13 Pro/Safari checks; D13-03: 5/5 macOS Increase Contrast
-checks, limited to that setting; and M152-T01: 5/5 Safari manual text-spacing
-checks after P03 clarification, within the recorded environment. Windows
-forced-colors remains **UNVERIFIED**; on October 9 the maintainer explicitly
-accepted its absence as a bounded qualification limitation for the current
-pre-production informational homepage. Missing exact running-build identity
-and other recorded manual metadata limitations remain. These scoped observations
-establish neither Windows compatibility nor WCAG conformance.
-Human review, successful exact-SHA CI and explicit M1.5.2 acceptance remain required.
+**M1.5.2 — Accessibility & Performance Qualification: FORMALLY ACCEPTED AND COMPLETE October 9, 2026 (UTC).**
+The [formal acceptance record](docs/engineering/m1-5-2-qualification-results.md#formal-m152-acceptance--october-9-2026-utc)
+owns the maintainer's explicit decision, signed main integration
+`b5c090709145d3fc48efef0f12e3aa8630f7d07e`, successful exact-SHA main run
+37978959204, independent audit PASS outcomes and scoped human observations.
+Windows forced-colors remains **UNVERIFIED**; its absence and the missing
+manual-test provenance metadata are human-accepted bounded limitations for
+this homepage. Acceptance establishes neither Windows compatibility nor WCAG
+conformance. M1.5 remains **IN PROGRESS, NOT FORMALLY COMPLETE**; M1 is
+**NOT FORMALLY COMPLETE**. The new administrative acceptance-record commit
+requires human signed integration and its own successful exact-SHA Ubuntu CI.
 **M1.5.3 and corrective application changes: NOT AUTHORIZED.**
 No public release or deployment is authorized; other claim subjects and
 P02–P08 remain withheld.

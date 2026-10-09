@@ -42,8 +42,10 @@ not implemented work.
 **M1.5.1 — Qualification Baseline & Adversarial Review: FORMALLY ACCEPTED October 9, 2026 (UTC).**
 The [canonical acceptance record](m1-5-1-qualification-baseline.md#formal-m151-acceptance--october-9-2026-utc)
 owns independent audit PASS, signed integration and exact-commit main CI.
-The nine NOTE obligations remain outstanding. **M1.5.2 and M1.5.3:
-NOT AUTHORIZED FOR EXECUTION.** Corrective application changes are not authorized.
+**M1.5.2 — Accessibility & Performance Qualification: AUTHORIZED October 9, 2026 (UTC); technical execution complete, manual evidence incomplete; UNDER REVIEW, NOT ACCEPTED.**
+The [canonical results](m1-5-2-qualification-results.md) own the fresh evidence,
+human-reported desktop observations and nine NOTE dispositions; D13-01–D13-03
+remain unverified. **M1.5.3 and corrective application changes: NOT AUTHORIZED.**
 Later implementation, public release and deployment remain unauthorized.
 Later checkpoints retain their scope and human review gates. Specification approval grants no publication or
 production deployment authorization. Milestone 0 is complete and accepted;
@@ -90,7 +92,7 @@ samples as product claims or delete unique coverage without replacement.
 | M1.2 — Internal engineering-preview shell | Approved identity header, skip link, responsive container, existing qualification proof and minimal footer; essential accessible styling; navigation/disclosure only when eligible destinations justify them | Server-first/client-reference review; JS-disabled usability; keyboard/focus/axe; measured actual contrast/control states; narrow-to-wide/pseudo checks; preserved security/hydration/publication regressions; typecheck/build; full supported CI | No fabricated marketing content, unavailable routes/links, pricing, commerce, accounts, contact forms, backend services, speculative features, mega-menu/search, real second language or broad token library | Maintainer visual review and formal acceptance recorded October 8, 2026 (UTC); first-implementation ESLint review satisfied by explicit retention approval |
 | M1.3 — Tokens/primitives | Measure palette pairs; consolidate minimal M1.2 styling into semantic tokens and demonstrated container/section/link/button/card/callout patterns | Contrast/state pairing sheet; responsive/expanded-text/forced-colors/reduced-motion checks; proportionate tests and canonical gates | No UI framework, remote fonts, generic component factory, complex forms/data grids or commerce controls | FORMALLY ACCEPTED October 8, 2026 (UTC); measured 43-property system and no-extraction composition retained; merged closeout/main CI 30/30; three approved, unverified M1.5 deferrals remain obligations |
 | M1.4 — Reviewed templates/content | Authorized October 8, 2026 (UTC); M1.4.1 assesses content/evidence first; later template work requires an approved exact set, M1.3 and explicit checkpoint authorization | M1.4.1 documentation review, links/anchors and scope integrity; later implementation retains claim/exposure, SSR, content-specific accessibility/performance and CI gates | No runtime work in M1.4.1; no requirement to populate every area, fake claims, CMS, pricing, commerce/account or backend | M1.4.1 FORMALLY ACCEPTED October 8, 2026 (UTC); approve each disclosure set separately; M1.4.2 FORMALLY ACCEPTED October 8, 2026 (UTC) only for the exact reviewed homepage; signed main commit `017fa33125310fb2d6bbc3bcd517ce9af738254d`, run 37848845430 (30/30); M1.4 FORMALLY ACCEPTED AND COMPLETE October 9, 2026 (UTC); signed scope closeout `8729179ee18b0d154d8fa63b144d1d98212f8f39`, main run 37877425523 (30/30 and source cleanliness); M1.4.3 reviewed and deferred, no implementation authorized; [formal outcome](#formal-m14-acceptance--october-9-2026-utc) |
-| M1.5 — Final qualification | Authorized October 9, 2026 (UTC), IN PROGRESS; M1.5.1 baseline assessment accepted; later execution requires separate authorization | Existing exact-commit evidence, sourced classifications, findings and reproducible M1.5.2 protocols; later authorized execution retains three-browser/manual/graph/performance gates | No runtime/artifact changes, correction implementation, browser processes or new measurements in M1.5.1; no deployment certification or automated WCAG claim | M1.5.1 FORMALLY ACCEPTED October 9, 2026 (UTC); [canonical acceptance](m1-5-1-qualification-baseline.md#formal-m151-acceptance--october-9-2026-utc). M1.5.2/M1.5.3 execution and corrective application changes remain unauthorized; M1/M1.5 acceptance and deployment remain separately gated |
+| M1.5 — Final qualification | Authorized October 9, 2026 (UTC), IN PROGRESS; M1.5.1 baseline accepted; M1.5.2 technical/manual qualification authorized; M1.5.3 separately gated | Existing exact-commit evidence, sourced classifications, findings and reproducible M1.5.2 protocols; later authorized execution retains three-browser/manual/graph/performance gates | No runtime/artifact changes, correction implementation, browser processes or new measurements in M1.5.1; no deployment certification or automated WCAG claim | M1.5.1 FORMALLY ACCEPTED October 9, 2026 (UTC); [canonical acceptance](m1-5-1-qualification-baseline.md#formal-m151-acceptance--october-9-2026-utc). M1.5.2 AUTHORIZED October 9, 2026 (UTC), under review/not accepted; [fresh results](m1-5-2-qualification-results.md) retain missing manual evidence. M1.5.3 and corrective application changes remain unauthorized; M1/M1.5 acceptance and deployment remain separately gated |
 
 The maintainer explicitly approved D13-01 screen-reader, D13-02 physical-device
 and D13-03 actual OS high-contrast deferrals to M1.5 on October 8, 2026 (UTC).
@@ -526,3 +528,42 @@ exact-build artifact qualification. **M1.5.2 and M1.5.3: NOT AUTHORIZED FOR
 EXECUTION.** Responsible operators, actual environments and evidence-recording
 arrangements require a separate execution decision. Corrective application
 changes and production deployment/public release remain **NOT AUTHORIZED**.
+
+## M1.5.2 authorization and qualification boundary — October 9, 2026 (UTC)
+
+The human maintainer separately authorized **M1.5.2 — Accessibility & Performance
+Qualification** on October 9, 2026 (UTC). This supersedes earlier historical
+M1.5.2-not-authorized statements without rewriting those records. Authorization
+permits existing exact-build tests, ignored artifact regeneration, public-output
+and client-import inspection, controlled development pseudo-localization,
+temporary private laboratory measurements and genuine manual evidence collection.
+
+The accepted starting source is `e5db9126e57b39aa120004d684f7af78e229fc7b`;
+[prior main run 37884329332](https://github.com/adarj/grocery-pos-website/actions/runs/37884329332)
+is exact-SHA supported Ubuntu evidence, not new CI for the uncommitted report.
+The [M1.5.2 results](m1-5-2-qualification-results.md) own commands, environment,
+raw-evidence references, fresh local Chromium/Firefox qualification, WebKit host
+limitations, artifact provenance, pseudo expansion, repeated performance data
+and the nine carried NOTE dispositions.
+
+**Technical execution is complete; manual evidence remains incomplete.
+M1.5.2 is UNDER REVIEW, NOT ACCEPTED.** The maintainer supplied current
+Firefox/Chrome keyboard, focus and native-400%-zoom/reflow PASS observations
+with desktop environment details. D13-01 screen reader, D13-02 physical
+touch/device and D13-03 actual OS high contrast remain **DEFERRED, UNVERIFIED —
+M1.5**. Host Safari/iPhone access and genuine assistive/theme observations remain
+missing; this report neither grants renewed deferral nor claims WCAG conformance.
+
+Only qualification documentation and authorized temporary/generated execution
+effects are permitted. No application, test, content, route, dependency, security,
+Nix or CI correction is authorized. Before the next real client island, restore
+applicable production-browser hydration, activation, state, keyboard and
+retained-focus coverage; Counter SSR is not equivalent. Before an additional
+public child route, make identity current-state handling route-aware.
+
+Independent audit, human review, signed integration, unchanged exact-SHA
+supported Ubuntu CI and explicit acceptance remain required.
+**M1.5.3 and corrective implementation: NOT AUTHORIZED. M1.5/M1 remain incomplete.
+Production deployment/public release: NOT AUTHORIZED.** M1.4's accepted scope
+and exact C01/C02/C04/C05 approvals are unchanged; other assertions/P02–P08 remain
+withheld. The ESLint 9.39.5 bounded exception and January 8, 2027 deadline remain.

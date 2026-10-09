@@ -56,9 +56,12 @@ accepted scope; no additional content was implemented.
 **M1.5.1 — Qualification Baseline & Adversarial Review: FORMALLY ACCEPTED October 9, 2026 (UTC).**
 Its [formal acceptance record](docs/engineering/m1-5-1-qualification-baseline.md#formal-m151-acceptance--october-9-2026-utc)
 records independent audit PASS, signed integration and exact-commit main CI.
-Manual qualification, performance measurements and fresh exact-build artifact
-qualification remain outstanding. **M1.5.2 and M1.5.3: NOT AUTHORIZED FOR EXECUTION.**
-Corrective application changes are not authorized.
+**M1.5.2 — Accessibility & Performance Qualification: AUTHORIZED October 9, 2026 (UTC); technical execution complete, manual evidence incomplete; UNDER REVIEW, NOT ACCEPTED.**
+The [qualification results](docs/engineering/m1-5-2-qualification-results.md)
+record fresh local evidence and human-reported desktop keyboard/native-zoom
+observations. D13-01–D13-03 remain unverified; actual assistive/device environments
+and private access remain required. **M1.5.3 and corrective application changes:
+NOT AUTHORIZED.**
 Other assertions and P02–P08 remain withheld. No public
 release or deployment is authorized. The human maintainer
 formally accepted Milestone 0 and authorized M1 on October 8, 2026 (UTC).

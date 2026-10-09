@@ -49,9 +49,11 @@ not an implemented checkpoint.
 **M1.5.1 — Qualification Baseline & Adversarial Review: FORMALLY ACCEPTED October 9, 2026 (UTC).**
 The [canonical acceptance record](engineering/m1-5-1-qualification-baseline.md#formal-m151-acceptance--october-9-2026-utc)
 owns audit PASS, signed integration, exact-commit main CI and retained obligations.
-Acceptance validates the baseline and proposed methods, not completed manual tests
-or measurements. **M1.5.2 and M1.5.3: NOT AUTHORIZED FOR EXECUTION.**
-Corrective application changes are not authorized.
+Acceptance validates the M1.5.1 baseline and proposed methods.
+**M1.5.2 — Accessibility & Performance Qualification: AUTHORIZED October 9, 2026 (UTC); technical execution complete, manual evidence incomplete; UNDER REVIEW, NOT ACCEPTED.**
+The [canonical results](engineering/m1-5-2-qualification-results.md) separate fresh
+technical evidence, human-reported desktop observations and missing D13 evidence.
+**M1.5.3 and corrective application changes: NOT AUTHORIZED.**
 Other assertions and P02–P08 remain withheld.
 The approved M1 plan and design-system specification remain governing; acceptance
 grants no additional disclosure, public release or deployment approval.
@@ -71,6 +73,7 @@ grants no additional disclosure, public release or deployment approval.
 | What was accepted and qualified in M1.2, and which limits remain? | [Engineering-preview shell](engineering/m1-2-shell-qualification.md) |
 | What formally accepts M1.4's implemented scope and no-expansion decision? | [M1.4 formal acceptance](engineering/milestone-1-plan.md#formal-m14-acceptance--october-9-2026-utc) |
 | Which current properties are demonstrated, and how should final qualification proceed? | [M1.5.1 qualification baseline](engineering/m1-5-1-qualification-baseline.md) |
+| What fresh accessibility/performance evidence exists, and what remains manual? | [M1.5.2 qualification results](engineering/m1-5-2-qualification-results.md) |
 | What are the M1 scopes, approval record and checkpoint gates? | [Milestone 1 plan](engineering/milestone-1-plan.md) |
 | How does the eventual website fit together? | [Architecture overview](architecture/website-architecture.md) |
 | Where does source code belong? | [Source layout and application boundary](architecture/source-layout.md) |

@@ -307,3 +307,103 @@ and the ESLint 9.39.5 exception/January 8, 2027 review deadline.
 production deployment/public release remain NOT AUTHORIZED.** No future checkpoint,
 feature, qualification execution or release approval is inferred from this
 documentation correction or the successful assessment-commit CI.
+
+## Formal M1.5.3 acceptance — October 10, 2026 (UTC)
+
+On October 10, 2026 (UTC), the human maintainer explicitly stated:
+
+> I formally accept M1.5.3 — Corrective Work Necessity Assessment and No-Correction Closeout.
+
+**M1.5.3 — FORMALLY ACCEPTED AND COMPLETE; NO CORRECTIVE APPLICATION IMPLEMENTATION REQUIRED.**
+
+This records an already-issued human decision. It supersedes the earlier
+proposed/pending checkpoint statuses and review gates without changing their
+historical meaning. The original assessed baseline, proposed acceptance criteria,
+independent audit's CONDITIONAL PASS and correction-time pending statements remain
+preserved. Acceptance supports the existing evidence-based no-correction conclusion
+for the approved pre-production homepage; it does not establish universal defect
+absence.
+
+### Signed main revision and exact-SHA qualification
+
+Accepted signed main revision:
+[`7aec4feaae90afa946565adb17fe60c6e230fccf`](https://github.com/adarj/grocery-pos-website/commit/7aec4feaae90afa946565adb17fe60c6e230fccf),
+`docs(web): reconcile M1.5.3 integration status`. GitHub reports a valid signature;
+the local signed payload and signature match that verified commit.
+
+[GitHub Actions run 38044259857](https://github.com/adarj/grocery-pos-website/actions/runs/38044259857)
+completed **SUCCESS** for that exact main SHA, push event, attempt 1. The
+[Quality and browsers job](https://github.com/adarj/grocery-pos-website/actions/runs/38044259857/job/114190486551)
+ran the unchanged supported Ubuntu 24.04 x86_64 workflow. Run metadata, job steps
+and execution logs were inspected read-only for this acceptance record.
+
+| Qualification gate | Verified integrated-revision result |
+| --- | --- |
+| Unit/fixture tests | PASS — 17/17 |
+| Development-supervisor regressions | PASS — 7/7 |
+| Chromium | PASS — 10/10 |
+| Firefox | PASS — 10/10 |
+| WebKit | PASS — 10/10 |
+| Browser aggregate and execution policy | PASS — 30/30; one Playwright worker; zero configured retries |
+| Lint, formatting and typechecking | PASS |
+| Production build and source cleanliness | PASS |
+
+These results qualify the integrated revision above. They do not qualify the
+new administrative acceptance-record commit, which requires its own successful
+exact-SHA supported Ubuntu CI after human signing and pushing. No build, browser
+suite, benchmark or new accessibility session was performed to prepare this record.
+
+### Independent audit and accepted no-correction conclusion
+
+The original independent assessment audit returned **CONDITIONAL PASS — A153A-01
+MINOR correction required**. A153A-01 concerned completed assessment integration
+and CI being presented as pending in current summaries; it was a documentation
+finding, not an application defect.
+
+The bounded correction was subsequently independently verified by the focused
+read-only follow-up audit, which returned **PASS — A153A-01 RESOLVED**. That audit
+checked the complete five-file candidate, signed assessment identity and CI logs,
+historical preservation, links/anchors and repository/evidence integrity. This
+later disposition supersedes the correction author's pending-confirmation status;
+it does not retroactively rewrite the original CONDITIONAL PASS.
+
+The maintainer accepts **A — NO CORRECTION JUSTIFIED**. No substantiated present
+BLOCKER, MAJOR or MINOR application defect warranted corrective implementation for
+the current approved homepage. No corrective application implementation was
+performed or required.
+
+### Retained limitations, obligations and authority
+
+The [accepted evidence boundaries](#accepted-limitations-and-human-evidence-scope)
+remain unchanged. Genuine Windows forced-colors testing remains **UNVERIFIED**,
+with its absence explicitly human-accepted as a bounded homepage limitation;
+Q19 remains PARTIALLY VERIFIED. A152M-02's missing exact running-build identity
+and incomplete environment, browser, display and VoiceOver transcript/procedure
+metadata remain unverified within the separately human-accepted limitation.
+
+D13-01 (8/8 VoiceOver/Safari), D13-02 (6/6 iPhone 13 Pro/Safari), D13-03
+(5/5 macOS Increase Contrast) and M152-T01 (5/5 Safari text-spacing after P03
+clarification) remain human-reported PASS observations within their recorded
+environments. They are not independently executed or universal results.
+Laboratory performance is not field-performance evidence. Original temporary
+evidence loss and the independently audited replacement-evidence disposition,
+including A152A-01 and A152M-01 resolutions, remain intact. Acceptance establishes
+neither Windows compatibility, universal accessibility, WCAG conformance,
+security certification nor production readiness.
+
+All [binding future gates](#binding-future-gates) carry forward: restore applicable
+production-browser hydration, activation, state-update, keyboard and retained-focus
+tests before the next real application client island; implement and qualify
+route-aware identity handling before another public child route; requalify applicable
+CSP/security boundaries when future sensitive surfaces are authorized. Retain
+exactly ESLint 9.39.5, the bounded exception controls and January 8, 2027 review
+deadline. Additional functionality, disclosures and production deployment require
+separate authorization and appropriate qualification.
+
+M1.5.1 remains **FORMALLY ACCEPTED**; M1.5.2 remains **FORMALLY ACCEPTED AND
+COMPLETE**. M1.5 overall remains **IN PROGRESS, NOT FORMALLY COMPLETE**; M1 overall
+remains **NOT FORMALLY COMPLETE**. This checkpoint decision supplies no overall
+milestone acceptance. **Application changes, new homepage content, public routes,
+languages, product claims and P02–P08 implementation remain NOT AUTHORIZED.**
+**Production deployment, hosting/domain configuration and public release remain
+NOT AUTHORIZED.** The exact approved homepage disclosure subset is unchanged.

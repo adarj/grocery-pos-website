@@ -57,26 +57,27 @@ conformance. M1.5 remains **IN PROGRESS, NOT FORMALLY COMPLETE**; M1 is
 `335a31187284956f2a8eb6e23deecee0e12ed3fe` is integrated on main and
 [run 37981808698](https://github.com/adarj/grocery-pos-website/actions/runs/37981808698)
 passed on that exact SHA.
-**M1.5.3 — NO-CORRECTION CLOSEOUT PROPOSED; FORMAL HUMAN ACCEPTANCE PENDING.**
-The [post-integration reconciliation](m1-5-3-correction-assessment.md#post-integration-ci-and-independent-audit-reconciliation)
-retains **A — NO CORRECTION JUSTIFIED** and records signed main assessment
-`f2db122136675e21133cb4c3c0443d87f6dd41b2` with successful exact-SHA
-[run 38042793882](https://github.com/adarj/grocery-pos-website/actions/runs/38042793882).
-The independent audit returned **CONDITIONAL PASS — A153A-01 MINOR correction required**.
-A153A-01 is corrected in this documentation candidate; independent follow-up
-confirmation and formal human acceptance remain pending. This correction's
-eventual signed commit requires its own exact-SHA CI.
+**M1.5.3 — FORMALLY ACCEPTED AND COMPLETE; NO CORRECTIVE APPLICATION IMPLEMENTATION REQUIRED.**
+The [formal acceptance record](m1-5-3-correction-assessment.md#formal-m153-acceptance--october-10-2026-utc)
+records the maintainer's October 10, 2026 (UTC) decision, signed main revision
+`7aec4feaae90afa946565adb17fe60c6e230fccf` and successful exact-SHA
+[run 38044259857](https://github.com/adarj/grocery-pos-website/actions/runs/38044259857).
+The accepted conclusion remains **A — NO CORRECTION JUSTIFIED**. A153A-01 is
+independently **RESOLVED** by the focused PASS audit; the original CONDITIONAL
+PASS remains historical. Checkpoint acceptance does not complete M1.5 or M1
+or authorize additional implementation or public release. This administrative
+acceptance-record commit requires human signed integration and its own exact-SHA CI.
 **Corrective application implementation remains NOT AUTHORIZED.**
 Later implementation, public release and deployment remain unauthorized.
 Later checkpoints retain their scope and human review gates. Specification approval grants no publication or
 production deployment authorization. Milestone 0 is complete and accepted;
 see the [qualification record](milestone-0-qualification.md).
 
-Historical D13 and M1.5.2 pending-status statements in the checkpoint tables
-and dated acceptance/authorization records below retain their earlier evidence
-state. The linked formal M1.5.2 acceptance supersedes those checkpoint statuses;
-its scoped human observations and retained limitations do not expand the earlier
-evidence or authorize later implementation or deployment.
+Historical D13, M1.5.2 and M1.5.3 pending-status statements in the checkpoint
+tables and dated records below retain their earlier evidence state. The linked
+formal M1.5.2 acceptance and the [formal M1.5.3 outcome](#formal-m153-acceptance--october-10-2026-utc)
+supersede those checkpoint statuses without expanding earlier evidence or
+authorizing later implementation, overall milestone acceptance or deployment.
 
 ## M1.1 approval and qualification record
 
@@ -630,3 +631,30 @@ and the ESLint 9.39.5 exception/January 8, 2027 deadline remain binding.
 Additional content/routes/P02–P08 and production deployment/public release remain
 **NOT AUTHORIZED**. This candidate grants no further implementation or release
 authority.
+
+## Formal M1.5.3 acceptance — October 10, 2026 (UTC)
+
+**M1.5.3 — FORMALLY ACCEPTED AND COMPLETE; NO CORRECTIVE APPLICATION IMPLEMENTATION REQUIRED.**
+
+The maintainer explicitly accepted the no-correction closeout on October 10,
+2026 (UTC). The [canonical acceptance record](m1-5-3-correction-assessment.md#formal-m153-acceptance--october-10-2026-utc)
+owns the verbatim decision, signed main revision
+`7aec4feaae90afa946565adb17fe60c6e230fccf`, successful
+[exact-SHA run 38044259857](https://github.com/adarj/grocery-pos-website/actions/runs/38044259857),
+the original independent audit's CONDITIONAL PASS and focused
+**PASS — A153A-01 RESOLVED** outcome.
+
+This formal outcome supersedes the earlier proposed/pending M1.5.3 statuses
+without changing their historical meaning. The accepted conclusion is
+**A — NO CORRECTION JUSTIFIED** for the approved pre-production homepage;
+no corrective application implementation was performed or warranted.
+
+M1.5.1 remains **FORMALLY ACCEPTED** and M1.5.2 **FORMALLY ACCEPTED AND COMPLETE**.
+M1.5 overall remains **IN PROGRESS, NOT FORMALLY COMPLETE**; M1 overall remains
+**NOT FORMALLY COMPLETE**. Accepted qualification limitations and future
+client-island, child-route, security/deployment and ESLint maintenance gates remain
+binding. No application changes, expanded disclosures, new content/routes/languages,
+P02–P08 implementation or production deployment/public release are authorized.
+The eventual signed administrative acceptance-record commit requires its own
+successful exact-SHA supported Ubuntu CI; run 38044259857 qualifies the integrated
+revision above.

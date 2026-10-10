@@ -97,7 +97,10 @@ records the October 9, 2026 (UTC) decision, signed closeout
 37877425523 (30/30 and source cleanliness). **M1.4.3 — Additional Reviewed Content
 & Navigation: REVIEWED AND DEFERRED; NO IMPLEMENTATION AUTHORIZED.** Its deferral
 is part of the accepted M1.4 scope, not implemented work.
-**M1.5 — Final Qualification: AUTHORIZED October 9, 2026 (UTC); IN PROGRESS.**
+**M1.5 — Final Qualification: FORMALLY ACCEPTED AND COMPLETE October 10, 2026 (UTC) — repository closeout in progress.**
+The [canonical M1.5 acceptance record](docs/engineering/m1-5-final-qualification-acceptance.md)
+owns the cumulative evidence, accepted limitations and M15R-01 correction;
+independent confirmation and this closeout's signed integration/exact-SHA CI remain pending.
 **M1.5.1 — Qualification Baseline & Adversarial Review: FORMALLY ACCEPTED October 9, 2026 (UTC).**
 The [formal acceptance record](docs/engineering/m1-5-1-qualification-baseline.md#formal-m151-acceptance--october-9-2026-utc)
 owns the independent audit PASS, signed implementation and exact-commit main CI.
@@ -109,21 +112,23 @@ owns the maintainer's explicit decision, signed main integration
 Windows forced-colors remains **UNVERIFIED**; its absence and the missing
 manual-test provenance metadata are human-accepted bounded limitations for
 this homepage. Acceptance establishes neither Windows compatibility nor WCAG
-conformance. M1.5 remains **IN PROGRESS, NOT FORMALLY COMPLETE**; M1 is
-**NOT FORMALLY COMPLETE**. Signed M1.5.2 acceptance-record commit
+conformance. Milestone 1 overall remains **NOT FORMALLY ACCEPTED**.
+Signed M1.5.2 acceptance-record commit
 `335a31187284956f2a8eb6e23deecee0e12ed3fe` is integrated on main and
 [run 37981808698](https://github.com/adarj/grocery-pos-website/actions/runs/37981808698)
 passed on that exact SHA.
 **M1.5.3 — FORMALLY ACCEPTED AND COMPLETE; NO CORRECTIVE APPLICATION IMPLEMENTATION REQUIRED.**
 The [formal acceptance record](docs/engineering/m1-5-3-correction-assessment.md#formal-m153-acceptance--october-10-2026-utc)
-records the maintainer's October 10, 2026 (UTC) decision, signed main revision
-`7aec4feaae90afa946565adb17fe60c6e230fccf` and successful exact-SHA
-[run 38044259857](https://github.com/adarj/grocery-pos-website/actions/runs/38044259857).
+records the maintainer's October 10, 2026 (UTC) decision. Its signed
+acceptance-record commit `1067bd0d21ac45890dcf8e94a3afdf353f372bde` is
+integrated on main; [run 38044969571](https://github.com/adarj/grocery-pos-website/actions/runs/38044969571)
+passed on that exact SHA on Ubuntu 24.04 x86_64: 17/17 fixtures, 7/7 supervisor
+regressions, Chromium/Firefox/WebKit 10/10 each, one worker, zero configured
+retries and quality/typecheck/build/source-cleanliness gates.
 The accepted conclusion remains **A — NO CORRECTION JUSTIFIED**. A153A-01 is
 independently **RESOLVED** by the focused PASS audit; the original CONDITIONAL
-PASS remains historical. Checkpoint acceptance does not complete M1.5 or M1
-or authorize additional implementation or public release. This administrative
-acceptance-record commit requires human signed integration and its own exact-SHA CI.
+PASS remains historical. The separate M1.5 overall decision is recorded above;
+Milestone 1 acceptance and release authorization remain separate.
 **Corrective application implementation remains NOT AUTHORIZED.**
 No public release or deployment is authorized; other claim subjects and
 P02–P08 remain withheld.

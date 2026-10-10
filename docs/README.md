@@ -1,11 +1,21 @@
 # Documentation map
 
+**M2 PLANNING AUTHORIZED — October 10, 2026 (UTC).**
+**M2 IMPLEMENTATION AND PUBLICATION NOT AUTHORIZED.**
+The [M2 planning baseline](engineering/milestone-2-plan.md) proposes strategy, evidence/content
+readiness and an experience/technology study. M2.1 is a planning candidate under
+review, not complete or accepted; no application, disclosure or deployment change
+is authorized. M0/M1 acceptance and their retained limitations remain unchanged.
+
 **MILESTONE 1 — WEBSITE FOUNDATION: FORMALLY ACCEPTED AND COMPLETE October 10, 2026 (UTC).**
 The [canonical acceptance record](engineering/milestone-1-acceptance.md) records the maintainer's explicit
 human decision, approved M1.1–M1.5 scope, retained limitations and future gates.
-The decision is effective; this new administrative record's independent review,
-human signed integration and exact-SHA CI remain pending. No additional
-implementation, public release or deployment is authorized.
+M1 repository closeout is verified: signed main commit
+`80b55162c865ea58d7de853a3d8eb68845c200e7` passed exact-SHA
+[run 38049863825](https://github.com/adarj/grocery-pos-website/actions/runs/38049863825);
+the independent closeout returned **PASS — MILESTONE 1 REPOSITORY CLOSEOUT VERIFIED**.
+Preparation-time pending statements in the canonical record remain historical.
+No additional implementation, public release or deployment is authorized.
 
 Milestone 0 was formally accepted and M1 authorized on October 8, 2026 (UTC);
 main run 37727162386 qualifies the merged foundation on all three browser engines.
@@ -76,8 +86,8 @@ manual-test provenance metadata are human-accepted bounded limitations for
 this homepage. Acceptance establishes neither Windows compatibility nor WCAG
 conformance. **Milestone 1 overall: FORMALLY ACCEPTED AND COMPLETE October 10,
 2026 (UTC).** The [canonical acceptance record](engineering/milestone-1-acceptance.md) owns that separate
-human decision; its new administrative record still requires independent review,
-human signed integration and its own exact-SHA CI.
+human decision; its signed integration, exact-SHA CI and independent closeout
+are completed as recorded above.
 Signed M1.5.2 acceptance-record commit
 `335a31187284956f2a8eb6e23deecee0e12ed3fe` is integrated on main and
 [run 37981808698](https://github.com/adarj/grocery-pos-website/actions/runs/37981808698)
@@ -103,6 +113,9 @@ grants no additional disclosure, public release or deployment approval.
 | --- | --- |
 | What is this repository and its next checkpoint? | [Root README](../README.md) |
 | What formally accepts the completed website foundation? | [Milestone 1 acceptance](engineering/milestone-1-acceptance.md) |
+| What M2 planning is authorized, and which later gates are proposed? | [Milestone 2 plan](engineering/milestone-2-plan.md) |
+| Which marketing audiences, claims and pages have sufficient evidence? | [M2.1 marketing readiness](product/m2-1-marketing-content-readiness.md) |
+| What design, technology and asset decisions should M2 consider? | [M2.1 experience study](design/m2-1-marketing-experience-study.md) |
 | Is the engineering foundation qualified for M1? | [Milestone 0 qualification](engineering/milestone-0-qualification.md) |
 | Who is the website for, and how should pages/navigation work? | [Website information architecture](product/website-information-architecture.md) |
 | Which content is evidenced, ready and separately approved for disclosure? | [M1.4.1 content readiness](product/m1-4-1-content-readiness.md) |

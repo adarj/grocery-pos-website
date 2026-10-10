@@ -57,12 +57,16 @@ conformance. M1.5 remains **IN PROGRESS, NOT FORMALLY COMPLETE**; M1 is
 `335a31187284956f2a8eb6e23deecee0e12ed3fe` is integrated on main and
 [run 37981808698](https://github.com/adarj/grocery-pos-website/actions/runs/37981808698)
 passed on that exact SHA.
-**M1.5.3 — NO-CORRECTION CLOSEOUT PROPOSED; INDEPENDENT REVIEW AND FORMAL HUMAN ACCEPTANCE PENDING.**
-The [correction assessment](m1-5-3-correction-assessment.md) records the October 10, 2026 (UTC)
-advisory decision **A — NO CORRECTION JUSTIFIED**. Only documentation preparation
-is authorized; **corrective application implementation remains NOT AUTHORIZED**.
-Independent review, human signed integration, exact-SHA CI and formal acceptance
-remain gates for this new candidate.
+**M1.5.3 — NO-CORRECTION CLOSEOUT PROPOSED; FORMAL HUMAN ACCEPTANCE PENDING.**
+The [post-integration reconciliation](m1-5-3-correction-assessment.md#post-integration-ci-and-independent-audit-reconciliation)
+retains **A — NO CORRECTION JUSTIFIED** and records signed main assessment
+`f2db122136675e21133cb4c3c0443d87f6dd41b2` with successful exact-SHA
+[run 38042793882](https://github.com/adarj/grocery-pos-website/actions/runs/38042793882).
+The independent audit returned **CONDITIONAL PASS — A153A-01 MINOR correction required**.
+A153A-01 is corrected in this documentation candidate; independent follow-up
+confirmation and formal human acceptance remain pending. This correction's
+eventual signed commit requires its own exact-SHA CI.
+**Corrective application implementation remains NOT AUTHORIZED.**
 Later implementation, public release and deployment remain unauthorized.
 Later checkpoints retain their scope and human review gates. Specification approval grants no publication or
 production deployment authorization. Milestone 0 is complete and accepted;
@@ -600,7 +604,7 @@ homepage. The maintainer authorized preparation of a documentation-only candidat
 the [M1.5.3 assessment](m1-5-3-correction-assessment.md) owns its evidence,
 finding dispositions, retained limitations and proposed acceptance criteria.
 
-**M1.5.3 — NO-CORRECTION CLOSEOUT PROPOSED; INDEPENDENT REVIEW AND FORMAL HUMAN ACCEPTANCE PENDING.**
+**M1.5.3 — NO-CORRECTION CLOSEOUT PROPOSED; FORMAL HUMAN ACCEPTANCE PENDING.**
 This supersedes earlier M1.5.3-not-authorized statements only for administrative
 preparation, preserving their historical meaning. Corrective application
 implementation remains **NOT AUTHORIZED**.
@@ -608,9 +612,16 @@ implementation remains **NOT AUTHORIZED**.
 Signed M1.5.2 acceptance-record commit `335a31187284956f2a8eb6e23deecee0e12ed3fe`
 is integrated on main; [exact-SHA run 37981808698](https://github.com/adarj/grocery-pos-website/actions/runs/37981808698)
 passed. That fulfilled its previously pending integration/CI requirement.
-This new M1.5.3 candidate still requires independent review, human signed
-integration, its own successful exact-SHA supported Ubuntu CI and an explicit
-human acceptance decision.
+The signed M1.5.3 assessment is now integrated on main at
+`f2db122136675e21133cb4c3c0443d87f6dd41b2`;
+[run 38042793882](https://github.com/adarj/grocery-pos-website/actions/runs/38042793882)
+passed on that exact SHA. Its integration and CI gates are complete. The
+subsequent independent audit returned **CONDITIONAL PASS — A153A-01 MINOR correction required**.
+The [dated reconciliation](m1-5-3-correction-assessment.md#post-integration-ci-and-independent-audit-reconciliation)
+records **A153A-01: CORRECTED IN DOCUMENTATION CANDIDATE; INDEPENDENT FOLLOW-UP CONFIRMATION PENDING**.
+Independent follow-up, human review and explicit M1.5.3 acceptance remain gates.
+This correction's eventual signed commit requires human integration and its
+own successful exact-SHA supported Ubuntu CI; run 38042793882 does not qualify it.
 
 M1.5.1 and M1.5.2 acceptance remain intact; M1.5 is **IN PROGRESS, NOT FORMALLY
 COMPLETE**, and M1 is **NOT FORMALLY COMPLETE**. Accepted Windows/provenance

@@ -217,3 +217,93 @@ for milestone completion. **Corrective application implementation, public releas
 Vercel deployment and other production operations remain NOT AUTHORIZED.**
 Qualification completion and future milestone acceptance do not grant release
 authority or expand product maturity, content disclosure or commercial offerings.
+
+## Post-integration CI and independent-audit reconciliation
+
+October 10, 2026 (UTC). This dated outcome supersedes the preparation-time
+pending integration/CI and next-step statements above. The original assessed
+baseline, proposed acceptance criteria and contemporaneous pending statements
+remain historical records; no qualification observation is retrospectively
+changed.
+
+### Signed assessment integration and exact-SHA CI
+
+The signed assessment commit
+[`f2db122136675e21133cb4c3c0443d87f6dd41b2`](https://github.com/adarj/grocery-pos-website/commit/f2db122136675e21133cb4c3c0443d87f6dd41b2),
+`docs(web): record M1.5.3 no-correction assessment`, is integrated on main.
+Read-only GitHub verification reports a valid signature; the local signed
+payload and signature match that verified record.
+
+[Run 38042793882](https://github.com/adarj/grocery-pos-website/actions/runs/38042793882)
+completed **SUCCESS** on that exact SHA, triggered by a push to main, attempt 1.
+The [Quality and browsers job](https://github.com/adarj/grocery-pos-website/actions/runs/38042793882/job/114186231375)
+ran the unchanged supported Ubuntu 24.04 x86_64 workflow. The independent audit
+reviewed metadata and execution logs; this correction reconfirmed run identity
+and outcome without new qualification execution.
+
+| Gate | Verified assessment-commit result |
+| --- | --- |
+| Unit/fixture tests | PASS — 17/17 |
+| Development-supervisor regressions | PASS — 7/7 |
+| Chromium | PASS — 10/10 |
+| Firefox | PASS — 10/10 |
+| WebKit | PASS — 10/10 |
+| Browser aggregate and execution policy | PASS — 30/30; one Playwright worker; zero configured retries |
+| Lint, formatting and typechecking | PASS |
+| Production build and source cleanliness | PASS |
+
+These results qualify the signed assessment commit only. They do not qualify
+this uncommitted corrective documentation candidate. Its eventual signed commit
+requires its own successful exact-SHA supported Ubuntu CI with the unchanged
+quality/build/source-cleanliness gates and three-browser policy.
+
+### Independent audit and A153A-01 correction
+
+The subsequent independent M1.5.3 audit returned
+**CONDITIONAL PASS — A153A-01 MINOR correction required**, not an unconditional
+PASS. Its principal conclusion remained **A — NO CORRECTION JUSTIFIED**:
+no substantiated present BLOCKER, MAJOR or MINOR application defect warranted
+corrective implementation.
+
+**A153A-01 — MINOR** arose because live repository summaries and the M1 plan
+still presented signed assessment integration and exact-SHA CI as outstanding,
+despite their verified completion. The minimum correction reconciles the four
+current summaries and the plan's October 10 candidate section, and appends this
+canonical integration/CI outcome while preserving the original preparation
+history.
+
+**A153A-01 — CORRECTED IN DOCUMENTATION CANDIDATE; INDEPENDENT FOLLOW-UP CONFIRMATION PENDING.**
+Applying this bounded edit does not independently resolve the finding, change
+application behavior, constitute a new technical qualification run or establish
+formal checkpoint acceptance.
+
+### Remaining review and authorization gates
+
+**M1.5.3 — NO-CORRECTION CLOSEOUT PROPOSED; FORMAL HUMAN ACCEPTANCE PENDING.**
+
+Independent follow-up must confirm the documentation correction. Human review,
+signed integration of this correction, successful CI on that new exact SHA and
+an explicit human M1.5.3 acceptance decision remain separate gates. The original
+audit's CONDITIONAL PASS remains historical; any follow-up disposition must be
+recorded separately.
+
+M1.5.1 remains **FORMALLY ACCEPTED**; M1.5.2 remains **FORMALLY ACCEPTED AND
+COMPLETE**. M1.5 remains **IN PROGRESS, NOT FORMALLY COMPLETE**, and M1 remains
+**NOT FORMALLY COMPLETE**. Any later M1.5 or overall M1 closeout requires its own
+human review and explicit acceptance.
+
+The [accepted limitations and human observations](#accepted-limitations-and-human-evidence-scope)
+remain unchanged: Windows forced-colors and missing A152M-02 provenance metadata
+remain UNVERIFIED within their human-accepted bounded dispositions. Prior
+A152A-01/A152M-01 independent resolutions, scoped human-reported PASS results,
+laboratory performance limitations and original evidence-loss chronology remain
+intact.
+
+All [future implementation gates](#binding-future-gates) remain binding, including
+client-island browser-test restoration, route-aware identity handling, appropriate
+CSP/security requalification, separately authorized deployment-edge qualification
+and the ESLint 9.39.5 exception/January 8, 2027 review deadline.
+**Corrective application implementation, new content/routes/P02–P08 and
+production deployment/public release remain NOT AUTHORIZED.** No future checkpoint,
+feature, qualification execution or release approval is inferred from this
+documentation correction or the successful assessment-commit CI.

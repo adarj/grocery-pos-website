@@ -114,12 +114,16 @@ conformance. M1.5 remains **IN PROGRESS, NOT FORMALLY COMPLETE**; M1 is
 `335a31187284956f2a8eb6e23deecee0e12ed3fe` is integrated on main and
 [run 37981808698](https://github.com/adarj/grocery-pos-website/actions/runs/37981808698)
 passed on that exact SHA.
-**M1.5.3 — NO-CORRECTION CLOSEOUT PROPOSED; INDEPENDENT REVIEW AND FORMAL HUMAN ACCEPTANCE PENDING.**
-The [correction assessment](docs/engineering/m1-5-3-correction-assessment.md) records the October 10, 2026 (UTC)
-advisory decision **A — NO CORRECTION JUSTIFIED**. Only documentation preparation
-is authorized; **corrective application implementation remains NOT AUTHORIZED**.
-Independent review, human signed integration, exact-SHA CI and formal acceptance
-remain gates for this new candidate.
+**M1.5.3 — NO-CORRECTION CLOSEOUT PROPOSED; FORMAL HUMAN ACCEPTANCE PENDING.**
+The [post-integration reconciliation](docs/engineering/m1-5-3-correction-assessment.md#post-integration-ci-and-independent-audit-reconciliation)
+retains **A — NO CORRECTION JUSTIFIED** and records signed main assessment
+`f2db122136675e21133cb4c3c0443d87f6dd41b2` with successful exact-SHA
+[run 38042793882](https://github.com/adarj/grocery-pos-website/actions/runs/38042793882).
+The independent audit returned **CONDITIONAL PASS — A153A-01 MINOR correction required**.
+A153A-01 is corrected in this documentation candidate; independent follow-up
+confirmation and formal human acceptance remain pending. This correction's
+eventual signed commit requires its own exact-SHA CI.
+**Corrective application implementation remains NOT AUTHORIZED.**
 No public release or deployment is authorized; other claim subjects and
 P02–P08 remain withheld.
 Follow the [M1 plan](docs/engineering/milestone-1-plan.md) and approved

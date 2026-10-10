@@ -1,11 +1,18 @@
 # Documentation map
 
+**MILESTONE 1 — WEBSITE FOUNDATION: FORMALLY ACCEPTED AND COMPLETE October 10, 2026 (UTC).**
+The [canonical acceptance record](engineering/milestone-1-acceptance.md) records the maintainer's explicit
+human decision, approved M1.1–M1.5 scope, retained limitations and future gates.
+The decision is effective; this new administrative record's independent review,
+human signed integration and exact-SHA CI remain pending. No additional
+implementation, public release or deployment is authorized.
+
 Milestone 0 was formally accepted and M1 authorized on October 8, 2026 (UTC);
 main run 37727162386 qualifies the merged foundation on all three browser engines.
 The [qualification record](engineering/milestone-0-qualification.md) owns acceptance,
 evidence and the approved bounded ESLint exception. Detailed CI history remains in
 [quality and CI](engineering/quality-and-ci.md).
-M1.1 specifications were human-approved October 8, 2026 (UTC); the independent
+M1.1 specifications are **HUMAN-APPROVED AND QUALIFIED** October 8, 2026 (UTC); the independent
 audit and feature CI run 37728971554 pass. Main run 37749346349 qualifies the merged
 specifications. The [M1 plan](engineering/milestone-1-plan.md#m11-approval-and-qualification-record)
 owns that record and the approved M1.2 scope. The
@@ -47,10 +54,14 @@ records the October 9, 2026 (UTC) outcome, signed closeout
 **M1.4.3 — Additional Reviewed Content & Navigation: REVIEWED AND DEFERRED;
 NO IMPLEMENTATION AUTHORIZED.** This deferral is part of the accepted M1.4 scope,
 not an implemented checkpoint.
-**M1.5 — Final Qualification: FORMALLY ACCEPTED AND COMPLETE October 10, 2026 (UTC) — repository closeout in progress.**
+**M1.5 — Final Qualification: FORMALLY ACCEPTED AND COMPLETE October 10, 2026 (UTC).**
 The [canonical M1.5 acceptance record](engineering/m1-5-final-qualification-acceptance.md)
-owns the cumulative evidence, accepted limitations and M15R-01 correction;
-independent confirmation and this closeout's signed integration/exact-SHA CI remain pending.
+owns the cumulative evidence and accepted limitations. Signed main acceptance record
+`2195fcc938ca7eeafc0cc6c3a8b287dd03d170f8` passed exact-SHA
+[run 38047244927](https://github.com/adarj/grocery-pos-website/actions/runs/38047244927)
+on supported Ubuntu 24.04 x86_64. The subsequent independent audit returned
+**PASS — M1.5 CLOSEOUT VERIFIED; M15R-01 RESOLVED**. Its preparation-time
+integration/CI statements are historical; this repository closeout is complete.
 **M1.5.1 — Qualification Baseline & Adversarial Review: FORMALLY ACCEPTED October 9, 2026 (UTC).**
 The [canonical acceptance record](engineering/m1-5-1-qualification-baseline.md#formal-m151-acceptance--october-9-2026-utc)
 owns audit PASS, signed integration, exact-commit main CI and retained obligations.
@@ -63,7 +74,10 @@ owns the maintainer's explicit decision, signed main integration
 Windows forced-colors remains **UNVERIFIED**; its absence and the missing
 manual-test provenance metadata are human-accepted bounded limitations for
 this homepage. Acceptance establishes neither Windows compatibility nor WCAG
-conformance. Milestone 1 overall remains **NOT FORMALLY ACCEPTED**.
+conformance. **Milestone 1 overall: FORMALLY ACCEPTED AND COMPLETE October 10,
+2026 (UTC).** The [canonical acceptance record](engineering/milestone-1-acceptance.md) owns that separate
+human decision; its new administrative record still requires independent review,
+human signed integration and its own exact-SHA CI.
 Signed M1.5.2 acceptance-record commit
 `335a31187284956f2a8eb6e23deecee0e12ed3fe` is integrated on main and
 [run 37981808698](https://github.com/adarj/grocery-pos-website/actions/runs/37981808698)
@@ -88,6 +102,7 @@ grants no additional disclosure, public release or deployment approval.
 | Question | Canonical document |
 | --- | --- |
 | What is this repository and its next checkpoint? | [Root README](../README.md) |
+| What formally accepts the completed website foundation? | [Milestone 1 acceptance](engineering/milestone-1-acceptance.md) |
 | Is the engineering foundation qualified for M1? | [Milestone 0 qualification](engineering/milestone-0-qualification.md) |
 | Who is the website for, and how should pages/navigation work? | [Website information architecture](product/website-information-architecture.md) |
 | Which content is evidenced, ready and separately approved for disclosure? | [M1.4.1 content readiness](product/m1-4-1-content-readiness.md) |

@@ -1,5 +1,12 @@
 # Milestone 1 plan
 
+**MILESTONE 1 — WEBSITE FOUNDATION: FORMALLY ACCEPTED AND COMPLETE October 10, 2026 (UTC).**
+The [canonical acceptance record](milestone-1-acceptance.md) records the maintainer's explicit
+human decision, approved M1.1–M1.5 scope, retained limitations and future gates.
+The decision is effective; this new administrative record's independent review,
+human signed integration and exact-SHA CI remain pending. No additional
+implementation, public release or deployment is authorized.
+
 **Status: M1.1 planning specification approved by the human maintainer on
 October 8, 2026 (UTC).** The initial M1.2 internal engineering-preview scope below
 is implemented, merged and qualified on main. The maintainer confirmed completion
@@ -40,10 +47,14 @@ records the October 9, 2026 (UTC) outcome, signed closeout
 (30/30 and source cleanliness). **M1.4.3 — Additional Reviewed Content & Navigation:
 REVIEWED AND DEFERRED; NO IMPLEMENTATION AUTHORIZED** is part of the accepted scope,
 not implemented work.
-**M1.5 — Final Qualification: FORMALLY ACCEPTED AND COMPLETE October 10, 2026 (UTC) — repository closeout in progress.**
+**M1.5 — Final Qualification: FORMALLY ACCEPTED AND COMPLETE October 10, 2026 (UTC).**
 The [canonical M1.5 acceptance record](m1-5-final-qualification-acceptance.md)
-owns the cumulative evidence, accepted limitations and M15R-01 correction;
-independent confirmation and this closeout's signed integration/exact-SHA CI remain pending.
+owns the cumulative evidence and accepted limitations. Signed main acceptance record
+`2195fcc938ca7eeafc0cc6c3a8b287dd03d170f8` passed exact-SHA
+[run 38047244927](https://github.com/adarj/grocery-pos-website/actions/runs/38047244927)
+on supported Ubuntu 24.04 x86_64. The subsequent independent audit returned
+**PASS — M1.5 CLOSEOUT VERIFIED; M15R-01 RESOLVED**. Its preparation-time
+integration/CI statements are historical; this repository closeout is complete.
 **M1.5.1 — Qualification Baseline & Adversarial Review: FORMALLY ACCEPTED October 9, 2026 (UTC).**
 The [canonical acceptance record](m1-5-1-qualification-baseline.md#formal-m151-acceptance--october-9-2026-utc)
 owns independent audit PASS, signed integration and exact-commit main CI.
@@ -55,7 +66,10 @@ owns the maintainer's explicit decision, signed main integration
 Windows forced-colors remains **UNVERIFIED**; its absence and the missing
 manual-test provenance metadata are human-accepted bounded limitations for
 this homepage. Acceptance establishes neither Windows compatibility nor WCAG
-conformance. Milestone 1 overall remains **NOT FORMALLY ACCEPTED**.
+conformance. **Milestone 1 overall: FORMALLY ACCEPTED AND COMPLETE October 10,
+2026 (UTC).** The [canonical acceptance record](milestone-1-acceptance.md) owns that separate
+human decision; its new administrative record still requires independent review,
+human signed integration and its own exact-SHA CI.
 Signed M1.5.2 acceptance-record commit
 `335a31187284956f2a8eb6e23deecee0e12ed3fe` is integrated on main and
 [run 37981808698](https://github.com/adarj/grocery-pos-website/actions/runs/37981808698)
@@ -78,12 +92,14 @@ Later checkpoints retain their scope and human review gates. Specification appro
 production deployment authorization. Milestone 0 is complete and accepted;
 see the [qualification record](milestone-0-qualification.md).
 
-Historical D13 and M1.5 checkpoint/overall pending-status statements in the
+Historical D13 and M1/M1.5 checkpoint/overall pending-status statements in the
 tables and dated records below retain their earlier evidence state. The linked
-checkpoint acceptances and the [formal M1.5 outcome](#formal-m15-acceptance--october-10-2026-utc)
-supersede those statuses and the M1.5.3 acceptance record's pending integration/CI
-statements without expanding earlier evidence or authorizing later implementation,
-Milestone 1 overall acceptance or deployment.
+checkpoint acceptances, [formal M1.5 outcome](#formal-m15-acceptance--october-10-2026-utc)
+and [formal Milestone 1 outcome](#formal-milestone-1-acceptance--october-10-2026-utc)
+supersede those statuses. Signed M1.5 acceptance integration, exact-SHA CI and
+independent closeout are completed as recorded above; their preparation-time
+pending statements remain historical. These outcomes expand neither earlier
+evidence nor later implementation, content or deployment authorization.
 
 ## M1.1 approval and qualification record
 
@@ -705,3 +721,52 @@ binding, including the January 8, 2027 review deadline.
 corrective implementation, additional homepage content, public routes/languages,
 P02–P08, expanded maturity/commercial claims or production deployment/public
 release are authorized by M1.5 acceptance.
+
+## Formal Milestone 1 acceptance — October 10, 2026 (UTC)
+
+On October 10, 2026 (UTC), the human maintainer explicitly stated:
+
+> I formally accept Milestone 1 — Website Foundation.
+
+**MILESTONE 1 — WEBSITE FOUNDATION: FORMALLY ACCEPTED AND COMPLETE October 10, 2026 (UTC).**
+
+The decision followed the independent overall review's
+**A — READY FOR FORMAL MILESTONE 1 ACCEPTANCE** recommendation. The
+[canonical acceptance record](milestone-1-acceptance.md) owns the approved and
+explicitly revised M1.1–M1.5 scope, prerequisite/checkpoint evidence, final
+finding dispositions, accepted limitations and binding future obligations.
+M1.1 retains its October 8 human specification/design approval, not an invented
+separate formal-acceptance declaration. M1.2–M1.5 retain their formal outcomes;
+M1.4.3 remains deliberately reviewed and deferred without implementation.
+M1.5.3's accepted conclusion remains **A — NO CORRECTION JUSTIFIED**.
+
+Signed M1.5 overall acceptance-record commit
+`2195fcc938ca7eeafc0cc6c3a8b287dd03d170f8` is integrated on main.
+[Run 38047244927](https://github.com/adarj/grocery-pos-website/actions/runs/38047244927)
+succeeded on that exact SHA, push to main, attempt 1, Ubuntu 24.04 x86_64:
+17/17 fixtures, 7/7 supervisor regressions, Chromium/Firefox/WebKit 10/10 each,
+one worker, zero configured retries and quality/typecheck/build/source-cleanliness
+gates. The subsequent independent closeout returned **PASS — M1.5 CLOSEOUT
+VERIFIED; M15R-01 RESOLVED**. The earlier M1.5 preparation-time pending
+integration/CI/review statements in the dated M1.5 outcome are superseded by this
+record; they do not reopen M15R-01 or introduce another defect identifier.
+
+This formal Milestone 1 decision is effective and supersedes the earlier
+M1-not-accepted statuses without changing their historical meaning. Independent
+audit and human review of this new administrative candidate, human signed
+integration and its own successful exact-SHA Ubuntu CI remain closeout gates;
+run 38047244927 qualifies the preceding M1.5 record, not this candidate.
+
+Scoped human observations, unverified Windows forced-colors and manual provenance
+within their explicit accepted limitations, laboratory-only performance,
+original evidence loss and independently reviewed replacement evidence remain
+bounded. Q11/Q12/Q16–Q19 retain applicable partial/provenance limits;
+Q23–Q25 remain not applicable; Q26 deployment-edge verification remains unverified.
+Future client-island, route-aware identity, content-disclosure, security/deployment
+and ESLint 9.39.5 maintenance gates remain binding, including January 8, 2027.
+
+**No new application implementation, additional homepage disclosures, public
+routes/languages, P02–P08, accounts/commerce/support portals, external integrations,
+expanded maturity/commercial claims, Vercel/hosting/domain operations, production
+deployment or public release is authorized.** Subsequent website milestones
+require separate scope, authorization and qualification decisions.

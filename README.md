@@ -16,6 +16,16 @@ implementation. Its intended repository identity is `adarj/grocery-pos-website`.
 
 ## Current status
 
+**MILESTONE 1 — WEBSITE FOUNDATION: FORMALLY ACCEPTED AND COMPLETE October 10, 2026 (UTC).**
+The [canonical acceptance record](docs/engineering/milestone-1-acceptance.md) records the maintainer's explicit
+human decision, approved M1.1–M1.5 scope, retained limitations and future gates.
+The decision is effective; this new administrative record's independent review,
+human signed integration and exact-SHA CI remain pending. No additional
+implementation, public release or deployment is authorized.
+
+Milestone 0 remains formally accepted; M1.1 is **HUMAN-APPROVED AND QUALIFIED**
+October 8, 2026 (UTC), with its original specification/design approval preserved.
+
 Internal/preproduction; **M1.2 — Public Shell & Responsive Foundation** is accepted.
 **M1.3 — Design Tokens & Reusable Primitives: FORMALLY ACCEPTED October 8, 2026 (UTC).** M1.3.1 tokens are
 accepted, merged and qualified on main (30/30); see the
@@ -54,10 +64,14 @@ records the October 9, 2026 (UTC) outcome, signed closeout
 **M1.4.3 — Additional Reviewed Content & Navigation: REVIEWED AND DEFERRED;
 NO IMPLEMENTATION AUTHORIZED.** This intentional deferral is part of M1.4's
 accepted scope; no additional content was implemented.
-**M1.5 — Final Qualification: FORMALLY ACCEPTED AND COMPLETE October 10, 2026 (UTC) — repository closeout in progress.**
+**M1.5 — Final Qualification: FORMALLY ACCEPTED AND COMPLETE October 10, 2026 (UTC).**
 The [canonical M1.5 acceptance record](docs/engineering/m1-5-final-qualification-acceptance.md)
-owns the cumulative evidence, accepted limitations and M15R-01 correction;
-independent confirmation and this closeout's signed integration/exact-SHA CI remain pending.
+owns the cumulative evidence and accepted limitations. Signed main acceptance record
+`2195fcc938ca7eeafc0cc6c3a8b287dd03d170f8` passed exact-SHA
+[run 38047244927](https://github.com/adarj/grocery-pos-website/actions/runs/38047244927)
+on supported Ubuntu 24.04 x86_64. The subsequent independent audit returned
+**PASS — M1.5 CLOSEOUT VERIFIED; M15R-01 RESOLVED**. Its preparation-time
+integration/CI statements are historical; this repository closeout is complete.
 **M1.5.1 — Qualification Baseline & Adversarial Review: FORMALLY ACCEPTED October 9, 2026 (UTC).**
 Its [formal acceptance record](docs/engineering/m1-5-1-qualification-baseline.md#formal-m151-acceptance--october-9-2026-utc)
 records independent audit PASS, signed integration and exact-commit main CI.
@@ -69,7 +83,10 @@ owns the maintainer's explicit decision, signed main integration
 Windows forced-colors remains **UNVERIFIED**; its absence and the missing
 manual-test provenance metadata are human-accepted bounded limitations for
 this homepage. Acceptance establishes neither Windows compatibility nor WCAG
-conformance. Milestone 1 overall remains **NOT FORMALLY ACCEPTED**.
+conformance. **Milestone 1 overall: FORMALLY ACCEPTED AND COMPLETE October 10,
+2026 (UTC).** The [canonical acceptance record](docs/engineering/milestone-1-acceptance.md) owns that separate
+human decision; its new administrative record still requires independent review,
+human signed integration and its own exact-SHA CI.
 Signed M1.5.2 acceptance-record commit
 `335a31187284956f2a8eb6e23deecee0e12ed3fe` is integrated on main and
 [run 37981808698](https://github.com/adarj/grocery-pos-website/actions/runs/37981808698)

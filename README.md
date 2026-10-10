@@ -67,10 +67,16 @@ Windows forced-colors remains **UNVERIFIED**; its absence and the missing
 manual-test provenance metadata are human-accepted bounded limitations for
 this homepage. Acceptance establishes neither Windows compatibility nor WCAG
 conformance. M1.5 remains **IN PROGRESS, NOT FORMALLY COMPLETE**; M1 is
-**NOT FORMALLY COMPLETE**. The new administrative acceptance-record commit
-requires human signed integration and its own successful exact-SHA Ubuntu CI.
-**M1.5.3 and corrective application changes:
-NOT AUTHORIZED.**
+**NOT FORMALLY COMPLETE**. Signed M1.5.2 acceptance-record commit
+`335a31187284956f2a8eb6e23deecee0e12ed3fe` is integrated on main and
+[run 37981808698](https://github.com/adarj/grocery-pos-website/actions/runs/37981808698)
+passed on that exact SHA.
+**M1.5.3 — NO-CORRECTION CLOSEOUT PROPOSED; INDEPENDENT REVIEW AND FORMAL HUMAN ACCEPTANCE PENDING.**
+The [correction assessment](docs/engineering/m1-5-3-correction-assessment.md) records the October 10, 2026 (UTC)
+advisory decision **A — NO CORRECTION JUSTIFIED**. Only documentation preparation
+is authorized; **corrective application implementation remains NOT AUTHORIZED**.
+Independent review, human signed integration, exact-SHA CI and formal acceptance
+remain gates for this new candidate.
 Other assertions and P02–P08 remain withheld. No public
 release or deployment is authorized. The human maintainer
 formally accepted Milestone 0 and authorized M1 on October 8, 2026 (UTC).

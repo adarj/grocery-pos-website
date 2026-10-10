@@ -53,9 +53,16 @@ Windows forced-colors remains **UNVERIFIED**; its absence and the missing
 manual-test provenance metadata are human-accepted bounded limitations for
 this homepage. Acceptance establishes neither Windows compatibility nor WCAG
 conformance. M1.5 remains **IN PROGRESS, NOT FORMALLY COMPLETE**; M1 is
-**NOT FORMALLY COMPLETE**. The new administrative acceptance-record commit
-requires human signed integration and its own successful exact-SHA Ubuntu CI.
-**M1.5.3 and corrective application changes: NOT AUTHORIZED.**
+**NOT FORMALLY COMPLETE**. Signed M1.5.2 acceptance-record commit
+`335a31187284956f2a8eb6e23deecee0e12ed3fe` is integrated on main and
+[run 37981808698](https://github.com/adarj/grocery-pos-website/actions/runs/37981808698)
+passed on that exact SHA.
+**M1.5.3 — NO-CORRECTION CLOSEOUT PROPOSED; INDEPENDENT REVIEW AND FORMAL HUMAN ACCEPTANCE PENDING.**
+The [correction assessment](m1-5-3-correction-assessment.md) records the October 10, 2026 (UTC)
+advisory decision **A — NO CORRECTION JUSTIFIED**. Only documentation preparation
+is authorized; **corrective application implementation remains NOT AUTHORIZED**.
+Independent review, human signed integration, exact-SHA CI and formal acceptance
+remain gates for this new candidate.
 Later implementation, public release and deployment remain unauthorized.
 Later checkpoints retain their scope and human review gates. Specification approval grants no publication or
 production deployment authorization. Milestone 0 is complete and accepted;
@@ -583,3 +590,32 @@ supported Ubuntu CI and explicit acceptance remain required.
 Production deployment/public release: NOT AUTHORIZED.** M1.4's accepted scope
 and exact C01/C02/C04/C05 approvals are unchanged; other assertions/P02–P08 remain
 withheld. The ESLint 9.39.5 bounded exception and January 8, 2027 deadline remain.
+
+## M1.5.3 no-correction closeout candidate — October 10, 2026 (UTC)
+
+The preceding read-only necessity assessment recommended **A — NO CORRECTION
+JUSTIFIED**: no substantiated present BLOCKER, MAJOR or MINOR application defect
+requires corrective implementation for the current approved pre-production
+homepage. The maintainer authorized preparation of a documentation-only candidate;
+the [M1.5.3 assessment](m1-5-3-correction-assessment.md) owns its evidence,
+finding dispositions, retained limitations and proposed acceptance criteria.
+
+**M1.5.3 — NO-CORRECTION CLOSEOUT PROPOSED; INDEPENDENT REVIEW AND FORMAL HUMAN ACCEPTANCE PENDING.**
+This supersedes earlier M1.5.3-not-authorized statements only for administrative
+preparation, preserving their historical meaning. Corrective application
+implementation remains **NOT AUTHORIZED**.
+
+Signed M1.5.2 acceptance-record commit `335a31187284956f2a8eb6e23deecee0e12ed3fe`
+is integrated on main; [exact-SHA run 37981808698](https://github.com/adarj/grocery-pos-website/actions/runs/37981808698)
+passed. That fulfilled its previously pending integration/CI requirement.
+This new M1.5.3 candidate still requires independent review, human signed
+integration, its own successful exact-SHA supported Ubuntu CI and an explicit
+human acceptance decision.
+
+M1.5.1 and M1.5.2 acceptance remain intact; M1.5 is **IN PROGRESS, NOT FORMALLY
+COMPLETE**, and M1 is **NOT FORMALLY COMPLETE**. Accepted Windows/provenance
+limitations, future client-island and child-route gates, CSP/security controls
+and the ESLint 9.39.5 exception/January 8, 2027 deadline remain binding.
+Additional content/routes/P02–P08 and production deployment/public release remain
+**NOT AUTHORIZED**. This candidate grants no further implementation or release
+authority.

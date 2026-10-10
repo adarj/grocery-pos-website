@@ -61,9 +61,16 @@ Windows forced-colors remains **UNVERIFIED**; its absence and the missing
 manual-test provenance metadata are human-accepted bounded limitations for
 this homepage. Acceptance establishes neither Windows compatibility nor WCAG
 conformance. M1.5 remains **IN PROGRESS, NOT FORMALLY COMPLETE**; M1 is
-**NOT FORMALLY COMPLETE**. The new administrative acceptance-record commit
-requires human signed integration and its own successful exact-SHA Ubuntu CI.
-**M1.5.3 and corrective application changes: NOT AUTHORIZED.**
+**NOT FORMALLY COMPLETE**. Signed M1.5.2 acceptance-record commit
+`335a31187284956f2a8eb6e23deecee0e12ed3fe` is integrated on main and
+[run 37981808698](https://github.com/adarj/grocery-pos-website/actions/runs/37981808698)
+passed on that exact SHA.
+**M1.5.3 — NO-CORRECTION CLOSEOUT PROPOSED; INDEPENDENT REVIEW AND FORMAL HUMAN ACCEPTANCE PENDING.**
+The [correction assessment](engineering/m1-5-3-correction-assessment.md) records the October 10, 2026 (UTC)
+advisory decision **A — NO CORRECTION JUSTIFIED**. Only documentation preparation
+is authorized; **corrective application implementation remains NOT AUTHORIZED**.
+Independent review, human signed integration, exact-SHA CI and formal acceptance
+remain gates for this new candidate.
 Other assertions and P02–P08 remain withheld.
 The approved M1 plan and design-system specification remain governing; acceptance
 grants no additional disclosure, public release or deployment approval.
@@ -84,6 +91,7 @@ grants no additional disclosure, public release or deployment approval.
 | What formally accepts M1.4's implemented scope and no-expansion decision? | [M1.4 formal acceptance](engineering/milestone-1-plan.md#formal-m14-acceptance--october-9-2026-utc) |
 | Which current properties are demonstrated, and how should final qualification proceed? | [M1.5.1 qualification baseline](engineering/m1-5-1-qualification-baseline.md) |
 | What fresh accessibility/performance evidence exists, and what remains manual? | [M1.5.2 qualification results](engineering/m1-5-2-qualification-results.md) |
+| Does current qualification evidence justify corrective application work? | [M1.5.3 correction assessment](engineering/m1-5-3-correction-assessment.md) |
 | What are the M1 scopes, approval record and checkpoint gates? | [Milestone 1 plan](engineering/milestone-1-plan.md) |
 | How does the eventual website fit together? | [Architecture overview](architecture/website-architecture.md) |
 | Where does source code belong? | [Source layout and application boundary](architecture/source-layout.md) |

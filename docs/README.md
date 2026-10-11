@@ -2,10 +2,14 @@
 
 **M2 PLANNING AUTHORIZED — October 10, 2026 (UTC).**
 **M2 IMPLEMENTATION AND PUBLICATION NOT AUTHORIZED.**
-The [M2 planning baseline](engineering/milestone-2-plan.md) proposes strategy, evidence/content
-readiness and an experience/technology study. M2.1 is a planning candidate under
-review, not complete or accepted; no application, disclosure or deployment change
-is authorized. M0/M1 acceptance and their retained limitations remain unchanged.
+**M2.1 — Marketing Strategy, Scope & Content Readiness: FORMALLY ACCEPTED October 11, 2026 (UTC).**
+The [canonical acceptance record](engineering/m2-1-acceptance.md) records the effective human decision
+and CI-qualified signed planning baseline. This separate administrative record
+still requires independent audit, human review, signed integration and its own
+exact-SHA CI. **Milestone 2 overall: IN PROGRESS, NOT FORMALLY ACCEPTED.**
+M2.2–M2.6 execution, further research, application implementation, disclosure
+expansion and deployment remain unauthorized. M0/M1 acceptance and retained
+limitations remain unchanged.
 
 **MILESTONE 1 — WEBSITE FOUNDATION: FORMALLY ACCEPTED AND COMPLETE October 10, 2026 (UTC).**
 The [canonical acceptance record](engineering/milestone-1-acceptance.md) records the maintainer's explicit
@@ -113,6 +117,7 @@ grants no additional disclosure, public release or deployment approval.
 | --- | --- |
 | What is this repository and its next checkpoint? | [Root README](../README.md) |
 | What formally accepts the completed website foundation? | [Milestone 1 acceptance](engineering/milestone-1-acceptance.md) |
+| What records formal M2.1 planning acceptance and its closeout gates? | [M2.1 acceptance](engineering/m2-1-acceptance.md) |
 | What M2 planning is authorized, and which later gates are proposed? | [Milestone 2 plan](engineering/milestone-2-plan.md) |
 | Which marketing audiences, claims and pages have sufficient evidence? | [M2.1 marketing readiness](product/m2-1-marketing-content-readiness.md) |
 | What design, technology and asset decisions should M2 consider? | [M2.1 experience study](design/m2-1-marketing-experience-study.md) |

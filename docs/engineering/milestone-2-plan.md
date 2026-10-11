@@ -1,6 +1,22 @@
 # Milestone 2 — Marketing: Planning Baseline
 
-## Authorization and current status — October 10, 2026 (UTC)
+## Formal M2.1 acceptance and current status — October 11, 2026 (UTC)
+
+**M2.1 — Marketing Strategy, Scope & Content Readiness: FORMALLY ACCEPTED October 11, 2026 (UTC).**
+The [canonical acceptance record](m2-1-acceptance.md) records the effective human
+decision after independent planning review, signed integration and successful
+exact-SHA planning CI. This separate acceptance-record candidate still requires
+independent audit, human review, signed integration and its own exact-SHA CI.
+**Milestone 2 overall: IN PROGRESS, NOT FORMALLY ACCEPTED.**
+**M2.2–M2.6 execution, implementation, additional publication and deployment remain NOT AUTHORIZED.**
+This administrative closeout authorizes no further research or content-review work.
+
+The following October 10 preparation record preserves the original planning
+authorization, starting baseline, analysis, proposed roadmap and then-pending
+review/integration gates. Its earlier M2.1 pending status is superseded by the
+October 11 human decision above; the underlying evidence and limitations are unchanged.
+
+## Historical planning authorization and preparation status — October 10, 2026 (UTC)
 
 **M2 PLANNING AUTHORIZED — October 10, 2026 (UTC).**
 **M2 IMPLEMENTATION AND PUBLICATION NOT AUTHORIZED.**
@@ -183,7 +199,7 @@ documentation/research work. The detailed
 [owner questions](../product/m2-1-marketing-content-readiness.md#owner-questions-and-next-decisions)
 are inputs for review, not requests to contact third parties.
 
-## Planning review and integration gates
+## Historical planning review and integration gates — October 10, 2026 (UTC)
 
 Before accepting M2.1, the maintainer must review evidence applicability, audience
 priorities, unresolved inputs, proposed roadmap and technology dispositions, with

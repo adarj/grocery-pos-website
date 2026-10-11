@@ -58,10 +58,14 @@ contradictions rather than silently substituting another architecture.
 
 **M2 PLANNING AUTHORIZED — October 10, 2026 (UTC).**
 **M2 IMPLEMENTATION AND PUBLICATION NOT AUTHORIZED.**
-The [M2 planning baseline](docs/engineering/milestone-2-plan.md) proposes strategy, evidence/content
-readiness and an experience/technology study. M2.1 is a planning candidate under
-review, not complete or accepted; no application, disclosure or deployment change
-is authorized. M0/M1 acceptance and their retained limitations remain unchanged.
+**M2.1 — Marketing Strategy, Scope & Content Readiness: FORMALLY ACCEPTED October 11, 2026 (UTC).**
+The [canonical acceptance record](docs/engineering/m2-1-acceptance.md) records the effective human decision
+and CI-qualified signed planning baseline. This separate administrative record
+still requires independent audit, human review, signed integration and its own
+exact-SHA CI. **Milestone 2 overall: IN PROGRESS, NOT FORMALLY ACCEPTED.**
+M2.2–M2.6 execution, further research, application implementation, disclosure
+expansion and deployment remain unauthorized. M0/M1 acceptance and retained
+limitations remain unchanged.
 
 **Milestone 0: FORMALLY ACCEPTED**; see the
 [qualification record](docs/engineering/milestone-0-qualification.md).

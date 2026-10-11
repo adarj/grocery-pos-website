@@ -1,6 +1,32 @@
 # Milestone 2 — Marketing: Planning Baseline
 
-## Formal M2.1 acceptance and current status — October 11, 2026 (UTC)
+## M2.2 preparation and current status — October 11, 2026 (UTC)
+
+**M2.1: FORMALLY ACCEPTED October 11, 2026 (UTC); REPOSITORY CLOSEOUT VERIFIED.**
+The [acceptance record](m2-1-acceptance.md) was signed and integrated at
+`0610d5ff40fbd2580e9f9bd0c723e180d222d107`, parent
+`83f5346fd5ba945e4964e1727ec4836617aee592`;
+[run 38104636456](https://github.com/adarj/grocery-pos-website/actions/runs/38104636456)
+completed SUCCESS, push, attempt 1, on that exact SHA after independent audit PASS.
+That CI qualifies the M2.1 record, not the new M2.2 candidate.
+
+**M2.2 — Exact Content & Disclosure Review: DOCUMENTATION/RESEARCH PREPARATION AUTHORIZED; CANDIDATE UNDER REVIEW, NOT ACCEPTED.**
+Authority is the maintainer's instruction, “Codex — M2.2 Exact Content & Disclosure
+Review: Initial Candidate”, received October 11, 2026 (UTC).
+The [consolidated candidate](../product/m2-2-exact-content-disclosure-review.md) owns
+bounded source verification, one internal educational draft, exact proposed
+metadata, source-to-content traceability and the disclosure decision packet.
+Publication approval is **NO — DECISION PENDING**; the existing homepage is unchanged.
+No M2.3 or later execution, application/dependency/asset change, broader product
+disclosure or deployment is authorized. M2 overall remains in progress, not formally accepted.
+
+The following October 11 M2.1 acceptance-record preparation section and October 10
+planning sections remain historical. Their pending integration/CI and M2.2
+nonauthorization statements are superseded only by the completed M2.1 closeout
+and this narrowly bounded M2.2 preparation authorization. All underlying planning,
+withholding, architecture and future qualification gates remain intact.
+
+## Historical M2.1 acceptance-record preparation status — October 11, 2026 (UTC)
 
 **M2.1 — Marketing Strategy, Scope & Content Readiness: FORMALLY ACCEPTED October 11, 2026 (UTC).**
 The [canonical acceptance record](m2-1-acceptance.md) records the effective human

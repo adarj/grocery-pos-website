@@ -23,9 +23,13 @@ Its [acceptance record](docs/engineering/m2-1-acceptance.md) is signed and integ
 `0610d5ff40fbd2580e9f9bd0c723e180d222d107`;
 [exact-SHA run 38104636456](https://github.com/adarj/grocery-pos-website/actions/runs/38104636456)
 passed. M2.1 repository closeout is verified; its preparation-time pending statements are historical.
-**M2.2 — Exact Content & Disclosure Review: bounded documentation/research preparation authorized; candidate under review, not accepted.**
-The [internal content/disclosure candidate](docs/product/m2-2-exact-content-disclosure-review.md) proposes
-one educational article for review only. Publication approval remains **NO — DECISION PENDING**.
+**M2.2 — Exact Content & Disclosure Review: FORMALLY ACCEPTED October 11, 2026 (UTC).**
+The [canonical acceptance record](docs/engineering/m2-2-acceptance.md) records the effective human
+decision for completed documentation and internal editorial review.
+**PUBLIC DISCLOSURE: EXPLICITLY DEFERRED; ARTICLE PUBLICATION: NOT APPROVED;
+WEBSITE IMPLEMENTATION: NOT AUTHORIZED.** This new administrative record still
+requires independent read-only audit, human review, human-signed integration
+and its own exact-SHA CI.
 **Milestone 2 overall: IN PROGRESS, NOT FORMALLY ACCEPTED.**
 M2.3–M2.6 execution, application implementation, disclosure expansion and deployment
 remain unauthorized. M0/M1 acceptance and retained limitations remain unchanged.

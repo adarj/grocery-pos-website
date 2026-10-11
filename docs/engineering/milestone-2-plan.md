@@ -1,6 +1,39 @@
 # Milestone 2 — Marketing: Planning Baseline
 
-## M2.2 preparation and current status — October 11, 2026 (UTC)
+## Formal M2.2 acceptance and current status — October 11, 2026 (UTC)
+
+**M2.1: FORMALLY ACCEPTED October 11, 2026 (UTC); REPOSITORY CLOSEOUT VERIFIED.**
+Its [acceptance record](m2-1-acceptance.md) and completed exact-SHA CI remain governing.
+
+**M2.2 — Exact Content & Disclosure Review: FORMALLY ACCEPTED October 11, 2026 (UTC).**
+The [canonical acceptance record](m2-2-acceptance.md) records the maintainer's
+effective acceptance of completed documentation and internal editorial review,
+with public disclosure and implementation explicitly deferred.
+The signed review baseline `55c7f05862c45b85abec9f5a55f88ec9995f962b`
+passed [exact-SHA run 38106316743](https://github.com/adarj/grocery-pos-website/actions/runs/38106316743),
+SUCCESS, push, attempt 1. That run qualifies the review commit, not the new
+administrative acceptance record.
+
+**PUBLIC DISCLOSURE: EXPLICITLY DEFERRED.**
+**ARTICLE PUBLICATION: NOT APPROVED.**
+**WEBSITE IMPLEMENTATION: NOT AUTHORIZED.**
+The existing homepage, exact disclosure permissions and article revision remain unchanged.
+This separate acceptance-record candidate still requires independent read-only
+audit, human review, human-signed integration and its own exact-SHA CI.
+
+**Milestone 2 overall: IN PROGRESS, NOT FORMALLY ACCEPTED.**
+**M2.3–M2.6: NOT AUTHORIZED FOR EXECUTION.**
+No further research, public content, route, asset, dependency, operational
+platform change or deployment is authorized by this administrative closeout.
+
+The following October 11 preparation sections and October 10 planning sections
+are historical. Their M2.2 pending-acceptance and review/integration statements
+are superseded by the later human decision and completed review-commit provenance
+above. Public disclosure is now explicitly deferred, with publication still not
+approved. Underlying research, editorial content, roadmap, architecture,
+withholding and future qualification gates retain their original meaning.
+
+## Historical M2.2 preparation status — October 11, 2026 (UTC)
 
 **M2.1: FORMALLY ACCEPTED October 11, 2026 (UTC); REPOSITORY CLOSEOUT VERIFIED.**
 The [acceptance record](m2-1-acceptance.md) was signed and integrated at

@@ -14,3 +14,7 @@ export const qualificationOnly = [
   "Public-safe capability samples", "M0.4 internationalized architecture proof",
   "Fictional qualification data", "Internal engineering preview", "Increment counter",
 ];
+
+// D6 approval adds only this exact contextual link, after the fourth section paragraph.
+export const resourceTitle = "Evaluating Grocery POS Systems: Checkout Continuity, Migration, and Operational Risk";
+export const resourcePath = "/en/resources/evaluating-grocery-pos-systems";

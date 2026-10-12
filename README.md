@@ -17,7 +17,8 @@ implementation. Its intended repository identity is `adarj/grocery-pos-website`.
 ## Current status
 
 **M2 PLANNING AUTHORIZED — October 10, 2026 (UTC).**
-**M2 APPLICATION IMPLEMENTATION AND PRODUCTION PUBLICATION NOT AUTHORIZED.**
+**M2 APPLICATION IMPLEMENTATION: ONLY THE BOUNDED M2.4.1 SLICE AUTHORIZED.**
+**PRODUCTION PUBLICATION: NOT AUTHORIZED.**
 **M2.1 — Marketing Strategy, Scope & Content Readiness: FORMALLY ACCEPTED October 11, 2026 (UTC).**
 Its [acceptance record](docs/engineering/m2-1-acceptance.md) is signed and integrated at
 `0610d5ff40fbd2580e9f9bd0c723e180d222d107`;
@@ -33,10 +34,12 @@ M2.2 repository closeout is verified by the subsequent retrospective audit:
 M22-ACC-N01 remains a nonblocking NOTE that this audit followed integration.
 Preparation-time pending statements in the acceptance record are historical.
 The disclosure deferrals at M2.2/M2.3 acceptance are historical; D5 below
-supersedes them only for exact R1 content. Implementation/release restrictions remain.
+supersedes them only for exact R1 content. The separate M2.4.1 authorization below
+supersedes the earlier implementation-entry deferral; release restrictions remain.
 **M2.3 — Information Architecture & Experience Qualification Plan: FORMALLY ACCEPTED October 12, 2026 (UTC).**
 The [canonical acceptance record](docs/engineering/m2-3-acceptance.md) records the effective human decision.
-**M2.3 PLANNING RECOMMENDATION: NO IMPLEMENTATION YET.**
+At M2.3 acceptance, the recommendation was **NO IMPLEMENTATION YET**.
+The later exact D1–D6 decisions and M2.4.1 authorization below permit only the bounded local slice.
 Its signed acceptance-record commit `df43895a81e02683e13e6c87896893c306c41eb2`
 passed [exact-SHA run 38199211077](https://github.com/adarj/grocery-pos-website/actions/runs/38199211077),
 SUCCESS, push to main, attempt 1, with valid GitHub signature verification.
@@ -53,18 +56,25 @@ Its pending choices remain historical; the packet and accepted records are uncha
 **EXACT M22-C12-A01-R1 DISCLOSURE: APPROVED.**
 This narrow approval supersedes article withholding only for R1's exact identity;
 other claims and P02–P08 material remain withheld beyond that scope.
-**CURRENT RECOMMENDATION: NO IMPLEMENTATION YET.**
-**M2.4 APPLICATION IMPLEMENTATION: NOT AUTHORIZED.**
-**TECHNICAL QUALIFICATION OF NEW ARTICLE: NOT PERFORMED.**
+**M2.4 FIRST BOUNDED APPLICATION IMPLEMENTATION: HUMAN AUTHORIZED; CANDIDATE UNDER REVIEW — October 12, 2026 (UTC).**
+The [implementation record](docs/engineering/m2-4-1-resource-implementation.md) records the explicit authority, exact R1
+projection, server-first home/child identity, page metadata, approved contextual
+homepage link, automated checks and unperformed human/OS/AT qualification.
+**FORMAL M2.5 QUALIFICATION: NOT PERFORMED; NOT AUTHORIZED.**
 **PRODUCTION PUBLICATION: NOT AUTHORIZED.**
 **DEPLOYMENT: NOT AUTHORIZED.**
 **Milestone 2 overall: IN PROGRESS, NOT FORMALLY ACCEPTED.**
 **M2.5–M2.6: NOT AUTHORIZED.**
-Final prepublication source/rights verification, separate implementation authority
-and actual qualification/release gates remain. No application code, asset, dependency,
-operational-platform or hosting change is authorized. M0/M1 scope and limitations
-remain unchanged. This administrative candidate needs separate read-only audit,
-human manual review, signed integration and its own exact-SHA CI.
+The human-decision record is signed and integrated at
+`3854375bf2e7ccd2149ce3e316d7343108291649`; [exact-SHA run 38314035517](https://github.com/adarj/grocery-pos-website/actions/runs/38314035517)
+passed, SUCCESS, push to main, attempt 1, with valid GitHub signature verification.
+That CI qualifies the decision record only. Its preparation-time pending wording
+is historical. The local M2.4.1 implementation remains unstaged and uncommitted;
+it requires a separate independent read-only implementation audit, human manual
+review, human-signed integration and new exact-SHA CI. Final prepublication
+source/rights verification, formal qualification and release gates remain.
+No additional feature, dependency, asset, language, operational-platform or hosting
+change is authorized. Accepted M0/M1 limitations remain binding.
 
 **MILESTONE 1 — WEBSITE FOUNDATION: FORMALLY ACCEPTED AND COMPLETE October 10, 2026 (UTC).**
 The [canonical acceptance record](docs/engineering/milestone-1-acceptance.md) records the maintainer's explicit
@@ -74,7 +84,8 @@ M1 repository closeout is verified: signed main commit
 [run 38049863825](https://github.com/adarj/grocery-pos-website/actions/runs/38049863825);
 the independent closeout returned **PASS — MILESTONE 1 REPOSITORY CLOSEOUT VERIFIED**.
 Preparation-time pending statements in the canonical record remain historical.
-No additional implementation, public release or deployment is authorized.
+M1 acceptance granted no additional implementation, public release or deployment authority;
+the later bounded M2.4.1 instruction above is separate.
 
 Milestone 0 remains formally accepted; M1.1 is **HUMAN-APPROVED AND QUALIFIED**
 October 8, 2026 (UTC), with its original specification/design approval preserved.
@@ -177,7 +188,7 @@ at `e5f690977273ce721998f6f778b946924b5a443f`: Chromium/Firefox/WebKit 9/9 each,
 completion of visual review, formal M1.2 acceptance and M1.3 authorization on
 October 8, 2026 (UTC). M1.4.1 is formally accepted as documentation-only planning;
 M1.4.2 is formally accepted only for the exact approved informational homepage.
-No additional claim, route, asset, public release or deployment is authorized. The broader palette
+No claim, route or feature beyond M2.4.1, asset, public release or deployment is authorized. The broader palette
 remains exploratory. The [M1.2 lint review](docs/engineering/quality-and-ci.md#m12-eslint-compatibility-review-2026-10-08)
 and explicit maintainer retention approval satisfy the first-implementation-checkpoint
 requirement under the existing bounded exception and January 8, 2027 maximum review date.

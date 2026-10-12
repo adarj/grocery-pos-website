@@ -1,7 +1,7 @@
 import { expect, test } from "./browser-diagnostics";
 
 test("production pages, root redirect, and invalid language enforce security headers", async ({ request }) => {
-  for (const [path, status] of [["/en", 200], ["/", 307], ["/zz", 404]] as const) {
+  for (const [path, status] of [["/en", 200], ["/en/resources/evaluating-grocery-pos-systems", 200], ["/", 307], ["/zz", 404], ["/en-XA/resources/evaluating-grocery-pos-systems", 404], ["/en/resources", 404]] as const) {
     const response = await request.get(path, { maxRedirects: 0 });
     expect(response.status(), path).toBe(status);
     const headers = response.headers();

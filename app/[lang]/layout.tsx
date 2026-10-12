@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { direction, htmlLanguage, isPublic, publicRouteCodes } from "../../src/i18n/Language.gen";
-import { pageMetadata } from "../../src/i18n/Messages.gen";
 import { requireRouteLanguage } from "../../src/adapters/next/language";
-import { make as EngineeringShell } from "../../src/ui/EngineeringShell.gen";
 import "../globals.css";
 
 export function generateStaticParams() {
@@ -12,7 +10,6 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: LayoutProps<"/[lang]">): Promise<Metadata> {
   const language = requireRouteLanguage((await params).lang);
   return {
-    ...pageMetadata(language),
     ...(isPublic(language) ? {} : { robots: { index: false, follow: false } }),
   };
 }
@@ -21,7 +18,7 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
   const language = requireRouteLanguage((await params).lang);
   return (
     <html lang={htmlLanguage(language)} dir={direction(language)}>
-      <body><EngineeringShell language={language}>{children}</EngineeringShell></body>
+      <body>{children}</body>
     </html>
   );
 }

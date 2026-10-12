@@ -18,6 +18,11 @@ let make = (~language: Language.t) => {
     <section>
       <h2> {React.string(Messages.get(language, WebsiteHeading))} </h2>
       <p> {React.string(Messages.get(language, WebsiteParagraph))} </p>
+      <p>
+        <a href={GroceryPosEvaluation.path(language)}>
+          {React.string(Messages.get(language, EvaluationTitle))}
+        </a>
+      </p>
     </section>
   </main>
 }

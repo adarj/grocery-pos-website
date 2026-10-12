@@ -1,5 +1,6 @@
 import type { Locator } from "@playwright/test";
 import { expect, test } from "./browser-diagnostics";
+import { resourceTitle } from "./approved-homepage";
 
 // Computed opaque sRGB only. Reject transparency/other color spaces rather than
 // reporting a ratio without the compositing or gamut conversion they require.
@@ -147,6 +148,11 @@ test("homepage shell has measured text, action and focus contrast", async ({ pag
     button.textContent = "Control styling probe";
     node.append(button);
   });
+  await page.keyboard.press("Tab");
+  const resource = page.getByRole("link", { name: resourceTitle, exact: true });
+  await expect(resource).toBeFocused();
+  pair("resourceFocusPage", await focusIndicator(resource), body.background, 3);
+  pair("resourceText", (await colors(resource)).text, body.background);
   await page.keyboard.press("Tab");
   await expect(button).toBeFocused();
   // The 4px offset leaves page background adjacent to the 3px indicator;

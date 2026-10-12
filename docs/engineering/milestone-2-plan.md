@@ -1,6 +1,36 @@
 # Milestone 2 — Marketing: Planning Baseline
 
+## M2.4.1 first bounded application implementation — October 12, 2026 (UTC)
+
+**M2.1–M2.3: FORMALLY ACCEPTED; REPOSITORY CLOSEOUT VERIFIED.**
+**M2.4 FIRST BOUNDED APPLICATION IMPLEMENTATION: HUMAN AUTHORIZED; CANDIDATE UNDER REVIEW.**
+The [implementation record](m2-4-1-resource-implementation.md) records the later
+explicit human authorization, exact R1 semantic projection, one validated English
+resource route, approved contextual homepage link and server-first identity/metadata
+mechanism. This instruction supersedes NO IMPLEMENTATION YET only for that slice.
+The unchanged [D1–D6 record](m2-4-human-decisions.md) is signed and integrated at
+`3854375bf2e7ccd2149ce3e316d7343108291649`, parent
+`22dd719d16d17faa9e5db8cd1e71f81ff5eec638`, with valid GitHub signature and
+[exact-SHA run 38314035517](https://github.com/adarj/grocery-pos-website/actions/runs/38314035517),
+SUCCESS, push to main, attempt 1. That run qualifies the decision record only.
+
+**EXACT R1 CONTENT DISCLOSURE: HUMAN APPROVED.**
+**PRODUCTION PUBLICATION: NOT AUTHORIZED.**
+**DEPLOYMENT: NOT AUTHORIZED.**
+**M2 OVERALL: IN PROGRESS, NOT FORMALLY ACCEPTED.**
+**M2.5–M2.6: NOT AUTHORIZED.**
+Implementation-time automated validation is authorized; formal M2.5 qualification
+and full new human accessibility evidence collection are separate future gates.
+Applicable M2.3 A01–A12 obligations, final prepublication source/rights checks and
+all retained findings/limitations remain. The local candidate requires separate
+independent implementation audit, human review/signing/integration and new exact-SHA
+CI; no independent PASS, M2.4 acceptance, public release or deployment is asserted.
+
 ## M2.4 human editorial and presentation decisions — October 12, 2026 (UTC)
+
+**Historical decision-record preparation snapshot.** The later M2.4.1 status above
+supersedes its implementation-entry restriction and pending record integration/CI.
+The effective D1–D6 decisions and separate release restrictions remain binding.
 
 **M2.1–M2.3: FORMALLY ACCEPTED; REPOSITORY CLOSEOUT VERIFIED.**
 **M2.4 EDITORIAL / DISCLOSURE / PRESENTATION DECISIONS: HUMAN APPROVED.**

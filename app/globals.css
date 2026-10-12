@@ -236,3 +236,16 @@ button:active {
     border-color: ButtonText;
   }
 }
+
+/* The approved text resource reuses the existing prose measure and section rhythm. */
+.educational-resource {
+  max-inline-size: var(--measure-prose);
+}
+
+.educational-resource ul {
+  margin-block: 0 var(--space-6);
+}
+
+.educational-resource li + li {
+  margin-block-start: var(--space-2);
+}

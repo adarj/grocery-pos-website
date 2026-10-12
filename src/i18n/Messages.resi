@@ -14,6 +14,9 @@ type key =
   | LocalFirstParagraph
   | WebsiteHeading
   | WebsiteParagraph
+  | EvaluationTitle
+  | EvaluationMetaTitle
+  | EvaluationMetadataDescription
   | QualificationTitle
   | ArchitectureExplanation
   | FictionalDisclaimer
@@ -35,3 +38,6 @@ let counterLabels: Language.t => counterLabels
 type pageMetadata = {title: string, description: string}
 @genType
 let pageMetadata: Language.t => pageMetadata
+
+@genType
+let evaluationMetadata: Language.t => pageMetadata

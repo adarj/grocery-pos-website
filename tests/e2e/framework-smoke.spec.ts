@@ -1,5 +1,5 @@
 import { expect, test } from "./browser-diagnostics";
-import { title, description, headings, paragraphs, qualificationOnly } from "./approved-homepage";
+import { title, description, headings, paragraphs, qualificationOnly, resourceTitle, resourcePath } from "./approved-homepage";
 
 test.describe("visible server-rendered content", () => {
   test.use({ javaScriptEnabled: false });
@@ -22,15 +22,17 @@ test.describe("visible server-rendered content", () => {
     await expect(sections).toHaveCount(4);
     await expect(sections.first().locator("p").first()).toHaveText("Introduction");
     for (let i = 0; i < paragraphs.length; i++) {
-      const paragraph = sections.nth(i).locator("p").last();
+      const paragraph = sections.nth(i).locator("p").nth(i === 0 ? 1 : 0);
       await expect(paragraph).toHaveText(paragraphs[i]);
       await expect(paragraph).toBeVisible();
     }
-    await expect(page.locator("main p")).toHaveCount(5);
+    await expect(page.locator("main p")).toHaveCount(6);
+    await expect(sections.nth(3).locator("p")).toHaveText([paragraphs[3], resourceTitle]);
+    await expect(sections.nth(3).locator("p").last().getByRole("link")).toHaveAttribute("href", resourcePath);
     const identity = page.getByRole("link", { name: "Grocery POS home", exact: true });
     await expect(identity).toHaveAttribute("href", "/en");
     await expect(identity).toHaveAttribute("aria-current", "page");
-    await expect(page.getByRole("link")).toHaveCount(2);
+    await expect(page.getByRole("link")).toHaveCount(3);
     await expect(page.locator("button, form, details, summary, img, iframe")).toHaveCount(0);
     await page.keyboard.press("Tab");
     const skip = page.getByRole("link", { name: "Skip to main content", exact: true });
@@ -53,8 +55,9 @@ test("JavaScript-enabled homepage preserves approved output and excludes fixture
   });
   const response = await page.goto("/en");
   await expect(page.locator("main h1, main h2")).toHaveText(headings);
-  await expect(page.locator("main > section p:last-child")).toHaveText(paragraphs);
-  await expect(page.locator("main")).toHaveText(["Introduction", headings[0], paragraphs[0], headings[1], paragraphs[1], headings[2], paragraphs[2], headings[3], paragraphs[3]].join(""));
+  const sections = page.locator("main > section");
+  for (let i = 0; i < paragraphs.length; i++) await expect(sections.nth(i).locator("p").nth(i === 0 ? 1 : 0)).toHaveText(paragraphs[i]);
+  await expect(page.locator("main")).toHaveText(["Introduction", headings[0], paragraphs[0], headings[1], paragraphs[1], headings[2], paragraphs[2], headings[3], paragraphs[3], resourceTitle].join(""));
   const rsc = await request.get("/en", { headers: { RSC: "1" } });
   expect(rsc.ok()).toBe(true);
   expect(rsc.headers()["content-type"]).toContain("text/x-component");
@@ -65,7 +68,8 @@ test("JavaScript-enabled homepage preserves approved output and excludes fixture
     publicOutputs.push(await script.text());
   }
   for (const output of publicOutputs) for (const value of qualificationOnly) expect(output).not.toContain(value);
-  await expect(page.getByRole("link")).toHaveCount(2);
+  await expect(page.getByRole("link", { name: resourceTitle, exact: true })).toHaveAttribute("href", resourcePath);
+  await expect(page.getByRole("link")).toHaveCount(3);
   await expect(page.getByRole("button")).toHaveCount(0);
   await expect(page.getByRole("navigation")).toHaveCount(0);
   expect(unexpectedRequests).toEqual([]);

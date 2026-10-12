@@ -1,8 +1,9 @@
-// Server-rendered site identity and native skip navigation; no eligible extra destinations.
-// Only language-root pages exist today. Make current state route-aware before
-// adding a child page to this shared layout.
+// Per-page server composition supplies identity explicitly; no client pathname state.
+@genType
+type pageIdentity = Home | Resource
+
 @genType @react.component
-let make = (~language: Language.t, ~children: React.element) => {
+let make = (~language: Language.t, ~pageIdentity: pageIdentity, ~children: React.element) => {
   <>
     <a className="skip-link" href="#main-content">
       {React.string(Messages.get(language, SkipToMain))}
@@ -13,7 +14,10 @@ let make = (~language: Language.t, ~children: React.element) => {
           className="preview-identity"
           href={"/" ++ Language.routeCode(language)}
           ariaLabel={Messages.get(language, IdentityHome)}
-          ariaCurrent={#page}
+          ariaCurrent=?{switch pageIdentity {
+          | Home => Some(#page)
+          | Resource => None
+          }}
         >
           {React.string(Messages.get(language, SiteIdentity))}
         </a>

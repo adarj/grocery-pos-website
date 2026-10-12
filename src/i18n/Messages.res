@@ -14,6 +14,9 @@ type key =
   | LocalFirstParagraph
   | WebsiteHeading
   | WebsiteParagraph
+  | EvaluationTitle
+  | EvaluationMetaTitle
+  | EvaluationMetadataDescription
   | QualificationTitle
   | ArchitectureExplanation
   | FictionalDisclaimer
@@ -45,6 +48,9 @@ let english = key =>
   | LocalFirstParagraph => "Grocery POS is being designed around a local-first architecture, with the goal of keeping essential checkout operations functional even when internet connectivity is unavailable. This is a development objective, not a claim of proven reliability in production grocery environments."
   | WebsiteHeading => "About this website"
   | WebsiteParagraph => "This website is intended to provide information about the Grocery POS project and its development. Checkout transactions and day-to-day grocery store operations belong to the separate POS software, not to this website."
+  | EvaluationTitle => "Evaluating Grocery POS Systems: Checkout Continuity, Migration, and Operational Risk"
+  | EvaluationMetaTitle => "Evaluating Grocery POS: Continuity and Migration Questions"
+  | EvaluationMetadataDescription => "Questions for grocery owners comparing POS systems: checkout continuity, data migration, device compatibility, payment responsibilities, and rollout evidence."
   | QualificationTitle => "Grocery POS Website — M0.4 internationalized architecture proof"
   | ArchitectureExplanation => "Publication decisions come from the ReScript application boundary."
   | FictionalDisclaimer => "Fictional qualification data; no Grocery POS product availability is claimed."
@@ -87,4 +93,10 @@ type pageMetadata = {title: string, description: string}
 let pageMetadata = language => {
   title: get(language, PageTitle),
   description: get(language, MetadataDescription),
+}
+
+@genType
+let evaluationMetadata = language => {
+  title: get(language, EvaluationMetaTitle),
+  description: get(language, EvaluationMetadataDescription),
 }

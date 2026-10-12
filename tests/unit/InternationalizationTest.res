@@ -111,6 +111,9 @@ test(
       LocalFirstParagraph,
       WebsiteHeading,
       WebsiteParagraph,
+      EvaluationTitle,
+      EvaluationMetaTitle,
+      EvaluationMetadataDescription,
       QualificationTitle,
       ArchitectureExplanation,
       FictionalDisclaimer,
@@ -151,3 +154,58 @@ test("localization leaves authorized machine facts unchanged and never adds with
     pseudoMetadata.title == PseudoLocalization.transform(Messages.pageMetadata(English).title),
   )
 })
+
+test(
+  "resource metadata and contextual destination use the validated language without changing home metadata",
+  () => {
+    let metadata = Messages.evaluationMetadata(English)
+    expectTrue(metadata.title == "Evaluating Grocery POS: Continuity and Migration Questions")
+    expectTrue(
+      metadata.description == "Questions for grocery owners comparing POS systems: checkout continuity, data migration, device compatibility, payment responsibilities, and rollout evidence.",
+    )
+    expectTrue(metadata.title != Messages.pageMetadata(English).title)
+    expectTrue(GroceryPosEvaluation.path(English) == "/en/resources/evaluating-grocery-pos-systems")
+    expectTrue(
+      GroceryPosEvaluation.path(PseudoEnglish) == "/en-XA/resources/evaluating-grocery-pos-systems",
+    )
+  },
+)
+
+test(
+  "resolved pseudo editorial content expands human prose while preserving citations and technical identifiers",
+  () => {
+    let english = GroceryPosEvaluation.load(English)
+    let pseudo = GroceryPosEvaluation.load(PseudoEnglish)
+    expectTrue(pseudo.title != english.title)
+    expectTrue(
+      pseudo.sections->Array.map(section => section.heading) !=
+        english.sections->Array.map(section => section.heading),
+    )
+    let expanded = GroceryPosEvaluation.humanText(
+      PseudoEnglish,
+      "GS1 GTIN NIST SP 1300 PCI SSC POS Sunrise 2027",
+    )
+    ["GS1", "GTIN", "NIST SP 1300", "PCI SSC", "POS", "Sunrise 2027"]->Array.forEach(fact =>
+      expectTrue(expanded->String.includes(fact))
+    )
+    let citations = (article: GroceryPosEvaluation.article) =>
+      article.GroceryPosEvaluation.sections->Array.flatMap(section =>
+        section.blocks->Array.flatMap(
+          block =>
+            switch block {
+            | Paragraph(parts) =>
+              parts->Array.flatMap(
+                part =>
+                  switch part {
+                  | Citation(source) => [source.href]
+                  | Text(_) => []
+                  },
+              )
+            | Questions(_) => []
+            },
+        )
+      )
+    expectTrue(citations(english) == citations(pseudo))
+    expectTrue(Array.length(citations(english)) == 6)
+  },
+)

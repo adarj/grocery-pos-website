@@ -1,7 +1,7 @@
 # Documentation map
 
 **M2 PLANNING AUTHORIZED — October 10, 2026 (UTC).**
-**M2 IMPLEMENTATION AND PUBLICATION NOT AUTHORIZED.**
+**M2 APPLICATION IMPLEMENTATION AND PRODUCTION PUBLICATION NOT AUTHORIZED.**
 **M2.1 — Marketing Strategy, Scope & Content Readiness: FORMALLY ACCEPTED October 11, 2026 (UTC).**
 Its [acceptance record](engineering/m2-1-acceptance.md) is signed and integrated at
 `0610d5ff40fbd2580e9f9bd0c723e180d222d107`;
@@ -16,8 +16,8 @@ M2.2 repository closeout is verified by the subsequent retrospective audit:
 **PASS — M2.2 FORMAL ACCEPTANCE RECORD REPOSITORY CLOSEOUT VERIFIED.**
 M22-ACC-N01 remains a nonblocking NOTE that this audit followed integration.
 Preparation-time pending statements in the acceptance record are historical.
-**PUBLIC DISCLOSURE: EXPLICITLY DEFERRED; ARTICLE PUBLICATION: NOT APPROVED;
-WEBSITE IMPLEMENTATION: NOT AUTHORIZED.**
+The disclosure deferrals at M2.2/M2.3 acceptance are historical; D5 below
+supersedes them only for exact R1 content. Implementation/release restrictions remain.
 **M2.3 — Information Architecture & Experience Qualification Plan: FORMALLY ACCEPTED October 12, 2026 (UTC).**
 The [canonical acceptance record](engineering/m2-3-acceptance.md) records the effective human decision.
 **M2.3 PLANNING RECOMMENDATION: NO IMPLEMENTATION YET.**
@@ -26,19 +26,29 @@ passed [exact-SHA run 38199211077](https://github.com/adarj/grocery-pos-website/
 SUCCESS, push to main, attempt 1, with valid GitHub signature verification.
 M2.3 repository closeout is verified; preparation-time pending statements in
 its acceptance record are historical. M2.1–M2.3 closeouts are complete.
-**M2.4 ENTRY-DECISION PREPARATION: DOCUMENTATION-ONLY AUTHORIZED; UNDER REVIEW — October 12, 2026 (UTC).**
-The [entry-readiness and disclosure decision packet](engineering/m2-4-entry-readiness-disclosure-decision.md)
-prepares source, ownership, exact-disclosure and conditional route/scope choices.
-It does not open, rename, complete or accept M2.4 — Bounded Marketing Implementation.
+**M2.4 EDITORIAL / DISCLOSURE / PRESENTATION DECISIONS: HUMAN APPROVED — October 12, 2026 (UTC).**
+The [consolidated human record](engineering/m2-4-human-decisions.md) records D1–D6:
+confirmed interim editorial/maintenance ownership, audience, maintenance policy,
+rights/subject-review approach, exact R1 disclosure and page/navigation specification.
+The entry packet is signed at `22dd719d16d17faa9e5db8cd1e71f81ff5eec638`;
+[exact-SHA run 38303766796](https://github.com/adarj/grocery-pos-website/actions/runs/38303766796)
+passed, SUCCESS, push to main, attempt 1, with valid GitHub signature verification.
+Its pending choices remain historical; the packet and accepted records are unchanged.
+**EXACT M22-C12-A01-R1 DISCLOSURE: APPROVED.**
+This narrow approval supersedes article withholding only for R1's exact identity;
+other claims and P02–P08 material remain withheld beyond that scope.
 **CURRENT RECOMMENDATION: NO IMPLEMENTATION YET.**
 **M2.4 APPLICATION IMPLEMENTATION: NOT AUTHORIZED.**
+**TECHNICAL QUALIFICATION OF NEW ARTICLE: NOT PERFORMED.**
+**PRODUCTION PUBLICATION: NOT AUTHORIZED.**
+**DEPLOYMENT: NOT AUTHORIZED.**
 **Milestone 2 overall: IN PROGRESS, NOT FORMALLY ACCEPTED.**
 **M2.5–M2.6: NOT AUTHORIZED.**
-Public disclosure remains explicitly deferred; article publication is not approved.
-No application, public content/metadata, dependency, asset, operational-platform,
-hosting or deployment change is authorized. M0/M1 acceptance and limitations remain
-unchanged. The new entry packet needs independent read-only audit, human manual
-review, signed integration and its own exact-SHA CI.
+Final prepublication source/rights verification, separate implementation authority
+and actual qualification/release gates remain. No application code, asset, dependency,
+operational-platform or hosting change is authorized. M0/M1 scope and limitations
+remain unchanged. This administrative candidate needs separate read-only audit,
+human manual review, signed integration and its own exact-SHA CI.
 
 **MILESTONE 1 — WEBSITE FOUNDATION: FORMALLY ACCEPTED AND COMPLETE October 10, 2026 (UTC).**
 The [canonical acceptance record](engineering/milestone-1-acceptance.md) records the maintainer's explicit
@@ -138,7 +148,8 @@ independently **RESOLVED** by the focused PASS audit; the original CONDITIONAL
 PASS remains historical. The separate M1.5 overall decision is recorded above;
 Milestone 1 acceptance and release authorization remain separate.
 **Corrective application implementation remains NOT AUTHORIZED.**
-Other assertions and P02–P08 remain withheld.
+Other assertions and P02–P08 material remain withheld beyond the exact R1 approval
+recorded above.
 The approved M1 plan and design-system specification remain governing; acceptance
 grants no additional disclosure, public release or deployment approval.
 
@@ -155,6 +166,7 @@ grants no additional disclosure, public release or deployment approval.
 | What conditional resource IA, navigation and future qualification are proposed? | [M2.3 experience qualification plan](design/m2-3-information-architecture-experience-qualification.md) |
 | What records formal M2.3 planning acceptance and its NO IMPLEMENTATION YET disposition? | [M2.3 acceptance](engineering/m2-3-acceptance.md) |
 | Which exact disclosure, ownership and scope decisions are needed before M2.4 implementation? | [M2.4 entry-decision packet](engineering/m2-4-entry-readiness-disclosure-decision.md) |
+| Which human editorial, ownership, disclosure and presentation decisions are effective? | [M2.4 human decisions](engineering/m2-4-human-decisions.md) |
 | Is the engineering foundation qualified for M1? | [Milestone 0 qualification](engineering/milestone-0-qualification.md) |
 | Who is the website for, and how should pages/navigation work? | [Website information architecture](product/website-information-architecture.md) |
 | Which content is evidenced, ready and separately approved for disclosure? | [M1.4.1 content readiness](product/m1-4-1-content-readiness.md) |

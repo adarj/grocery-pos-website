@@ -1,6 +1,54 @@
 # Milestone 2 — Marketing: Planning Baseline
 
+## M2.4 human editorial and presentation decisions — October 12, 2026 (UTC)
+
+**M2.1–M2.3: FORMALLY ACCEPTED; REPOSITORY CLOSEOUT VERIFIED.**
+**M2.4 EDITORIAL / DISCLOSURE / PRESENTATION DECISIONS: HUMAN APPROVED.**
+The [canonical human record](m2-4-human-decisions.md) reproduces D1–D6 in order:
+confirmed interim editorial/maintenance ownership, approved audience, maintenance
+policy, rights/attribution/subject-review approach, exact R1 public-content disclosure
+and English route/presentation/homepage-link specification. These are effective
+human decisions, not approval inferred from preparation, independent audit or CI.
+
+The unchanged [entry packet](m2-4-entry-readiness-disclosure-decision.md) is signed
+and integrated at `22dd719d16d17faa9e5db8cd1e71f81ff5eec638`, parent
+`df43895a81e02683e13e6c87896893c306c41eb2`, with valid GitHub signature and
+[exact-SHA run 38303766796](https://github.com/adarj/grocery-pos-website/actions/runs/38303766796),
+SUCCESS, push to main, attempt 1. That evidence qualifies the entry packet only,
+not this record or future code, and grants no human disclosure approval.
+
+**EXACT M22-C12-A01-R1 CONTENT DISCLOSURE: APPROVED.**
+D5 narrowly supersedes the article-disclosure deferral for the unchanged 7,840-byte
+R1 target; D6 approves its intended presentation, URL and contextual homepage link.
+Other claims, page families, metadata and destinations remain withheld beyond that
+exact scope. Final prepublication source/rights verification remains required.
+The approved URL is a specification; no new route or link has been implemented.
+
+**CURRENT RECOMMENDATION: NO IMPLEMENTATION YET.**
+**M2.4 APPLICATION IMPLEMENTATION: NOT AUTHORIZED.**
+**TECHNICAL QUALIFICATION OF NEW ARTICLE: NOT PERFORMED.**
+**PRODUCTION PUBLICATION: NOT AUTHORIZED.**
+**DEPLOYMENT: NOT AUTHORIZED.**
+**M2 OVERALL: IN PROGRESS, NOT FORMALLY ACCEPTED.**
+**M2.5–M2.6: NOT AUTHORIZED.**
+The human record prepares a bounded implementation-authorization proposal only.
+No application, public-output, asset, dependency, operational-platform or hosting
+change is authorized. Implementation, audit, qualification and release remain
+distinct gates. The unchanged M2.3 A01–A12 plan governs future applicable tests.
+
+This administrative candidate requires separate read-only adversarial audit, human
+manual review, signed integration and its own exact-SHA CI. D1–D6 are already
+effective; those repository gates do not postpone them or formally accept M2.4.
+Earlier snapshots below preserve their chronology, including the original deferrals
+and then-pending choices; accepted records, roadmap and qualification limits remain.
+
 ## M2.4 entry-decision preparation and current status — October 12, 2026 (UTC)
+
+**Historical entry-decision preparation snapshot.** The original heading and body
+preserve the then-pending choices and review/integration requirements. The later
+human-decision status above supersedes only D1–D6's corresponding pending choices
+and the completed entry-packet integration/CI. Implementation, qualification and
+release restrictions remain governing.
 
 **M2.1–M2.3: FORMALLY ACCEPTED; REPOSITORY CLOSEOUT VERIFIED.**
 The [M2.1](m2-1-acceptance.md), [M2.2](m2-2-acceptance.md) and

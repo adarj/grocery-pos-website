@@ -1,6 +1,55 @@
 # Milestone 2 — Marketing: Planning Baseline
 
+## M2.3 planning authorization and current status — October 11, 2026 (UTC)
+
+**M2.1: FORMALLY ACCEPTED; REPOSITORY CLOSEOUT VERIFIED.**
+Its [acceptance record](m2-1-acceptance.md) and exact-SHA CI remain governing.
+
+**M2.2: FORMALLY ACCEPTED October 11, 2026 (UTC); REPOSITORY CLOSEOUT VERIFIED.**
+The [acceptance record](m2-2-acceptance.md) is signed and integrated at
+`2f9e522ec0fc2a4eb729b93e013c2fbd5cae60d0`, parent
+`55c7f05862c45b85abec9f5a55f88ec9995f962b`;
+[run 38112225630](https://github.com/adarj/grocery-pos-website/actions/runs/38112225630)
+completed SUCCESS, push, attempt 1, on that exact SHA, with valid GitHub signature
+verification. The later retrospective read-only audit returned
+**PASS — M2.2 FORMAL ACCEPTANCE RECORD REPOSITORY CLOSEOUT VERIFIED.**
+M22-ACC-N01 is a nonblocking procedural NOTE: that acceptance-record audit occurred
+after integration, not before it. Earlier pending administrative gates are historical.
+
+**PUBLIC DISCLOSURE: EXPLICITLY DEFERRED.**
+**ARTICLE PUBLICATION: NOT APPROVED.**
+**WEBSITE IMPLEMENTATION: NOT AUTHORIZED.**
+The exact article and existing homepage remain unchanged.
+
+**M2.3 — Information Architecture & Experience Qualification Plan:
+DOCUMENTATION/PLANNING AUTHORIZED; CANDIDATE UNDER REVIEW, NOT ACCEPTED.**
+Authority is the maintainer's October 11, 2026 (UTC) instruction with that title.
+The [canonical M2.3 candidate](../design/m2-3-information-architecture-experience-qualification.md)
+owns source-inspected State A, conditional P05 structure/navigation, first-party
+CSS and future risk-based qualification/readiness matrices. Current recommendation:
+**NO IMPLEMENTATION YET** while disclosure remains deferred. The roadmap's
+approved-content prerequisite gates implementation; it does not prevent this
+expressly authorized conditional planning of withheld content.
+
+**Milestone 2 overall: IN PROGRESS, NOT FORMALLY ACCEPTED.**
+**M2.4–M2.6: NOT AUTHORIZED FOR EXECUTION.**
+No route, public copy/metadata, asset, dependency, operational platform change or
+deployment is authorized. The M2.3 candidate still requires independent read-only
+review, human review, human-signed integration, its own exact-SHA CI and an explicit
+human acceptance decision; previous M2.2 CI does not qualify it.
+
+All following status snapshots preserve preparation-time chronology. Their
+pending acceptance/administrative gates and later-checkpoint nonauthorization
+statements are superseded only by the completed M2.1/M2.2 closeouts and this narrow
+M2.3 planning authorization. Underlying studies, content withholding, accepted
+architecture, proposed roadmap and future qualification gates remain governing.
+
 ## Formal M2.2 acceptance and current status — October 11, 2026 (UTC)
+
+**Historical acceptance-record preparation snapshot.** This dated heading and its
+original pending-gate text are retained for chronology and existing incoming links.
+The authoritative later status is the M2.3 section above; the original record
+does not claim that the retrospective audit occurred before integration.
 
 **M2.1: FORMALLY ACCEPTED October 11, 2026 (UTC); REPOSITORY CLOSEOUT VERIFIED.**
 Its [acceptance record](m2-1-acceptance.md) and completed exact-SHA CI remain governing.

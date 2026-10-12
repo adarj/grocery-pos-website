@@ -1,6 +1,52 @@
 # Milestone 2 — Marketing: Planning Baseline
 
+## Formal M2.3 acceptance and current status — October 12, 2026 (UTC)
+
+**M2.1: FORMALLY ACCEPTED; REPOSITORY CLOSEOUT VERIFIED.**
+**M2.2: FORMALLY ACCEPTED; REPOSITORY CLOSEOUT VERIFIED.**
+Their [M2.1](m2-1-acceptance.md) and [M2.2](m2-2-acceptance.md) records remain governing.
+M22-ACC-N01 remains a nonblocking procedural NOTE: the M2.2 acceptance-record audit
+was retrospective, after integration, not before it.
+
+**M2.3 — Information Architecture & Experience Qualification Plan: FORMALLY ACCEPTED October 12, 2026 (UTC).**
+The [canonical acceptance record](m2-3-acceptance.md) records the maintainer's exact,
+effective decision and preserves the accepted conditional experience and qualification
+plan. Its preceding independent audit returned
+**PASS — M2.3 EXPERIENCE QUALIFICATION PLAN READY FOR HUMAN REVIEW**, with no new
+BLOCKER, MAJOR, MINOR or NOTE finding. Human manual review, signed planning integration
+at `1f80a0af1aa3d70ca5bb11793d6c7733cc53c548`, parent
+`2f9e522ec0fc2a4eb729b93e013c2fbd5cae60d0`, and
+[exact-SHA run 38195513984](https://github.com/adarj/grocery-pos-website/actions/runs/38195513984)
+are completed: valid GitHub signature, SUCCESS, push to main, attempt 1. That run
+qualifies the accepted planning commit, not the separate acceptance-record candidate.
+
+**M2.3 PLANNING RECOMMENDATION: NO IMPLEMENTATION YET.**
+**PUBLIC DISCLOSURE: EXPLICITLY DEFERRED.**
+**ARTICLE PUBLICATION: NOT APPROVED.**
+**WEBSITE IMPLEMENTATION: NOT AUTHORIZED.**
+The current homepage and exact internal M2.2 article remain unchanged. Exact public
+content/metadata, ownership, route/navigation scope, qualification and separate
+implementation authority remain prerequisites for reconsidering a bounded slice.
+
+**MILESTONE 2 OVERALL: IN PROGRESS, NOT FORMALLY ACCEPTED.**
+**M2.4–M2.6: NOT AUTHORIZED FOR EXECUTION.**
+No new research/design work, public content, route, asset, dependency, operational
+platform change, hosting or deployment is authorized by this administrative record.
+The acceptance-record candidate still requires a separate independent read-only audit,
+human manual review, human-signed integration and its own exact-SHA CI. Formal M2.3
+human acceptance is effective; administrative repository closeout remains pending.
+
+All following status snapshots remain historical. This later status supersedes their
+pending M2.3 planning-review/integration/CI/acceptance statements without rewriting
+what was true during preparation. Accepted studies, withholding, architecture,
+roadmap and future qualification contracts remain unchanged.
+
 ## M2.3 planning authorization and current status — October 11, 2026 (UTC)
+
+**Historical planning/preparation snapshot.** The original heading and body are
+preserved for chronology and existing incoming links. The authoritative October 12
+status above records completed planning review/integration/CI and effective human
+acceptance; its pending administrative gates apply only to the new acceptance record.
 
 **M2.1: FORMALLY ACCEPTED; REPOSITORY CLOSEOUT VERIFIED.**
 Its [acceptance record](m2-1-acceptance.md) and exact-SHA CI remain governing.

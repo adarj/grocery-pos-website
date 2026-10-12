@@ -74,10 +74,14 @@ M22-ACC-N01 remains a nonblocking NOTE that this audit followed integration.
 Preparation-time pending statements in the acceptance record are historical.
 **PUBLIC DISCLOSURE: EXPLICITLY DEFERRED; ARTICLE PUBLICATION: NOT APPROVED;
 WEBSITE IMPLEMENTATION: NOT AUTHORIZED.**
-**M2.3 — DOCUMENTATION/PLANNING AUTHORIZED; CANDIDATE UNDER REVIEW, NOT ACCEPTED.**
-The [M2.3 experience qualification plan](docs/design/m2-3-information-architecture-experience-qualification.md) prepares conditional
-IA, navigation, first-party CSS and future qualification gates only. Its independent
-review, human-controlled integration, exact-SHA CI and formal acceptance remain pending.
+**M2.3 — Information Architecture & Experience Qualification Plan: FORMALLY ACCEPTED October 12, 2026 (UTC).**
+The [canonical acceptance record](docs/engineering/m2-3-acceptance.md) records the effective human decision.
+**M2.3 PLANNING RECOMMENDATION: NO IMPLEMENTATION YET.**
+The independently reviewed planning commit `1f80a0af1aa3d70ca5bb11793d6c7733cc53c548`
+passed [exact-SHA run 38195513984](https://github.com/adarj/grocery-pos-website/actions/runs/38195513984)
+after human manual review and signed integration. The separate acceptance-record
+candidate still requires independent read-only audit, human review, human-signed
+integration and its own exact-SHA CI; human acceptance is already effective.
 **Milestone 2 overall: IN PROGRESS, NOT FORMALLY ACCEPTED.**
 M2.4–M2.6 execution, application implementation, disclosure expansion and deployment
 remain unauthorized. M0/M1 acceptance and retained limitations remain unchanged.

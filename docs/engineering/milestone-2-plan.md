@@ -1,6 +1,50 @@
 # Milestone 2 — Marketing: Planning Baseline
 
+## M2.4 entry-decision preparation and current status — October 12, 2026 (UTC)
+
+**M2.1–M2.3: FORMALLY ACCEPTED; REPOSITORY CLOSEOUT VERIFIED.**
+The [M2.1](m2-1-acceptance.md), [M2.2](m2-2-acceptance.md) and
+[M2.3](m2-3-acceptance.md) records retain their effective human decisions.
+M2.3's signed acceptance-record commit `df43895a81e02683e13e6c87896893c306c41eb2`,
+parent `1f80a0af1aa3d70ca5bb11793d6c7733cc53c548`, has valid GitHub signature
+verification and successful [exact-SHA run 38199211077](https://github.com/adarj/grocery-pos-website/actions/runs/38199211077),
+push to main, attempt 1. That completed CI qualifies the M2.3 record only.
+M22-ACC-N01 remains a nonblocking procedural NOTE: the M2.2 acceptance-record
+audit followed integration, not preceded it.
+
+**M2.4 ENTRY-DECISION PREPARATION: DOCUMENTATION-ONLY AUTHORIZED; UNDER REVIEW.**
+Authority is the maintainer's October 12, 2026 (UTC) instruction, “Codex — M2.4
+Entry-Readiness & Disclosure Decision Packet”. The
+[canonical packet](m2-4-entry-readiness-disclosure-decision.md) owns bounded
+source refresh, ownership/maintenance alternatives, exact disclosure options,
+conditional URL/navigation and a proposed implementation slice. This preparation
+does not open, rename, complete or accept the roadmap's M2.4 implementation
+checkpoint. No option, owner or public destination is approved by recording it.
+
+**M2.4 APPLICATION IMPLEMENTATION: NOT AUTHORIZED.**
+**CURRENT RECOMMENDATION: NO IMPLEMENTATION YET.**
+**PUBLIC DISCLOSURE: EXPLICITLY DEFERRED.**
+**ARTICLE PUBLICATION: NOT APPROVED.**
+**M2 OVERALL: IN PROGRESS, NOT FORMALLY ACCEPTED.**
+**M2.5–M2.6: NOT AUTHORIZED.**
+The homepage, exact internal article and accepted architecture/qualification
+records remain unchanged. Human disclosure, ownership, rights, audience and
+route/link decisions plus separate implementation authority remain necessary.
+No application, public metadata/content, dependency, asset, hosting, deployment
+or operational-platform change is authorized.
+
+This new packet still requires separate independent read-only audit, human manual
+review, human-signed integration and its own exact-SHA CI. Author checks are not
+that audit. Earlier dated preparation/status snapshots below are historical;
+completed M2.3 administrative gates supersede their pending statements without
+rewriting the accepted studies, roadmap or contemporaneous decisions.
+
 ## Formal M2.3 acceptance and current status — October 12, 2026 (UTC)
+
+**Historical acceptance-record preparation snapshot.** This original heading and
+body remain for chronology and incoming links. The later entry-decision status
+above supersedes its pending M2.3 acceptance-record audit/integration/CI statements;
+the accepted plan, recommendation and disclosure restrictions remain governing.
 
 **M2.1: FORMALLY ACCEPTED; REPOSITORY CLOSEOUT VERIFIED.**
 **M2.2: FORMALLY ACCEPTED; REPOSITORY CLOSEOUT VERIFIED.**

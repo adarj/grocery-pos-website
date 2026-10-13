@@ -1,7 +1,7 @@
 # Documentation map
 
 **M2 PLANNING AUTHORIZED — October 10, 2026 (UTC).**
-**M2 APPLICATION IMPLEMENTATION: ONLY THE BOUNDED M2.4.1 SLICE AUTHORIZED.**
+**M2.4.1 IMPLEMENTATION: FORMALLY ACCEPTED; NO ADDITIONAL APPLICATION WORK AUTHORIZED.**
 **PRODUCTION PUBLICATION: NOT AUTHORIZED.**
 **M2.1 — Marketing Strategy, Scope & Content Readiness: FORMALLY ACCEPTED October 11, 2026 (UTC).**
 Its [acceptance record](engineering/m2-1-acceptance.md) is signed and integrated at
@@ -40,23 +40,33 @@ Its pending choices remain historical; the packet and accepted records are uncha
 **EXACT M22-C12-A01-R1 DISCLOSURE: APPROVED.**
 This narrow approval supersedes article withholding only for R1's exact identity;
 other claims and P02–P08 material remain withheld beyond that scope.
-**M2.4 FIRST BOUNDED APPLICATION IMPLEMENTATION: HUMAN AUTHORIZED; CANDIDATE UNDER REVIEW — October 12, 2026 (UTC).**
-The [implementation record](engineering/m2-4-1-resource-implementation.md) records the explicit authority, exact R1
-projection, server-first home/child identity, page metadata, approved contextual
-homepage link, automated checks and unperformed human/OS/AT qualification.
-**FORMAL M2.5 QUALIFICATION: NOT PERFORMED; NOT AUTHORIZED.**
+**M2.4.1 — First Educational Resource Implementation: FORMALLY ACCEPTED October 12, 2026 (UTC).**
+The [canonical acceptance record](engineering/m2-4-1-acceptance.md) memorializes the effective
+human decision for implementation `8577c49db8de1b08f2a95caf0fa61018475237ed`.
+The preceding independent implementation audit returned
+**PASS — M2.4.1 IMPLEMENTATION CANDIDATE READY FOR HUMAN REVIEW**.
+The signed implementation passed [exact-SHA run 38320702025](https://github.com/adarj/grocery-pos-website/actions/runs/38320702025),
+SUCCESS, push to main, attempt 1: 19/19 unit tests, 7/7 supervisor regressions,
+54/54 browser tests and source cleanliness. GitHub signature verification is valid.
+The unchanged [implementation report](engineering/m2-4-1-resource-implementation.md) retains
+historical candidate/validation wording and the unexplained invalid-route delay.
+Supported-host CI resolves automated WebKit coverage; human/OS/AT and laboratory
+performance qualification remain separate. The maintainer reports checking before
+the implementation push and finding no connected hosting pipeline; Codex did not
+independently inspect hosting accounts.
+**M2.4 OVERALL: NOT YET FORMALLY ACCEPTED.**
+**M2.5 FORMAL QUALIFICATION: NOT PERFORMED; NOT AUTHORIZED.**
+**M2.6 FINAL M2 ACCEPTANCE: NOT AUTHORIZED.**
 **PRODUCTION PUBLICATION: NOT AUTHORIZED.**
 **DEPLOYMENT: NOT AUTHORIZED.**
 **Milestone 2 overall: IN PROGRESS, NOT FORMALLY ACCEPTED.**
-**M2.5–M2.6: NOT AUTHORIZED.**
 The human-decision record is signed and integrated at
 `3854375bf2e7ccd2149ce3e316d7343108291649`; [exact-SHA run 38314035517](https://github.com/adarj/grocery-pos-website/actions/runs/38314035517)
-passed, SUCCESS, push to main, attempt 1, with valid GitHub signature verification.
-That CI qualifies the decision record only. Its preparation-time pending wording
-is historical. The local M2.4.1 implementation remains unstaged and uncommitted;
-it requires a separate independent read-only implementation audit, human manual
-review, human-signed integration and new exact-SHA CI. Final prepublication
-source/rights verification, formal qualification and release gates remain.
+passed. Its preparation-time pending wording remains historical.
+Only this new acceptance record's administrative audit, human review, signed
+integration, own exact-SHA CI and focused repository closeout remain pending;
+those steps do not postpone effective M2.4.1 acceptance. Final prepublication
+source/fact/rights verification and applicable qualification/release gates remain.
 No additional feature, dependency, asset, language, operational-platform or hosting
 change is authorized. Accepted M0/M1 limitations remain binding.
 
@@ -179,6 +189,7 @@ grants no additional disclosure, public release or deployment approval.
 | Which exact disclosure, ownership and scope decisions are needed before M2.4 implementation? | [M2.4 entry-decision packet](engineering/m2-4-entry-readiness-disclosure-decision.md) |
 | Which human editorial, ownership, disclosure and presentation decisions are effective? | [M2.4 human decisions](engineering/m2-4-human-decisions.md) |
 | What implements the approved first resource locally, and what checks and gates remain? | [M2.4.1 implementation](engineering/m2-4-1-resource-implementation.md) |
+| What records effective M2.4.1 acceptance, committed CI and remaining closeout/qualification gates? | [M2.4.1 acceptance](engineering/m2-4-1-acceptance.md) |
 | Is the engineering foundation qualified for M1? | [Milestone 0 qualification](engineering/milestone-0-qualification.md) |
 | Who is the website for, and how should pages/navigation work? | [Website information architecture](product/website-information-architecture.md) |
 | Which content is evidenced, ready and separately approved for disclosure? | [M1.4.1 content readiness](product/m1-4-1-content-readiness.md) |

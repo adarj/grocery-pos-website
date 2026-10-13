@@ -57,7 +57,7 @@ contradictions rather than silently substituting another architecture.
 ## Checkpoint and Git limits
 
 **M2 PLANNING AUTHORIZED — October 10, 2026 (UTC).**
-**M2 APPLICATION IMPLEMENTATION: ONLY THE BOUNDED M2.4.1 SLICE AUTHORIZED.**
+**M2.4.1 IMPLEMENTATION: FORMALLY ACCEPTED; NO ADDITIONAL APPLICATION WORK AUTHORIZED.**
 **PRODUCTION PUBLICATION: NOT AUTHORIZED.**
 **M2.1 — Marketing Strategy, Scope & Content Readiness: FORMALLY ACCEPTED October 11, 2026 (UTC).**
 Its [acceptance record](docs/engineering/m2-1-acceptance.md) is signed and integrated at
@@ -96,23 +96,33 @@ Its pending choices remain historical; the packet and accepted records are uncha
 **EXACT M22-C12-A01-R1 DISCLOSURE: APPROVED.**
 This narrow approval supersedes article withholding only for R1's exact identity;
 other claims and P02–P08 material remain withheld beyond that scope.
-**M2.4 FIRST BOUNDED APPLICATION IMPLEMENTATION: HUMAN AUTHORIZED; CANDIDATE UNDER REVIEW — October 12, 2026 (UTC).**
-The [implementation record](docs/engineering/m2-4-1-resource-implementation.md) records the explicit authority, exact R1
-projection, server-first home/child identity, page metadata, approved contextual
-homepage link, automated checks and unperformed human/OS/AT qualification.
-**FORMAL M2.5 QUALIFICATION: NOT PERFORMED; NOT AUTHORIZED.**
+**M2.4.1 — First Educational Resource Implementation: FORMALLY ACCEPTED October 12, 2026 (UTC).**
+The [canonical acceptance record](docs/engineering/m2-4-1-acceptance.md) memorializes the effective
+human decision for implementation `8577c49db8de1b08f2a95caf0fa61018475237ed`.
+The preceding independent implementation audit returned
+**PASS — M2.4.1 IMPLEMENTATION CANDIDATE READY FOR HUMAN REVIEW**.
+The signed implementation passed [exact-SHA run 38320702025](https://github.com/adarj/grocery-pos-website/actions/runs/38320702025),
+SUCCESS, push to main, attempt 1: 19/19 unit tests, 7/7 supervisor regressions,
+54/54 browser tests and source cleanliness. GitHub signature verification is valid.
+The unchanged [implementation report](docs/engineering/m2-4-1-resource-implementation.md) retains
+historical candidate/validation wording and the unexplained invalid-route delay.
+Supported-host CI resolves automated WebKit coverage; human/OS/AT and laboratory
+performance qualification remain separate. The maintainer reports checking before
+the implementation push and finding no connected hosting pipeline; Codex did not
+independently inspect hosting accounts.
+**M2.4 OVERALL: NOT YET FORMALLY ACCEPTED.**
+**M2.5 FORMAL QUALIFICATION: NOT PERFORMED; NOT AUTHORIZED.**
+**M2.6 FINAL M2 ACCEPTANCE: NOT AUTHORIZED.**
 **PRODUCTION PUBLICATION: NOT AUTHORIZED.**
 **DEPLOYMENT: NOT AUTHORIZED.**
 **Milestone 2 overall: IN PROGRESS, NOT FORMALLY ACCEPTED.**
-**M2.5–M2.6: NOT AUTHORIZED.**
 The human-decision record is signed and integrated at
 `3854375bf2e7ccd2149ce3e316d7343108291649`; [exact-SHA run 38314035517](https://github.com/adarj/grocery-pos-website/actions/runs/38314035517)
-passed, SUCCESS, push to main, attempt 1, with valid GitHub signature verification.
-That CI qualifies the decision record only. Its preparation-time pending wording
-is historical. The local M2.4.1 implementation remains unstaged and uncommitted;
-it requires a separate independent read-only implementation audit, human manual
-review, human-signed integration and new exact-SHA CI. Final prepublication
-source/rights verification, formal qualification and release gates remain.
+passed. Its preparation-time pending wording remains historical.
+Only this new acceptance record's administrative audit, human review, signed
+integration, own exact-SHA CI and focused repository closeout remain pending;
+those steps do not postpone effective M2.4.1 acceptance. Final prepublication
+source/fact/rights verification and applicable qualification/release gates remain.
 No additional feature, dependency, asset, language, operational-platform or hosting
 change is authorized. Accepted M0/M1 limitations remain binding.
 
@@ -216,7 +226,7 @@ Follow the [M1 plan](docs/engineering/milestone-1-plan.md) and approved
 The [shell record](docs/engineering/m1-2-shell-qualification.md) preserves audit/CI
 history, resolved A12-01/A12-02 and final main qualification. Keep navigation limited
 to eligible destinations; make identity current-state handling route-aware before
-the first public child route; M2.4.1 implements that mechanism for review and qualification.
+the first public child route; M2.4.1 implements the accepted mechanism, with formal qualification still separate.
 No implementation beyond the bounded M2.4.1 slice, product-claim expansion, asset or deployment is authorized.
 The maintainer approved ESLint retention at M1.2, satisfying its first-implementation
 review. Retain all exception controls; review targeted lint-stack updates and no

@@ -1,6 +1,57 @@
 # Milestone 2 — Marketing: Planning Baseline
 
+## Formal M2.4.1 acceptance and current status — October 12, 2026 (UTC)
+
+**M2.1–M2.3: FORMALLY ACCEPTED; REPOSITORY CLOSEOUT VERIFIED.**
+**M2.4.1 — First Educational Resource Implementation: FORMALLY ACCEPTED October 12, 2026 (UTC).**
+The [canonical acceptance record](m2-4-1-acceptance.md) reproduces the effective
+human decision, limited to implementation `8577c49db8de1b08f2a95caf0fa61018475237ed`,
+subject `feat(web): implement M2.4.1 educational resource page`, parent
+`3854375bf2e7ccd2149ce3e316d7343108291649`, with valid GitHub signature verification.
+The preceding independent audit returned
+**PASS — M2.4.1 IMPLEMENTATION CANDIDATE READY FOR HUMAN REVIEW**;
+it found no substantiated BLOCKER, MAJOR or MINOR defect in the 21-file candidate.
+[Exact-SHA run 38320702025](https://github.com/adarj/grocery-pos-website/actions/runs/38320702025)
+completed SUCCESS, push to main, attempt 1: formatting/compilation, lint,
+19/19 unit tests, 7/7 supervisor regressions, typecheck, production build,
+Chromium/Firefox/WebKit 18/18 each (54/54) and source cleanliness passed.
+This qualifies the signed implementation, not the new acceptance-record candidate.
+
+The accepted slice is one English resource with exact R1 content/metadata,
+the approved fourth-section homepage link, page-owned server shell and typed
+home/resource identity, preserved homepage copy and first-party CSS. The unchanged
+[implementation report](m2-4-1-resource-implementation.md) retains historical local
+checks and pending-status wording. M241-T01's invalid-route scenario passed in CI;
+the original unusual delay remains unexplained. M241-R01's author-time provenance
+limits remain historical; committed CI supplies canonical validation. M241-R02's
+automated WebKit coverage is resolved by supported-host CI. For M241-R03, the
+maintainer reports finding no connected hosting pipeline before pushing;
+Codex did not independently inspect hosting accounts.
+
+**EXACT R1 CONTENT DISCLOSURE: HUMAN APPROVED.**
+**M2.4 OVERALL: NOT YET FORMALLY ACCEPTED.**
+**M2.5 FORMAL QUALIFICATION: NOT PERFORMED; NOT AUTHORIZED.**
+**M2.6 FINAL M2 ACCEPTANCE: NOT AUTHORIZED.**
+**PRODUCTION PUBLICATION: NOT AUTHORIZED.**
+**DEPLOYMENT: NOT AUTHORIZED.**
+**M2 OVERALL: IN PROGRESS, NOT FORMALLY ACCEPTED.**
+No additional implementation is authorized. Applicable A01–A12 human/OS/AT/device
+and laboratory-performance evidence, final editorial source/fact/rights checks,
+retained findings and release/deployment gates remain. Appropriately scoped valid
+evidence may be reused with exact provenance; the maintainer's local website
+review does not establish the full qualification matrix.
+
+Human acceptance is effective. This separate administrative record still requires
+independent read-only audit, human manual review, signed commit/push, its own
+successful exact-SHA CI and focused repository closeout. Earlier preparation
+snapshots remain historical; accepted implementation/source records are unchanged.
+
 ## M2.4.1 first bounded application implementation — October 12, 2026 (UTC)
+
+**Historical implementation-candidate preparation snapshot.** The later formal
+acceptance status above supersedes pending implementation audit/review/integration/CI
+statements; its original authority, evidence limitations and release restrictions
+retain their preparation-time meaning.
 
 **M2.1–M2.3: FORMALLY ACCEPTED; REPOSITORY CLOSEOUT VERIFIED.**
 **M2.4 FIRST BOUNDED APPLICATION IMPLEMENTATION: HUMAN AUTHORIZED; CANDIDATE UNDER REVIEW.**
